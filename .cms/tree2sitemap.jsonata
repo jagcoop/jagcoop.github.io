@@ -1,0 +1,19 @@
+(
+    /* Expecting the output of this command tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r  */
+
+    $base_url := "https://example.com/";
+    $index_page := function($a_path)<s:s>{
+        $substringAfter($a_path,"./")&"/index.html"
+    };
+
+    $Urls := $.contents.**[type="directory"].{
+    "loc":$index_page(name),
+    "changefreq":"weekly",
+    "lastmod":time
+    };
+{
+ "root":$base_url,
+ "urls":$Urls
+};
+
+)

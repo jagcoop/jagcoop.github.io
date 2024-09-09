@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://example.com/rss.xml" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Author meta tag -->
+    <meta name="author" content="Your Name">
+
+    <!-- Description meta tag -->
+    <meta name="description" content="A brief description of your web page content. This should be concise and informative, typically between 150-160 characters.">
+
+    <!-- Keywords meta tag -->
+    <meta name="keywords" content="keyword1, keyword2, keyword3, keyword4, keyword5">
+
+    <!-- Other common meta tags you might want to include -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph meta tags for better social media sharing -->
+    <meta property="og:title" content="Your Page Title">
+    <meta property="og:description" content="A brief description for social media sharing">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com/page-url">
+    <meta property="og:type" content="website">
+
+    <title>Webpage with Two Iframes</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+        }
+        #navigation {
+            height: 70px; /* Adjust height for navigation */
+        }
+        #main {
+            height: 100%; /* Adjust height for main content */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation iFrame -->
+    <iframe id="navigation" name="navigation" srcdoc='
+<html data-theme="light">
+<head>
+<link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.css">
+<style>
+header{padding: 0px}
+body > header > *:only-child {
+  margin-block-start: 0rem;
+}
+body > header {
+  background-color: var(--accent-bg);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  padding: 0;
+  grid-column: 1 / -1;
+}
+
+[data-theme="light"] {
+  /* Default (light) theme */
+  --bg: #fff;
+  --accent-bg: #eee;
+  --text: #212121;
+  --text-light: #585858;
+  --border: #898ea4;
+  --accent: #0d47a1;
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #212121;
+  --accent-bg: #222;
+  --text: #dcdcdc;
+  --text-light: #ababab;
+  --accent: #ffb300;
+  --code: #f06292;
+  --preformatted: #ccc;
+  --disabled: #111;
+}
+
+[data-theme="dark"] img,
+[data-theme="dark"] video {
+  opacity: 0.8;
+}
+
+/* slate theme */
+[data-theme="slate"] {
+  color-scheme: dark;
+  --bg: #212121;
+  --accent-bg: #222;
+  --text: #dcdcdc;
+  --text-light: #ababab;
+  --accent: #ffb300;
+  --code: #f06292;
+  --preformatted: #ccc;
+  --disabled: #111;
+}
+
+[data-theme="slate"] img,
+[data-theme="slate"] video {
+  opacity: 0.8;
+}
+
+
+</style>
+<script>
+function change_theme(a_theme){
+      const htmlElement = document.documentElement; // Get the <html> element
+	  htmlElement.setAttribute("data-theme", a_theme);
+}
+  </script>
+
+</head>
+<body>
+<header>
+<nav>
+                <a href="./posts/index.html"
+				   onclick="change_theme(&#39;light&#39;);"
+				   target="main">Posts</a>
+                <a href="./about/index.md.html"
+				   onclick="change_theme(&#39;slate&#39;);"
+				   target="main">About</a>
+                <a href="./whitepaper/index.html"
+				   onclick="change_theme(&#39;light&#39;);"
+				   target="main">Whitepaper</a>
+</nav></header></body></html>
+        '></iframe>
+
+    <!-- Main iFrame -->
+    <iframe id="main" name="main" src="./posts/index.html"></iframe>
+
+</body>
+</html>
