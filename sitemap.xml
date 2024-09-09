@@ -36,11 +36,6 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://example.com/public_html/index.html</loc>
-  <lastmod>2024-09-09</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
   <loc>https://example.com/home/index.html</loc>
   <lastmod>2024-09-09</lastmod>
   <changefreq>weekly</changefreq>

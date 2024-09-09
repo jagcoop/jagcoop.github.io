@@ -46,7 +46,7 @@ def "main .info ls" [] -> table<name: string, type: string, size: filesize, modi
 def "main build" [] {
 	#in main generate .info, rss, sitemap (en ese orden)
 	.cms/generate .info ;
-	.cms/generate posts;
+	.cms/generate posts ;
 	.cms/generate rss ;
 	.cms/generate sitemap
 	rm -rf .puplic_html; mkdir .public_html

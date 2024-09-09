@@ -10,24 +10,10 @@
       <lastBuildDate>2024-09-09T00:00:00.000Z</lastBuildDate>
 
         <item>
-          <title>public_html</title>
-          <description></description>
-          <link>https://example.com/public_html</link>
-          <guid>https://example.com/public_html</guid>
-          <pubDate>2024-09-09</pubDate>
-        </item>
-        <item>
           <title>posts</title>
           <description></description>
           <link>https://example.com/posts</link>
           <guid>https://example.com/posts</guid>
-          <pubDate>2024-09-09</pubDate>
-        </item>
-        <item>
-          <title>template_latex</title>
-          <description>newsmag description</description>
-          <link>https://example.com/template_latex</link>
-          <guid>https://example.com/template_latex</guid>
           <pubDate>2024-09-09</pubDate>
         </item>
         <item>
@@ -38,39 +24,46 @@
           <pubDate>2024-09-09</pubDate>
         </item>
         <item>
+          <title>template_latex</title>
+          <description>newsmag description</description>
+          <link>https://example.com/template_latex</link>
+          <guid>https://example.com/template_latex</guid>
+          <pubDate>2024-09-09</pubDate>
+        </item>
+        <item>
           <title>template_journal</title>
           <description>This is the description and should be indented with a TAB</description>
           <link>https://example.com/template_journal</link>
           <guid>https://example.com/template_journal</guid>
-          <pubDate>2024-09-08</pubDate>
+          <pubDate>2024-09-09</pubDate>
         </item>
         <item>
           <title>template_apidoc</title>
           <description>This is the description and should be indented with a TAB</description>
           <link>https://example.com/template_apidoc</link>
           <guid>https://example.com/template_apidoc</guid>
-          <pubDate>2024-09-08</pubDate>
+          <pubDate>2024-09-09</pubDate>
         </item>
         <item>
           <title>whitepaper</title>
           <description></description>
           <link>https://example.com/whitepaper</link>
           <guid>https://example.com/whitepaper</guid>
-          <pubDate>2024-09-08</pubDate>
+          <pubDate>2024-09-09</pubDate>
         </item>
         <item>
           <title>home</title>
           <description></description>
           <link>https://example.com/home</link>
           <guid>https://example.com/home</guid>
-          <pubDate>2024-09-08</pubDate>
+          <pubDate>2024-09-09</pubDate>
         </item>
         <item>
           <title>about</title>
           <description></description>
           <link>https://example.com/about</link>
           <guid>https://example.com/about</guid>
-          <pubDate>2024-09-08</pubDate>
+          <pubDate>2024-09-09</pubDate>
         </item>
   </channel>
 </rss>
