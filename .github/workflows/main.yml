@@ -1,0 +1,80 @@
+# .github/workflows/arise-deploy.yml
+# What do I need todo to activate this workflow that was forke?
+name: Deploy blog from main branch to public_html branch
+
+on:
+  # Runs on pushes targeting the default branch
+  # Only runs when the push contains changes to the site source itself. No need to rebuild the site if it's just program files that have changed.
+  # changing the code
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Deploy Arise
+    steps:
+      - name: Check if we should deploy to prod or staging
+        run: |
+          echo "SMART DEPLOY"
+          echo "============"
+          echo "We only want to deploy to prod if the branch that triggered this workflow is 'main'. Otherwise, we want the site to be deployed to staging..."
+          echo ""
+          if [[ $GITHUB_REF == 'refs/heads/main' ]]; then
+              # Feel free to change the value of OUTPUT_BRANCH. This is where Arise artefacts will be deployed for production.
+              echo "OUTPUT_BRANCH=public_html" >> "$GITHUB_ENV"
+              echo "Workflow running from main branch. Pushing results to production deployment branch (html)."
+          else
+              # Feel free to change the value of OUTPUT_BRANCH. This is where Arise artefacts will be deployed for staging.
+              echo "OUTPUT_BRANCH=staging_public_html" >> "$GITHUB_ENV"
+              echo "Workflow running from a development branch. Pushing results to staging deployment branch (html-staging)."
+          fi
+
+      - name: git-checkout
+        uses: actions/checkout@v4
+
+      - name: Install pandoc
+        run: sudo apt-get install -y pandoc
+
+        # Set up Go environment
+      - name: Set up Go
+        uses: actions/setup-go@v4
+
+      - name: Install mustache
+        run: go install github.com/cbroglie/mustache/cmd/mustache@latest
+
+      - name: Install pup to extract meta tags from html files
+        run: go install github.com/ericchiang/pup@latest
+
+      - name: Install jfq (to have sonata)
+        run: npm install --global jfq
+
+      - uses: hustcer/setup-nu@v3
+        with:
+          version: "0.92.1"         # Don't use 0.90 here, as it was a float number and will be convert to 0.9, you can use v0.90/0.90.0 or '0.90'
+      - run: print $'Nu version info:(char nl)'; version
+        shell: nu {0}
+      - name: Default shell will be `nu`
+        shell: nu {0}
+        run: $env.PATH = ($env.PATH | split row (char esep) | append $"($env.HOME)/go/bin")
+
+      - name: Build .public_html folder
+        run: .cms/generate build
+
+      - name: Push to live branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: ${{ env.OUTPUT_BRANCH }}            # If you want to change this, change it in the step above. This allows us to intelligently deploy to production from main or staging if we're on a dev branch.
+          FOLDER: .public_html                        # cms/generate build output location. Don't change this.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # Handled automatically -- Don't change this unless you're pushing to a different repo
+          MESSAGE: "Commit: ({sha}) {msg}"            # Copies commit msg from main to the deploy version branch
