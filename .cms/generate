@@ -1,0 +1,65 @@
+#!/usr/bin/env nu
+def "main sitemap" []: nothing -> nothing {
+	
+	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r
+	| jfq --query-file .cms/tree2sitemap.jsonata
+	| mustache .cms/json2sitemap.mustache
+	| save --force sitemap.xml
+
+}
+
+def "main rss" []: nothing -> nothing {
+
+	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r
+	| jfq --query-file .cms/tree2rss.jsonata
+	| mustache .cms/json2rss.mustache
+	| save --force rss.xml
+}
+
+def extract_description [f] -> string {
+	open $f.name| pup 'meta[name="description"] attr{content}'
+}
+
+def "main .info" []: nothing -> nothing {
+	ls **/*
+	| where name =~  "index.html"
+	| where {|f| (extract_description $f) != "" }
+	| each {|f| (extract_description $f)
+	  	    |  $"index.html\n\t($in)"
+	 		| save --force ($f.name | path dirname | $"./($in)/.info" )}
+	| if ($in | is-empty) { null}
+}
+
+def "main .info ls" [] -> table<name: string, type: string, size: filesize, modified: date> (stream) {
+	ls **/*	-a | where name =~  ".info" | to tsv
+}
+
+def "main build" [] {
+	#in main generate .info, rss, sitemap (en ese orden)
+	.cms/generate .info ;
+	.cms/generate rss ;
+	.cms/generate sitemap
+	rm -rf .puplic_html; mkdir .public_html
+	#copies everything except files and directories that start with a dot
+	rsync --archive --exclude=".*/" ./* .public_html/
+
+	#if we are in the branch main,
+		#create a new branch html
+		#copy all files there except .cms
+		#commit y push en el branch
+	#else create the branch html-staging
+}
+
+def "main mustache_build" [] {
+# The idea is to pass every file to mustache so that it every file can be "dynamic"
+# so for example a file like rss.xml (which should a mustache) can be genarted in .public_html rehydrated
+# so 3 cases
+# file doesn't have mustache strings then don't pass to mustache
+# there is a file with the same name.json then that file passes through mustache
+# there is a file with same name.tree2jsonata and should the execute the tree command and process it with jsonata and then pass to mustache
+# like currently it does with rss and sitemap
+#  ls **/* | each {|f| echo "[]" | mustache $f.name}   
+}
+
+
+def main [] { }
