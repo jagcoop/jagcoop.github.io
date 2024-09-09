@@ -51,7 +51,7 @@ def "main build" [] {
 	.cms/generate sitemap
 	rm -rf .puplic_html; mkdir .public_html
 	#copies everything except files and directories that start with a dot
-	rsync --archive --exclude=".*/" ./* .public_html/
+	rsync --archive --include=".githu*" --exclude=".*/"  ./* .public_html/
 
 	#if we are in the branch main,
 		#create a new branch html
