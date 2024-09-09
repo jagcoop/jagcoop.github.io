@@ -5,9 +5,8 @@ name: Deploy blog in main branch to html branch
 on:
   push:
     branches: ["main"]
-    paths: ['arise-source/**']
-  # Runs on pushes targeting the default branch
-  # Only runs when the push contains changes to the site source itself. No need to rebuild the site if it's just program files that have changed.
+    # Runs on pushes targeting the default branch
+    # Only runs when the push contains changes to the site source itself. No need to rebuild the site if it's just program files that have changed.
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch: true
