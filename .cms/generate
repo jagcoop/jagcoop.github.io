@@ -30,6 +30,15 @@ def "main .info" []: nothing -> nothing {
 	| if ($in | is-empty) { null}
 }
 
+def "main posts" []: nothing -> nothing {
+	#notice that this one is different because it has the ./posts
+	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r ./posts
+	| jfq '$.*[type = "directory"].{"type":type, "time":time,"name":name, "info":contents.info}' --plain-text
+	| mustache ./posts/index.mustache.html
+	| save --force ./posts/index.html
+
+}
+
 def "main .info ls" [] -> table<name: string, type: string, size: filesize, modified: date> (stream) {
 	ls **/*	-a | where name =~  ".info" | to tsv
 }
@@ -37,6 +46,7 @@ def "main .info ls" [] -> table<name: string, type: string, size: filesize, modi
 def "main build" [] {
 	#in main generate .info, rss, sitemap (en ese orden)
 	.cms/generate .info ;
+	.cms/generate posts;
 	.cms/generate rss ;
 	.cms/generate sitemap
 	rm -rf .puplic_html; mkdir .public_html
