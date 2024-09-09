@@ -5,6 +5,7 @@ name: Deploy blog in main branch to html branch
 on:
   # Runs on pushes targeting the default branch
   # Only runs when the push contains changes to the site source itself. No need to rebuild the site if it's just program files that have changed.
+  # changing the code
   push:
     branches: ["main"]
     paths: ['./**']
