@@ -6,15 +6,15 @@
       <link>https://example.com/</link>
       <language>en</language>
       <copyright></copyright>
-      <pubDate>2024-09-09T00:00:00.000Z</pubDate>
-      <lastBuildDate>2024-09-09T00:00:00.000Z</lastBuildDate>
+      <pubDate>2024-09-10T00:00:00.000Z</pubDate>
+      <lastBuildDate>2024-09-10T00:00:00.000Z</lastBuildDate>
 
         <item>
           <title>posts</title>
           <description>newsmag description</description>
           <link>https://example.com/posts</link>
           <guid>https://example.com/posts</guid>
-          <pubDate>2024-09-09</pubDate>
+          <pubDate>2024-09-10</pubDate>
         </item>
         <item>
           <title>template_newsmag</title>
