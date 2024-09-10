@@ -10,15 +10,8 @@
       <lastBuildDate>2024-09-10T00:00:00.000Z</lastBuildDate>
 
         <item>
-          <title>whitepaper</title>
-          <description></description>
-          <link>https://example.com/whitepaper</link>
-          <guid>https://example.com/whitepaper</guid>
-          <pubDate>2024-09-10</pubDate>
-        </item>
-        <item>
           <title>posts</title>
-          <description></description>
+          <description>newsmag description</description>
           <link>https://example.com/posts</link>
           <guid>https://example.com/posts</guid>
           <pubDate>2024-09-10</pubDate>
@@ -49,6 +42,13 @@
           <description>This is the description and should be indented with a TAB</description>
           <link>https://example.com/template_apidoc</link>
           <guid>https://example.com/template_apidoc</guid>
+          <pubDate>2024-09-10</pubDate>
+        </item>
+        <item>
+          <title>whitepaper</title>
+          <description></description>
+          <link>https://example.com/whitepaper</link>
+          <guid>https://example.com/whitepaper</guid>
           <pubDate>2024-09-10</pubDate>
         </item>
         <item>

@@ -6,11 +6,6 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://example.com/whitepaper/index.html</loc>
-  <lastmod>2024-09-10</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
   <loc>https://example.com/posts/index.html</loc>
   <lastmod>2024-09-10</lastmod>
   <changefreq>weekly</changefreq>
@@ -32,6 +27,11 @@
 </url>
 <url>
   <loc>https://example.com/template_apidoc/index.html</loc>
+  <lastmod>2024-09-10</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://example.com/whitepaper/index.html</loc>
   <lastmod>2024-09-10</lastmod>
   <changefreq>weekly</changefreq>
 </url>
