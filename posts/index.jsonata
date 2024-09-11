@@ -1,1 +1,0 @@
-$.*[type = "directory"].{"type":type, "time":time,"name":name, "info":contents.info}

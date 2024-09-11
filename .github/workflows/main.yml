@@ -75,6 +75,6 @@ jobs:
         env:
           REPO: self
           BRANCH: ${{ env.OUTPUT_BRANCH }}            # If you want to change this, change it in the step above. This allows us to intelligently deploy to production from main or staging if we're on a dev branch.
-          FOLDER: .public_html                        # cms/generate build output location. Don't change this.
+          FOLDER: .cms/public_html                       # cms/generate build output location. Don't change this.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # Handled automatically -- Don't change this unless you're pushing to a different repo
           MESSAGE: "Commit: ({sha}) {msg}"            # Copies commit msg from main to the deploy version branch
