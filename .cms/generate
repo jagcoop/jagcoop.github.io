@@ -1,23 +1,25 @@
 #!/usr/bin/env nu
-def "main sitemap" []: nothing -> nothing {
-	
-	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r
-	| jfq --query-file .cms/tree2sitemap.jsonata
-	| mustache .cms/json2sitemap.mustache
-	| save --force sitemap.xml
+use std assert
 
-}
+def main [] { }
 
-def "main rss" []: nothing -> nothing {
+def "main build" [] {
+	#in main generate .info, rss, sitemap (en ese orden)
+	.cms/generate .info ;
+	.cms/generate nav
+	.cms/generate posts ;
+	.cms/generate rss ;
+	.cms/generate sitemap;
 
-	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r
-	| jfq --query-file .cms/tree2rss.jsonata
-	| mustache .cms/json2rss.mustache
-	| save --force rss.xml
-}
+	rm -rf .puplic_html; mkdir .public_html
+	#copies everything except files and directories that start with a dot
+	rsync --archive --include=".githu*" --include=".nojekyll" --exclude=".*/"  ./* .public_html/
 
-def extract_description [f] -> string {
-	open $f.name| pup 'meta[name="description"] attr{content}'
+	#if we are in the branch main,
+		#create a new branch html
+		#copy all files there except .cms
+		#commit y push en el branch
+	#else create the branch html-staging
 }
 
 def "main .info" []: nothing -> nothing {
@@ -31,34 +33,61 @@ def "main .info" []: nothing -> nothing {
 }
 
 def "main posts" []: nothing -> nothing {
-	#notice that this one is different because it has the ./posts
-	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r ./posts
-	| jfq '$.*[type = "directory"].{"type":type, "time":time,"name":name, "info":contents.info}' --plain-text
-	| mustache ./posts/index.mustache.html
-	| save --force ./posts/index.html
+	process_template ./posts/index.mustache 'html'
+}
 
+def "main rss" []: nothing -> nothing {
+	process_template ./rss.mustache xml
+}
+
+def "main sitemap" []: nothing -> nothing {
+	process_template ./sitemap.mustache xml
+}
+
+def "main nav" []: nothing -> nothing {
+	process_template ./nav.mustache html
+}
+
+
+
+
+def process_template [a_template:path, output_extension:string] -> nothing {
+
+	let $jsonata = find_for 'jsonata' $a_template
+	let $mustache = find_for 'mustache' $a_template 
+	let $html_output_file = new_path_for $output_extension $a_template 
+
+	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r .
+	| jfq  --query-file $jsonata
+	| mustache $mustache
+	| save --force $html_output_file
+}
+
+
+def find_for [template_extension:string, a_template:path] -> path {
+	let template = new_path_for $template_extension $a_template
+	assert ($template | path exists) --error-label {
+        text: $"Mandatory file: '($template)' doesn't exist",
+        span: (metadata $template).span,
+    }
+	$template
+	
+}
+
+def new_path_for [template_extension:string, a_template:path ] -> path {
+	$a_template | path parse | upsert extension $template_extension | path join
 }
 
 def "main .info ls" [] -> table<name: string, type: string, size: filesize, modified: date> (stream) {
 	ls **/*	-a | where name =~  ".info" | to tsv
 }
 
-def "main build" [] {
-	#in main generate .info, rss, sitemap (en ese orden)
-	.cms/generate .info ;
-	.cms/generate posts ;
-	.cms/generate rss ;
-	.cms/generate sitemap
-	rm -rf .puplic_html; mkdir .public_html
-	#copies everything except files and directories that start with a dot
-	rsync --archive --include=".githu*" --include=".nojekyll" --exclude=".*/"  ./* .public_html/
 
-	#if we are in the branch main,
-		#create a new branch html
-		#copy all files there except .cms
-		#commit y push en el branch
-	#else create the branch html-staging
+def extract_description [f] -> string {
+	open $f.name| pup 'meta[name="description"] attr{content}'
 }
+
+
 
 def "main mustache_build" [] {
 # The idea is to pass every file to mustache so that it every file can be "dynamic"
@@ -71,5 +100,3 @@ def "main mustache_build" [] {
 #  ls **/* | each {|f| echo "[]" | mustache $f.name}   
 }
 
-
-def main [] { }
