@@ -1,25 +1,26 @@
 #!/usr/bin/env nu
 use std assert
 
+let OUTPUT_DIR = '.cms/public_html'
 def main [] { }
 
 def "main build" [] {
 	#in main generate .info, rss, sitemap (en ese orden)
-	rm -rf .cms/puplic_html; mkdir .cms/public_html
-		#copies everything except files and directories that start with a dot
-	rsync --archive --include=".githu*" --include=".nojekyll" --exclude="*mustache*" --exclude=".*"   ./* .cms/public_html/
+	rm -rf $OUTPUT_DIR; mkdir $OUTPUT_DIR
+	
+	#copies everything except files and directories that start with a dot
+	rsync --archive --include=".githu*" --include=".nojekyll" --exclude="*mustache*" --exclude=".*"   ./* $OUTPUT_DIR
 
 	.cms/generate .info ;
 	.cms/generate all_mustache;
 }
 
 def "main all_mustache" [] : nothing -> nothing {
-	(ls **/* 
-	| where name =~ "mustache"
-	| get name
-	| each {|mustache_file| .cms/generate process_template $mustache_file }
-	| null
-	)
+	ls **/* | 
+	where name =~ "mustache" |
+	get name |
+	each {|m| process_template $m }
+	
 }
 
 def "main .info" []: nothing -> nothing {
@@ -33,23 +34,28 @@ def "main .info" []: nothing -> nothing {
 }
 
 
-export def "main process_template" [a_template:path] -> nothing {
-	assert str contains $a_template ".mustache."
+def process_template [a_template:path] -> nothing {
+	assert str contains $a_template "mustache"
 	assert path exists $a_template
-	let $relative_template = ($a_template | path relative-to $env.PWD)
+
+
+	let $relative_template = $a_template #| path relative-to $env.PWD
 	
 	let $output_extension = $a_template | path parse | get extension
 	
 	let $jsonata =  $relative_template | path parse | upsert parent {|f| $".cms/jsonata/($f.parent)"}| path join 
 	assert path exists $jsonata
 	
-	let $html_output_file = $relative_template | path parse | upsert parent {|f| $".cms/public_html/($f.parent)"} | upsert stem {|f| $"($f.stem | path parse | get stem)"} | path join
+	let $html_output_file = $relative_template | path parse | upsert parent {|f| $"($OUTPUT_DIR)/($f.parent)" } | upsert stem {|f| $"($f.stem | path parse | get stem)" } | path join
 	$html_output_file | path dirname | mkdir $in
 	
+
 	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r .
 	| jfq  --query-file $jsonata
 	| mustache $a_template
-	| save --force $html_output_file
+	| save --force $html_output_file;
+
+	assert path exists $html_output_file
 }
 
 
