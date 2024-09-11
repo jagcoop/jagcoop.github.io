@@ -6,14 +6,11 @@ def main [] { }
 def "main build" [] {
 	#in main generate .info, rss, sitemap (en ese orden)
 	.cms/generate .info ;
-	.cms/generate nav
-	.cms/generate posts ;
-	.cms/generate rss ;
-	.cms/generate sitemap;
+	.cms/generate all_mustache;
 
-	rm -rf .puplic_html; mkdir .public_html
+	rm -rf .cms/puplic_html; mkdir .cms/public_html
 	#copies everything except files and directories that start with a dot
-	rsync --archive --include=".githu*" --include=".nojekyll" --exclude=".*/"  ./* .public_html/
+	rsync --archive --include=".githu*" --include=".nojekyll" --exclude="*mustache*" --exclude=".*/"   ./* .cms/public_html/
 
 	#if we are in the branch main,
 		#create a new branch html
@@ -22,14 +19,12 @@ def "main build" [] {
 	#else create the branch html-staging
 }
 
-def "main all_mustache_files" [] : nothing -> nothing {
+def "main all_mustache" [] : nothing -> nothing {
 	ls **/*
 	| where name =~ ".mustache.*"
 	| get name
-	| each {|mustache_file|
-	  let extension_goal = $mustache_file | path parse | get extension
-	  process_template  $mustache_file $extension_goal
-}
+	| each {|mustache_file| process_template  $mustache_file }
+	| null
 }
 
 def "main .info" []: nothing -> nothing {
@@ -42,30 +37,20 @@ def "main .info" []: nothing -> nothing {
 	| if ($in | is-empty) { null}
 }
 
-def "main posts" []: nothing -> nothing {
-	process_template ./posts/index.mustache 'html'
-}
 
-def "main rss" []: nothing -> nothing {
-	process_template ./rss.mustache xml
-}
-
-def "main sitemap" []: nothing -> nothing {
-	process_template ./sitemap.mustache xml
-}
-
-def "main nav" []: nothing -> nothing {
-	process_template ./nav.mustache.html html
-}
-
-
-
-
-def process_template [a_template:path, output_extension:string] -> nothing {
+export def "main process_template" [a_template:path] -> nothing {
+	assert str contains $a_template ".mustache."
 	assert path exists $a_template
-	let $jsonata = find_for 'jsonata' $a_template
-	let $html_output_file = new_path_for $output_extension $a_template 
-
+	let $relative_template = ($a_template | path relative-to $env.PWD)
+	
+	let $output_extension = $a_template | path parse | get extension
+	
+	let $jsonata =  $relative_template | path parse | upsert parent {|f| $".cms/jsonata/($f.parent)"}| path join 
+	assert path exists $jsonata
+	
+	let $html_output_file = $relative_template | path parse | upsert parent {|f| $".cms/public_html/($f.parent)"} | upsert stem {|f| $"($f.stem | path parse | get stem)"} | path join
+	($html_output_file | path dirname | mkdir $in)
+	
 	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r .
 	| jfq  --query-file $jsonata
 	| mustache $a_template
@@ -74,12 +59,6 @@ def process_template [a_template:path, output_extension:string] -> nothing {
 
 
 
-def find_for [template_extension:string, a_template:path] -> path {
-	let template = new_path_for $template_extension $a_template
-	assert path exists $template
-	$template
-}
-
 def "assert path exists" [a_path:path] {
 	assert ($a_path | path exists) --error-label {
         text: $"Mandatory file: '($a_path)' doesn't exist",
@@ -87,23 +66,6 @@ def "assert path exists" [a_path:path] {
     }
 }
 
-export def new_path_for [template_extension:string, a_template:path] -> path {
-    let original_last_extension = $a_template | path parse | get extension
-
-    let new_path = $a_template
-		| path parse --extension $'mustache.($original_last_extension)'
-		| upsert extension $template_extension
-		| path join
-    $new_path
-}
-
-
-# export def new_path_for [template_extension:string, a_template:path ] -> path {
-# 	let original_last_extension = $a_template | path parse | get extension
-# 	print $original_last_extension
-# 	print "what"
-# 	$a_template | path parse --extension $".mustache.($original_last_extension)" | tee {echo} | upsert extension $template_extension | path join
-# }
 
 def "main .info ls" [] -> table<name: string, type: string, size: filesize, modified: date> (stream) {
 	ls **/*	-a | where name =~  ".info" | to tsv
@@ -112,18 +74,5 @@ def "main .info ls" [] -> table<name: string, type: string, size: filesize, modi
 
 def extract_description [f] -> string {
 	open $f.name| pup 'meta[name="description"] attr{content}'
-}
-
-
-
-def "main mustache_build" [] {
-# The idea is to pass every file to mustache so that it every file can be "dynamic"
-# so for example a file like rss.xml (which should a mustache) can be genarted in .public_html rehydrated
-# so 3 cases
-# file doesn't have mustache strings then don't pass to mustache
-# there is a file with the same name.json then that file passes through mustache
-# there is a file with same name.tree2jsonata and should the execute the tree command and process it with jsonata and then pass to mustache
-# like currently it does with rss and sitemap
-#  ls **/* | each {|f| echo "[]" | mustache $f.name}   
 }
 

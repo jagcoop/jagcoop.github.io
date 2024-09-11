@@ -1,6 +1,6 @@
 # ignore .public_html since that folder is only used for publising in the workflow/main.yml
 public_html
-.info
+*.info
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
