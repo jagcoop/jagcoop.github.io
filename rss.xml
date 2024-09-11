@@ -17,17 +17,17 @@
           <pubDate>2024-09-10</pubDate>
         </item>
         <item>
-          <title>template_newsmag</title>
-          <description>newsmag description</description>
-          <link>https://example.com/template_newsmag</link>
-          <guid>https://example.com/template_newsmag</guid>
-          <pubDate>2024-09-09</pubDate>
-        </item>
-        <item>
           <title>template_latex</title>
           <description>newsmag description</description>
           <link>https://example.com/template_latex</link>
           <guid>https://example.com/template_latex</guid>
+          <pubDate>2024-09-10</pubDate>
+        </item>
+        <item>
+          <title>template_newsmag</title>
+          <description>newsmag description</description>
+          <link>https://example.com/template_newsmag</link>
+          <guid>https://example.com/template_newsmag</guid>
           <pubDate>2024-09-09</pubDate>
         </item>
         <item>

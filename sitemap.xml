@@ -11,12 +11,12 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://example.com/template_newsmag/index.html</loc>
-  <lastmod>2024-09-09</lastmod>
+  <loc>https://example.com/template_latex/index.html</loc>
+  <lastmod>2024-09-10</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://example.com/template_latex/index.html</loc>
+  <loc>https://example.com/template_newsmag/index.html</loc>
   <lastmod>2024-09-09</lastmod>
   <changefreq>weekly</changefreq>
 </url>
