@@ -50,9 +50,9 @@ def process_template [a_template:path] -> nothing {
 	$html_output_file | path dirname | mkdir $in
 	
 
-	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r .
+	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r $'($relative_template|path dirname)'
 	| jfq  --query-file $jsonata
-	| mustache $a_template
+	| mustache $relative_template
 	| save --force $html_output_file;
 
 	assert path exists $html_output_file
