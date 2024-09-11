@@ -22,6 +22,16 @@ def "main build" [] {
 	#else create the branch html-staging
 }
 
+def "main all_mustache_files" [] : nothing -> nothing {
+	ls **/*
+	| where name =~ ".mustache.*"
+	| get name
+	| each {|mustache_file|
+	  let extension_goal = $mustache_file | path parse | get extension
+	  process_template  $mustache_file $extension_goal
+}
+}
+
 def "main .info" []: nothing -> nothing {
 	ls **/*
 	| where name =~  "index.html"
@@ -45,38 +55,55 @@ def "main sitemap" []: nothing -> nothing {
 }
 
 def "main nav" []: nothing -> nothing {
-	process_template ./nav.mustache html
+	process_template ./nav.mustache.html html
 }
 
 
 
 
 def process_template [a_template:path, output_extension:string] -> nothing {
-
+	assert path exists $a_template
 	let $jsonata = find_for 'jsonata' $a_template
-	let $mustache = find_for 'mustache' $a_template 
 	let $html_output_file = new_path_for $output_extension $a_template 
 
 	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r .
 	| jfq  --query-file $jsonata
-	| mustache $mustache
+	| mustache $a_template
 	| save --force $html_output_file
 }
 
 
+
 def find_for [template_extension:string, a_template:path] -> path {
 	let template = new_path_for $template_extension $a_template
-	assert ($template | path exists) --error-label {
-        text: $"Mandatory file: '($template)' doesn't exist",
-        span: (metadata $template).span,
-    }
+	assert path exists $template
 	$template
-	
 }
 
-def new_path_for [template_extension:string, a_template:path ] -> path {
-	$a_template | path parse | upsert extension $template_extension | path join
+def "assert path exists" [a_path:path] {
+	assert ($a_path | path exists) --error-label {
+        text: $"Mandatory file: '($a_path)' doesn't exist",
+        span: (metadata $a_path).span
+    }
 }
+
+export def new_path_for [template_extension:string, a_template:path] -> path {
+    let original_last_extension = $a_template | path parse | get extension
+
+    let new_path = $a_template
+		| path parse --extension $'mustache.($original_last_extension)'
+		| upsert extension $template_extension
+		| path join
+    $new_path
+}
+
+
+# export def new_path_for [template_extension:string, a_template:path ] -> path {
+# 	let original_last_extension = $a_template | path parse | get extension
+# 	print $original_last_extension
+# 	print "what"
+# 	$a_template | path parse --extension $".mustache.($original_last_extension)" | tee {echo} | upsert extension $template_extension | path join
+# }
 
 def "main .info ls" [] -> table<name: string, type: string, size: filesize, modified: date> (stream) {
 	ls **/*	-a | where name =~  ".info" | to tsv
