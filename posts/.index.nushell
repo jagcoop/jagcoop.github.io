@@ -1,8 +1,0 @@
-#!/usr/bin/env nu
-
-def main [] {
-	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r .
-	| jfq  '$.*[type = "directory"].{"type":type, "time":time,"name":name, "info":contents.info}' --plain-text
-	| mustache ./index.mustache.html
-	| save --force ./index.html
-}
