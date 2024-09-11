@@ -5,26 +5,21 @@ def main [] { }
 
 def "main build" [] {
 	#in main generate .info, rss, sitemap (en ese orden)
+	rm -rf .cms/puplic_html; mkdir .cms/public_html
+		#copies everything except files and directories that start with a dot
+	rsync --archive --include=".githu*" --include=".nojekyll" --exclude="*mustache*" --exclude=".*"   ./* .cms/public_html/
+
 	.cms/generate .info ;
 	.cms/generate all_mustache;
-
-	rm -rf .cms/puplic_html; mkdir .cms/public_html
-	#copies everything except files and directories that start with a dot
-	rsync --archive --include=".githu*" --include=".nojekyll" --exclude="*mustache*" --exclude=".*/"   ./* .cms/public_html/
-
-	#if we are in the branch main,
-		#create a new branch html
-		#copy all files there except .cms
-		#commit y push en el branch
-	#else create the branch html-staging
 }
 
 def "main all_mustache" [] : nothing -> nothing {
-	ls **/*
-	| where name =~ ".mustache.*"
+	(ls **/* 
+	| where name =~ "mustache"
 	| get name
-	| each {|mustache_file| process_template  $mustache_file }
+	| each {|mustache_file| .cms/generate process_template $mustache_file }
 	| null
+	)
 }
 
 def "main .info" []: nothing -> nothing {
@@ -49,7 +44,7 @@ export def "main process_template" [a_template:path] -> nothing {
 	assert path exists $jsonata
 	
 	let $html_output_file = $relative_template | path parse | upsert parent {|f| $".cms/public_html/($f.parent)"} | upsert stem {|f| $"($f.stem | path parse | get stem)"} | path join
-	($html_output_file | path dirname | mkdir $in)
+	$html_output_file | path dirname | mkdir $in
 	
 	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r .
 	| jfq  --query-file $jsonata
