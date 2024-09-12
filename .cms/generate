@@ -12,6 +12,8 @@ def "main build" [] {
 	rsync --archive --include=".githu*" --include=".nojekyll" --exclude="*mustache*" --exclude=".*"   ./* $OUTPUT_DIR
 
 	.cms/generate .info ;
+	#the navigation template must be processed before everything else.
+	process_template ./nav.mustache.html 
 	.cms/generate all_mustache;
 
 	let all_html_files = $"($OUTPUT_DIR)/all_contents.txt"
