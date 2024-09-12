@@ -13,14 +13,27 @@ def "main build" [] {
 
 	.cms/generate .info ;
 	.cms/generate all_mustache;
+
+	let all_html_files = $"($OUTPUT_DIR)/all_contents.txt"
+	
+	# TODO When I try to use this with a variable
+	# ls $"($OUTPUT_DIR)/**/*.html" Throws the error pattern not found
+	# so i left thepath hardcoded but it should be with the constant
+	
+	ls .cms/public_html/**/*.html
+	| get name
+	| each {|f| open $f
+	| save --append $all_html_files}
+	wc --words $all_html_files
 }
 
+
+
 def "main all_mustache" [] : nothing -> nothing {
-	ls **/* | 
-	where name =~ "mustache" |
-	get name |
-	each {|m| process_template $m }
-	
+	ls **/*
+	| where name =~ "mustache"
+	| get name
+	| each {|m| process_template $m }
 }
 
 def "main .info" []: nothing -> nothing {
@@ -51,8 +64,6 @@ def process_template [a_template:path] -> nothing {
 	
 	mut what_is_the_relative_path = $'($relative_template|path dirname)' 
 	$what_is_the_relative_path = if ($what_is_the_relative_path | is-empty) { '.' } else { $what_is_the_relative_path }
-
-
 
 	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r $what_is_the_relative_path
 	| jfq  --query-file $jsonata
