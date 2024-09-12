@@ -36,13 +36,25 @@ def "main all_mustache" [] : nothing -> nothing {
 	| each {|m| process_template $m }
 }
 
+# def "main .info" []: nothing -> nothing {
+# 	ls **/*
+# 	| where name =~  "index.html" or name =~  "index.mustache.html"
+# 	| where {|f| (extract_description $f) != "" }
+# 	| each {|f| (extract_description $f)
+# 	  	    |  $"index.html\n\t($in)"
+# 	 		| save --force ($f.name | path dirname | $"./($in)/.info" )}
+# 	| if ($in | is-empty) { null}
+# }
+
 def "main .info" []: nothing -> nothing {
-	ls **/*
-	| where name =~  "index.html"
-	| where {|f| (extract_description $f) != "" }
-	| each {|f| (extract_description $f)
-	  	    |  $"index.html\n\t($in)"
+	ls **/index*.html
+	| each {|f|
+	  if (extract_description $f.name | is-empty) {
+	  	 #if there is no description don't do anything
+	  } else {
+	  	    $"($f.name| path basename)\n\t($in)"
 	 		| save --force ($f.name | path dirname | $"./($in)/.info" )}
+	  }
 	| if ($in | is-empty) { null}
 }
 
