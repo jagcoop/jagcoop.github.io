@@ -11,27 +11,22 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/projects/index.html</loc>
+  <lastmod>2024-09-12</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://example.com/rewards.codes/index.html</loc>
+  <lastmod>2024-09-12</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://example.com/AOP in Eiffel/index.html</loc>
+  <lastmod>2024-09-12</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://example.com/template_newsmag/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://example.com/template_latex/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://example.com/template_journal/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://example.com/template_apidoc/index.html</loc>
   <lastmod>2024-09-12</lastmod>
   <changefreq>weekly</changefreq>
 </url>
