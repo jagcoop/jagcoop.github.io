@@ -508,6 +508,13 @@ CC-By-Sa-NC JagIs
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
+<meta name="author" content="Alejandro Garcia Fernandez">
+<meta name="description" content="Implementing the Architecture Oriented Programming of Objective.st in Eiffel"
+<meta name="keywords" content="Eiffel, Objective Smalltalk, Design Patterns">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+
+
 **Architecture-Oriented Programming in Eiffel**
 
 A Conjecture
