@@ -20,7 +20,7 @@ def "main build" [] {
 	# ls $"($OUTPUT_DIR)/**/*.html" Throws the error pattern not found
 	# so i left thepath hardcoded but it should be with the constant
 	
-	ls .cms/public_html/**/*.html
+	ls -f .cms/public_html/**/*.html
 	| get name
 	| each {|f| open $f
 	| save --append $all_html_files}
@@ -30,24 +30,13 @@ def "main build" [] {
 
 
 def "main all_mustache" [] : nothing -> nothing {
-	ls **/*
-	| where name =~ "mustache"
+	ls -f **/*.mustache.*
 	| get name
 	| each {|m| process_template $m }
 }
 
-# def "main .info" []: nothing -> nothing {
-# 	ls **/*
-# 	| where name =~  "index.html" or name =~  "index.mustache.html"
-# 	| where {|f| (extract_description $f) != "" }
-# 	| each {|f| (extract_description $f)
-# 	  	    |  $"index.html\n\t($in)"
-# 	 		| save --force ($f.name | path dirname | $"./($in)/.info" )}
-# 	| if ($in | is-empty) { null}
-# }
-
 def "main .info" []: nothing -> nothing {
-	ls **/index*.html
+	ls -f **/index*.html
 	| each {|f|
 	  if (extract_description $f.name | is-empty) {
 	  	 #if there is no description don't do anything
@@ -58,13 +47,17 @@ def "main .info" []: nothing -> nothing {
 	| if ($in | is-empty) { null}
 }
 
+def "main process_template" [a_template:path] -> nothing {
+	process_template $a_template
+}
 
 def process_template [a_template:path] -> nothing {
 	assert str contains $a_template "mustache"
 	assert path exists $a_template
 
-
-	let $relative_template = $a_template #| path relative-to $env.PWD
+	
+	let $relative_template = $a_template | path relative-to $env.PWD
+	assert path exists $relative_template
 	
 	let $output_extension = $a_template | path parse | get extension
 	
