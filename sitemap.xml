@@ -6,38 +6,28 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://example.com/whitepaper/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
   <loc>https://example.com/projects/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
+  <lastmod>2024-09-13</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://example.com/rewards.codes/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
+  <loc>https://example.com/projects/rewards.codes/index.html</loc>
+  <lastmod>2024-09-13</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://example.com/AOP_in_Eiffel/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
+  <loc>https://example.com/projects/AOP_in_Eiffel/index.html</loc>
+  <lastmod>2024-09-13</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://example.com/posts/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://example.com/home/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
+  <lastmod>2024-09-13</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://example.com/about/index.html</loc>
-  <lastmod>2024-09-12</lastmod>
+  <lastmod>2024-09-13</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>

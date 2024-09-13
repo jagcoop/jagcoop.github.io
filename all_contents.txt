@@ -133,146 +133,6 @@ See Also
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
-   <meta charset="utf-8" emacsmode="-*- markdown -*-"> <link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/journal.css?">
-
-                        **Journal Template**
-                           Version 1.1
-
-
-This template is good for project journals that are maintained in blog
-order, with the latest updates at the top. The
-[G3D Innovation Engine](https://casual-effects.com/g3d/www/index.html)
-automatically appends to Markdeep journals when you save screen shots or video.
-
-
-2019-03-01: Updated Results
-=================================================================
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. 
-
- Maine | Iowa | Colorado 
--------|------|----------
-   1   |  4   |   10
-  ME   |  IA  |   CO
- Blue  | Red  | Brown
-[Table [states]: Caption with label.]
-
-
-Code
----------------------------------------------------------------
-
-Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum:
-
-- Incididunt
-- Bonus Unum
-- Quibusdam
-
-```````````````````````````````````````````````
-count_lines () {
-  local f=$1  
-  local m
-  m=`wc -l $f | sed 's/^\([0-9]*\).*$/\1/'`
-  return $m
-}
-```````````````````````````````````````````````
-
-
-2019-02-20: Procedural Synthesis
-===================================================================
-
-At vero eos et accusamus et iusto odio dignissimos ducimus qui
-blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-et quas molestias excepturi sint occaecati cupiditate non provident,
-similique sunt in culpa qui officia deserunt mollitia animi, id est
-laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
-distinctio. 
-
-
-2019-02-19: Flow Diagram
-===================================================================
-
-**************************************************************
-*                                                            
-* .---.       .-.        .-.       .-.                       
-* | A +----->| 1 +<---->| 2 |<----+ 4 +------------------.   
-* '---'       '-'        '+'       '-'                    |  
-*                         |         ^                     |  
-*                         v         |                     v  
-*                        .-.      .-+-.        .-.      .-+-.
-*                       | 3 +---->| B |<----->| 5 +---->| C |
-*                        '-'      '---'        '-'      '---'
-**************************************************************
-
-Nam libero tempore, cum `soluta` nobis est eligendi optio
-cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
-autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-eveniet ut et voluptates repudiandae sint et molestiae non
-recusandae. 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-2019-02-15: Example
-==============================================================
-
-Nam libero tempore, cum soluta nobis est eligendi optio
-cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-omnis voluptas assumenda est, omnis dolor repellendus.
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ rust
-fn main() {
-    let x = 5u32;
-
-    let y = {
-        let x_squared = x * x;
-        let x_cube = x_squared * x;
-
-        // This expression will be assigned to `y`
-        x_cube + x_squared + x
-    };
-
-    let z = {
-        // The semicolon suppresses this expression and `()` is assigned to `z`
-        2 * x;
-    };
-
-    println!("x is {:?}", x);
-    println!("y is {:?}", y);
-    println!("z is {:?}", z);
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-<!--
-![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
-![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
--->
-
-[Link to nowhere](nowhere).
-
-
-
-2019-02-01: Started Project
-==============================================================
-
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-voluptatibus maiores alias consequatur aut perferendis doloribus
-asperiores repellat.
-
-
- 
-<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
-<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/newsmag.css?">
 
     <meta name="author" content="Your Name">
@@ -337,23 +197,19 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 <ul>
-  <li>[whitepaper](./whitepaper/) 
-  </li>
-  <li>[projects](./projects/) 
+  <li>[./projects](././projects/) 
       <ul>
-  	  <li>[rewards.codes](./rewards.codes/) 
+  	  <li>[./projects/rewards.codes](././projects/rewards.codes/) 
   	  </li>
   	</ul>
       <ul>
-  	  <li>[AOP_in_Eiffel](./AOP_in_Eiffel/) 
+  	  <li>[./projects/AOP_in_Eiffel](././projects/AOP_in_Eiffel/) 
   	  </li>
   	</ul>
   </li>
-  <li>[posts](./posts/) 
+  <li>[./posts](././posts/) 
   </li>
-  <li>[home](./home/) 
-  </li>
-  <li>[about](./about/) 
+  <li>[./about](././about/) 
   </li>
 </ul>
 --------------------------------------------------
@@ -372,11 +228,10 @@ the archive](/newsletter).
 
 
 <ul>
-		<li>[whitepaper](/whitepaper/index.html)</li>
-		<li>[projects](/projects/index.html)</li>
-		<li>[posts](/posts/index.html)</li>
-		<li>[home](/home/index.html)</li>
-		<li>[about](/about/index.html)</li>
+    <li><a href="/">index</a></li>
+		<li>[./projects](/./projects/index.html)</li>
+		<li>[./posts](/./posts/index.html)</li>
+		<li>[./about](/./about/index.html)</li>
 </ul>
 
 <script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
@@ -393,11 +248,10 @@ CC-By-Sa-NC JagIs
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'medium'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <ul>
-		<li>[whitepaper](/whitepaper/index.html)</li>
-		<li>[projects](/projects/index.html)</li>
-		<li>[posts](/posts/index.html)</li>
-		<li>[home](/home/index.html)</li>
-		<li>[about](/about/index.html)</li>
+    <li><a href="/">index</a></li>
+		<li>[./projects](/./projects/index.html)</li>
+		<li>[./posts](/./posts/index.html)</li>
+		<li>[./about](/./about/index.html)</li>
 </ul>
 
 <script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
@@ -488,6 +342,7 @@ the archive](/newsletter).
 Email
 
 <ul>
+    <li><a href="/">index</a></li>
 </ul>
 
 <script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
@@ -507,7 +362,9 @@ CC-By-Sa-NC JagIs
 <meta name="language" content="English">
 
 
-**Architecture-Oriented Programming in Eiffel**
+                  **Architecture-Oriented Programming in Eiffel**
+	Applying systems architecture (i.e. between servers) at level of programs (i.e. between functions)
+
 
 A Conjecture
 ===============================================================================
@@ -639,10 +496,10 @@ References
 - Weiher, M. (2020 a). Can programmers escape the gentle tyranny of call/return? Companion Proceedings of the 4th International Conference on Art, Science, and Engineering of Programming.
 - Weiher, M. (2020 b). Can programmers escape the gentle tyranny of call/return? https://www.youtube.com/watch?v=Gel8ffr4pqw
 
-(insert /nav.html here)
 
 <link rel="stylesheet" href="https://morgan3d.github.io/markdeep/latest/latex.css?">
-<!-- Markdeep: --><style class="fallback">body{visibility:hidden}</style><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden}</style>
+<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/newsmag.css?">
     <!-- Author meta tag -->
     <meta name="author" content="Your Name">
@@ -713,12 +570,12 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-09-12: rewards.codes](./rewards.codes).
-[lab notes ongaing](./rewards.codes)
+### [2024-09-13: projects/rewards.codes](./projects/rewards.codes).
+[lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-09-12: AOP_in_Eiffel](./AOP_in_Eiffel).
-[lab notes ongaing](./AOP_in_Eiffel)
+### [2024-09-13: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+[lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
 --------------------------------------------------
@@ -738,8 +595,9 @@ the archive](/newsletter).
 Email
 
 <ul>
-		<li>[rewards.codes](/rewards.codes/index.html)</li>
-		<li>[AOP_in_Eiffel](/AOP_in_Eiffel/index.html)</li>
+    <li><a href="/">index</a></li>
+		<li>[projects/rewards.codes](/projects/rewards.codes/index.html)</li>
+		<li>[projects/AOP_in_Eiffel](/projects/AOP_in_Eiffel/index.html)</li>
 </ul>
 
 <script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
@@ -892,166 +750,23 @@ asperiores repellat.
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <li>[.](././) 
     <ul>
-	  <li>[whitepaper](./whitepaper/) 
-	  </li>
-	</ul>
-    <ul>
-	  <li>[projects](./projects/) 
+	  <li>[./projects](././projects/) 
 	      <ul>
-	  	  <li>[rewards.codes](./rewards.codes/) 
+	  	  <li>[./projects/rewards.codes](././projects/rewards.codes/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
-	  	  <li>[AOP_in_Eiffel](./AOP_in_Eiffel/) 
+	  	  <li>[./projects/AOP_in_Eiffel](././projects/AOP_in_Eiffel/) 
 	  	  </li>
 	  	</ul>
 	  </li>
 	</ul>
     <ul>
-	  <li>[posts](./posts/) 
+	  <li>[./posts](././posts/) 
 	  </li>
 	</ul>
     <ul>
-	  <li>[home](./home/) 
-	  </li>
-	</ul>
-    <ul>
-	  <li>[about](./about/) 
+	  <li>[./about](././about/) 
 	  </li>
 	</ul>
 </li>
-                             <meta charset="utf-8">
-                              **Document Title**
-                             Important Information
-
-
-(#) Document History
-
-Version | Date       | Authors                    | Description of Change
---------|------------|----------------------------|-------------------------------------------
-1.0     | 2020-01-22 | Author One                 | Initial release
-        |            |                            |
-
-Overview
-========================================================================================
-
-This is a generic company whitepaper template for Markdeep. Replace the `company-logo-256.png`
-and `company-background.png` images for your organization and alter the colors as needed
-in `company-whitepaper.css`. Print to PDF to see how the page breaks affect formatting.
-The rest of this document is just a placeholder to show the styling.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-anim id est laborum.
-
-
-Quantum Computing
-----------------------------------------------------------------------------------------
-
-Auctor
-----------------------------------------------------------------------------------------
-Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Aliquam malesuada
-bibendum arcu vitae elementum curabitur vitae nunc. Arcu ac tortor dignissim convallis. 
-
-Enim tortor at auctor urna. Sapien et ligula ullamcorper malesuada. Fermentum odio eu 
-feugiat pretium nibh. 
-
-
-### Nanotech
-
-Sociis natoque penatibus et magnis. Ut consequat semper viverra nam libero justo laoreet.
-
-
-### Viverra
-
-Luctus accumsan tortor posuere ac ut consequat semper viverra. Donec pretium vulputate
-sapien nec sagittis aliquam malesuada. Interdum velit laoreet id donec ultrices tincidunt.
-
-
-#### Amet Nisl
-
-Amet nisl purus in mollis nunc sed id. Massa tincidunt nunc pulvinar sapien et ligula
-ullamcorper malesuada proin.
-
-Numbered list:
-1. This is a numbered list
-3. List number
-4. List number
-
-
-Bullets:
-- Bulleted list
- - Level 2
-  - Level 3
-    - Level 4
-
-
-Geo-Engineering
-========================================================================================
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GLSL
-vec3 sphNormal(in vec3 pos, in vec4 sph) {
-   return normalize(pos-sph.xyz);
-}
-
-vec3 camera(vec2 U, vec2 r, vec3 ro, vec3 la, float fl) {
-   vec2 uv = (U - r*.5)/r.y;
-   vec3 fwd = normalize(la-ro),
-        rgt = normalize(vec3(fwd.z, 0., -fwd.x));
-   return normalize(fwd + fl*uv.x*rgt + fl*uv.y*cross(fwd, rgt));
-}
-
-float vMap(vec3 p) {
-   float hit = 0.0;
-   vec2 h2 = hash22(floor(p.xz*0.25));
-   if (p.z > 0.0) {
-       if (p.y < -10.0 && h2.x > 0.5) hit=1.0;
-       if (p.y > 10.0 && h2.y > 0.5) hit=1.0;
-   }
-   return hit;   
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[Code listing]
-
-
-XR Future
-========================================================================================
-
-
-APIs
-========================================================================================
-
-******************************************************************
-*                                       ^ y
-*                                       | 
-*     .---------.                  .----|----.
-*     |         |                  |    |    |
-*     |    *-------> x             |    *--------> x
-*     |    |    |                  |         |
-*     '----|----'                  '---------'
-*          |
-*          v y
-******************************************************************
-[Figure 1: Coordinate Example]
-
-
-
-\pagebreak
-<small style="line-height:140%">
-**Notice**<br>
-The information provided in this specification is believed to be accurate and reliable as of the date provided. However, Company Corporation (“Company”) does not give any representations or warranties, expressed or implied, as to the accuracy or completeness of such information. Company shall have no liability for the consequences or use of such information or for any infringement of patents or other rights of third parties that may result from its use. This publication supersedes and replaces all other specifications for the product that may have been previously supplied.
-Company reserves the right to make corrections, modifications, enhancements, improvements, and other changes to this specification, at any time and/or to discontinue any product or service without notice. Customer should obtain the latest relevant specification before placing orders and should verify that such information is current and complete. 
-Company products are sold subject to the Company standard terms and conditions of sale supplied at the time of order acknowledgement, unless otherwise agreed in an individual sales agreement signed by authorized representatives of Company and customer. Company hereby expressly objects to applying any customer general terms and conditions with regards to the purchase of the Company product referenced in this specification.
-
-**Trademarks**<br>
-Company, the Company logo, etc. are trademarks and/or registered trademarks of Company Corporation in the U.S. and other countries. Other company and product names may be trademarks of the respective companies with which they are associated.
-Copyright © 2019 Company Corporation. All rights reserved.
-<small>
-
-<script>markdeepOptions = {tocStyle: 'long'};</script>
-<link rel="stylesheet" href="company-whitepaper.css">
-<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
