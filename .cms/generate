@@ -72,7 +72,7 @@ def process_template [a_template:path] -> nothing {
 	mut what_is_the_relative_path = $'($relative_template|path dirname)' 
 	$what_is_the_relative_path = if ($what_is_the_relative_path | is-empty) { '.' } else { $what_is_the_relative_path }
 
-	tree --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r $what_is_the_relative_path
+	tree -f --info --timefmt %Y-%m-%d -H '.' --noreport -J -t -r $what_is_the_relative_path
 	| jfq  --query-file $jsonata
 	| mustache $relative_template
 	| save --force $html_output_file;
