@@ -26,6 +26,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/The_Rise_and_Fall_of_Abacus_Rationale/index.html</loc>
+  <lastmod>2024-09-18</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/about/index.html</loc>
   <lastmod>2024-09-18</lastmod>
   <changefreq>weekly</changefreq>
