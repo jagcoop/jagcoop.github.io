@@ -259,6 +259,7 @@ CC-By-Sa-NC JagIs
 </ul>
 
 <script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+ <meta charset="utf-8" emacsmode="-*- markdown -*-">
 # The Rise and Fall of Abacus Rationale
 September 18th, 2024
 by *Pepe Hernandez*
@@ -355,7 +356,8 @@ The entrepreneur, his finance associate, and a pair of clerical people stay in t
 
 What could have happened if the entrepreneur hadn't invested in the building and could have done what Toyota or 3M did to overcome the difficult times? As Eliyahu Goldratt, the creator of the Theory of Constraints, said: You have to take advantage of any crisis. Why did they not make a decision that made them a little bit antifragile or at least gave them more options for the future? We'll never know. The "would" does not exist. 
 
-
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/newsmag.css?">
     <!-- Author meta tag -->
     <meta name="author" content="Your Name">
