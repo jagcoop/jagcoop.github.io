@@ -428,7 +428,7 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-09-18: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-09-19: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
@@ -683,11 +683,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-09-18: projects/rewards.codes](./projects/rewards.codes).
+### [2024-09-19: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-09-18: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-09-19: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -723,140 +723,47 @@ CC-By-Sa-NC JagIs
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
    <meta charset="utf-8" emacsmode="-*- markdown -*-"> <link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/journal.css?">
 
-                        **Journal Template**
-                           Version 1.1
+                        **Rewards Codes**
+                        Loyalty platform
 
 
-This template is good for project journals that are maintained in blog
-order, with the latest updates at the top. The
-[G3D Innovation Engine](https://casual-effects.com/g3d/www/index.html)
-automatically appends to Markdeep journals when you save screen shots or video.
+[Rewards Codes - RwC](https://rewards.codes)
+is a simple loyalty platform conceived for *small* companies to use **big** strategies for customers retention. 
+This project started from a closed project "SigueMS" an SMS interface for twitter. 
 
-
-2019-03-01: Updated Results
+2024-09-19: Features Roadmap 
 =================================================================
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. 
-
- Maine | Iowa | Colorado 
--------|------|----------
-   1   |  4   |   10
-  ME   |  IA  |   CO
- Blue  | Red  | Brown
-[Table [states]: Caption with label.]
-
-
-Code
----------------------------------------------------------------
-
-Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum:
-
-- Incididunt
-- Bonus Unum
-- Quibusdam
-
-```````````````````````````````````````````````
-count_lines () {
-  local f=$1  
-  local m
-  m=`wc -l $f | sed 's/^\([0-9]*\).*$/\1/'`
-  return $m
-}
-```````````````````````````````````````````````
-
-
-2019-02-20: Procedural Synthesis
-===================================================================
-
-At vero eos et accusamus et iusto odio dignissimos ducimus qui
-blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-et quas molestias excepturi sint occaecati cupiditate non provident,
-similique sunt in culpa qui officia deserunt mollitia animi, id est
-laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
-distinctio. 
-
-
-2019-02-19: Flow Diagram
-===================================================================
-
-**************************************************************
-*                                                            
-* .---.       .-.        .-.       .-.                       
-* | A +----->| 1 +<---->| 2 |<----+ 4 +------------------.   
-* '---'       '-'        '+'       '-'                    |  
-*                         |         ^                     |  
-*                         v         |                     v  
-*                        .-.      .-+-.        .-.      .-+-.
-*                       | 3 +---->| B |<----->| 5 +---->| C |
-*                        '-'      '---'        '-'      '---'
-**************************************************************
-
-Nam libero tempore, cum `soluta` nobis est eligendi optio
-cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
-autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-eveniet ut et voluptates repudiandae sint et molestiae non
-recusandae. 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-2019-02-15: Example
-==============================================================
-
-Nam libero tempore, cum soluta nobis est eligendi optio
-cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-omnis voluptas assumenda est, omnis dolor repellendus.
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ rust
-fn main() {
-    let x = 5u32;
-
-    let y = {
-        let x_squared = x * x;
-        let x_cube = x_squared * x;
-
-        // This expression will be assigned to `y`
-        x_cube + x_squared + x
-    };
-
-    let z = {
-        // The semicolon suppresses this expression and `()` is assigned to `z`
-        2 * x;
-    };
-
-    println!("x is {:?}", x);
-    println!("y is {:?}", y);
-    println!("z is {:?}", z);
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-<!--
-![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
-![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
--->
-
-[Link to nowhere](nowhere).
-
-
-
-2019-02-01: Started Project
-==============================================================
-
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-voluptatibus maiores alias consequatur aut perferendis doloribus
-asperiores repellat.
-
+                  +----------------------------------+ +-------------------------+
+                  |                                  | |                         |
+                  |        Q4 2024                   | |       Q1 2025           |
+                  |                                  | |                         |
+                  |                                  | |                         |
+                  |                                  | |                         |
+                  +----------------------------------+ +-------------------------+
++----------------+                                                                
+|                |  * Visits loyalty program             * Customization 1.1      
+|  Platform      |  * Static QR                                                   
+|                |  * Dynamic QR                                                  
++----------------+  * Customization 1.0                                           
+                                                                                  
++----------------+                                                                
+|                |  * Odoo                               * Oxxo Pay               
+|  Integrations  |  * Whatsapp reminders                                          
+|                |  * Whatsapp device link                                        
++----------------+                                                                
+                                                                                  
++----------------+                                                                
+|                |  * Company Loyalty card                                        
+|   Apps         |  * Redeem Code                                                 
+|                |  * Nearby RwC Businesses (Map)                                 
++----------------+                                                                
+                                                                                  
++----------------+                                                                
+|                |  * Customized virtual assistant       * Historical context     
+|   Chatbot      |  * Time for response customization    * User context           
+|                |                                       * Agenda management      
++----------------+                                                                
 
  
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
