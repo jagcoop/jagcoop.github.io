@@ -6,50 +6,57 @@
       <link>https://example.com/</link>
       <language>en</language>
       <copyright></copyright>
-      <pubDate>2024-09-19T00:00:00.000Z</pubDate>
-      <lastBuildDate>2024-09-19T00:00:00.000Z</lastBuildDate>
+      <pubDate>2024-09-22T00:00:00.000Z</pubDate>
+      <lastBuildDate>2024-09-22T00:00:00.000Z</lastBuildDate>
 
         <item>
           <title>projects</title>
           <description></description>
           <link>https://example.com/./projects</link>
           <guid>https://example.com/./projects</guid>
-          <pubDate>2024-09-19</pubDate>
+          <pubDate>2024-09-22</pubDate>
         </item>
         <item>
           <title>rewards.codes</title>
           <description></description>
           <link>https://example.com/./projects/rewards.codes</link>
           <guid>https://example.com/./projects/rewards.codes</guid>
-          <pubDate>2024-09-19</pubDate>
+          <pubDate>2024-09-22</pubDate>
         </item>
         <item>
           <title>AOP_in_Eiffel</title>
           <description></description>
           <link>https://example.com/./projects/AOP_in_Eiffel</link>
           <guid>https://example.com/./projects/AOP_in_Eiffel</guid>
-          <pubDate>2024-09-19</pubDate>
+          <pubDate>2024-09-22</pubDate>
         </item>
         <item>
           <title>posts</title>
           <description></description>
           <link>https://example.com/./posts</link>
           <guid>https://example.com/./posts</guid>
-          <pubDate>2024-09-19</pubDate>
+          <pubDate>2024-09-22</pubDate>
         </item>
         <item>
           <title>The_Rise_and_Fall_of_Abacus_Rationale</title>
           <description></description>
           <link>https://example.com/./posts/The_Rise_and_Fall_of_Abacus_Rationale</link>
           <guid>https://example.com/./posts/The_Rise_and_Fall_of_Abacus_Rationale</guid>
-          <pubDate>2024-09-19</pubDate>
+          <pubDate>2024-09-22</pubDate>
+        </item>
+        <item>
+          <title>A_Tool_in_a_World_Full_of_Distractions</title>
+          <description></description>
+          <link>https://example.com/./posts/A_Tool_in_a_World_Full_of_Distractions</link>
+          <guid>https://example.com/./posts/A_Tool_in_a_World_Full_of_Distractions</guid>
+          <pubDate>2024-09-22</pubDate>
         </item>
         <item>
           <title>about</title>
           <description></description>
           <link>https://example.com/./about</link>
           <guid>https://example.com/./about</guid>
-          <pubDate>2024-09-19</pubDate>
+          <pubDate>2024-09-22</pubDate>
         </item>
   </channel>
 </rss>
