@@ -276,7 +276,11 @@ In search of a solution to this "problem" I came across the recommendation for t
 
 The book is divided into two main parts: the concept of deep work and strategies to cultivate it.
 
+## The concept of DeepWork
+
 In the first part, Newport defines deep work as a state of concentration that enables individuals to produce high-quality work and develop valuable skills. He contrasts this with shallow work, which consists of non-cognitively demanding tasks often performed while distracted. Newport suggests that the ability to engage in deep work is becoming increasingly rare yet is highly valuable in today's economy, where knowledge work is key.
+
+## Strategies to cultivate it.
 
 Newport supports his arguments with examples from successful individuals who practice deep work, including authors, scientists, and entrepreneurs. He illustrates how their focus and commitment to deep work have led to significant contributions and achievements.
 
@@ -289,6 +293,8 @@ The second part of the book offers practical strategies for cultivating deep wor
 3. **Quit Social Media**: Newport critically examines the role of social media and other distractions, recommending that individuals assess the tools they use and eliminate those that do not provide significant benefits to their professional and personal lives.
 
 4. **Drain the Shallows**: He advises minimizing the time spent on shallow work by scheduling every minute of the day. This practice helps prioritize deep work and ensures that time is not wasted on low-value activities.
+
+## In my personal experience
 
 For me, the first strategy has been helpful, and I've implemented it by keeping my phone away for certain periods. I'm trying to create a schedule for each activity throughout the day, although I haven't fully succeeded yet. I will continue to improve my concentration practices because, ultimately, **"Deep Work"** serves as both a manifesto for focused success and a practical guide for cultivating concentration in a world full of distractions. Newport's insights resonate with anyone seeking to enhance productivity, achieve professional goals, and develop valuable skills in an era dominated by superficial engagement.
 
