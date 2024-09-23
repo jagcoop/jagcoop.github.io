@@ -31,6 +31,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/Psychological_Safety/index.html</loc>
+  <lastmod>2024-09-23</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/An_Exploration_on_Software_Complexity/index.html</loc>
   <lastmod>2024-09-23</lastmod>
   <changefreq>weekly</changefreq>
