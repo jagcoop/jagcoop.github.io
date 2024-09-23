@@ -213,6 +213,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/An_Exploration_on_Software_Complexity](././posts/An_Exploration_on_Software_Complexity/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/A_Tool_in_a_World_Full_of_Distractions](././posts/A_Tool_in_a_World_Full_of_Distractions/) 
   	  </li>
   	</ul>
@@ -297,6 +301,51 @@ The second part of the book offers practical strategies for cultivating deep wor
 ## In my personal experience
 
 For me, the first strategy has been helpful, and I've implemented it by keeping my phone away for certain periods. I'm trying to create a schedule for each activity throughout the day, although I haven't fully succeeded yet. I will continue to improve my concentration practices because, ultimately, **"Deep Work"** serves as both a manifesto for focused success and a practical guide for cultivating concentration in a world full of distractions. Newport's insights resonate with anyone seeking to enhance productivity, achieve professional goals, and develop valuable skills in an era dominated by superficial engagement.
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+ <meta charset="utf-8" emacsmode="-*- markdown -*-">
+# An exploration on Software Complexity
+
+September 23th, 2024
+by *Julio César*
+
+> Controlling complexity is the essence of computer programming.
+> 
+> — Brian Kernighan
+
+Recently I've been enjoying reading "A philosophy of software design" by John Ousterhout, the main focus of the book is to learn techniques to reduce complexity in a software system, however, first of all we might ask, what is complexity?
+
+Complexity in software is a term that has been explored a lot, I would think that since we as a society started to depend on software systems to replace processes that didn't need computers before, we started to observe a toxic pattern emerging on them.
+
+Software systems never seem to be complete - as they always require changes to be made; a system should be maintained. However, over time, the system starts to rot, it starts to become harder and harder to modify, therefore we might say that a complex system is one that is hard to understand and hard to modify; Fred Brooks wrote something on complexity in his famous book "The Mythical Man-Month: Essays on Software Engineering" - he mentioned there are two kind of complexities, first, _essential complexity_ is the kind of complexity that exists just because the domain a software models maps to is inherently complex, there might be lots of business rules all with intricate details that aren't easy to understand. The second type of complexity Brooks mentions is _accidental complexity_ which is more in line with the complexity Ousterhout documents in his book.
+
+Accidental complexity is what remains when we take essential complexity out of the picture, it is often the result of bad habits we as software developers adopt or maybe just simply due to an incomplete understanding of the domain or the problem we are trying to solve. Again, Ousterhout suggest complexity is anything that inhibits change on a software system and is primarily a consequence of bad software design decisions (be it small or big) made during continuous prolonged amounts of time. It is hinted that complexity is something that can't just be avoided, but there are practices that help software developers to manage it.
+
+According to Ousterhout it is paramount to train ourselves to identify complexity, we cannot manage it if we cannot see it! In the book we're taught that one way to see complexity is to identify where in the system we're spending most time on, typically, the more time drawn by changes on a certain part of a system will hint that that component of the system is complex, i.e. hard to change.
+
+One might also think that beyond time - size of a component is also a good indicator for presence of complexity in a system, yet this is not true, big systems aren't necessarily complex, if they are easy to work with then they remain simple. On the contrary there could be pieces of code or even single lines of instructions that on their own are very hard to understand and change, and in doing so it might implicate other other parts of the system, therefore complexity can lie even in a single line of code.
+
+Ousterhout outlines three signs that alert the presence of complexity in a code-base.
+
+1. Change amplification
+2. Cognitive load
+3. Unknown unknowns
+
+In the first case, whenever implementation of even the simplest feature needs a lot of changes in lots of areas of the system to get it done then we're suffering of change amplification and it is a major major sign of accidental complexity on a software system.
+
+On the second case, whenever the developers need understanding of a lot of context to make a simple change then cognitive load exists. This also means that lines of code do not translate to code complexity, it may be the case that simple changes require lots of lines of code - or, on the contrary, a complex change could end up being just a single line change. Cognitive load refers about the context the developer needs to understand in order to make changes to the system, the bigger that context is the more complex the system is.
+
+The third case, "Unknown unknowns" is a sign of complexity where a developer doesn't know what or where a change is required to implement a certain feature; often developers follow a hunch on what needs to be modified to get the job done, they try out the new feature thinking all is done but then as it turns out the behaviour reveals the change is incomplete, there's something the developer didn't anticipate and doesn't understand why the change they made wasn't sufficient - "Why it isn't working yet if I have just changed this part here?", that's an unknown unknown.
+
+From all the signs of complexity in a software system, having unknown unknowns is the worst, it reveals deep problems in the design of the system as it is non-obvious what's its structure and there's no clear path to evolve it.
+
+All in all, these are just signs that we have a complex system in our hands, but it doesn't give indication of where that complexity is coming from or how we can tackle it. Ousterhout mentions that complexity is introduced by dependencies and obscurities in a software system. Dependencies meaning that the code can't be understood in isolation, or when changing a part of a system will also require updating other parts of the system, there we have a dependency.
+
+Obscurity is another form of dependency, but is a non-obvious one, it can also happen when a variable or symbol refer to two separate concepts, there's a dependency but it isn't clear what that dependency entails or what is affected by changing it. A simple example of obscurity is handling a numeric variable without any clue about what the units that variable measures are. Also, whenever we need extensive documentation on a component, is a clear indication that we have obscurity in the code.
+
+Let's conclude this exploration on software complexity, with the following thought. If we can find ways or design techniques that minimize dependencies and obscurity in a code-base then we'll be able to reduce the complexity of the system. In a future post we'll understand more about both of these aspects of software.
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
@@ -482,11 +531,15 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-09-22: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-09-23: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-09-22: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-09-23: posts/An_Exploration_on_Software_Complexity](./posts/An_Exploration_on_Software_Complexity).
+[lab notes ongaing](./posts/An_Exploration_on_Software_Complexity)
+
+
+### [2024-09-23: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
@@ -509,6 +562,7 @@ Email
 <ul>
     <li><a href="/">index</a></li>
 		<li>[posts/The_Rise_and_Fall_of_Abacus_Rationale](/posts/The_Rise_and_Fall_of_Abacus_Rationale/index.html)</li>
+		<li>[posts/An_Exploration_on_Software_Complexity](/posts/An_Exploration_on_Software_Complexity/index.html)</li>
 		<li>[posts/A_Tool_in_a_World_Full_of_Distractions](/posts/A_Tool_in_a_World_Full_of_Distractions/index.html)</li>
 </ul>
 
@@ -742,11 +796,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-09-22: projects/rewards.codes](./projects/rewards.codes).
+### [2024-09-23: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-09-22: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-09-23: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -863,6 +917,10 @@ We’re continually evolving to meet the needs of small businesses. Our next ste
 	  <li>[./posts](././posts/) 
 	      <ul>
 	  	  <li>[./posts/The_Rise_and_Fall_of_Abacus_Rationale](././posts/The_Rise_and_Fall_of_Abacus_Rationale/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/An_Exploration_on_Software_Complexity](././posts/An_Exploration_on_Software_Complexity/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
