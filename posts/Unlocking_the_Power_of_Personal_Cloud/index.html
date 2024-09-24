@@ -1,0 +1,115 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Unlocking the Power of Personal Cloud
+September 24th, 2024
+by *Agus Rumayor*
+
+Rent vs Buy is a well-known dilemma, and we have plenty of tools and calculators to help us decide one of the biggest financial questions in life. From comparing the cost of buying versus renting to weighing opportunity costs like capital gains versus investment profits, there's one clear spoiler: if you plan to stay in one place for more than 10 years, it’s generally better to buy.
+
+For data engineers, we face a similar dilemma: should we "rent" cloud services or "buy" our own? From a financial perspective, the conclusion is pretty much the same. If you plan to manage your data or services in the long run, it’s worth considering "buying" your own cloud.
+
+That’s where the personal cloud comes into play, a solution that offers not just storage, but also long-term control, security, and savings in your data services. Rather than renting space on third-party servers, a personal cloud involves hardware you control. Setting up a personal cloud isn’t as simple as signing up for a public cloud service. It requires a bit more technical know-how and upfront planning. However, for individuals or small businesses that need large amounts of storage, prioritize data privacy, or want to avoid recurring costs, personal cloud storage could be the perfect long-term solution.
+
+## What is needed?
+
+A personal cloud should be tailored to meet your unique needs. From a developer or techie perspective, we aren't just talking about storing typical personal data like photos and documents. We need a robust environment that allows us to experiment, test, and host applications. Think of it as your personal sandbox, an all-in-one space for cloud data storage, cloud computing, hosting files and apps, and security tools to manage all these services.
+
+Let's start with essential services:
+
+************************************************************************
+*                                                                      *
+*               │                                                      *
+*               │                                                      *
+*  ┌────────────▼──────────────────┐                                   *
+*  │                               │                                   *
+*  │         Router                │                                   *
+*  │                               │                                   *
+*  │                               │                                   *
+*  └────────────┬──────────────────┘                                   *
+*               │                                                      *
+*  ┌────────────▼──────────────────┐   ┌──────────────────────────┐    *
+*  │                               │   │                          │    *
+*  │  Reverse Proxy / Firewall     │   │    Access proxy          │    *
+*  │                              ─┼───┼►                         │    *
+*  │ Reverse proxy and firewall    │   │ Proxy to auth users and  │    *
+*  │ rules to access all internal  │   │     proxy services       │    *
+*  │           services           ─┼───┼─┐                        │    *
+*  └──────────────┬────────────────┘   └─┼──────────┬─────────────┘    *
+*                 │                      │          │                  *
+*  ┌──────────────┼──────────────────┐  ┌┼──────────▼──────────────┐   *
+*  │              ▼                  │  ││                         │   *
+*  │                                 │  │▼ K8s and docker services │   *
+*  │     NAS Private services        │  │                          │   *
+*  │                                 │  │  Services allocated in   │   *
+*  │  All the services we don't want │  │  private servers         │   *
+*  │    to expose                    │  │                          │   *
+*  │                                 │  │                          │   *
+*  └─────────────────────────────────┘  └──────────────────────────┘   *
+*                                                                      *
+************************************************************************
+
+### The Key Components
+* **Router**
+
+Acts as the entry point for all external traffic coming into the network. The router handles the distribution of incoming requests to the reverse proxy.
+
+* **Reverse Proxy & Firewall**
+
+The reverse proxy is a key component in securing the internal services. It handles external requests and forwards them to either public-facing services or routes them to an Access Proxy for authorization before exposing internal services. The firewall is configured to allow traffic based on specific rules, ensuring that only authorized traffic passes through to the services.
+
+* **Access Proxy**
+
+The access proxy manages Single Sign-On (SSO) and enforces authentication before allowing users to access private resources. When a request is made to a subdomain like private.example.com, the reverse proxy routes it to the access proxy, which authenticates the user and determines access rights.
+
+* **NAS Private Services**
+
+For all data and services that doesn’t need to be publicly exposed, the NAS (Network-Attached Storage) solution serves as a secure, private repository. This is where you store personal data like photos, documents, and any files that don’t require external exposure. Popular NAS devices offer a powerful combination of storage, security, and backup solutions.
+
+* **Kubernetes and Docker Services**
+
+These services power cloud computing and application hosting. K3s, a lightweight Kubernetes distribution, provides orchestration for containerized applications, allowing for easy scalability and management of services like blogs, development environments, or experimental code bases.
+Portainer simplifies the management of these containers, providing an easy-to-use GUI for container orchestration, while Coder offers an IDE and development environment in the cloud for collaborative or remote projects.
+
+## Architecture in Action
+
+Let’s break down a real-world scenario to illustrate how this architecture functions.
+
+Public Requests (e.g., public.example.com): When someone accesses a public-facing service like your personal blog, the request hits the reverse proxy, which redirects the traffic to the appropriate internal service (e.g., a Docker container hosting your blog).
+
+Private Requests (e.g., private.example.com): For private services like a personal dashboard or sensitive data, the request is handled differently. The reverse proxy directs the traffic to the access proxy, which requires the user to authenticate via SSO before allowing access. If authenticated, the proxy routes the user to the service behind the firewall.
+
+## Technologies Behind the Setup
+
+Here's a quick summary of the technologies that power each part of my personal cloud:
+
+***********************************************************
+*                                                         *
+*    ┌──────────────────────┬────────────────────────┐    *
+*    │                      │                        │    *
+*    │Service               │   Technology           │    *
+*    ├──────────────────────┼────────────────────────┤    *
+*    │                      │                        │    *
+*    │Reverse Proxy         │   Nginx Reverse Proxy  │    *
+*    │                      │                        │    *
+*    │Access Proxy          │   Teleport             │    *
+*    │                      │                        │    *
+*    │NAS Private Services  │   QTS (QNAP)           │    *
+*    │                      │                        │    *
+*    │K8s Docker Services   │   K3s                  │    *
+*    │                      │   Portainer            │    *
+*    │                      │   Coder                │    *
+*    │                      │                        │    *
+*    └──────────────────────┴────────────────────────┘    *
+*                                                         *
+*                                                         *
+*                                                         *
+***********************************************************
+
+## Why This Setup?
+
+1. **Security**: By using a reverse proxy and access proxy combination, this setup ensures that only authorized users access private resources, while public resources remain easily accessible.
+2. **Scalability**: With Kubernetes (K3s) and Docker, you have the flexibility to scale your cloud services quickly as needed.
+3. **Cost-Effective**: Thanks to modern tools and open source projects solution offers high performance at a lower cost than traditional enterprise solutions.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
