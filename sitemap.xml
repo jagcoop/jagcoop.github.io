@@ -7,52 +7,52 @@
 
 <url>
   <loc>https://example.com/projects/index.html</loc>
-  <lastmod>2024-09-24</lastmod>
+  <lastmod>2024-09-28</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://example.com/projects/rewards.codes/index.html</loc>
-  <lastmod>2024-09-24</lastmod>
+  <lastmod>2024-09-28</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://example.com/projects/AOP_in_Eiffel/index.html</loc>
-  <lastmod>2024-09-24</lastmod>
+  <lastmod>2024-09-28</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://example.com/posts/index.html</loc>
-  <lastmod>2024-09-24</lastmod>
+  <lastmod>2024-09-28</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://example.com/posts/Unlocking_the_Power_of_Personal_Cloud/index.html</loc>
-  <lastmod>2024-09-24</lastmod>
+  <lastmod>2024-09-28</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://example.com/posts/Understanding_complexity_in_software_systems/index.html</loc>
+  <lastmod>2024-09-28</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://example.com/posts/The_Rise_and_Fall_of_Abacus_Rationale/index.html</loc>
-  <lastmod>2024-09-24</lastmod>
+  <lastmod>2024-09-28</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://example.com/posts/Psychological_Safety/index.html</loc>
-  <lastmod>2024-09-24</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://example.com/posts/An_Exploration_on_Software_Complexity/index.html</loc>
-  <lastmod>2024-09-24</lastmod>
+  <lastmod>2024-09-28</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://example.com/posts/A_Tool_in_a_World_Full_of_Distractions/index.html</loc>
-  <lastmod>2024-09-24</lastmod>
+  <lastmod>2024-09-28</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://example.com/about/index.html</loc>
-  <lastmod>2024-09-24</lastmod>
+  <lastmod>2024-09-28</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>
