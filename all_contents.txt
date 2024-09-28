@@ -977,8 +977,14 @@ How can we solve the contradiction once it is found?
 - With IBIS 40 principles.
 
 
-<link rel="stylesheet" href="https://morgan3d.github.io/markdeep/latest/latex.css?">
-<!-- Markdeep: --><style class="fallback">body{visibility:hidden}</style><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<link rel="stylesheet" href="https://unpkg.com/latex.css/style.min.css" />
+<style>
+body.md{
+	max-width:120ch; !important
+}
+</style>
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden}</style>
+<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/newsmag.css?">
     <!-- Author meta tag -->
     <meta name="author" content="Your Name">
