@@ -864,6 +864,7 @@ and what are Bob's *needs* that are satisfied by his *wants*
 
 Then, we can identify the common goal. Both their needs want to be satisfied.
 
+
 ********************************************************
 *                  ┌──────────┐        ┌─────────┐     *
 *           ┌──────┼ Alice's  ◄────────┼Alice's  │     *
