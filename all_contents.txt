@@ -924,7 +924,7 @@ A contraction is the idea of improving the solution in one dimension and making 
 But Both are needed!
 The contradiction is the problem.
 
-### Classic examples area
+### Classic examples
 
 #### Armor vs Agility::
   Ever since the knights mounted a Horse, they knew that heavier armor would protect them better.
@@ -944,11 +944,8 @@ The contradiction is the problem.
 
   How can we have a boat that is wide above the surface but slim below it? With a catamaran.
 
-
 So, that is how Triz approaches the definition of a problem. Just find the contradiction.
 I.e., the attributes that you want and ask the question in terms of the contradiction.
-
-
 
 # Leassons Learned
 
@@ -962,7 +959,7 @@ To ask better questions, we need to:
 
 a) Write problems and questions and
 
-B) Find a contradiction
+b) Find a contradiction
 
 A contradiction is:
 
@@ -1055,27 +1052,27 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-09-28: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-09-29: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-09-28: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-09-29: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-09-28: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-09-29: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-09-28: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-09-29: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-09-28: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-09-29: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-09-28: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-09-29: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
@@ -1335,11 +1332,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-09-28: projects/rewards.codes](./projects/rewards.codes).
+### [2024-09-29: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-09-28: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-09-29: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
