@@ -322,8 +322,8 @@ For me, the first strategy has been helpful, and I've implemented it by keeping 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
  <meta charset="utf-8" emacsmode="-*- markdown -*-">
-# A Tool in a World Full of Distractions
-September 23th, 2024
+# How did I generate a QR so our clients could write a review 
+September 30th, 2024
 by *Pepe Hernandez*
 
 ###Portfolio ###Hacks ###ProgrammingAdventures
