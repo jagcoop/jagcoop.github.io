@@ -1,0 +1,43 @@
+ <meta charset="utf-8" emacsmode="-*- markdown -*-">
+# A Tool in a World Full of Distractions
+September 23th, 2024
+by *Pepe Hernandez*
+
+###Portfolio ###Hacks ###ProgrammingAdventures
+
+My wife asked me for a QR code so their clients could write a review in Google Maps. As you know, when a woman asks a man to do something, the man will do it; you don't have to remember the task every six months. As I know myself, I started as soon as possible, just before a kind reminder came to me.
+
+## 1st iteration. Found the URL on Google Maps. Find a tool to generate the QR. Generate it.
+The first thing I did was go to Google Maps and find the URL of the business. I had the input to generate the QR. Then, I asked chatGPT, "How can I create a QR?"
+It gave me three options: download Code Monkey or use a QR code generator. I tried both. I downloaded the QR code generator, but there is no app for Code Monkey on my iPhone. The third option was to generate the code using some Python libraries. I had to generate only one, so I chose to go with the apps. 
+I had to pay for the 14th-day package of the QR code generator. 
+It was okay, but you have to scroll until the review section, which creates a little friction for the customer. I was not happy with it. 
+
+## 2nd Iteration. How do you get a direct URL to publish the review?
+I asked CHATGPT how to do this. It gave me two options: First, add the URL /review, which didn't work. 
+The second option is generating the URL using the PLACE_ID with the next link:
+https://search.google.com/local/writereview?placeid=PLACE_ID
+
+Now I asked, "How do I get the PLACE_ID?" The direct place ID is a HEXADECIMAL number that you can extract from the sharing URL of the place. However, this doesn't work. 
+
+It generates an error:
+404. That's an error. The requested URL /local/writereview?placeid=0x8f56777791707875:0xf7ed452d4b2d8269 was not found on this server. That's all we know.
+
+I asked CHATgpt about it. The reason is that the HEXADECIMAL format is incompatible with the suggested link to go directly to the review.
+To get the right PLACE_ID, CHATgpt suggested going to the Google Developers site: https://developers.google.com/maps/documentation/places/web-service/place-id and looking for the PLACE.
+I got the right PLACE_ID.
+Here you can write your review:
+https://search.google.com/local/writereview?placeid=ChIJM9B-Nap1Vo8R-decYH9-KV4
+
+## Finally, I tuned the QR using the QR Generator
+I used a template.
+I selected a logo.
+I shared the QR with my wife.
+
+![Add your review! Quiriquiqui](QRQuiquiriqui.jpg)
+
+And those who are married know, "Happy wife, happy life."
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+
