@@ -1,0 +1,25 @@
+ <meta charset="utf-8" emacsmode="-*- markdown -*-">
+# Manage complexity behind simple interfaces
+
+October 3rd, 2024
+by *Julio César*
+
+This is a follow up of the first post on [Understanding complexity in Software Systems](https://jagcoop.github.io/posts/Understanding_complexity_in_software_systems/), there we mention that a good software design is the one that reduces complexity of the whole system, complexity being anything that makes the system hard to understand and therefore modify.
+
+On that note, complexity can take many forms but one area where it tends to creep-in is at the boundaries of modules, that is, in the interfaces.
+
+A software system is primarily an amalgamation of components, for this to work every component in the system must expose some kind of interface, this is what tells users how are they supposed to use the &ldquo;thing&rdquo;, let it be a function, a method, a class, a package, a service, or a system on its own; all of these expose interfaces so that consumers know how to consume them.
+
+Software components might be generally referred to as &ldquo;modules&rdquo;. Modules can be deep or shallow.
+
+Deep modules are the ones hiding a lot of complexity behind a simple interface so that users aren&rsquo;t bothered with understanding or even knowing about such complexities. A real-world example of a good deep module is the Linux I/O subsystem, users need only to know about five system calls to I/O interaction, mainly with files. Often programmers are able to get away with just four of them, `open()`, `read()`, `write()` and `close()`; behind these system calls there&rsquo;s a lot of complexity hidden that manages permissions, storage devices, memory mapping, and more.
+
+In contrast to deep modules there is also the notion of *shallow modules*. Shallow modules are components of a system in which its interface leaks a lot of info about the implementation details of the thing or worse where the interface ends up being more verbose than the implementation of the module it self. Such small components shouldn&rsquo;t exist, specially if it used just in a couple of places.
+
+The information exposed by the interface of a module should be as small as posible without the need to make users understand the implementation of the module. This is the basis of the principle on *information hiding*. An idea that&rsquo;s preached in other areas as well, &ldquo;the principle of the least information&rdquo;, &ldquo;don&rsquo;t make me thing&rdquo;, etc.
+
+This in short is the secret sauce of modular software, focus on small and simple interfaces; this in turn will then make composition easier.
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
