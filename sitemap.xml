@@ -61,6 +61,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/Declarative_dotfiles_with_Home_Manager/index.html</loc>
+  <lastmod>2024-10-05</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/Creating_a_QR_for_Google_review_URL/index.html</loc>
   <lastmod>2024-10-05</lastmod>
   <changefreq>weekly</changefreq>
