@@ -5,40 +5,137 @@
 October 5th, 2024
 by *Julio César*
 
+## What are dotfiles?
+
 The UNIX philosophy is a set of cultural norms and a philosophical approach to building minimalist and modular software, the main tenets can be summarized as follows:
 
 -   Write programs that do one thing and do it well.
 -   Write programs to work together.
 -   Write programs to handle text streams, because that is a universal interface.
 
-While I am a big supporter of the idea, one consequence of this, is that in a Linux system one often ends up installing lots of small utilities each one defining its own configuration files. It is not uncommon to have lots of these configuration files polluting the home directory, in an attempt to &ldquo;hide&rdquo; these files their names usually start with a dot (`.`) meaning they are not listed by programs such as `ls` or any other file browser for that matter, but, they&rsquo;re still there creating a bigger configuration file collection over time, these are commonly known as &ldquo;*dotfiles*&rdquo;.
+While I am a big supporter of the idea, is not without drawbacks. As a software developer in a Linux system I often end up installing lots of small utilities each one needing its own configuration file. It&rsquo;s not uncommon to have lots of these configuration files lying around polluting the home directory. In an attempt to keep these out of the way their names usually start with a dot (`.`) meaning they are &ldquo;hidden&rdquo; and not listed by programs such as `ls` or any other file browser for that matter (at least by default), however, they&rsquo;re still there accruing into a bigger configuration file collection over time, these are commonly known as &ldquo;*dotfiles*&rdquo;.
 
-These files end up being treated as code, as they define the state of the system we use to do our work as software developers, it is not uncommon to check these files into version control systems so that we&rsquo;re able to share the same configuration across multiple machines with the added benefit that if we ever change workstations it would be easier to port our tools over and get to work right away.
+In order to ease management of these configuration files it is often practical to start viewing them as code, after all they define the state of the system we use to do our work, because of this reason it is not uncommon to check these files into version control systems so that we&rsquo;re able to share the same configuration across multiple machines with the added benefit that if we ever need to change workstations then it would be easier to port our tools over and get to work right away (which in my experience - it&rsquo;s never that easy).
 
-However, managing this files as a software repository starts to become a problem since we now need to handle the installation of these files into their correct locations, not all files need to be in the home directory and not every tool supports the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/), more over tools which provide lots of functionality might end up needed more than one file to configure it. Symbolic links are often our first attempt to solve this problem but managing lots of symlinks will sooner or later require some flaky custom scripts that comes with its own set of problems.
+However, managing these files in a software repository brings on a new challenge as we now need to handle the installation of these files into their correct locations, not all dotfiles need to be in the home directory and not every tool supports the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) so it&rsquo;s not uncommon to have non-standard locations for these files, more over tools which provide lots of functionality might end up needing more than one configuration file for them to work.
 
-As a neophyte Nix user I had to try Home Manager for solving exactly this problem, and what a great solution!
 
-Home manager allow us to follow the philosophy of NixOS to manage our dotfiles, whereas NixOS allow us to configure an entire system state and system-level properties declaratively using the Nix language, Home Manager allow us to configure our user-level tooling declaratively using the Nix language.
+## The symlink approach
 
-Nix being nix, defines lots of possible ways to do the same thing, so I will document bellow the way I&rsquo;m currently using it in combination of Nix Flakes, a fancy name for &ldquo;*Nix distribution package*&rdquo;.
+Take the following dotfiles repository as an example:
 
-Within the root of the dotfiles repo define a `flake.nix` file with the following:
+```
+$ tree --charset=ascii ~/configuration/dotfiles
+.
+|-- .ghcid
+|-- .git/
+|-- bat/
+|   `-- config
+|-- doom/
+|   |-- config.el
+|   |-- init.el
+|   `-- packages.el
+|-- fourmolu/
+|   `-- fourmolu.yaml
+|-- nix/
+|   |-- netrc
+|   |-- nix.conf
+|   `-- registry.json
+|-- nvim/
+|   `-- init.vim
+`-- setup.sh
+```
+
+One option would be to use symbolic links to install this configuration into place:
+
+```
+$ ln -s ~/config/dotfiles/bat ~/.config/bat
+$ ln -s ~/config/dotfiles/doom ~/.config/doom
+$ ln -s ~/config/dotfiles/nix ~/.config/nix
+...
+```
+
+Unfortunately we can&rsquo;t symlink the whole repo into `~/.config` because this directory might not be empty and contain other files that we don&rsquo;t want to track in our dotfiles repository, so the next intuitive thing to do might be to iterate through each of the directories and symlink each file into place, here is a one liner to do exactly this:
+
+```
+$ find . -type d -exec ln -s {} ~/.config/ \;
+```
+
+Ok but what about the `.git` folder that exists in all git repositories, or suppose I have a `docs` folder in my repo that doesn&rsquo;t hold any configuration files at all? I don&rsquo;t want these directories to be symlinked!
+
+With this symlink approach it isn&rsquo;t hard to find ourselves in a situation where we start to loose flexibility, for instance, all of a sudden a tool&rsquo;s configuration might need to be placed in a different location due to an upstream change. Next, we find ourselves coding a script with all these rules in it, yes, that&rsquo;s precisely why there&rsquo;s a `setup.sh` script in the dotfiles folder above. I&rsquo;ll give you a sneak peak into what that file might look like; young children close your eyes:
+
+```bash
+#!/usr/bin/env bash
+
+set -xeumo pipefail
+
+self="$(realpath "$0")"
+this="$(dirname "$self")"
+
+# Create symlinks so config appears in right folder
+# ln -sT "$this/.lesskey" "$HOME/.lesskey"
+# ln -sT "$this/dunst" "$HOME/.config/dunst"
+ln -sT "$this/.ghci" "$HOME/.ghci" || echo "WARN: .ghci config already exists"
+ln -sT "$this/fourmolu" "$HOME/.config/fourmolu" || echo "WARN: fourmolu config already exists"
+ln -sT "$this/.clang-format" "$HOME/.clang-format" || echo "WARN: .clang-format config already exists"
+ln -sT "$this/nvim" "$HOME/.config/nvim" || echo "WARN: nvim config already exists"
+# ln -sT "$this/bat" "$HOME/.config/bat"
+# ln -sT "$this/containers" "$HOME/.config/containers"
+
+# This should execute only when xmonad support is desired
+# # TODO Should link as well
+# mkdir -p $HOME/.local/share/sounds/
+# cp $this/share/sounds/* $HOME/.local/share/sounds/
+# cp $this/share/icons/* $HOME/.local/share/icons/
+
+# TODO Setup the following snap packages as well (in a function)
+function setup_snaps () {
+    snap install dbeaver-ce firefox gnome-clocks slack snapd-desktop-integration element-desktop
+}
+
+# TODO Link nix and nixpkgs configuration into place
+# ln -sT "$this/nix" "$HOME/.config/nix" || echo "WARN: nix config already exists"
+# ln -sT "$this/home-manager" "$HOME/.config/home-manager" || echo "WARN: home-manager config already exists"
+ln -sT "$this/doom" "$HOME/.config/doom" || echo "WARN: doom config already exists"
+
+# link share resources
+# TODO Add a check to make sure the "icons" and "applications" directories exist, and if not create them
+ln -sT "$this/share/fonts" "$HOME/.local/share/fonts" || echo "WARN: ~/.local/share/fonts already exists"
+ln -sT "$this/share/icons" "$HOME/.local/share/icons" || echo "WARN: ~/.local/share/icons already exists"
+# TODO probably need to fix globbing
+ln -s $this/share/applications/*.desktop "$HOME/.local/share/applications/" || echo "WARN: conflicting links/files in ~/.local/share/applications"
+```
+
+I don&rsquo;t know about you, but that looks nasty! it certainly does read &ldquo;fragile&rdquo; all over the place to me, you can even see we do not check if the files where already installed and might be overwritten, or whether the target directories exist at all. We might get into arguments on what approach the script should take and how it should be structured in order to improve the situation, but my point stands, scripting a configuration into place will never be good enough and as such is not the right approach to configure an environment.
+
+
+## Home Manager for declarative configurations
+
+As a neophyte Nix user I had to try Home Manager for solving exactly this problem, and what a great solution this is!
+
+Home manager allow us to follow the philosophy of NixOS to manage our dotfiles, that is, whereas NixOS allow us to configure an entire system state and system-level properties declaratively using the Nix language, Home Manager allow us to configure our user-level tooling declaratively using the Nix language.
+
+Nix being nix, exposes lots of possible ways to do the same thing, so I will document bellow the way I&rsquo;m currently using it in combination of Nix Flakes, a fancy name for &ldquo;*a unit of Nix distribution package*&rdquo;.
+
+Within the root of the dotfiles repo we define a `flake.nix` file, this is a file that implements a known schema of what a *flake* should look like, in essence it must define an object with certain properties set, or in Nix lingo, an attribute set with certain definitions in it, it&rsquo;s all the same, the code is properly commented to explain each part:
 
 ```nix
+# flake.nix
 {
     # Adds a sample description as metadata for this flake
     description = "This Flake manages my dotfiles";
 
-    # The "inputs" attribute is used to declare what other flakes this flake depends on
-    # it is essentially our dependency list
+    # The "inputs" attribute is used to declare what other flakes
+    # this flake depends on - it is essentially our dependency list
     inputs = {
+
         # We can depend on other flakes that are hosted at github by their URL.
         #
         # Nixpkgs is a big set of packages that is almost always depended upon
         # as it contains Nix's standard library.
         #
-        # It is possible to pin dependencies to a specific commit (revision)
+        # It is possible to pin dependencies to a specific commit (aka revision)
         # for example in this case we pin to a commit on the nixos-24.05 branch
         # of the "NixOS/nixpkgs" reposityory. We can obtain these either by
         # looking in github directly or by browsing https://status.nixos.org/.
@@ -46,68 +143,75 @@ Within the root of the dotfiles repo define a `flake.nix` file with the followin
           "github:NixOS/nixpkgs?rev=36bae45077667aff5720e5b3f1a5458f51cf0776";
 
         # The nixos-XX.YY branches contain stable packages known to work reliably,
-        # however this means that software packaged in that branch might not be the
-        # latest available, for that we can declare another version of nixpkgs but
-        # picking a revision from the "nixpkgs-unstable" branch which typically
-        # has the "latest" available version of most packages:
+        # however, this means that software packaged in that branch might not be
+        # the latest available, for that we can declare another version of nixpkgs
+        # this time pinning a revision from the "nixpkgs-unstable" branch which
+        # typically has the "latest" available versions of most packages:
         unstable.url =
           "github:NixOS/nixpkgs?rev=5de1564aed415bf9d0f281461babc2d101dd49ff";
 
-        # Home Manager is distributed as a flake itself, so we add it here as a
-        # dependency to our flake, the revision comes from the "release-24.05" branch
+        # Home Manager is distributed as a flake itself, so we add it
+        # here as a dependency to our flake, the revision comes from
+        # the "release-24.05" branch
         home-manager.url =
           "github:nix-community/home-manager?rev=e1391fb22e18a36f57e6999c7a9f966dc80ac073";
 
-        # Since Home Manager is a flake itself written in Nix then it surely declares
-        # nixpkgs as one of its dependencies, but since our flake already depends on
-        # nixpkgs it would be a bit pointless to download it twice. In this case, we
-        # can use "follows" to tell nix that when fetching nixpkgs for satisfying
-        # home-manager dependencies it should use the same Nixpkgs version that our
-        # flake depends on (that we named above as "nixpkgs").
+        # Since Home Manager is a flake itself written in Nix then it surely
+        # declares nixpkgs as one of its dependencies, since our flake already
+        # depends on nixpkgs it would be nice to tell nix to use the exact same
+        # Nixpkgs version that our flake depends on when Home Manager's nixpkgs
+        # dependcy gets resolved; we use literaly type "nixpkgs" here because
+        # that how we named it in our inputs above.
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # The "outputs" attribute is a function that takes the "inputs" as parameter
-    # (here we unpack it using destructuring) and returns an attribute set
-    # (aka an object or dictionary) that defines certain attributes that follow
-    # the flake schema.
+    # The "outputs" attribute is a function that takes the "inputs" as
+    # parameter (here we unpack it using object destructuring) and returns
+    # an attribute set (aka an object or dictionary) that defines certain
+    # attributes that follow the flake schema.
     outputs = { nixpkgs, unstable, home-manager, ... }:
+
       let
-        # nixpkgs packages software for different architectures in my case
-        # I only care about x86_64-linux so I refer to that on its own as "pkgs".
+        # nixpkgs packages software for different architectures in my
+        # case I only care about x86_64-linux so I refer to that on
+        # its own as "pkgs".
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
       in {
-        # In this particular case "homeConfigurations" is not part of the official
-        # flake schema but is an attribute understood by the home-manager CLI tool.
+
+        # In this particular case "homeConfigurations" is not part of the
+        # official flake schema but is an attribute understood by the
+        # home-manager CLI tool.
         #
         # Here we declare a home manager configuration named "demo".
         homeConfigurations.demo =
 
             # home-manager configurations are instantiated by calling the
-            # "homeManagerConfiguration" function, giving it an attribute set
-            # as its only argument:
+            # "homeManagerConfiguration" function, giving it an attribute
+            # set as its only argument:
             home-manager.lib.homeManagerConfiguration {
 
-              # The attribute set we give to the function expects a "pkgs" attribute
-              # to be defined, it must be a nixpkgs package set, in this case we use
-              # `inherit` as a shortcut for `pkgs = pkgs`.
+              # The attribute set we give to the function expects a "pkgs"
+              # attribute to be defined, it must be a nixpkgs package set,
+              # in this case we use `inherit` as a shortcut for `pkgs = pkgs`.
               inherit pkgs;
 
-              # Home manager - as well as NixOS - allow us to package our configuration
-              # in modules, at the beginning we might only have a single module but this
-              # can change later, perhaps having a module per application configuration.
+              # Home manager - as well as NixOS - allow us to package our
+              # configuration in modules, at the beginning we might only
+              # have a single module but this can change later, perhaps
+              # having a module per application configuration.
               modules = [
                 # We refer to the file containing our home configuration as a module
                 ./home.nix
               ];
 
-              # Optionally we can set "extraSpecialArgs" to pass arguments to
-              # home.nix and whatever other modules we might have included in
-              # the "modules" list above
+              # Optionally we can set "extraSpecialArgs" to pass arguments
+              # to home.nix and whatever other modules we might have
+              # included in the "modules" list above.
               extraSpecialArgs = {
-                # As an example we pass the "unstable" version of nixpkgs so that
-                # we're able to use it within the home.nix module.
+
+                # As an example we pass the "unstable" version of nixpkgs
+                # so that we're able to use it within the home.nix module.
                 inherit upkgs;
               };
             };
@@ -118,10 +222,17 @@ Within the root of the dotfiles repo define a `flake.nix` file with the followin
 Now, we need to define the `home.nix` file that we included by path in the `flake.nix` file:
 
 ```nix
+# home.nix
+
+# A module is no different than a function that takes an attribute set as its
+# only parameter, here we deconstruct the object to access `pkgs` and `upkgs`
+# that we passed in `extraSpecialArgs` earlier.
 { pkgs, upkgs, ... }:
 
 {
-  # We might include other modules if we want to organize our configuration in other files:
+  # We might include other modules if we have organized our configuration
+  # in multiple files, you see, our configuration composes just like
+  # Matryoshka dolls
   imports = [
     ./other-module.nix
   ];
@@ -143,16 +254,17 @@ Now, we need to define the `home.nix` file that we included by path in the `flak
     enable = true;
     extraPackages = epkgs: with epkgs; [ vterm ];
 
-    # We can tell it to use "emacs" as it is from the unstable nixpkgs version "upkgs"
+    # We can tell it to use "emacs" but the one coming from
+    # the unstable nixpkgs version "upkgs"
     package = upkgs.emacs;
   };
 
-  # It is possible to say "put *this* file in *this* location"
+  # It is possible to say "put *this* file into *this* location".
   #
-  # In this example we use it to "copy" a "ghci" configuration file into
-  # our home directory as ".ghci".
+  # In this example we use it to "copy" a "ghci" configuration
+  # file into our home directory as ".ghci".
   home.file.ghci = {
-    enable = true;  # If this is `false` then the file is not copied
+    enable = true; # If this is `false` then the file is not copied
     source = ./.ghci;
     target = ".ghci";
   };
@@ -161,7 +273,8 @@ Now, we need to define the `home.nix` file that we included by path in the `flak
   programs.git = {
     enable = true;
 
-    # These are attributes that git expects in its `~/.config/git/config` file
+    # These are attributes that git expects
+    # in its `~/.config/git/config` file
     userName = "demo";
     userEmail = "user@demo.com";
 
@@ -181,7 +294,7 @@ Now, we need to define the `home.nix` file that we included by path in the `flak
   # Whenever we use flakes (as we are doing) this value isn't really used
   # because we specifically set the home-manager revision to use as a flake
   # input, however, still must be present in the home configuration so that
-  # it does not throws an error about "missing attribute".
+  # it does not throw an error about "missing attribute".
   home.stateVersion = "23.11";
 }
 ```
@@ -191,10 +304,12 @@ This is a bare example that shows how could we use Home Manager to configure our
 Note that environment variables are only able to get injected if Home manager also configures our shell, this mentioned in the manual: [Why are the session variables not set?](https://nix-community.github.io/home-manager/index.xhtml#_why_are_the_session_variables_not_set), in the example above we did not configure our shell so if we wanted to see those variables we need to source a script home-manager installs, but, adding our shell configuration to home-manager is trivial.
 
 ```nix
-# This might be the contents of other-module.nix, whatever floats your boat!
+# other-module.nix
 { ... }:
+
 {
   # ...
+
   # Install and configure Zshell
   programs.zsh = {
     enable = true;
@@ -222,25 +337,36 @@ Note that environment variables are only able to get injected if Home manager al
       theme = "robbyrussell";
     };
   };
+
   # ...
 }
 ```
 
-What options are available to set can be seen in the manual [Appendix A. Home Manager Configuration Options](https://nix-community.github.io/home-manager/options.xhtml), but I also suggest using other resources such as [Home Manager Option Search](https://home-manager-options.extranix.com/).
+After seeing all this, a natural question arises, how do I know what options are available to set in my Home Manager configuration? good news, all the options home manage supports are listed in the official manual [Appendix A. Home Manager Configuration Options](https://nix-community.github.io/home-manager/options.xhtml). I would also suggest [Home Manager Option Search](https://home-manager-options.extranix.com/) an option index for quick searching.
 
-Now its all fun and games till we want to apply our configuration, the very first time you&rsquo;d want to run this:
 
-```sh
+## Applying the Home Manager configuration
+
+It&rsquo;s all fun and games till we want to apply our configuration, the very first time we do this we actually want to install Home Manager into our workstation, the following works given that we have Nix installed with Flakes support enabled:
+
+```
 $ nix run home-manager/release-24.05 -- init --switch
 ```
 
-That will activate a shell with home-manager available and enable your configuration for the first time ever. After that whenever the configuration is changed we need to execute `home-manager` to activate it:
+A temporary shell with `home-manager` available will be activated after running that command, and will bootstrap our configuration in the process.
 
-```sh
+From this point onwards whenever we modify our configuration `home-manager` can be executed directly to switch to the new configuration:
+
+```
 $ home-manager switch --flake .#demo
 ```
 
-We use &ldquo;demo&rdquo; here because that&rsquo;s the name we gave to our home-manager configuration within the `flake.nix` file.
+We use `demo` here because that&rsquo;s the name we gave to our Home Manager configuration within the `flake.nix` file.
+
+
+## Conclusion
+
+I know what you might be thinking, &ldquo;*this doesn&rsquo;t look any simpler!*&rdquo;, &ldquo;*uh&#x2026; ever heard of GNU Stow?*&rdquo;, &ldquo;*Nix is hard*&rdquo;, &ldquo;*I use Windows*&rdquo;, &ldquo;*what is this post even about?*&rdquo;. Shh! when we start to treat our configuration files as any other software codebase, then using a declarative functional language to manage it is a smart move.
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
