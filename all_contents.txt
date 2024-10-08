@@ -233,6 +233,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](././posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Manage_complexity_behind_simple_interfaces](././posts/Manage_complexity_behind_simple_interfaces/) 
   	  </li>
   	</ul>
@@ -771,6 +775,168 @@ In short, having simple interfaces is the secret sauce behind modular software, 
 
 In conclusion, by following these principles we will then make composition of modules on a system easier, just as we would like our jobs to be.
 
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Multi-layered proxy architecture for my personal cloud
+October 8th, 2024
+by *Agus Rumayor*
+
+After writing the [Unlocking the power of personal cloud post](https://jagcoop.github.io/posts/Unlocking_the_Power_of_Personal_Cloud/), I felt compelled to dig deeper into the choice of technologies—examining not just which technologies we select, but why, when, and what older methods they are replacing.
+
+First, let me clarify that today, the distinction between a **proxy** and a **gateway** has become increasingly blurred. In many instances, both terms are used interchangeably, and for good reason. As implementations grow more complex, proxies often incorporate robust security features, and gateways frequently employ proxy architectures to handle multiple protocols (HTTP, database, etc.). Therefore, moving forward, we will use the terms "Proxy/Gateway" to refer to technologies that utilize tunneling proxy architectures to secure access to services, regardless of which specific layer (application, network, etc.) is secured.
+
+Traditionally, when we hear "tunneling proxy," our minds might immediately jump to the concept of a **VPN** (Virtual Private Network). VPNs have long been the go-to technology for securing connections between clients and servers, particularly for remote access. They create an encrypted "tunnel" through which data passes, protecting it from interception and unauthorized access. But modern tunneling proxy technologies have evolved to go beyond the scope of VPNs, incorporating more refined and efficient methods of securing communication, while offering additional flexibility for multi-protocol environments.
+
+## The Shift from Traditional VPNs to Modern Proxy/Gateway Solutions
+Historically, VPNs were used to secure connections at the network layer (OSI Layer 3), but this approach has its limitations. For one, VPNs operate on a more coarse-grained access control, meaning that once a user is authenticated and connected to the VPN, they can access a broad range of network resources, whether needed or not. This "all or nothing" approach presents a security risk, especially in environments where granular access control is essential.
+
+Modern Proxy/Gateway solutions, on the other hand, offer a more fine-grained control. These systems allow organizations to secure access at the application layer (OSI Layer 7), meaning users are granted access only to the specific applications or services they need. This limits the attack surface and reduces the risks associated with over-permissive access.
+
+Moreover, modern proxy/gateway architectures can also accommodate multi-protocol tunneling, meaning they can handle HTTP, database protocols (such as SQL), and even proprietary application protocols, all within a unified framework. This is a significant improvement over traditional VPNs, which are often limited to securing basic network communication protocols. There are a lot of major trends to search like Software-defined Perimeter (SDP), Zero Trust Network Access (ZTNA), API Gateway, Secure Access Service Edge (SASE) all these concepts combines and some implements each other.
+
+## VPN architecture vs Multi-layered proxy architecture
+
+VPN Architecture
+**********************************************************************************************
+*                                                                                            *
+*                                                                                            *
+*                                                                                            *
+*                                                                                            *
+*                                   xxxx xx x  x x  xxxx           xxxxxxxxx                 *
+*                               xxxx                   xx   xx xxxx x  x  xxx                *
+*                            xxx                        x xx                xxxxx xxx        *
+*               xxxxxx    xxx                          xxx                           x       *
+*          x xxx     xxxxxx                           xxx                             x      *
+*        xx             x                             x                                x     *
+*      xxx                                                                              x    *
+*      x                                                                                x    *
+*      x                                                                                x    *
+*      x                                                                                x    *
+*      x              ┌────────────────────┐                                            x    *
+*      xx             │                    │                                            x    *
+*        xx           │      VPN Client    │                                            x    *
+*         xxx x       │                    │                                          xx     *
+*               xx    └────────────────────┴──┐                                      xx      *
+*                xx                           │   x                                xx        *
+*                  xx                         │  xxxx                           xxx          *
+*                   xx                        │xx    xx                       xx             *
+*                     xxx                    x│       x xxxxx xxx xx x xx xxxx               *
+*                       xxx              xxxx │            xxxxx      xxx                    *
+*                          xxxxx xxx xxxx     │                 xxxxxxx                      *
+*                                             │                                              *
+*                                             │                                              *
+*                                             │                                              *
+*                                             │                                              *
+*                                             │                                              *
+*                                             │                                              *
+*                                 ┌───────────▼─────────────┐                                *
+*                                 │                         │                                *
+*                                 │                         │                                *
+*                                 │       VPN Server        │                                *
+*                                 │                         │                                *
+*                                 │           │             │                                *
+*                                 └───────────┼─────────────┘                                *
+*                                             │                                              *
+*                                             │                                              *
+*                                             │                                              *
+*                                             │                                              *
+*                          ┌──────────────────┼─────────────────────────┐                    *
+*                          │                  ▼                         │                    *
+*                          │            Personal Cloud                  │                    *
+*                          │                                            │                    *
+*                          │                                            │                    *
+*                          └────────────────────────────────────────────┘                    *
+*                                                                                            *
+*                                                                                            *
+**********************************************************************************************
+
+Multi-layered proxy architecture
+*********************************************************************************************************
+*                                                                                                       *
+*                                                                                                       *
+*                                                                                                       *
+*                                   xxxx xx x  x x  xxxx           xxxxxxxxx                            *
+*                               xxxx                   xx   xx xxxx x  x  xxx                           *
+*                            xxx                        x xx                xxxxx xxx                   *
+*               xxxxxx    xxx                          xxx                           x                  *
+*          x xxx     xxxxxx                           xxx                             x                 *
+*        xx             x                             x                                x                *
+*      xxx                                                                              x               *
+*      x                                                                                x               *
+*      x                                                                                x               *
+*      x                                                                                x               *
+*      x              ┌────────────────────┐                                            x               *
+*      xx             │                    │                                            x               *
+*        xx           │          Client    │                                            x               *
+*         xxx x       │                    │                                          xx                *
+*               xx    └────────────────────┴──┐                                      xx                 *
+*                xx                           │   x                                xx                   *
+*                  xx                         │  xxxx                           xxx                     *
+*                   xx                        │xx    xx                       xx                        *
+*                     xxx                    x│       x xxxxx xxx xx x xx xxxx                          *
+*                       xxx              xxxx │            xxxxx      xxx                               *
+*                          xxxxx xxx xxxx     │                 xxxxxxx                                 *
+*                                             │                                                         *
+*                                             │                                                         *
+*                                             │                                                         *
+*                                             │                                                         *
+*                        ┌───┬────────────┬───▼──┬────────────────────┐                                 *
+*                        │   │    Proxy 1 │      ┼─────────┐          │                                 *
+*                        │   └────────────┼──────┘         │          │                                 *
+*                        ├────────────────┼──┐             │          │                                 *
+*                        │    Proxy 2     ▼  ┼──────────┐  │          │                                 *
+*                        ├────────────┬──────┘          │  │          │                                 *
+*                        ┼────────────┼───┐             │  │          │                                 *
+*                        │  Proxy 3   ▼   ┼───────►     ▼  ▼          │                                 *
+*                        ┼────────────────┘        Personal Cloud     │                                 *
+*                        │                                            │                                 *
+*                        │                                            │                                 *
+*                        │                                            │                                 *
+*                        └────────────────────────────────────────────┘                                 *
+*                                                                                                       *
+*                                                                                                       *
+*                                                                                                       *
+*                                                                                                       *
+*                                                                                                       *
+*                                                                                                       *
+*********************************************************************************************************
+
+To wrap up the discussion, it’s important to highlight the key differences between choosing a VPN architecture and a multi-layered proxy architecture for a personal cloud. Both options offer secure access to your data, but they serve different needs and come with distinct advantages depending on your use case.
+
+1. Security Model
+**VPN Architecture**: VPNs secure access at the network layer. When you connect to a VPN, your device becomes part of the private network, and all your traffic is routed through the VPN server. This secures your entire connection from end to end, regardless of what applications or services you use. However, once connected, you typically have access to everything on the network unless additional security measures are in place. This can increase the risk if any component inside the VPN is compromised.
+
+**Multi-Layered Proxy Architecture**: A multi-layered proxy secures access at various protocol layers—typically at the application layer. Instead of securing the entire network, a proxy can be set up to only secure specific services or applications. For example, you can have a proxy that handles HTTP requests, one that manages database connections, and another that secures file sharing. This architecture is inherently more granular, offering fine-tuned security controls that limit access to specific resources and services, which minimizes the attack surface.
+
+2. Granularity of Access Control
+**VPN Architecture**: When using a VPN for a personal cloud, the access control is often broad—once authenticated, users generally have access to the entire network, regardless of the specific service or resource they need. This can create challenges for personal cloud deployments where you may want to limit access to only certain files, databases, or applications.
+
+**Multi-Layered Proxy Architecture**: This offers fine-grained access control. Each layer or service can have its own access policies, allowing you to provide precise permissions for each user or device. For instance, you can allow access to a file-sharing service without exposing other resources like databases or web applications. This is crucial for minimizing security risks in personal cloud environments where different levels of access may be needed for different users or services.
+
+3. Performance and Latency
+**VPN Architecture**: VPNs encrypt and route all of your traffic through a remote server, which can introduce latency. This overhead may not be noticeable for small-scale personal clouds, but as the number of connected devices grows or the complexity of the data increases, VPNs can slow down performance.
+
+**Multi-Layered Proxy Architecture**: Proxies can be optimized to handle specific types of traffic more efficiently, often leading to better performance. For example, a proxy handling only HTTP traffic can be tuned for that protocol, ensuring lower latency and faster response times for web-based services. In a multi-layered proxy setup, each proxy can be optimized for its role, reducing overall latency and improving performance for each individual service.
+
+4. Complexity of Setup and Maintenance
+**VPN Architecture**: VPNs are typically easier to set up and maintain for personal use. Many consumer-grade VPN solutions offer out-of-the-box configurations that require minimal technical expertise. The tradeoff is that you lose some granularity and flexibility.
+
+**Multi-Layered Proxy Architecture**: Setting up a multi-layered proxy requires more technical expertise. Each proxy must be configured separately, and managing access controls at multiple layers introduces complexity. However, this also allows for tailored security and performance optimization, which can be beneficial for more advanced personal cloud setups that require specific controls over different services.
+
+5. Privacy and Anonymity
+**VPN Architecture**: VPNs are known for their ability to provide anonymity by masking your IP address and encrypting all of your traffic. For personal cloud users who want to ensure their connection is private and not traceable, VPNs are a strong choice.
+
+**Multi-Layered Proxy Architecture**: While proxies also provide privacy by encrypting traffic and masking the user’s identity, they are generally more focused on securing specific services rather than providing broad anonymity. If privacy from third-party services or ISPs is a major concern, combining proxies with VPN-like functionality may be necessary.
+
+### Final Thoughts: Which Architecture to Choose for a Personal Cloud?
+Choose a VPN Architecture if your primary goal is simplicity, broad network access, and privacy for your entire connection. This is often ideal for users who want a basic, all-in-one solution to secure their personal cloud without diving into too much complexity.
+
+Choose a Multi-Layered Proxy Architecture if you need fine-grained control, protocol-specific security, and scalability. This is the better option if you are running multiple services or applications in your personal cloud, and you want to manage access and performance on a more detailed level.
+
+Both architectures have their place in securing personal cloud environments. The decision ultimately depends on the level of control, performance, and security you need for your specific use case. As personal cloud technology continues to evolve, integrating elements of both VPNs and proxy architectures might become the optimal solution, offering the best of both worlds.
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
@@ -1571,43 +1737,47 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-10-07: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-10-08: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-10-07: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-10-08: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-10-07: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-10-08: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-10-07: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-10-08: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-10-07: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-10-08: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-10-07: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-10-08: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-10-07: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-10-08: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+[lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
+
+
+### [2024-10-08: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-10-07: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-10-08: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-10-07: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-10-08: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-10-07: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-10-08: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
@@ -1635,6 +1805,7 @@ Email
 		<li>[posts/The_Rise_and_Fall_of_Abacus_Rationale](/posts/The_Rise_and_Fall_of_Abacus_Rationale/index.html)</li>
 		<li>[posts/Requirements_in_the_Age_of_AI](/posts/Requirements_in_the_Age_of_AI/index.html)</li>
 		<li>[posts/Psychological_Safety](/posts/Psychological_Safety/index.html)</li>
+		<li>[posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](/posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud/index.html)</li>
 		<li>[posts/Manage_complexity_behind_simple_interfaces](/posts/Manage_complexity_behind_simple_interfaces/index.html)</li>
 		<li>[posts/Declarative_dotfiles_with_Home_Manager](/posts/Declarative_dotfiles_with_Home_Manager/index.html)</li>
 		<li>[posts/Creating_a_QR_for_Google_review_URL](/posts/Creating_a_QR_for_Google_review_URL/index.html)</li>
@@ -1871,11 +2042,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-10-07: projects/rewards.codes](./projects/rewards.codes).
+### [2024-10-08: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-10-07: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-10-08: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -2012,6 +2183,10 @@ We’re continually evolving to meet the needs of small businesses. Our next ste
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Psychological_Safety](././posts/Psychological_Safety/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](././posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
