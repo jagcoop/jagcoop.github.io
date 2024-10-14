@@ -780,13 +780,13 @@ The team focused on following the Work In Progress in the columns ahead of the A
 The head of acquisitions committed to attending weekly meetings to review the cases "blocked" by the area. In the first meeting, it became clear that his Department was a bottleneck. The team had labeled tickets with green stickers after each month, tickets had been spent in the acquisition process, and some had been stuck for six months or more, especially in public bidding cases. With this level of transparency, the acquisition area was aware of their importance in the process. They took action, and several tickets began to move. The head of the Department recognized the impact that waiting times had on project delivery.
 
 There are several things I learned with this Kanban initiative, like
- Establishing gradually Kanban Core Practices
-Limiting the Work in Progress
-Finding the criteria for the work done Determining policies of the system
-Using metrics to manage a significant volume of work (Core Practice 3. Managing Flow)
-One Kanban Board to rule all the requests
-The Physical Kanban Board evolution
-From a physical Kanban Board System to a Digital Kanban System
+* Establishing gradually Kanban Core Practices
+* Limiting the Work in Progress
+* Finding the criteria for the work done Determining policies of the system
+* Using metrics to manage a significant volume of work (Core Practice 3. Managing Flow)
+* One Kanban Board to rule all the requests
+* The Physical Kanban Board evolution
+* From a physical Kanban Board System to a Digital Kanban System
 ...
 
 I will talk about some of what I learned next week. 
