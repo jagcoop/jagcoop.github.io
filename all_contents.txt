@@ -830,7 +830,10 @@ Devtron introduces features that help reduce the operational overhead of running
 
 # Conclusion
 
-Devtron serves as a comprehensive platform for managing Kubernetes clusters, CI/CD pipelines, and security workflows. Its integration with Helm and Kubernetes makes it an ideal choice for organizations seeking to streamline application deployment, monitor performance, and enforce security policies. By reducing the complexity of managing Kubernetes and providing a single platform for CI/CD, DevSecOps, and cloud-native applications, Devtron helps organizations maximize the benefits of Kubernetes while minimizing operational overhead.<meta charset="utf-8" emacsmode="-*- markdown -*-">
+Devtron serves as a comprehensive platform for managing Kubernetes clusters, CI/CD pipelines, and security workflows. Its integration with Helm and Kubernetes makes it an ideal choice for organizations seeking to streamline application deployment, monitor performance, and enforce security policies. By reducing the complexity of managing Kubernetes and providing a single platform for CI/CD, DevSecOps, and cloud-native applications, Devtron helps organizations maximize the benefits of Kubernetes while minimizing operational overhead.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 # A Kanban Case Study in the Public Sector (Part I of N)
 
