@@ -62,5 +62,70 @@ We’re continually evolving to meet the needs of small businesses. Our next ste
 *└────────────────┘                                                                *
 ************************************************************************************
 
+2024-10-15: Simple architecture 
+=================================================================
+
+# Architecture Overview:
+
+Our system architecture revolves around two primary microservices, each serving a crucial function:
+
+Rewards Microservice: This microservice handles the core functionality of giving and redeeming rewards, retrieving balance and account information, and managing overall rewards activity for businesses.
+
+Messaging & Notifications Microservice: This service manages all the interactions between businesses and their customers, including messages and notifications, ensuring smooth and timely communication.
+
+At the center of these microservices is an API Gateway, which provides controlled access to them. This gateway allows external applications to interact with the services securely and efficiently.
+
+For data storage, we employ a Graph Database to record and analyze all customer-business interactions. The use of a graph structure helps us map relationships between customers, businesses, and rewards in a flexible and scalable way.
+
+## Recent Addition: Chatbot Module
+
+We've recently expanded the architecture by integrating a Chatbot Module. Initially, the main microservice interacted with an external service to handle business context exclusively. However, recognizing the need for more meaningful conversations, we are developing additional endpoints to incorporate user context alongside business information.
+
+This enhancement allows the chatbot to provide more personalized, relevant responses, making the platform even more engaging for customers.
+
+## User Context Module
+
+To enrich the chatbot's ability to interact with users meaningfully, we are implementing a User Context Module, which works through two complementary bots:
+
+Classifier Bot: This bot's role is to determine whether a prompt requires querying the database for specific user data or if it can be answered using only business context. This first step ensures that the system responds efficiently by directing the query to the correct source.
+
+Context Bot: Once the Classifier Bot identifies the need for user data, the Context Bot generates the necessary queries to fetch that data. It then supplies this additional user context to the chatbot, allowing it to return an enriched response with deeper insights.
+
+By utilizing these two bots together, the system can deliver more personalized interactions, improving the user experience and fostering stronger connections between businesses and their customers.
+
+*************************************************************************************************************************************************************************************
+*                                                                                                                                                                                   *
+*                 ┌─────────────┐                                                                                                                                                   *
+*                 │  Business   │                                                                                                                                                   *
+*                 │  Context    │                                                                                                                                                   *
+*                 └─────────────┘──┐  User context                                                                                                                                  *
+*     ┌─────────────►│             ◄───────────┐                                                                                                                                    *
+*     │              │  Classifier │           │                                                                                                                                    *
+*     │         ┌────┼    Bot     ─┼──────┐    │                                                                                                                                    *
+*  prompt       │    └─────────────┘      │    │                                                                                                                                    *
+*     │         │                         │    │                                                                                                                                    *
+*     │      Answer                       │    │                                                                                                                                    *
+*     │         │                         │    │                                                                                                                                    *
+*   ┌─┼─────────▼┐        Query        ┌──▼────┼───┐                                                                                                                                *
+*   │            │      ┌──────────────┼           │                                                                                                                                *
+*   │   User     │      │              │  Context  │                                                                                                                                *
+*   │            │      │     ┌────────►    Bot    │                                                                                                                                *
+*   └────────────┘      │     │ Result └───────────┘                                                                                                                                *
+*                       │     │                                                                                                                                                     *
+*                     ┌─▼─────┼───┐                                                                                                                                                 *
+*                     │ Rewards   │                                                                                                                                                 *
+*                     │  Service  │                                                                                                                                                 *
+*                     └─┬──────▲──┘                                                                                                                                                 *
+*                       │      │ Result ┌────────┐                                                                                                                                  *
+*                       │      └────────┼        │                                                                                                                                  *
+*                       │               │  DB    │                                                                                                                                  *
+*                       └───────────────►        │                                                                                                                                  *
+*                        Execute query  └────────┘                                                                                                                                  *
+*                                                                                                                                                                                   *
+*                                                                                                                                                                                   *
+*                                                                                                                                                                                   *
+*************************************************************************************************************************************************************************************
+
+
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
