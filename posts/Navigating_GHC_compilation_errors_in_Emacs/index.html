@@ -1,0 +1,54 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Turn GHC errors into links within Emacs' compilation buffer
+
+October 18th, 2024
+by *Julio César*
+
+Emacs has a feature that allows to run compilation commands using `M-x compile`, it can run arbitrary commands but as the name implies compiling is its primary utility. Interestingly, whenever there&rsquo;s a compilation error the output indicates the file and line number where the error occurred, the cool thing about `compile` is that we can put the cursor over that line and press `RET` (that is, the return key) to jump into that location in an Emacs buffer.
+
+The way this works is by defining a set of regular expressions that Emacs will use to identify *file location* patterns in the `*compilation*` buffer contents, these are set via the variables `compilation-error-regexp-alist-alist` and `compilation-error-regexp-alist`. The former is a keyed map (an associative list or *alist* in LISP lingo) of regular expressions with the error pattern to match for as the value, the key itself is not important but it should uniquely identify the regular expression associated to it. The second variable, `compilation-error-regexp-alist`, is a list of these keys that should be used to parse the `compilation-mode` buffer contents.
+
+Emacs&rsquo; Haskell support it is what it is, and of course this feature doesn&rsquo;t work out of the box, but, to quickly jump to the offending line of an error message in my source code was a nice feature I wanted to have as part of my workflow.
+
+There&rsquo;s `haskell-mode` which exposes a `haskell-compile` function that behaves pretty much identically to `compile` and that it has regular expressions loaded that makes the error output linking just work, sadly, it tends to become very slow on large buffers, like when there&rsquo;s a lot of compiler output or when there are lots of errors (which is often the case with GHC Haskell anyways).
+
+However, the bright side is that `haskell-mode` already exposes regular expressions that we need in a list variable named `haskell-compilation-error-regexp-alist` so what&rsquo;s needed is to just copy these over to the sources used by the `compile` function, that is the `compilation-error-regexp-alist-alist` and `compilation-error-regexp-alist` variables we alluded to earlier.
+
+Below there&rsquo;s a function that does this:
+
+```elisp
+(defun zz/load-haskell-compilation-error-regexp-alist ()
+  "Integrate `compile' with Haskell Stack errors.
+
+`haskell-mode' exposes `haskell-compile' as an alternative to `compile' with
+regexes that allow linking errors to source files in the compilation buffer.
+However, when using it, sometimes behave weirdly, here we copy those regexes to
+the variables used by `compile' so that we are able to just use that and have
+file links work."
+  (let* ((idx 0)
+         (regex-key (intern (format "haskell-error-%d" idx))))
+    (dolist (regex haskell-compilation-error-regexp-alist)
+      (unless (assoc regex-key compilation-error-regexp-alist-alist)
+        (add-to-list 'compilation-error-regexp-alist-alist (cons regex-key regex)))
+      (add-to-list 'compilation-error-regexp-alist regex-key)
+      (setq idx (1+ idx)))))
+```
+
+Note that in order to use this, it is not enough to write it verbatim into our Emacs configuration, we must call it within a `(with-eval-after-load 'haskell-mode ...)` block, otherwise the `haskell-compilation-error-regexp-alist` variable won&rsquo;t be defined yet; Emacs Doom users can use the `after!` macro to achieve the same thing:
+
+```emacs-lisp
+(after! haskell
+  (zz/load-haskell-compilation-error-regexp-alist))
+```
+
+Success!
+
+
+## Enabling error pattern recognition in `vterm` buffers
+
+To top it all off there&rsquo;s a minor mode in Emacs to get the same `*compilation*`-like behavior in the current buffer contents, and of course it works with shell buffers too, this means that if we&rsquo;re using `vterm` and we run a compile command that results in errors then we will be able to jump to the error source just as before, to use this we just need to activate the `compilation-shell-minor-mode`.
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
