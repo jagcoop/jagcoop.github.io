@@ -1,0 +1,222 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+    **A Single Text File Is My Productivity Hack**
+
+October 22th, 2024
+By Alejandro Garcia
+
+Back in 2020 I read this post: [My productivity app is a never-ending .txt file](https://jeffhuang.com/productivity_text_file/)
+I was inspired to try it my self
+And me being an Emacs and Bash user immediately resonated with me.
+So the idea is that you just write your notes in a long text file,
+and then you need to search for something it's as simple as doing a `grep` of your text file.
+
+What I like about the single text file method is that it doesn't require anything.
+Just open a text file.
+write the date in one line and write your note next to it and done.
+
+However, with passing of the years I have settled on a couple of "hacks" that make this even better.
+My tricks are:
+
+- Use jrnl
+- Create a shortcut in your keyboard to add notes.
+- Use a variant of the Getting Things Done organization method.
+
+Let's see this tricks.
+
+# Use `jrnl`
+
+[Jrnl](https://jrnl.sh/en/stable/) is a command line app. that takes care of formating and searching your text file.
+
+For example if I have an idea that I want to share with @Agus (he is another member of our coperative).
+What would write in the command line would be:
+
+``` bash
+
+jrnl Ask @Agus How can I recycle pet plastic for my @3d-printer
+```
+
+This will create the following intry in my ~/jrnl.txt file
+
+``` bash
+$ tail -1 ~/notes/jrnl.txt
+[2024-10-22 01:20:15 PM] Ask @Agus How can I recycle pet plastic for my @3d-printer
+```
+
+As you can see it has automatically added the current date and time.
+
+Now let's see I'm meeting @Agus in person and I want to remember all the things I was going to  ask him.
+The command is:
+
+``` bash
+$ jrnl @Agus
+┏━━━━━━━━━━━━━━━━━━━━┓
+┃  16 entries found  ┃
+┗━━━━━━━━━━━━━━━━━━━━┛
+2023-09-10 07:07:07 AM @agus about the naked objects pattern, maybe search for
+a videas exapmle and develop it in Eiffel
+.
+.
+.
+2024-10-22 01:20:15 PM Ask @Agus How can I recycle pet plastic for my
+@3d-printer
+```
+
+Observe that the search is case in-sensitive, so it will return me entries with @Agus and @agus equally.
+
+We can search by either having one OR two tags:
+
+```
+$ jrnl @agus @nohemi
+┏━━━━━━━━━━━━━━━━━━━━┓
+┃  18 entries found  ┃
+┗━━━━━━━━━━━━━━━━━━━━┛
+```
+
+Also we can search by entries that have only both (AND) tags
+
+``` bash
+$ jrnl @agus -and @3d-printer
+┏━━━━━━━━━━━━━━━━━┓
+┃  1 entry found  ┃
+┗━━━━━━━━━━━━━━━━━┛
+2024-10-22 01:20:15 PM Ask @Agus How can I recycle pet plastic for my
+@3d-printer
+```
+
+We can also search by date
+
+``` bash
+$ jrnl -on 2024-10-22
+┏━━━━━━━━━━━━━━━━━┓
+┃  1 entry found  ┃
+┗━━━━━━━━━━━━━━━━━┛
+2024-10-22 01:20:15 PM Ask @Agus How can I recycle pet plastic for my
+@3d-printer
+```
+
+We can see what tags do we have:
+
+``` bash
+$ jrnl --tags
+┏━━━━━━━━━━━━━━━━━━━━━┓
+┃  526 entries found  ┃
+┗━━━━━━━━━━━━━━━━━━━━━┛
+@racket-con          : 31
+@ideas               : 25
+@til                 : 23
+...
+
+```
+
+And you can run all those commands and get even Json, and then use other tools like `jsonata` or `jq` to do some further processing.
+
+``` bash
+$ jrnl @agus -and @3d-printer --format json
+┏━━━━━━━━━━━━━━━━━┓
+┃  1 entry found  ┃
+┗━━━━━━━━━━━━━━━━━┛
+{
+  "tags": {
+    "@3d-printer": 1,
+    "@agus": 1
+  },
+  "entries": [
+    {
+      "title": "Ask @Agus How can I recycle pet plastic for my @3d-printer",
+      "body": "",
+      "date": "2024-10-22",
+      "time": "13:20",
+      "tags": [
+        "@3d-printer",
+        "@agus"
+      ],
+      "starred": false
+    }
+  ]
+}
+```
+
+All in all `jrnl` has been the most user friendly way to keep a long text file as my notes document.
+
+# Create keyboard shortcut
+
+My next hack is to create a shortcut that opens your text editor with the notes file already opened with a text line.
+
+You can ask chatgpt on how to do this for your operating system.
+
+In my case using the Ubuntu operating system with the `gedit` text editor is as simple as:
+
+creating a script `nano ~/append_datetime_to_jrnl.sh`
+
+``` bash
+
+#!/bin/bash
+# Script to append current date and time to jrnl.txt and open it in gedit
+current_date_time=$(date "+%Y-%m-%d %H:%M:%S")
+echo "$current_date_time" >> ~/notes/jrnl.txt
+gedit ~/notes/jrnl.txt
+
+```
+
+then make the script executable: `chmod +x ~/append_datetime_to_jrnl.sh`
+
+## Set Up a Keyboard Shortcut
+Go to Settings -> Keyboard -> Custom Shortcuts.
+
+Click Add Shortcut.
+
+Set the Name to something like Append Date/Time to Journal.
+
+In the Command field, enter the path to your script:
+
+bash
+Copy code
+/home/your-username/append_datetime_to_jrnl.sh
+Replace your-username with your actual username.
+
+Set the desired keyboard shortcut by pressing the keys you want to use (e.g., Ctrl + Alt + J).
+
+Click Add.
+
+# Using the Getting Things Done method
+
+Finally, the GTD method popularized by David Allen has many techniques to help one organize.
+But the core of the method is to have several lists of activities depending on the context.
+
+for example an
+
+@home is to write things that you intend to do when you are at your home
+@agus is to write lists of things that you would like to discuss when you see Agus.
+@email to write emails that you would like to write.
+@some-day is to write projects or dreams that you would like to tackle someday.
+
+And as we have seen with `jrnl` is very easy to implement all of this lists as a single text file with tags.
+
+# Bonus tip: I love me list
+
+Finally the most important list is the @I_love_me.
+This was a list by my friend Paul M. Jones.
+The idea is to write down, when you did somethnig that you are proud of.
+Or your friends and coworkers congratulated you.
+
+This list is very important.
+Because some times we are sad and need a little shot of "self-steem".
+And it's just a matter of writing `jrnl @I_love_me` to find out our accomplishment.
+
+But this also has a practical value.
+When is time of your yearly review at work.
+And you need to write your accomplishments is as simple as:
+
+`jrnl @I_love_me -and @work -from 2024-01-01 -to 2024-12-31`
+
+And done you got a list of your accomplishments to share.
+
+# Conclusion
+
+A simple text file, with `jrnl` and some habits has beeen the best note taking application for me.
+
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
