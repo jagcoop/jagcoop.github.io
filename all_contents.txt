@@ -1226,11 +1226,24 @@ While tools and methodologies have evolved, the human element remains critical. 
 
     **A Single Text File Is My Productivity Hack**
 
-October 22th, 2024
+October 22Th, 2024
 By Alejandro Garcia
 
-Back in 2020 I read this post: [My productivity app is a never-ending .txt file](https://jeffhuang.com/productivity_text_file/)
-I was inspired to try it my self
+We are living the new dark ages. In the future when our Cyborg descendants are trying to make sense of the early 2000s
+They will have very hard problem finding evidence. Because files get lost or even more frustrating.
+The tools that could read the a file.
+Stop working.
+
+That is why I'm terrified of storing my personal notes in file formats that might become obsolete in the next decade.
+This are my most private thoughts a snapshot of my growth as a person.
+Maybe they are worthless to the rest of the world, but they are very valuable to me.
+
+That is why I type my personal notes in plain text.
+However having lots of small files has many challenges of organization, search-ability, etc.
+
+So in 2020 when I read this post: [My productivity app is a never-ending .txt file](https://jeffhuang.com/productivity_text_file/)
+I was inspired to try it my self.
+
 And me being an Emacs and Bash user immediately resonated with me.
 So the idea is that you just write your notes in a long text file,
 and then you need to search for something it's as simple as doing a `grep` of your text file.
@@ -1250,9 +1263,9 @@ Let's see this tricks.
 
 # Use `jrnl`
 
-[Jrnl](https://jrnl.sh/en/stable/) is a command line app. that takes care of formating and searching your text file.
+[Jrnl](https://jrnl.sh/en/stable/) is a command line app. that takes care of formatting and searching your text file.
 
-For example if I have an idea that I want to share with @Agus (he is another member of our coperative).
+For example if I have an idea that I want to share with @Agus (he is another member of our cooperative).
 What would write in the command line would be:
 
 ``` bash
@@ -1260,7 +1273,7 @@ What would write in the command line would be:
 jrnl Ask @Agus How can I recycle pet plastic for my @3d-printer
 ```
 
-This will create the following intry in my ~/jrnl.txt file
+This will create the following entry in my ~/jrnl.txt file
 
 ``` bash
 $ tail -1 ~/notes/jrnl.txt
@@ -1278,7 +1291,7 @@ $ jrnl @Agus
 ┃  16 entries found  ┃
 ┗━━━━━━━━━━━━━━━━━━━━┛
 2023-09-10 07:07:07 AM @agus about the naked objects pattern, maybe search for
-a videas exapmle and develop it in Eiffel
+a videos example and develop it in Eiffel
 .
 .
 .
@@ -1421,11 +1434,11 @@ And as we have seen with `jrnl` is very easy to implement all of this lists as a
 
 Finally the most important list is the @I_love_me.
 This was a list by my friend Paul M. Jones.
-The idea is to write down, when you did somethnig that you are proud of.
+The idea is to write down, when you did something that you are proud of.
 Or your friends and coworkers congratulated you.
 
 This list is very important.
-Because some times we are sad and need a little shot of "self-steem".
+Because some times we are sad and need a little shot of "self-stem".
 And it's just a matter of writing `jrnl @I_love_me` to find out our accomplishment.
 
 But this also has a practical value.
@@ -1438,7 +1451,7 @@ And done you got a list of your accomplishments to share.
 
 # Conclusion
 
-A simple text file, with `jrnl` and some habits has beeen the best note taking application for me.
+A simple text file, with `jrnl` and some habits has been the best note taking application for me.
 
 
 
@@ -2183,67 +2196,67 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-10-22: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-10-23: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-10-22: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-10-23: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-10-22: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-10-23: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-10-22: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-10-23: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-10-22: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-10-23: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-10-22: posts/Single_text_file](./posts/Single_text_file).
+### [2024-10-23: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-10-22: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-10-23: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-10-22: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-10-23: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-10-22: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-10-23: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-10-22: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-10-23: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-10-22: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-10-23: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-10-22: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-10-23: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-10-22: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-10-23: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-10-22: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-10-23: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-10-22: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-10-23: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-10-22: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-10-23: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
@@ -2513,11 +2526,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-10-22: projects/rewards.codes](./projects/rewards.codes).
+### [2024-10-23: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-10-22: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-10-23: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
