@@ -1125,11 +1125,9 @@ To top it all off there&rsquo;s a minor mode in Emacs to get the same `*compilat
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
  <meta charset="utf-8" emacsmode="-*- markdown -*-">
-# A Tool in a World Full of Distractions
+# Psychological Safety
 September 23th, 2024
 by *Pepe Hernandez*
-
-### Psychological Safety
 
 **How to identify and develop high-performing teams? This article helps us create psychological safety faster, better, and more productively.**
 
