@@ -269,6 +269,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](././posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/A_Tool_in_a_World_Full_of_Distractions](././posts/A_Tool_in_a_World_Full_of_Distractions/) 
   	  </li>
   	</ul>
@@ -358,6 +362,67 @@ For me, the first strategy has been helpful, and I've implemented it by keeping 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
  <meta charset="utf-8" emacsmode="-*- markdown -*-">
+# Reflecting on developing expertise using Blooms Taxonomy, and Shu Ha Ri model
+Octubre 25th, 2024
+by *Pepe Hernandez*
+
+
+## Bloom Taxonomy
+Boom's taxonomy is a multitiered model of classified thinking according to six cognitive levels of complexity. Bloom and a group of educators created the taxonomy in 1958. 
+
+In 1995, a group of specialists started. In 2001, the revisited Bloosm Taxonomy was published. 
+
+```markdown
+|                          |                             The Cognitive Process Dimension                                      |
+|--------------------------|---------------------------------|------------|------------|---------------|----------|-----------|
+| The Knowledge Dimension  | Remember                        | Understand | Apply     | Analyze       | Evaluate | Create     |
+|--------------------------|---------------------------------|------------|------------|---------------|----------|-----------|
+| Factual Knoledge         | List                  | Summarize  | Classify   | Order         | Rank     | Combine   |
+| Conceptual Knowledge     | Describe              | Interpret  | Experiment | Explain       | Assess   | Plan      |
+| Procedural Knowledge     | Tabualte              | Predict    | Calculate  | Differentiate | Conclude | Compose   |
+| Meta-Cognitive Knowledge | Appropiate use        | Execute    | Construct  | Achieve       | Action   | Actualize |
+```
+Source: Oreng State University. 
+
+The Bloom Taxonomy framework consists of six categories **each requiring achievement of the prior skill or ability before the next, more complex one, remains easy to understand.**
+
+## Get directly to the superior levels of learning, a wrong assumption 
+
+As a student, I believed that superior levels of taxonomy were what I had to focus. Critical thinking, for example, is prevalent among marketing messages today, and it was 20 years ago. I did believe that understanding and memorizing things was wrong. 
+
+Even several Bloom's taxonomy promoters believe that superior levels of thinking are the proper focus for students and professionals. They are wrong, too.
+
+Bloom's taxonomy is hierarchical. That means a specific pyramid level needs the student to master the previous ones.
+
+# The Software Product Managemer Certified training is focused on the first two levels of learning
+
+I am working on a Systematic Literature Review about Software Product Management and Artificial Intelligence. My base research question is, "Which approaches exist that allow software product managers to have expertise in specific Software Product Management Practices?" One of the first articles I found identifies different Product Management Frameworks. The ISPMA (International Software Product Management Association) is one of the most well-known. Several of the most well-known researchers of SPM (Ebert and Maglyas, among others) participated in developing the learning material for the Certified training.  
+
+The educational objectives of the ISPMA syllabus for the Software Product Manager Certified course focus on two cognitive levels of knowledge: "know" and "understand," the two basic levels of the Bloom Taxonomy—the first Bloom Taxonomy, not the revised one.
+
+The two verbs are placeholders. **Know** for enumerate, characterize, recognize, and name. **Understand** for reflect, analyze, execute, justify, describe, judge, display, design, develop, complete, explain, elucidate, elicit, formulate, identify, interpret, reason, translate, distinguish, compare, understand, suggest, and summarize.
+
+My base question is how to develop expertise in Software Management Practices. The two basic levels were a previous requirement. The ISPMA learning objective is not intended, at least in this foundational training course, to develop expertise. It's part of the solution. 
+
+The # Shu Ha Ri model is suitable for framing the expertise level from Apprentice to Master.
+
+As I am looking for practices that allow me to develop expertise, I think the Shu Ha Ri model better explains what I am expecting.
+
+The Shu Ha Ri is another learning model that comes from Japanese culture. It is the model of Master and apprentice. Shu means to obey. Here, the apprentice must do what the Master says. This is well represented in martial arts with the figure of katas. The apprentice knows the Kata and practices. When the student has enough practice, she becomes a practitioner. When the student dominates the Kata, she can introduce their variations to the movements. Ha point to this level of mastery. Ha means detach. When the apprentice dominates several katas, she creates her own. She designs, develops, and innovates. She became the Kata. 
+
+## The following question. Are there AI tools to develop Software Product Manager expertise? 
+
+What must a Producto Manager do to advance in these levels of learning and mastery? And what the existing tools are that allow them to become one. 
+
+The way to start is with the basic level of knowledge (to know). How does a Product Manager know what she must know? 
+
+The second step is to understand. How can a Product manager understand practices? Are there IA tools that allow them to understand? 
+
+This will come in another story...
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script> <meta charset="utf-8" emacsmode="-*- markdown -*-">
 # How did I generate a QR so our clients could write a review 
 September 30th, 2024
 by *Pepe Hernandez*
@@ -1125,7 +1190,7 @@ To top it all off there&rsquo;s a minor mode in Emacs to get the same `*compilat
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
  <meta charset="utf-8" emacsmode="-*- markdown -*-">
-# Psychological Safety
+# Psychological Safety 
 September 23th, 2024
 by *Pepe Hernandez*
 
@@ -2186,67 +2251,71 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-10-24: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-10-25: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-10-24: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-10-25: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-10-24: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-10-25: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-10-24: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-10-25: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-10-24: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-10-25: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-10-24: posts/Single_text_file](./posts/Single_text_file).
+### [2024-10-25: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-10-24: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-10-25: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-10-24: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-10-25: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-10-24: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-10-25: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-10-24: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-10-25: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-10-24: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-10-25: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-10-24: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-10-25: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-10-24: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-10-25: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-10-24: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-10-25: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-10-24: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-10-25: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-10-24: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-10-25: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+[lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
+
+
+### [2024-10-25: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
@@ -2283,6 +2352,7 @@ Email
 		<li>[posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](/posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines/index.html)</li>
 		<li>[posts/Declarative_dotfiles_with_Home_Manager](/posts/Declarative_dotfiles_with_Home_Manager/index.html)</li>
 		<li>[posts/Creating_a_QR_for_Google_review_URL](/posts/Creating_a_QR_for_Google_review_URL/index.html)</li>
+		<li>[posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](/posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise/index.html)</li>
 		<li>[posts/A_Tool_in_a_World_Full_of_Distractions](/posts/A_Tool_in_a_World_Full_of_Distractions/index.html)</li>
 </ul>
 
@@ -2516,11 +2586,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-10-24: projects/rewards.codes](./projects/rewards.codes).
+### [2024-10-25: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-10-24: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-10-25: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -2769,6 +2839,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Creating_a_QR_for_Google_review_URL](././posts/Creating_a_QR_for_Google_review_URL/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](././posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
