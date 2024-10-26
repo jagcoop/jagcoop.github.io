@@ -257,6 +257,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Extending_the_Power_of_your_Personal_Cloud](././posts/Extending_the_Power_of_your_Personal_Cloud/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](././posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines/) 
   	  </li>
   	</ul>
@@ -911,6 +915,77 @@ Devtron serves as a comprehensive platform for managing Kubernetes clusters, CI/
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Extending the Power of Your Personal Cloud with Development Tools
+
+## Tools for a Development Personal Cloud
+October 26th, 2024, by Agus Rumayor
+
+When building a personal cloud, the goal is not just storage or compute but creating a robust, versatile environment. For developers, this setup can include everything from managing web assets to container orchestration and IoT device control. Here’s how these tools fit together in a development-focused cloud.
+
+### 1.1 Min.io for Web Asset Management
+Min.io is a powerful open-source object storage tool, compatible with the S3 API, that allows for seamless management of web assets. With Min.io in your cloud, you can:
+
+Store and serve static assets like images, videos, and files for web apps.
+Scale storage efficiently, making it ideal for projects with expanding data needs.
+Integrate with web frameworks through its S3 compatibility, simplifying data handling in your applications.
+By handling web assets locally, you gain more control over data security and reduce reliance on external storage solutions.
+
+### 1.2 Portainer for Container Management
+Portainer brings simplicity to container management. With Docker and Kubernetes capabilities, Portainer’s visual interface makes it easy to:
+
+Deploy and monitor containers, supporting rapid testing and iteration.
+Manage permissions and access with role-based access control, essential for collaborative projects.
+Scale applications across environments, allowing you to deploy apps or services with ease.
+Portainer is perfect for quickly launching new containerized projects and managing them in a personal cloud setting without the complexity of a command-line-only interface.
+
+### 1.3 Coder for Development Environments
+Coder creates consistent, cloud-based development environments, freeing developers from machine constraints. With Coder, you can:
+
+Set up isolated workspaces that replicate production environments, enabling reliable testing.
+Scale environments dynamically based on the complexity of the project.
+Collaborate easily, letting team members access the same development environment remotely.
+Using Coder, you can turn your personal cloud into a reliable development hub, accessible from anywhere while maintaining security and control.
+
+### 1.4 ThingsBoard for IoT Device Management
+If IoT is part of your projects, ThingsBoard provides a versatile platform for device management. With ThingsBoard, your personal cloud can:
+
+Monitor device data using a customizable dashboard for real-time insights.
+Manage workflows and rules to automate responses to device data.
+Securely interact with connected devices through protocols like MQTT, HTTP, and CoAP.
+ThingsBoard’s visualization tools and device management capabilities make it ideal for any IoT-based projects or experiments within your personal cloud.
+
+## Additional Tools for Efficiency and Cost-Savings
+### 2.1 Storj for Leveraging Extra Storage and Cost Efficiency
+While not directly a development tool, Storj adds value to a personal cloud by letting you rent out unused storage. It’s a decentralized storage network that offers:
+
+Monetization of spare storage to offset cloud costs.
+Economical storage options for large files, encrypted and distributed across multiple nodes.
+Additional data redundancy, making it a secure backup option.
+For those seeking to maximize efficiency, Storj provides a way to share resources and reduce the fixed costs associated with a personal cloud.
+
+## Architecture in Action
+Let’s look at a scenario where these tools come together:
+
+Scenario: New Feature Development and Testing
+Imagine you’re developing a new feature for an IoT application and need to test it across multiple services. The process might go like this:
+
+Coder sets up a consistent environment, mirroring your production setup. You develop and test code, deploying the feature to a local container using Portainer for quick access and control.
+ThingsBoard manages IoT device telemetry, helping monitor device interactions in real time.
+Min.io stores all necessary assets, such as configuration files, images, or firmware for IoT devices.
+Storj is employed as a backup for critical data from Min.io, providing redundancy and sharing storage costs across the network.
+
+## Why This Setup?
+
+These tools are all integrated within the multi-layered proxy architecture, ensuring secure, controlled access to each service. For more details on how the proxy architecture is structured, check out this post: [Multi-layered Proxy Architecture for my Personal Cloud](https://jagcoop.github.io/posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud/).
+
+Security: By integrating only private and secure services, this setup gives full control over your data and applications. Scalability: Kubernetes and Docker provide flexibility to scale services, while Portainer and Coder simplify management. Cost-Effective: Tools like Storj help monetize spare storage, lowering overall costs compared to relying solely on public cloud services.
+
+This setup transforms a personal cloud into a comprehensive development environment, built with control, flexibility, and efficiency in mind.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 # A Kanban Case Study in the Public Sector (Part I of N)
 
@@ -2251,71 +2326,75 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-10-25: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-10-26: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-10-25: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-10-26: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-10-25: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-10-26: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-10-25: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-10-26: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-10-25: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-10-26: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-10-25: posts/Single_text_file](./posts/Single_text_file).
+### [2024-10-26: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-10-25: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-10-26: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-10-25: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-10-26: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-10-25: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-10-26: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-10-25: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-10-26: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-10-25: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-10-26: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-10-25: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-10-26: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-10-25: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-10-26: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+[lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
+
+
+### [2024-10-26: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-10-25: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-10-26: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-10-25: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-10-26: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-10-25: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-10-26: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-10-25: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-10-26: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
@@ -2349,6 +2428,7 @@ Email
 		<li>[posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](/posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud/index.html)</li>
 		<li>[posts/Manage_complexity_behind_simple_interfaces](/posts/Manage_complexity_behind_simple_interfaces/index.html)</li>
 		<li>[posts/Kanban_Case_Study_in_Public_Sector_Part_I](/posts/Kanban_Case_Study_in_Public_Sector_Part_I/index.html)</li>
+		<li>[posts/Extending_the_Power_of_your_Personal_Cloud](/posts/Extending_the_Power_of_your_Personal_Cloud/index.html)</li>
 		<li>[posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](/posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines/index.html)</li>
 		<li>[posts/Declarative_dotfiles_with_Home_Manager](/posts/Declarative_dotfiles_with_Home_Manager/index.html)</li>
 		<li>[posts/Creating_a_QR_for_Google_review_URL](/posts/Creating_a_QR_for_Google_review_URL/index.html)</li>
@@ -2586,11 +2666,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-10-25: projects/rewards.codes](./projects/rewards.codes).
+### [2024-10-26: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-10-25: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-10-26: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -2827,6 +2907,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Kanban_Case_Study_in_Public_Sector_Part_I](././posts/Kanban_Case_Study_in_Public_Sector_Part_I/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Extending_the_Power_of_your_Personal_Cloud](././posts/Extending_the_Power_of_your_Personal_Cloud/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
