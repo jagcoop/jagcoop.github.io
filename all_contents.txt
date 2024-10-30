@@ -213,6 +213,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/a_dozen_problems](././posts/a_dozen_problems/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Unlocking_the_Power_of_Personal_Cloud](././posts/Unlocking_the_Power_of_Personal_Cloud/) 
   	  </li>
   	</ul>
@@ -2054,6 +2058,105 @@ Here's a quick summary of the technologies that power each part of my personal c
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+
+     **My Dozen Problems**
+
+October 29th, 2024
+By Alejandro Garcia
+
+> "You have to keep a dozen of your favorite problems constantly present in your mind,
+> although by and large they will lay in a dormant state.
+> Every time you hear or read a new trick or a new result,
+> test it against each of your twelve problems to see whether it helps.
+> Every once in a while there will be a hit, and people will say,
+> 'How did he do it? He must be a genius!'"
+>
+>      -- Richard Feynman, as recounted Gian Carlo
+
+
+What Feynman calls a Dozen problems,
+I call my multi-annual obsessions.
+
+There are topics / problems that continuously go back and forth in my head.
+Those ideas sometimes decide to visit me at night
+and when that happens,
+I know the night is lost.
+I'll spend hours trying to dissect the problem, back and front up and down.
+
+On the other hand Steven Pressfield on his book: "The War of Art"
+says that as Plato identified there is the world of Ideas,
+the world of perfection.
+And from that world the Muses (magical beings)
+whisper into our ears what exist in this perfect world
+So that we can create it in this physical world of ours.
+
+But the Muses don't pick only one human.
+On the contrary, they whisper to many of us.
+And some have the sensitivity to listen to them.
+some less have enough skill in their craft (music, poetry, etc.)
+to be capable of actually implementing what the Muse inspire us to accomplish.
+
+
+I suspect this is my case,
+I can listen to the Muse,
+but my skills are not good enough to actually,
+translate that inspiration into something that exist in the world.
+
+But that doesn't matter
+I continue to practice,
+Who knows, maybe one day
+I'll be skilled enough.
+
+So without further ado, let me share the problems that keep we awake at night.
+Plus some tools that always help me to try to solve them.
+
+# Problems
+
+## Different perspectives for the same information
+: I love this image:
+
+    ![multiple persepectives](./shadow_cube_cas.jpg)
+
+	It shows that the same object can be seen from multiple perspectives.
+
+	Or in programming terms we can show the same data in multiple views.
+	We can see a table, or a graph.
+	We can see a Tree, or Kanban board.
+
+## Other problems
+
+* How to have successful software company?
+
+* How to teach software project management?
+
+* How to mix a virtual and physical kanban board?
+
+* How can we automate natural construction
+
+* How to automate processes in particular government processes?
+
+* What is proper setup for working with computers (ergonomics) ?
+
+* How can we make software documentation that works all the time?
+
+* How can we have better alignment, between all the layers of software development?
+
+* How to live comfortably in a small house or apartment?
+
+
+In the coming days, I’ll expand on each of these problems and dive deeper into the tools and approaches I’ve found useful.
+
+## What about you?
+
+If you have a “dozen problems” that keep you awake at night or tools that help you tackle them,
+I’d love to hear your thoughts.
+Maybe together, we can find new angles to approach these challenges.
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
 <meta name="author" content="Alejandro Garcia">
 <meta name="description" content="Is there a silver bullet to solve any and all problems?"
 <meta name="keywords" content="triz, toc, ibis, problem_solving">
@@ -2397,79 +2500,83 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-10-28: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-10-30: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-10-28: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-10-30: posts/a_dozen_problems](./posts/a_dozen_problems).
+[lab notes ongaing](./posts/a_dozen_problems)
+
+
+### [2024-10-30: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-10-28: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-10-30: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-10-28: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-10-30: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-10-28: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-10-30: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-10-28: posts/Single_text_file](./posts/Single_text_file).
+### [2024-10-30: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-10-28: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-10-30: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-10-28: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-10-30: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-10-28: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-10-30: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-10-28: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-10-30: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-10-28: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-10-30: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-10-28: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-10-30: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-10-28: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-10-30: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-10-28: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-10-30: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-10-28: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-10-30: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-10-28: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-10-30: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-10-28: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-10-30: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-10-28: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-10-30: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-10-28: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-10-30: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
@@ -2492,6 +2599,7 @@ Email
 <ul>
     <li><a href="/">index</a></li>
 		<li>[posts/how_to_define_a_problem](/posts/how_to_define_a_problem/index.html)</li>
+		<li>[posts/a_dozen_problems](/posts/a_dozen_problems/index.html)</li>
 		<li>[posts/Unlocking_the_Power_of_Personal_Cloud](/posts/Unlocking_the_Power_of_Personal_Cloud/index.html)</li>
 		<li>[posts/Understanding_complexity_in_software_systems](/posts/Understanding_complexity_in_software_systems/index.html)</li>
 		<li>[posts/The_Rise_and_Fall_of_Abacus_Rationale](/posts/The_Rise_and_Fall_of_Abacus_Rationale/index.html)</li>
@@ -2742,11 +2850,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-10-28: projects/rewards.codes](./projects/rewards.codes).
+### [2024-10-30: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-10-28: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-10-30: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -2939,6 +3047,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  <li>[./posts](././posts/) 
 	      <ul>
 	  	  <li>[./posts/how_to_define_a_problem](././posts/how_to_define_a_problem/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/a_dozen_problems](././posts/a_dozen_problems/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
