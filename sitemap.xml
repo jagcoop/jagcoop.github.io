@@ -106,6 +106,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/Did_You_Read_This_Book/index.html</loc>
+  <lastmod>2024-11-03</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines/index.html</loc>
   <lastmod>2024-11-03</lastmod>
   <changefreq>weekly</changefreq>

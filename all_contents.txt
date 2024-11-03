@@ -273,6 +273,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Did_You_Read_This_Book](././posts/Did_You_Read_This_Book/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](././posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines/) 
   	  </li>
   	</ul>
@@ -995,6 +999,80 @@ Devtron serves as a comprehensive platform for managing Kubernetes clusters, CI/
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Did you read this book? Great, show me...
+By Pepe Hernández, November 3rd, 2024
+
+# I like to read.
+
+I like to read.
+I wish I could have more time to read.
+As I don't have too much time to read, I need to take some shortcuts.
+First, I use audible. 
+I enjoy running for 30 minutes daily while listening to the chosen audiobook. Last month, I listened to and re-listened to Cal's Newport Slow Productivity book. I also re-listen to one of my favorites, Steven's Pressfield, "Put your ass where your heart wants to be." I will buy both books physically. They are worth it.
+
+## A pair of learnings from each book
+
+### Cal's Newport Slow Productivity
+
+**I discovered some stories that show that slow productivity works**. Cals Newport writes about how vital work is and how it took years, even decades, to finish. Newton, Galileo, Jane Austin, Einstein, and other great achievers had problems in their minds and worked on them for many years. They were persistent, patient, and slow productivity workers. They worked a pair of hours and then followed with the daily activities. But they continually came back to their stuff, to their problem.
+**I found another interesting Kanban case in the book**. 
+Another exciting learning is that the Genoma Research Center of Boston's business case used Kanban to achieve an excellent operating performance. A sustainable pace is one of Kanban's values. The lab's IT and software departments adopted Kanban to improve software delivery. 
+
+### Steven Pressfield, "Put your ass where your heart wants to be"
+You can use many quotes to be on your thing when you are working. Also, the book contains recommendations to motivate you to outperform in your field. This is mainly for artists and writers, but you can generalize this to every human field.
+
+- This is the day; there is no other day.
+- This is the wor, there is no other work.
+- Move your ass all the way, related to marketing.
+- Kill-kill = good, good
+- Among other advice.
+
+Both books are highly recommended.
+
+## Reading the Physical book, "Scaling Up".
+For other motifs, I am reading Vern Harmish's book Scaling Up. I am working right now, helping my family use this framework in their company.
+
+When I read a book, I try to understand the message. Frequently, I elaborate on something. I've made a presentation, prepared material, written a post, or done something else. 
+
+So when I recommend a book, I have a general understanding of it. I could talk about it. This is obvious, at least for me. But is it for everybody else?
+
+## Did you read X book?
+
+So frequently, when I talk to somebody about a specific topic, I remember a book, a phrase, a quote. And I ask, that comes from this particular book. Did you read it? Sometimes, people ask me, "Yes, of course." The younger me smiled, agreed, and continued with the talk to realize that people hadn't read the book for the following talk, or, if they had read the book, they hadn't understood the content, or the message, or thought bad, they only told me they read the book, but it wasn't true. 
+
+When this happens to me, now I ask, "Great, what do you think about the book?" What did you learn? Did you like it, and why? I do that not because I want to put them in evidence of lying to me or us. I do that because when I say something, I frequently don't finish my idea because I think other people already understand or know what I am trying to say. 
+
+I adopted this habit because Alex uses it frequently. We have a WhatsApp group of friends. The group aims to recommend movies or tracks. Its original name is cine cata (cine, for cinema, and data for the analogy of wine-tasting events for enthusiasts and specialists). When somebody adds a recommendation, Alex always asks, "Why did you like it?" That means you should give me more information to check my interest.
+
+As an expert in something, there is some knowledge you think is obvious. For example, bottlenecks determine the performance of the system. It's obvious, isn't it? Yes, but the second level of understanding is not. You realize that when people know the bottleneck, they continue improving the 99% of elements that are not the bottleneck. When you ask, what will you improve? That lets you know that they don't understand bottlenecks. 
+Experts understand deeply simple things in their domain.  
+
+If you know something as an expert and someone tells you they understand the concept, you believe them because it is obvious. This is a trap.
+
+Did you read this book? Did you know this concept? - you will ask.
+Yes, of course - people will answer.
+Then you believe. You have fallen. You lose an opportunity.
+
+	"What is obvious, is obvious (only) to You" - John Medina.
+
+John Medina, author of Brain Rules and Brain Rules for Kids (both excellent books), said, "What is obvious is obvious to you." Because what you are trying to say is not apparent to anybody else. You need to say it to be understood. Yes, I know. It's not only me. Everybody makes connections with his experience or with the knowledge he has acquired throughout his life. 
+
+## Teaching from the Back of the Room
+
+There is another story that I like to share. I have some friends who have been teachers for a long time. A month ago, a friend of mine shared with me that their students of a class ignored them, and some of them told them, you repeat the concepts many times. Your class is boring because you repeat it continuously. She was reflective. I recommended that she ask their students what they have learned. To ask more, to listen more, and to talk less. "Can you explain to me the concept, idea, technique, and tool I have already shared with you?" When students answered, she knew if students had understood the concept. And she could give them good feedback in advance. Her classes have improved with the use of this principle. 
+
+I discovered this principle in a Kanban University training course. Asking participants about Kanban methods' core practices lets facilitators know if they understand the concept or if they identify the gaps to give the participants good feedback. 
+
+A final thought.
+
+## People frequently think they know, but they don't. 
+
+When this happens, go deeper. Both parts win.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 # Extending the Power of Your Personal Cloud with Development Tools
 
@@ -2672,6 +2750,10 @@ This are the innovations that have been ocupaying our minds lately
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
+### [2024-11-03: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+[lab notes ongaing](./posts/Did_You_Read_This_Book)
+
+
 ### [2024-11-03: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
@@ -2730,6 +2812,7 @@ Email
 		<li>[posts/Kanban_Serious_Games_Intro](/posts/Kanban_Serious_Games_Intro/index.html)</li>
 		<li>[posts/Kanban_Case_Study_in_Public_Sector_Part_I](/posts/Kanban_Case_Study_in_Public_Sector_Part_I/index.html)</li>
 		<li>[posts/Extending_the_Power_of_your_Personal_Cloud](/posts/Extending_the_Power_of_your_Personal_Cloud/index.html)</li>
+		<li>[posts/Did_You_Read_This_Book](/posts/Did_You_Read_This_Book/index.html)</li>
 		<li>[posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](/posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines/index.html)</li>
 		<li>[posts/Declarative_dotfiles_with_Home_Manager](/posts/Declarative_dotfiles_with_Home_Manager/index.html)</li>
 		<li>[posts/Creating_a_QR_for_Google_review_URL](/posts/Creating_a_QR_for_Google_review_URL/index.html)</li>
@@ -3225,6 +3308,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Extending_the_Power_of_your_Personal_Cloud](././posts/Extending_the_Power_of_your_Personal_Cloud/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Did_You_Read_This_Book](././posts/Did_You_Read_This_Book/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
