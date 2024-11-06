@@ -2630,98 +2630,39 @@ body.md{
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 
-     **My Dozen Problems**
+    
 
-October 29th, 2024
-By Alejandro Garcia
+November 5th, 2024
+By Ruben Mevy
 
-> "You have to keep a dozen of your favorite problems constantly present in your mind,
-> although by and large they will lay in a dormant state.
-> Every time you hear or read a new trick or a new result,
-> test it against each of your twelve problems to see whether it helps.
-> Every once in a while there will be a hit, and people will say,
-> 'How did he do it? He must be a genius!'"
->
->      -- Richard Feynman, as recounted mathematician Gian-Carlo Rota
+# How to write your ideas? #
 
+It is very common as a student, no matter what we are studying, to find it important to know how to write—not only letters but also our ideas. I have been struggling with the fact that I have to learn and write, and maybe it sounds easy in theory, but in practice, it is not as easy as it looks. But why?
 
-What Feynman calls a Dozen problems,
-I call my multi-annual obsessions.
+**The recipe way.**
+I have realized that there are many ways to express an idea that comes to mind, but we definitely always need to keep in mind that we must have order. When we think, we always think in processes. When preparing food, we think about the entire process of its preparation, from the raw ingredients to the final dish. Similarly, ideas and the way we think when writing are exactly like a recipe. We have to start from the beginning.
+There are some steps to follow in order to start writing like a pro:
 
-There are topics / problems that continuously go back and forth in my head.
-Those ideas sometimes decide to visit me at night
-and when that happens,
-I know the night is lost.
-I'll spend hours trying to dissect the problem, back and front up and down.
+**Define Your Purpose**: Before you start writing, be clear about the objective of your idea. What do you want to achieve with it? Who is it aimed at? 
+We need to have at least a clear idea of who we want to reach or who we want to target with our objectives. And, above all, what we want to achieve with our idea.
 
-On the other hand Steven Pressfield on his book: "The War of Art"
-says that as Plato identified there is the world of Ideas,
-the world of perfection.
-And from that world the Muses (magical beings)
-whisper into our ears what exist in this perfect world
-So that we can create it in this physical world of ours.
+**Brainstorm Ideas**: Write down all the ideas that come to mind related to the topic. Don't worry about order or coherence at this stage; just let your thoughts flow.
+If your idea is about dogs, just write all about them, for example; pets, toys, dog food, bones, etc. There's more than meets the eye if we start thinking.
 
-But the Muses don't pick only one human.
-On the contrary, they whisper to many of us.
-And some have the sensitivity to listen to them.
-some less have enough skill in their craft (music, poetry, etc.)
-to be capable of actually implementing what the Muse inspire us to accomplish.
+**Organize Your Ideas**: Once you have a list of ideas, organize them into an outline or a mind map. This will help you see the overall structure of your idea and how the different points relate to each other.
+Write them down in a notebook if you want, in English or Spanish. The important thing is that you see it's easier to organize them when you have them written down somewhere. It will also be easier to relate them to each other and start consolidating your main idea.
 
+**Write a Draft**: Start writing a draft based on your outline. Don't worry about perfection at this stage; the important thing is to get your ideas down on paper.
+This is the point where the real practice begins. Just write about your ideas and start to see how they take shape. It will probably look rough at first, but as you keep writing, the way you do it will get better and better.
 
-I suspect this is my case,
-I can listen to the Muse,
-but my skills are not good enough to actually,
-translate that inspiration into something that exist in the world.
+**Review and Edit**: After writing the draft, take some time to review and edit it. Correct grammatical errors, improve coherence, and ensure your message is clear.
+Read it over and over again. First and foremost, you must like what you read. If you don't, we will have to correct spelling, change words, and the syntax of our writing, perhaps several times, until it seems right to us.
 
-But that doesn't matter
-I continue to practice,
-Who knows, maybe one day
-I'll be skilled enough.
+**Seek Feedback**: Share your writing with someone you trust and ask for their opinion. Feedback can help you improve and polish your idea.
+You should always seek a second opinion. There's no better critic than someone who doesn't conceive the idea. Look for all kinds of critiques; sometimes life is tough, and other times it's not so much. Always keep that in mind.
 
-So without further ado, let me share the problems that keep we awake at night.
-Plus some tools that always help me to try to solve them.
+**Refine Your Work**: Based on the feedback received, make the necessary adjustments to improve your writing. Now, with all the steps of our recipe, we are ready to express our ideas and get the most out of them as they should be. Now, let's enjoy writing.
 
-# Problems
-
-## Different perspectives for the same information
-: I love this image:
-
-    ![multiple persepectives](./shadow_cube_cas.jpg)
-
-	It shows that the same object can be seen from multiple perspectives.
-
-	Or in programming terms we can show the same data in multiple views.
-	We can see a table, or a graph.
-	We can see a Tree, or Kanban board.
-
-## Other problems
-
-* How to have successful software company?
-
-* How to teach software project management?
-
-* How to mix a virtual and physical kanban board?
-
-* How can we automate natural construction
-
-* How to automate processes in particular government processes?
-
-* What is proper setup for working with computers (ergonomics) ?
-
-* How can we make software documentation that works all the time?
-
-* How can we have better alignment, between all the layers of software development?
-
-* How to live comfortably in a small house or apartment?
-
-
-In the coming days, I’ll expand on each of these problems and dive deeper into the tools and approaches I’ve found useful.
-
-## What about you?
-
-If you have a “dozen problems” that keep you awake at night or tools that help you tackle them,
-I’d love to hear your thoughts.
-Maybe together, we can find new angles to approach these challenges.
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
