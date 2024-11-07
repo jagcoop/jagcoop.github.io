@@ -1494,6 +1494,7 @@ To top it all off there&rsquo;s a minor mode in Emacs to get the same `*compilat
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
+
 # Flight Levels vs PMI: The Case for Simplicity in Organizational Project Management
 November 6th, 2024
 by *Pepe Hernandez*
