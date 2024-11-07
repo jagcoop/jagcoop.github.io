@@ -253,6 +253,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/PMI_vs_Flight_Levels_Less_is_More](././posts/PMI_vs_Flight_Levels_Less_is_More/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Navigating_GHC_compilation_errors_in_Emacs](././posts/Navigating_GHC_compilation_errors_in_Emacs/) 
   	  </li>
   	</ul>
@@ -1489,7 +1493,45 @@ To top it all off there&rsquo;s a minor mode in Emacs to get the same `*compilat
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
- <meta charset="utf-8" emacsmode="-*- markdown -*-">
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+# Flight Levels vs PMI: The Case for Simplicity in Organizational Project Management
+November 6th, 2024
+by *Pepe Hernandez*
+
+I am wondering why I am resistant to complex methods. Complexity is a function of the number of elements in a system. The more elements, the more complexity. I like simpler systems. I tend to have low or no trust in complex solutions. The first question is, how can you be sure it will solve your problem? How do you know that without trying the solutions for a certain time? 
+
+Given Gall's Law ""a complex system that works is invariably found to have evolved from a simple system that works".
+
+Why not try first a simple system. 
+
+Eliyahu Goldrati points out that admiration for complexity is an obstacle to good thinking. Love for complexity is bad in this context. If you compare PMI's Organizational Project Management model with Flight Levels, you will detect rapidly the complexity of PMI's approach.
+
+Simplicity is undervalued. Loving complexity creates more intricate systems. Goldratt thinks that simple solutions truly can solve problems. Simpler does not necessarily mean easier. The Flight Levels Model was developed using principles of Systems Thinking, Lean Methodologies, and the Theory of Constraints. 
+
+Steve Jobs said that simple can be more complicated than complex: You have to work hard to get your thinking clean to make it simple. But it's worth it in the end because once you get there, you can move mountains.
+
+As I read the framework, I compared every element of the PMI approach with Klaus Leopold's Flight Levels model. The PMI model includes 10 knowledge areas. Klaus Leopold has three levels and 5 activities for achieving business agility. This simple comparison shows that Flight levels are a simpler model to understand and implement, even though their creation took years for Leopold. He was an advocate and pioneer of the Kanban Method in Knowledge services 14 years ago. 
+
+While comparing the models, I remembered Ockham's principle: "The simplest solution is often the correct one." 
+
+There are some variations of the Ockham principle:
+It is vain to do with more what you can do with less.
+An explanation of a fact must be just enough.
+Lastly, the simple solution is the correct one most of the time.
+
+Flight Levels has fewer elements than the PMI's Organizational Project Management Model. Following the Ockham principle, this solution is more likely to be right.
+
+Another thing that I dislike about the PMI model is that it seems to be a framework for managing a large number of projects. The lean agile principles say that you must limit your Work in Progress to obtain better performance and increase predictability.
+
+Antoine de Saint-Exupéry, Airman's Odyssey: "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away." I think Flight Levels is just enough.
+
+As David Anderson pointed out. Being bureaucratic adds value? Certainly not. You use bureaucracy to achieve a goal. You use bureaucracy because it is a means for something else. Why not use a tool that requires less overhead, less time, and fewer resources if you achieve the same with both. 
+
+Less is more.
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script> <meta charset="utf-8" emacsmode="-*- markdown -*-">
 # Psychological Safety 
 September 23th, 2024
 by *Pepe Hernandez*
@@ -2737,99 +2779,103 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-06: posts/ideas](./posts/ideas).
+### [2024-11-07: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2024-11-06: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-11-07: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-11-06: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2024-11-07: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2024-11-06: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2024-11-07: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2024-11-06: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-11-07: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-11-06: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-11-07: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-11-06: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-11-07: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-11-06: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-11-07: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-11-06: posts/Single_text_file](./posts/Single_text_file).
+### [2024-11-07: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-11-06: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-11-07: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-11-06: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-11-07: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-11-06: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-11-07: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+[lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
+
+
+### [2024-11-07: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-11-06: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-11-07: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-11-06: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-11-07: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-11-06: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-11-07: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-11-06: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-11-07: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-11-06: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-11-07: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-11-06: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2024-11-07: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2024-11-06: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-11-07: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-11-06: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-11-07: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-11-06: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-11-07: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-11-06: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-11-07: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-11-06: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-11-07: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2024-11-06: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2024-11-07: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -2862,6 +2908,7 @@ Email
 		<li>[posts/Single_text_file](/posts/Single_text_file/index.html)</li>
 		<li>[posts/Requirements_in_the_Age_of_AI](/posts/Requirements_in_the_Age_of_AI/index.html)</li>
 		<li>[posts/Psychological_Safety](/posts/Psychological_Safety/index.html)</li>
+		<li>[posts/PMI_vs_Flight_Levels_Less_is_More](/posts/PMI_vs_Flight_Levels_Less_is_More/index.html)</li>
 		<li>[posts/Navigating_GHC_compilation_errors_in_Emacs](/posts/Navigating_GHC_compilation_errors_in_Emacs/index.html)</li>
 		<li>[posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](/posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud/index.html)</li>
 		<li>[posts/Manage_complexity_behind_simple_interfaces](/posts/Manage_complexity_behind_simple_interfaces/index.html)</li>
@@ -3107,11 +3154,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-06: projects/rewards.codes](./projects/rewards.codes).
+### [2024-11-07: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-11-06: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-11-07: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -3344,6 +3391,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Psychological_Safety](././posts/Psychological_Safety/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/PMI_vs_Flight_Levels_Less_is_More](././posts/PMI_vs_Flight_Levels_Less_is_More/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
