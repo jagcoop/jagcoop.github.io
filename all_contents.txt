@@ -285,6 +285,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Frustration_in_the_face_of_improvement](././posts/Frustration_in_the_face_of_improvement/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Extending_the_Power_of_your_Personal_Cloud](././posts/Extending_the_Power_of_your_Personal_Cloud/) 
   	  </li>
   	</ul>
@@ -1220,6 +1224,34 @@ These tools are all integrated within the multi-layered proxy architecture, ensu
 Security: By integrating only private and secure services, this setup gives full control over your data and applications. Scalability: Kubernetes and Docker provide flexibility to scale services, while Portainer and Coder simplify management. Cost-Effective: Tools like Storj help monetize spare storage, lowering overall costs compared to relying solely on public cloud services.
 
 This setup transforms a personal cloud into a comprehensive development environment, built with control, flexibility, and efficiency in mind.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+
+    
+
+November 11th, 2024
+By Ruben Mevy
+
+# Frustration in the Face of Improvement #
+
+There always comes a time when we want to learn something or be better at some activity, and with it, a wave of feelings arises, both good and bad. It is at this point that the situation can play a trick on us and lead to frustration.
+
+So, ** what is the famous frustration, how to avoid it, and how to cope with it in a healthy way? **
+
+Frustration is a negative emotion that occurs when goals or objectives are not achieved. It is a natural response to the inability to get what we want, and it can generate feelings of disappointment, helplessness, anger, and despair.
+This happens to most people who are dedicated to any creative field, such as music, programming, literature, etc. Unfortunately, frustration is a feeling that leads to failure and creative self-destruction, which is precisely what we do not want to suffer. But how could we "combat" this feeling of failure in the face of new challenges? Well, "No one is born knowing," and from this phrase, we will start to put aside the mental and physical obstacles that frustration imposes on us.
+
+The first thing is to accept what we feel. Frustration is a sensation that we will inevitably experience when we learn something, as things will not always go as we expect the first time due to various factors, whether natural impediments or otherwise. I repeat, things will **NOT** always be in our favor.
+Self-motivation is very important at this point because, just as in music and programming, we can find different paths to reach our goal. So, we must look for ways to overcome new challenges. There is always more than one way to do it.
+And the most important thing of all is persistence and practice. Although this is the stage where frustration is most felt, there is no harm that does not bring some good. When learning something and after practicing and practicing, if you are not satisfied, you can always stop for a moment and take some time to clear your mind, relax your joints, or simply take a breather. You will see that when you try again, things will be better.
+It is also necessary to find external support that can constructively criticize our work and give us an outside opinion. This helps a lot to see errors that we, as creatives, do not perceive. Be very patient because practice makes perfect. Nothing is instant or magical; it will take more or less time depending on how much effort we put into practicing whatever we are learning.
+
+In conclusion, frustration is a natural emotion in the creative process. To overcome it, we must accept obstacles as opportunities for learning and improvement, be patient, and seek inspiration from new sources. Constant practice and self-reflection are key to advancing and improving.
+
+
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
@@ -2987,6 +3019,10 @@ This are the innovations that have been ocupaying our minds lately
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
+### [2024-11-11: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+[lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
+
+
 ### [2024-11-11: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
@@ -3060,6 +3096,7 @@ Email
 		<li>[posts/Kanban_Serious_Games_Intro](/posts/Kanban_Serious_Games_Intro/index.html)</li>
 		<li>[posts/Kanban_Case_Study_in_Public_Sector_Part_I](/posts/Kanban_Case_Study_in_Public_Sector_Part_I/index.html)</li>
 		<li>[posts/How_To_Choose_a_Book](/posts/How_To_Choose_a_Book/index.html)</li>
+		<li>[posts/Frustration_in_the_face_of_improvement](/posts/Frustration_in_the_face_of_improvement/index.html)</li>
 		<li>[posts/Extending_the_Power_of_your_Personal_Cloud](/posts/Extending_the_Power_of_your_Personal_Cloud/index.html)</li>
 		<li>[posts/Did_You_Read_This_Book](/posts/Did_You_Read_This_Book/index.html)</li>
 		<li>[posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](/posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines/index.html)</li>
@@ -3570,6 +3607,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/How_To_Choose_a_Book](././posts/How_To_Choose_a_Book/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Frustration_in_the_face_of_improvement](././posts/Frustration_in_the_face_of_improvement/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
