@@ -221,6 +221,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/different_perspectives_for_the_same_information](././posts/different_perspectives_for_the_same_information/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/a_dozen_problems](././posts/a_dozen_problems/) 
   	  </li>
   	</ul>
@@ -2515,6 +2519,205 @@ Maybe together, we can find new angles to approach these challenges.
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 
+     ** How to show different perspectives for the same information **
+
+November 21st, 2024
+By Alejandro Garcia
+
+
+As I have said in my previous post:
+I love this image:
+
+![multiple perspectives](./shadow_cube_cas.jpg)
+
+It shows that the same object can be seen from multiple perspectives.
+
+So for several years now I have been trying to find:
+
+> "How to show different perspectives for the same information, in programming?"
+> -- Alejandro Garcia
+
+In this post I'm going to explain the different ways I have tried to solve this problem.
+
+## Text to Diagrams.
+
+Let's first start with two representations of the same idea:
+Text and diagrams.
+
+Here we have PlantUML text:
+
+``` plantuml
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+```
+
+And it generates this diagram:
+
+![Plantuml](https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBCoKnELT2rKt3AJx9IS2mjoKZDAybCJYp9pCzJ24ejB4qjBk42oYde0jM05MDHLLoGdrUSoeLkM5u-K5sHGY9MGw6ARNHryQb66EwGcfS2T300)
+
+Observe how brief the text to create the diagram is.
+And at the same time observe that the diagram is more understandable than the text
+used to create it.
+
+I have a collection of tools like this:
+
+https://elviejo79.github.io//2020-02-02-Awesome-list-of-text-to-X/
+
+So in general I love this kinds of tools.
+My only problems are so far:
+1. I cannot create DSL to create any kind of language I want so that it creates a diagram.
+2. I wish that the text to generate the diagrams where actual code.
+
+### For diagrams that are actual code.
+
+We have programming languages like https://ballerina.io
+That given this code,
+ that is executable
+
+``` java
+
+import ballerina/http;
+import ballerina/googleapis.sheets;
+
+configurable string githubPAT = ?;
+configurable string repository = "ballerina-platform/ballerina-lang";
+configurable string sheetsAccessToken = ?;
+configurable string spreadSheetId = ?;
+configurable string sheetName = "pull-requests";
+
+type PR record {
+    string url;
+    string title;
+    string state;
+    string created_at;
+    string updated_at;
+};
+
+public function main() returns error? {
+    http:Client github = check new ("https://api.github.com/repos");
+    map<string> headers = {
+        "Accept": "application/vnd.github.v3+json",
+        "Authorization": "token " + githubPAT
+    };
+    PR[] prs = check github->/[repository]/pulls(headers);
+
+    sheets:Client gsheets = check new ({auth: {token: sheetsAccessToken}});
+    _ = check gsheets->appendValue(spreadSheetId, ["Issue", "Title", "State", "Created At", "Updated At"],
+                {sheetName: sheetName});
+
+    foreach var {url, title, state, created_at, updated_at} in prs {
+        _ = check gsheets->appendValue(spreadSheetId, [url, title, state, created_at, updated_at],
+                    {sheetName: sheetName});
+    }
+}
+```
+
+will generate this diagram:
+
+![Ballerina](https://ballerina.io/images/consuming-services-diagram.svg)
+
+Now this is a powerful programming language for cloud services.
+
+However my problem is that it's only for that kind of system and only sequence diagram.
+
+I want to crate any kind of diagram, with DSL.
+
+### For creating a DSL that has concepts
+
+The most user friendly ways that I have found to generate DSL are
+
+#### Small-talk
+
+#### Scroll notation
+
+#### White-space lisp
+
+#### Racket
+
+# Ontologies and RDFa
+
+Triplets
+
+Wikidata
+
+SPRQL
+
+# lisp and homo-iconic languages
+
+# Bidirectional parsers
+
+Bidirectional parsers are an extremely interesting concept.
+
+In most programming languages, the Parser and the Pretty Printer are developed independently.
+So that means that if your parsers translate a Source Code file .Ne a Long String.
+Into an Abstract Syntax Tree (AST). Which is a tree data structure.
+And then you print the AST (data structure)
+What gets printer is NOT code that compiles.
+
+But having the pretty print code to be compilable is attractive.
+Because that way we can more easily build debuggers, or even transpiler.
+
+The idea is that we have the two functions:
+
+get
+: takes a source code and returns an abstract syntax tree
+
+	source_code_v1 |> get |> AST
+
+put
+: takes an AST and returns a source code
+
+  AST |> put |> source_code_v2
+
+but we need to clarify that source_code_v2 and source_code_v1 are not the same but they are equivalent.
+which means that generating the AST from both versions must generate the same AST
+
+	(source_code_v1 |> put) == (source_code_v2 |> put)
+
+Now the problem is that given an AST there is almost an infinite number of possible source_code representations:
+for example
+
+  if (A == 1) and (B == 2) then ...
+
+could as easily be represented by
+
+  if (B == 2) and (A == 1) then ...
+
+  or even more difficult
+
+	if (A == 1) then {
+		if ( == 2 ) then ...
+	}
+
+with a nested if.
+So we we have the problem that the _put_ function can have "infinite outputs.
+that's why the creators of BiGUL
+Created a third function called _put-back_
+
+	put-back(source_code_v1, AST_modified) and produce source_code_v2
+
+So in put-back the parameters are the original source code that you started with, the AST that it generates,
+that can or cannot be modified and then outputs source_code_v2.
+Since now we have two pieces of data we can actually generate a single deterministic output for put-back.
+
+And that makes all the difference.
+
+## BiGul
+
+## BiOOP
+
+# Json, YAML, XML, S-expressions
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+
     <u> **Dive into Faust: The DSL for Musicians and Sound Wizards** </u> 
 
 November 2th, 2024
@@ -2943,119 +3146,123 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-11: posts/ideas](./posts/ideas).
+### [2024-11-13: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2024-11-11: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-11-13: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-11-11: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2024-11-13: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2024-11-11: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2024-11-13: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+[lab notes ongaing](./posts/different_perspectives_for_the_same_information)
+
+
+### [2024-11-13: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2024-11-11: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-11-13: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-11-11: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-11-13: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-11-11: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-11-13: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-11-11: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-11-13: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-11-11: posts/Single_text_file](./posts/Single_text_file).
+### [2024-11-13: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-11-11: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-11-13: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-11-11: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-11-13: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-11-11: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2024-11-13: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2024-11-11: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-11-13: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-11-11: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-11-13: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-11-11: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-11-13: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-11-11: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2024-11-13: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2024-11-11: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-11-13: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-11-11: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-11-13: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-11-11: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2024-11-13: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2024-11-11: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2024-11-13: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2024-11-11: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-11-13: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-11-11: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2024-11-13: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2024-11-11: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-11-13: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-11-11: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-11-13: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-11-11: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-11-13: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-11-11: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2024-11-13: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2024-11-11: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-11-13: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-11-11: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-11-13: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2024-11-11: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2024-11-13: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -3080,6 +3287,7 @@ Email
 		<li>[posts/ideas](/posts/ideas/index.html)</li>
 		<li>[posts/how_to_define_a_problem](/posts/how_to_define_a_problem/index.html)</li>
 		<li>[posts/faust_a_musical_dsl](/posts/faust_a_musical_dsl/index.html)</li>
+		<li>[posts/different_perspectives_for_the_same_information](/posts/different_perspectives_for_the_same_information/index.html)</li>
 		<li>[posts/a_dozen_problems](/posts/a_dozen_problems/index.html)</li>
 		<li>[posts/Unlocking_the_Power_of_Personal_Cloud](/posts/Unlocking_the_Power_of_Personal_Cloud/index.html)</li>
 		<li>[posts/Understanding_complexity_in_software_systems](/posts/Understanding_complexity_in_software_systems/index.html)</li>
@@ -3338,11 +3546,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-11: projects/rewards.codes](./projects/rewards.codes).
+### [2024-11-13: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-11-11: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-11-13: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -3543,6 +3751,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/faust_a_musical_dsl](././posts/faust_a_musical_dsl/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/different_perspectives_for_the_same_information](././posts/different_perspectives_for_the_same_information/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
