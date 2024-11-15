@@ -241,6 +241,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/The_Photovoltaics_Dilemma](././posts/The_Photovoltaics_Dilemma/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Terravision_vs_Google_Earth](././posts/Terravision_vs_Google_Earth/) 
   	  </li>
   	</ul>
@@ -2199,7 +2203,78 @@ Several key conclusions can be drawn from the provided summary regarding the con
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
-<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script> <meta charset="utf-8" emacsmode="-*- markdown -*-">
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
+# The Photovoltaics Dilemma: Grid-Tied, Off-Grid, or Hybrid?
+November 15th, 2024
+by *Agus Rumayor*
+
+Thankfully, solar systems are now easier to set up, and the costs are finally getting to a sweet spot where they make sense for most households. With the rise of electric vehicles (EVs) and the desire to power personal cloud services sustainably, energy consumption is trending upward. Currently, our system is isolated, and while I’m really happy with it, the inverter’s max amperage is a bit lower than what we need.
+
+The inverter does offer the flexibility to prioritize inputs between solar panels, grid, and batteries, which has been a game-changer for our energy management. Now, with the chance to design a new solar project, we’re considering whether to stick with an isolated system, switch to a grid-tied setup, or go hybrid.
+
+## The Options:
+
+1. Grid-Tied System
+
+Pros:
+* Connects to the grid, providing access to power when solar isn’t sufficient.
+* Potential for net metering (offsetting consumption with excess energy credits).
+* Lower upfront costs since no batteries are required.
+Cons:
+* No power during grid outages.
+* Dependence on the grid remains.
+
+2. Off-Grid System
+
+Pros:
+* Complete energy independence.
+* You produce and consume your energy, aligning perfectly with self-sufficiency goals.
+Cons:
+* Higher initial investment due to the need for batteries.
+* Risk of running out of power in prolonged cloudy weather or higher-than-expected consumption.
+
+3. Hybrid System
+
+Pros:
+* Stores excess energy in batteries while also being connected to the grid for added reliability.
+* Ensures power during outages while still achieving a high degree of self-sufficiency.
+Cons:
+* Higher setup and maintenance costs due to the inclusion of batteries and a more complex system.
+
+## Diving into System Designs: What Does Each Setup Look Like?
+Understanding the mechanics of each system helps you weigh your options better.
+
+Grid-Tied System Design
+* Solar panels generate electricity during the day.
+* Excess energy offsets your future usage (via credits, if applicable).
+* The system switches to the grid when solar power isn’t enough.
+
+Off-Grid System Design
+* Solar panels charge a battery bank, storing power for cloudy days and nighttime.
+* A backup generator can step in during extended periods of low solar production.
+
+Hybrid System Design
+* Combines the flexibility of grid-tied with the independence of off-grid.
+* Batteries store energy for use during outages or peak evening hours.
+* The system seamlessly switches between solar, battery, and grid power depending on availability.
+
+## My Considerations:
+
+1. Sustainability:
+My primary goal is to produce what I consume, minimizing waste and maximizing the use of renewable resources. I want to strike a balance where my household or business operates sustainably, independent of external energy inputs.
+
+2. Reliability and Location Factors:
+Living in a region where power outages are becoming more frequent, particularly in the late afternoons around sunset, reliability is crucial. This timing is problematic since it coincides with peak household energy use. As these outages are expected to increase, having a system that provides power during these critical hours is essential.
+
+3. Costs:
+While cost is a factor, it comes after sustainability and reliability in my decision-making process. I see this investment as a long-term commitment to reducing my environmental footprint and securing my energy future.
+
+## What’s Next?
+Over the coming days, I'll be diving deeper into each option, considering system designs, consulting with experts, and evaluating how each setup aligns with my values and goals. Right now, I’m leaning slightly towards the grid-tied system because it’s easier to switch from a grid-tied setup to off-grid or hybrid later, than it is to transition from off-grid to grid-tied.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+ <meta charset="utf-8" emacsmode="-*- markdown -*-">
 # The Rise and Fall of Abacus Rationale
 September 18th, 2024
 by *Pepe Hernandez*
@@ -3315,6 +3390,10 @@ This are the innovations that have been ocupaying our minds lately
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
+### [2024-11-15: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+[lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
+
+
 ### [2024-11-15: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
@@ -3433,6 +3512,7 @@ Email
 		<li>[posts/Unlocking_the_Power_of_Personal_Cloud](/posts/Unlocking_the_Power_of_Personal_Cloud/index.html)</li>
 		<li>[posts/Understanding_complexity_in_software_systems](/posts/Understanding_complexity_in_software_systems/index.html)</li>
 		<li>[posts/The_Rise_and_Fall_of_Abacus_Rationale](/posts/The_Rise_and_Fall_of_Abacus_Rationale/index.html)</li>
+		<li>[posts/The_Photovoltaics_Dilemma](/posts/The_Photovoltaics_Dilemma/index.html)</li>
 		<li>[posts/Terravision_vs_Google_Earth](/posts/Terravision_vs_Google_Earth/index.html)</li>
 		<li>[posts/Single_text_file](/posts/Single_text_file/index.html)</li>
 		<li>[posts/Requirements_in_the_Age_of_AI](/posts/Requirements_in_the_Age_of_AI/index.html)</li>
@@ -3913,6 +3993,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/The_Rise_and_Fall_of_Abacus_Rationale](././posts/The_Rise_and_Fall_of_Abacus_Rationale/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/The_Photovoltaics_Dilemma](././posts/The_Photovoltaics_Dilemma/) 
 	  	  </li>
 	  	</ul>
 	      <ul>

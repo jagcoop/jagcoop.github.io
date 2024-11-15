@@ -66,6 +66,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/The_Photovoltaics_Dilemma/index.html</loc>
+  <lastmod>2024-11-15</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/Terravision_vs_Google_Earth/index.html</loc>
   <lastmod>2024-11-15</lastmod>
   <changefreq>weekly</changefreq>
