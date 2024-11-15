@@ -2204,11 +2204,11 @@ Several key conclusions can be drawn from the provided summary regarding the con
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
-# The Photovoltaics Dilemma: Grid-Tied, Off-Grid, or Hybrid?
+# The Photovoltaics Dilemma: Grid-Tied, Off-Grid, or Hybrid? ☀️🔋
 November 15th, 2024
 by *Agus Rumayor*
 
-Thankfully, solar systems are now easier to set up, and the costs are finally getting to a sweet spot where they make sense for most households. With the rise of electric vehicles (EVs) and the desire to power personal cloud services sustainably, energy consumption is trending upward. Currently, our system is isolated, and while I’m really happy with it, the inverter’s max amperage is a bit lower than what we need.
+Thankfully, solar systems are now easier to set up, and the costs are finally getting to a sweet spot where they make sense for most households. With the rise of electric vehicles (EVs) 🚗⚡ and the desire to power our personal cloud services sustainably, energy consumption is trending upward. Currently, our system is isolated, and while I’m really happy with it, the inverter’s max amperage is a bit lower than what we need.
 
 The inverter does offer the flexibility to prioritize inputs between solar panels, grid, and batteries, which has been a game-changer for our energy management. Now, with the chance to design a new solar project, we’re considering whether to stick with an isolated system, switch to a grid-tied setup, or go hybrid.
 
@@ -2245,18 +2245,21 @@ Cons:
 Understanding the mechanics of each system helps you weigh your options better.
 
 Grid-Tied System Design
-* Solar panels generate electricity during the day.
-* Excess energy offsets your future usage (via credits, if applicable).
-* The system switches to the grid when solar power isn’t enough.
+
+- Solar panels generate electricity during the day.
+- Excess energy offsets your future usage (via credits, if applicable).
+- The system switches to the grid when solar power isn’t enough.
 
 Off-Grid System Design
-* Solar panels charge a battery bank, storing power for cloudy days and nighttime.
-* A backup generator can step in during extended periods of low solar production.
+
+- Solar panels charge a battery bank, storing power for cloudy days and nighttime.
+- A backup generator can step in during extended periods of low solar production.
 
 Hybrid System Design
-* Combines the flexibility of grid-tied with the independence of off-grid.
-* Batteries store energy for use during outages or peak evening hours.
-* The system seamlessly switches between solar, battery, and grid power depending on availability.
+
+- Combines the flexibility of grid-tied with the independence of off-grid.
+- Batteries store energy for use during outages or peak evening hours.
+- The system seamlessly switches between solar, battery, and grid power depending on availability.
 
 ## My Considerations:
 
