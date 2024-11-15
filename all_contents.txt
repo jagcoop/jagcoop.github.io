@@ -285,6 +285,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Innovation_Methods_Comparison](././posts/Innovation_Methods_Comparison/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/How_To_Choose_a_Book](././posts/How_To_Choose_a_Book/) 
   	  </li>
   	</ul>
@@ -480,7 +484,7 @@ by *Pepe Hernandez*
 
 
 ## Bloom Taxonomy
-Boom's taxonomy is a multitiered model of classified thinking according to six cognitive levels of complexity. Bloom and a group of educators created the taxonomy in 1958. 
+Bloom's taxonomy is a multitiered model of classified thinking according to six cognitive levels of complexity. Bloom and a group of educators created the taxonomy in 1958. 
 
 In 1995, a group of specialists started. In 2001, the revisited Bloosm Taxonomy was published. 
 
@@ -1291,6 +1295,50 @@ Bill Gates has a cool habit: during his summer vacations, he takes a pile of boo
 A final question. The Print or the Digital on Kindle or Audible Audiobooks
 This depends on the book and how fast I want to finish it. If I want to finish it very quickly, I buy it in two or three formats. This allows me to read practically anywhere—while waiting for someone, commuting, or as a bedtime read. If I want to take my time and the narrative is engaging, the audiobook suffices. But if the book is excellent, it’s worth having in physical format as well. If the book I want to read isn’t available in audio, I’ll buy it in digital format.
 
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Innovation Methos Graphical Comparison
+By Pepe Hernández, November 14th, 2024
+
+Recently I am giving a pair of training classes on line. The topic now is Design Thinking.
+Along the way, I've taking training, and used Design Thinking, Design Sprint, TRIZ, Six Thinking Hats, and Lean Startup. I am also user of TOC Thinking Process. But what is the difference and the similutes of these methods.
+
+Design Thinking is method designed by IDEA, an innovation company. It has a strong user centric approach. TRIZ is no user centric. TRIZ is focused on technical problems, defined as contradictions. But are there other criteria that can help us to differentiate those methods.
+
+Yes these are some of basic characteristics determined for innovative methods:
+1. Focus on Problem Solving. It measures how effectively the methodology identifies and addresses specific problems. High-scoring methods provide systematic approaches to solve complex issues.
+2. Encourages Creativity. Assesses the degree to which the method fosters innovative and out-of-the-box thinking. High scores indicate methods that prioritize ideation and divergent thinking.
+3. Iterative Process. It evaluates whether the methodology emphasizes repeated cycles of experimentation, learning, and refinement. Iterative processes improve solutions through continuous feedback.
+4. User-Centric. It determines how much the methodology focuses on understanding and addressing user needs and feedback. Higher scores reflect direct user engagement.
+5. Structured Framework. It indicates the presence of a clear and systematic approach to applying the methodology. High scores imply well-defined steps or tools.
+6. Emphasis on Rapid Prototyping. It measures the method's ability to quickly develop and test prototypes to validate ideas or solutions. Essential for methods that prioritize speed in experimentation.
+7. Decision-Making Enhancement. It reflects how well the methodology supports structured and informed decision-making. Higher scores mean improved clarity and reduced biases in group decisions.
+8. Root Cause Analysis. Focuses on identifying the underlying causes of problems rather than addressing superficial symptoms. High-scoring methods delve deeply into system inefficiencies.
+9. Focus on Reducing Risk. It evaluates the methodology’s effectiveness in mitigating risks through experimentation, validation, or optimization. Methods with high scores emphasize de-risking early and often.
+
+With these criteria, I asked ChatGPT to compare all the methods, and assign a grade in each of them for each method. 
+
+ [![Alt Text](Image URL])](radar.png)
+
+* TRIZ and TOC Thinking Process excel in internal constraints optimization due to their structured approaches to identifying and resolving inefficiencies.
+* Other methodologies, like Lean Startup, provide moderate optimization through their focus on resource efficiency but are not as specifically geared toward internal constraints.
+* Methods like Six Thinking Hats and Design Thinking focus more on external or collaborative aspects, leading to lower scores in this dimension.
+
+I asked CHATGPT to make a two dimension diagram. First dimension specifies the Optimization of Internal Constraints, and the other axis the User-Centric approach. 
+
+[![Alt Text](Image URL])](two_dimenssion.png)
+
+This diagram is very clear. There are two types of innovation methods. Those centered on the technical aspects, and those centered on the user.
+
+There is a special case. Six Thinkin Hats is graded low on both dimension. But, it is the first on decision making enhancement.
+
+These two graphics explain the differences among methods. 
+
+Several times I had had the dobut about this differences. 
+
+ 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
@@ -3146,123 +3194,127 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-13: posts/ideas](./posts/ideas).
+### [2024-11-15: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2024-11-13: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-11-15: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-11-13: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2024-11-15: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2024-11-13: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2024-11-15: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2024-11-13: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2024-11-15: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2024-11-13: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-11-15: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-11-13: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-11-15: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-11-13: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-11-15: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-11-13: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-11-15: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-11-13: posts/Single_text_file](./posts/Single_text_file).
+### [2024-11-15: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-11-13: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-11-15: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-11-13: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-11-15: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-11-13: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2024-11-15: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2024-11-13: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-11-15: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-11-13: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-11-15: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-11-13: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-11-15: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-11-13: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2024-11-15: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2024-11-13: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-11-15: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-11-13: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-11-15: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-11-13: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2024-11-15: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+[lab notes ongaing](./posts/Innovation_Methods_Comparison)
+
+
+### [2024-11-15: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2024-11-13: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2024-11-15: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2024-11-13: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-11-15: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-11-13: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2024-11-15: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2024-11-13: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-11-15: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-11-13: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-11-15: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-11-13: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-11-15: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-11-13: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2024-11-15: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2024-11-13: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-11-15: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-11-13: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-11-15: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2024-11-13: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2024-11-15: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -3303,6 +3355,7 @@ Email
 		<li>[posts/Karina_La_Humana](/posts/Karina_La_Humana/index.html)</li>
 		<li>[posts/Kanban_Serious_Games_Intro](/posts/Kanban_Serious_Games_Intro/index.html)</li>
 		<li>[posts/Kanban_Case_Study_in_Public_Sector_Part_I](/posts/Kanban_Case_Study_in_Public_Sector_Part_I/index.html)</li>
+		<li>[posts/Innovation_Methods_Comparison](/posts/Innovation_Methods_Comparison/index.html)</li>
 		<li>[posts/How_To_Choose_a_Book](/posts/How_To_Choose_a_Book/index.html)</li>
 		<li>[posts/Frustration_in_the_face_of_improvement](/posts/Frustration_in_the_face_of_improvement/index.html)</li>
 		<li>[posts/Extending_the_Power_of_your_Personal_Cloud](/posts/Extending_the_Power_of_your_Personal_Cloud/index.html)</li>
@@ -3546,11 +3599,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-13: projects/rewards.codes](./projects/rewards.codes).
+### [2024-11-15: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-11-13: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-11-15: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -3815,6 +3868,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Kanban_Case_Study_in_Public_Sector_Part_I](././posts/Kanban_Case_Study_in_Public_Sector_Part_I/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Innovation_Methods_Comparison](././posts/Innovation_Methods_Comparison/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
