@@ -447,7 +447,8 @@ Successful DevOps requires a cultural shift that promotes transparency, accounta
 Overcoming the complexities of DevOps involves mastering a range of tools and practices while promoting a collaborative culture. By addressing these common challenges—DevSecOps integration, multi-cloud management, CI/CD automation, observability, IaC, and culture-building—DevOps teams can enhance efficiency, security, and scalability. As DevOps continues to evolve, staying informed on best practices and emerging tools is crucial for maintaining a resilient and responsive DevOps framework.
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
-<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script> <meta charset="utf-8" emacsmode="-*- markdown -*-">
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+ <meta charset="utf-8" emacsmode="-*- markdown -*-">
 # A Tool in a World Full of Distractions
 September 21th, 2024
 by *Karina Chaires*
@@ -487,14 +488,14 @@ For me, the first strategy has been helpful, and I've implemented it by keeping 
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
  <meta charset="utf-8" emacsmode="-*- markdown -*-">
 # Reflecting on developing expertise using Blooms Taxonomy, and Shu Ha Ri model
-Octubre 25th, 2024
+October 25th, 2024
 by *Pepe Hernandez*
 
 
 ## Bloom Taxonomy
-Bloom's taxonomy is a multitiered model of classified thinking according to six cognitive levels of complexity. Bloom and a group of educators created the taxonomy in 1958. 
+Bloom's taxonomy is a multitiered model of classified thinking according to six cognitive levels of complexity. Bloom and a group of educators created the taxonomy in 1958.
 
-In 1995, a group of specialists started. In 2001, the revisited Bloosm Taxonomy was published. 
+In 1995, a group of specialists started. In 2001, the revisited Bloosm Taxonomy was published.
 
 ```markdown
 |                          |                             The Cognitive Process Dimension                            |
@@ -506,13 +507,13 @@ In 1995, a group of specialists started. In 2001, the revisited Bloosm Taxonomy 
 | Procedural Knowledge     | Tabualte              | Predict    | Calculate  | Differentiate | Conclude | Compose   |
 | Meta-Cognitive Knowledge | Appropiate use        | Execute    | Construct  | Achieve       | Action   | Actualize |
 ```
-Source: Oreng State University. 
+Source: Oreng State University.
 
 The Bloom Taxonomy framework consists of six categories **each requiring achievement of the prior skill or ability before the next, more complex one, remains easy to understand.**
 
-## Get directly to the superior levels of learning, a wrong assumption 
+## Get directly to the superior levels of learning, a wrong assumption
 
-As a student, I believed that superior levels of taxonomy were what I had to focus. Critical thinking, for example, is prevalent among marketing messages today, and it was 20 years ago. I did believe that understanding and memorizing things was wrong. 
+As a student, I believed that superior levels of taxonomy were what I had to focus. Critical thinking, for example, is prevalent among marketing messages today, and it was 20 years ago. I did believe that understanding and memorizing things was wrong.
 
 Even several Bloom's taxonomy promoters believe that superior levels of thinking are the proper focus for students and professionals. They are wrong, too.
 
@@ -520,27 +521,27 @@ Bloom's taxonomy is hierarchical. That means a specific pyramid level needs the 
 
 ## The Software Product Managemer Certified training is focused on the first two levels of learning
 
-I am working on a Systematic Literature Review about Software Product Management and Artificial Intelligence. My base research question is, "Which approaches exist that allow software product managers to have expertise in specific Software Product Management Practices?" One of the first articles I found identifies different Product Management Frameworks. The ISPMA (International Software Product Management Association) is one of the most well-known. Several of the most well-known researchers of SPM (Ebert and Maglyas, among others) participated in developing the learning material for the Certified training.  
+I am working on a Systematic Literature Review about Software Product Management and Artificial Intelligence. My base research question is, "Which approaches exist that allow software product managers to have expertise in specific Software Product Management Practices?" One of the first articles I found identifies different Product Management Frameworks. The ISPMA (International Software Product Management Association) is one of the most well-known. Several of the most well-known researchers of SPM (Ebert and Maglyas, among others) participated in developing the learning material for the Certified training.
 
 The educational objectives of the ISPMA syllabus for the Software Product Manager Certified course focus on two cognitive levels of knowledge: "know" and "understand," the two basic levels of the Bloom Taxonomy—the first Bloom Taxonomy, not the revised one.
 
 The two verbs are placeholders. **Know** for enumerate, characterize, recognize, and name. **Understand** for reflect, analyze, execute, justify, describe, judge, display, design, develop, complete, explain, elucidate, elicit, formulate, identify, interpret, reason, translate, distinguish, compare, understand, suggest, and summarize.
 
-My base question is how to develop expertise in Software Management Practices. The two basic levels were a previous requirement. The ISPMA learning objective is not intended, at least in this foundational training course, to develop expertise. It's part of the solution. 
+My base question is how to develop expertise in Software Management Practices. The two basic levels were a previous requirement. The ISPMA learning objective is not intended, at least in this foundational training course, to develop expertise. It's part of the solution.
 
 ## The Shu Ha Ri model is suitable for framing the expertise level from Apprentice to Master.
 
 As I am looking for practices that allow me to develop expertise, I think the Shu Ha Ri model better explains what I am expecting.
 
-The Shu Ha Ri is another learning model that comes from Japanese culture. It is the model of Master and apprentice. Shu means to obey. Here, the apprentice must do what the Master says. This is well represented in martial arts with the figure of katas. The apprentice knows the Kata and practices. When the student has enough practice, she becomes a practitioner. When the student dominates the Kata, she can introduce their variations to the movements. Ha point to this level of mastery. Ha means detach. When the apprentice dominates several katas, she creates her own. She designs, develops, and innovates. She became the Kata. 
+The Shu Ha Ri is another learning model that comes from Japanese culture. It is the model of Master and apprentice. Shu means to obey. Here, the apprentice must do what the Master says. This is well represented in martial arts with the figure of katas. The apprentice knows the Kata and practices. When the student has enough practice, she becomes a practitioner. When the student dominates the Kata, she can introduce their variations to the movements. Ha point to this level of mastery. Ha means detach. When the apprentice dominates several katas, she creates her own. She designs, develops, and innovates. She became the Kata.
 
-## The following question. Are there AI tools to develop Software Product Manager expertise? 
+## The following question. Are there AI tools to develop Software Product Manager expertise?
 
-What must a Producto Manager do to advance in these levels of learning and mastery? And what the existing tools are that allow them to become one. 
+What must a Producto Manager do to advance in these levels of learning and mastery? And what the existing tools are that allow them to become one.
 
-The way to start is with the basic level of knowledge (to know). How does a Product Manager know what she must know? 
+The way to start is with the basic level of knowledge (to know). How does a Product Manager know what she must know?
 
-The second step is to understand. How can a Product manager understand practices? Are there IA tools that allow them to understand? 
+The second step is to understand. How can a Product manager understand practices? Are there IA tools that allow them to understand?
 
 This will come in another story...
 
@@ -550,7 +551,8 @@ https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
-<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 # 🌟 Create Abundance with Software 🌟
 Nov 7th, 2024
@@ -1101,14 +1103,15 @@ Devtron serves as a comprehensive platform for managing Kubernetes clusters, CI/
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 # Did you read this book? Great, show me...
-By Pepe Hernández, November 3rd, 2024
+November 3rd, 2024
+By Pepe Hernández
 
 # I like to read.
 
 I like to read.
 I wish I could have more time to read.
 As I don't have too much time to read, I need to take some shortcuts.
-First, I use audible. 
+First, I use audible.
 I enjoy running for 30 minutes daily while listening to the chosen audiobook. Last month, I listened to and re-listened to Cal's Newport Slow Productivity book. I also re-listen to one of my favorites, Steven's Pressfield, "Put your ass where your heart wants to be." I will buy both books physically. They are worth it.
 
 ## A pair of learnings from each book
@@ -1116,8 +1119,8 @@ I enjoy running for 30 minutes daily while listening to the chosen audiobook. La
 ### Cal's Newport Slow Productivity
 
 **I discovered some stories that show that slow productivity works**. Cals Newport writes about how vital work is and how it took years, even decades, to finish. Newton, Galileo, Jane Austin, Einstein, and other great achievers had problems in their minds and worked on them for many years. They were persistent, patient, and slow productivity workers. They worked a pair of hours and then followed with the daily activities. But they continually came back to their stuff, to their problem.
-**I found another interesting Kanban case in the book**. 
-Another exciting learning is that the Genoma Research Center of Boston's business case used Kanban to achieve an excellent operating performance. A sustainable pace is one of Kanban's values. The lab's IT and software departments adopted Kanban to improve software delivery. 
+**I found another interesting Kanban case in the book**.
+Another exciting learning is that the Genoma Research Center of Boston's business case used Kanban to achieve an excellent operating performance. A sustainable pace is one of Kanban's values. The lab's IT and software departments adopted Kanban to improve software delivery.
 
 ### Steven Pressfield, "Put your ass where your heart wants to be"
 You can use many quotes to be on your thing when you are working. Also, the book contains recommendations to motivate you to outperform in your field. This is mainly for artists and writers, but you can generalize this to every human field.
@@ -1133,20 +1136,20 @@ Both books are highly recommended.
 ## Reading the Physical book, "Scaling Up".
 For other motifs, I am reading Vern Harmish's book Scaling Up. I am working right now, helping my family use this framework in their company.
 
-When I read a book, I try to understand the message. Frequently, I elaborate on something. I've made a presentation, prepared material, written a post, or done something else. 
+When I read a book, I try to understand the message. Frequently, I elaborate on something. I've made a presentation, prepared material, written a post, or done something else.
 
 So when I recommend a book, I have a general understanding of it. I could talk about it. This is obvious, at least for me. But is it for everybody else?
 
 ## Did you read X book?
 
-So frequently, when I talk to somebody about a specific topic, I remember a book, a phrase, a quote. And I ask, that comes from this particular book. Did you read it? Sometimes, people ask me, "Yes, of course." The younger me smiled, agreed, and continued with the talk to realize that people hadn't read the book for the following talk, or, if they had read the book, they hadn't understood the content, or the message, or thought bad, they only told me they read the book, but it wasn't true. 
+So frequently, when I talk to somebody about a specific topic, I remember a book, a phrase, a quote. And I ask, that comes from this particular book. Did you read it? Sometimes, people ask me, "Yes, of course." The younger me smiled, agreed, and continued with the talk to realize that people hadn't read the book for the following talk, or, if they had read the book, they hadn't understood the content, or the message, or thought bad, they only told me they read the book, but it wasn't true.
 
-When this happens to me, now I ask, "Great, what do you think about the book?" What did you learn? Did you like it, and why? I do that not because I want to put them in evidence of lying to me or us. I do that because when I say something, I frequently don't finish my idea because I think other people already understand or know what I am trying to say. 
+When this happens to me, now I ask, "Great, what do you think about the book?" What did you learn? Did you like it, and why? I do that not because I want to put them in evidence of lying to me or us. I do that because when I say something, I frequently don't finish my idea because I think other people already understand or know what I am trying to say.
 
 I adopted this habit because Alex uses it frequently. We have a WhatsApp group of friends. The group aims to recommend movies or tracks. Its original name is cine cata (cine, for cinema, and data for the analogy of wine-tasting events for enthusiasts and specialists). When somebody adds a recommendation, Alex always asks, "Why did you like it?" That means you should give me more information to check my interest.
 
-As an expert in something, there is some knowledge you think is obvious. For example, bottlenecks determine the performance of the system. It's obvious, isn't it? Yes, but the second level of understanding is not. You realize that when people know the bottleneck, they continue improving the 99% of elements that are not the bottleneck. When you ask, what will you improve? That lets you know that they don't understand bottlenecks. 
-Experts understand deeply simple things in their domain.  
+As an expert in something, there is some knowledge you think is obvious. For example, bottlenecks determine the performance of the system. It's obvious, isn't it? Yes, but the second level of understanding is not. You realize that when people know the bottleneck, they continue improving the 99% of elements that are not the bottleneck. When you ask, what will you improve? That lets you know that they don't understand bottlenecks.
+Experts understand deeply simple things in their domain.
 
 If you know something as an expert and someone tells you they understand the concept, you believe them because it is obvious. This is a trap.
 
@@ -1156,17 +1159,17 @@ Then you believe. You have fallen. You lose an opportunity.
 
 	"What is obvious, is obvious (only) to You" - John Medina.
 
-John Medina, author of Brain Rules and Brain Rules for Kids (both excellent books), said, "What is obvious is obvious to you." Because what you are trying to say is not apparent to anybody else. You need to say it to be understood. Yes, I know. It's not only me. Everybody makes connections with his experience or with the knowledge he has acquired throughout his life. 
+John Medina, author of Brain Rules and Brain Rules for Kids (both excellent books), said, "What is obvious is obvious to you." Because what you are trying to say is not apparent to anybody else. You need to say it to be understood. Yes, I know. It's not only me. Everybody makes connections with his experience or with the knowledge he has acquired throughout his life.
 
 ## Teaching from the Back of the Room
 
-There is another story that I like to share. I have some friends who have been teachers for a long time. A month ago, a friend of mine shared with me that their students of a class ignored them, and some of them told them, you repeat the concepts many times. Your class is boring because you repeat it continuously. She was reflective. I recommended that she ask their students what they have learned. To ask more, to listen more, and to talk less. "Can you explain to me the concept, idea, technique, and tool I have already shared with you?" When students answered, she knew if students had understood the concept. And she could give them good feedback in advance. Her classes have improved with the use of this principle. 
+There is another story that I like to share. I have some friends who have been teachers for a long time. A month ago, a friend of mine shared with me that their students of a class ignored them, and some of them told them, you repeat the concepts many times. Your class is boring because you repeat it continuously. She was reflective. I recommended that she ask their students what they have learned. To ask more, to listen more, and to talk less. "Can you explain to me the concept, idea, technique, and tool I have already shared with you?" When students answered, she knew if students had understood the concept. And she could give them good feedback in advance. Her classes have improved with the use of this principle.
 
-I discovered this principle in a Kanban University training course. Asking participants about Kanban methods' core practices lets facilitators know if they understand the concept or if they identify the gaps to give the participants good feedback. 
+I discovered this principle in a Kanban University training course. Asking participants about Kanban methods' core practices lets facilitators know if they understand the concept or if they identify the gaps to give the participants good feedback.
 
 A final thought.
 
-## People frequently think they know, but they don't. 
+## People frequently think they know, but they don't.
 
 When this happens, go deeper. Both parts win.
 
@@ -1177,7 +1180,8 @@ When this happens, go deeper. Both parts win.
 # Extending the Power of Your Personal Cloud with Development Tools
 
 ## Tools for a Development Personal Cloud
-October 26th, 2024, by Agus Rumayor
+October 26th, 2024
+by Agus Rumayor
 
 When building a personal cloud, the goal is not just storage or compute but creating a robust, versatile environment. For developers, this setup can include everything from managing web assets to container orchestration and IoT device control. Here’s how these tools fit together in a development-focused cloud.
 
@@ -1423,7 +1427,8 @@ This depends on the book and how fast I want to finish it. If I want to finish i
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 # Innovation Methods Graphical Comparison
-By Pepe Hernández, November 14th, 2024
+November 14th, 2024
+By Pepe Hernández
 
 ## Most known Innovation Methods
 Recently I gave a pair of classes on line about Design Thinking. Design Thinking is the Designer approach for an innovation method. In order I discovered first TRIZ en 2010, TOC thinking process, Six Thinking Hats, Google Design Sprint, and lately Design Thinking. Along the way after discovering a new method a questions arises. Is there a better method? Is there an universal method? Which is the adequate criteria to compare them?
@@ -1573,22 +1578,22 @@ Enjoy it.
 
 # A Kanban Case Study in the Public Sector (Part I of N)
 
-Octuber 14th, 2024
+October 14th, 2024
 By Pepe Hernandez
 
-By the end of 2017, several Department of Education administrative units had unspent budgets, and the fiscal year was nearing its end. Given the success of the Self-Construction Program team, the Zacatecas Education Agency decided to allocate unspent resources from other programs to the self-construction program. Thanks to this budget, the team could double the number of requests attended, a significant achievement considering that the annual resources needed to be more to meet all the needs of public schools. In the following years, the same phenomenon happened. The self-construction program used remanent resources from other programs. The team was proud of their Service's impact on the Zacatecas's childhood. 
+By the end of 2017, several Department of Education administrative units had unspent budgets, and the fiscal year was nearing its end. Given the success of the Self-Construction Program team, the Zacatecas Education Agency decided to allocate unspent resources from other programs to the self-construction program. Thanks to this budget, the team could double the number of requests attended, a significant achievement considering that the annual resources needed to be more to meet all the needs of public schools. In the following years, the same phenomenon happened. The self-construction program used remanent resources from other programs. The team was proud of their Service's impact on the Zacatecas's childhood.
 
 It hasn't always been this way.
 
-The Self-construction program was tripartite. The Education Agency of the State, the Municipal Governments, and School Parent Associations signed a legal agreement to participate in the program. The Education Agency provided materials and coordination through the Department of Self-Construction. The school parents' association provided social supervision. The municipal government provided labor. Some municipal governments signed an agreement and supported all the requests from schools with labor. Some of the work only needed the Parents' work and the materials provided by the Education Agency. 
+The Self-construction program was tripartite. The Education Agency of the State, the Municipal Governments, and School Parent Associations signed a legal agreement to participate in the program. The Education Agency provided materials and coordination through the Department of Self-Construction. The school parents' association provided social supervision. The municipal government provided labor. Some municipal governments signed an agreement and supported all the requests from schools with labor. Some of the work only needed the Parents' work and the materials provided by the Education Agency.
 
 The team was small: the Service manager (and other services), the supervisor coordinator, three supervisors, and the documentation specialist. There was a lot of work in progress or WIP (the work started but still needed to be finished). They didn't have a way to visualize the WIP. All they knew was that they were busy all day. They had a commitment to their purpose, but they felt stuck. But the natural explanation of reality was that the acquisition area was blocking our work. As humans look for a rational explanation of reality. We don't believe that it's our fault. It's somebody else. In this case, the acquisitions area was responsible for delaying materials. However, this limiting belief prevented them from acting on what was within their control.
 
 Stephen Covey, author of The Seven Habits of Highly Effective People, states that **"when we think the problem is outside, that thought is the problem."** The team of the Self-Construction Program believed that the Department of acquisitions needed to be improved. However, this limiting belief prevented them from acting on what was within their control.
 
-The introduction of a physical Kanban board revealed the partial truth. Of the 84 tickets in the "Preparing for Acquisition" column, only 37% of the work was pending acquisitions. The remaining 63%, or 139 tickets, had already passed through this phase and were in stages of building, finishing, and closing. With this new visibility, the team prioritized finishing those 139 tickets, freeing up space for new projects after the acquisitions area could do its job (acquiring materials from vendors). 
+The introduction of a physical Kanban board revealed the partial truth. Of the 84 tickets in the "Preparing for Acquisition" column, only 37% of the work was pending acquisitions. The remaining 63%, or 139 tickets, had already passed through this phase and were in stages of building, finishing, and closing. With this new visibility, the team prioritized finishing those 139 tickets, freeing up space for new projects after the acquisitions area could do its job (acquiring materials from vendors).
 
-The team focused on following the Work In Progress in the columns ahead of the Acquisition in Progress step. The team needed to be more stable and was able to focus their attention on facilitating communication with stakeholders. The supervisor knew which requests required supervision, and the coordination area could make calls to update the state of the work. The team could detect external blockers, like delayed work due to unprovided municipal labor. Requests started to finish more frequently. The WIP decreased, and it was time to ask for help in the acquisition area. 
+The team focused on following the Work In Progress in the columns ahead of the Acquisition in Progress step. The team needed to be more stable and was able to focus their attention on facilitating communication with stakeholders. The supervisor knew which requests required supervision, and the coordination area could make calls to update the state of the work. The team could detect external blockers, like delayed work due to unprovided municipal labor. Requests started to finish more frequently. The WIP decreased, and it was time to ask for help in the acquisition area.
 
 The head of acquisitions committed to attending weekly meetings to review the cases "blocked" by the area. In the first meeting, it became clear that his Department was a bottleneck. The team had labeled tickets with green stickers after each month, tickets had been spent in the acquisition process, and some had been stuck for six months or more, especially in public bidding cases. With this level of transparency, the acquisition area was aware of their importance in the process. They took action, and several tickets began to move. The head of the Department recognized the impact that waiting times had on project delivery.
 
@@ -1603,7 +1608,7 @@ There are several things I learned with this Kanban initiative, like:
 
 ...
 
-I will talk about some of what I learned next week. 
+I will talk about some of what I learned next week.
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
@@ -2302,7 +2307,7 @@ Or when it's time to merge our conciousness with the great computer in the sky, 
 
 # The billion dolar Code. A Netflix series about code infringement. The case of Terreavision and Google Earth.
 
-Octuber 20th, 2024
+October 20th, 2024
 By Pepe Hernandez
 
 In 1993, in Berlin, an artist (Pavel Mayer or Yuri in the series) and a hacker (Joachim Schlüter, portrayed as Carsten in the series) came together to create software ahead of its time: TERRAVISION. This project allowed users to navigate the globe and zoom in to get a physical view of a location. The interface for selecting and navigating to the desired place was a sphere. To develop it, they partnered with one of the largest companies in Germany, Deutch Post, now Deutch Telecomm. The project brought together a group of hackers and designers who created an interface that preceded Google Earth by eight years. The ART+COM project came before Google's, which wasn’t publicly released until 2001.
@@ -2338,7 +2343,8 @@ Several key conclusions can be drawn from the provided summary regarding the con
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
-<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
 # The Photovoltaics Dilemma: Grid-Tied, Off-Grid, or Hybrid? ☀️🔋
 November 15th, 2024
 by *Agus Rumayor*
@@ -3496,135 +3502,135 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-16: posts/ideas](./posts/ideas).
+### [2024-11-18: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2024-11-16: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-11-18: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-11-16: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2024-11-18: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2024-11-16: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2024-11-18: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2024-11-16: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2024-11-18: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2024-11-16: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-11-18: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-11-16: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-11-18: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-11-16: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-11-18: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-11-16: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2024-11-18: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2024-11-16: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-11-18: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-11-16: posts/Single_text_file](./posts/Single_text_file).
+### [2024-11-18: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-11-16: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-11-18: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-11-16: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-11-18: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-11-16: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2024-11-18: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2024-11-16: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-11-18: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-11-16: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-11-18: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-11-16: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-11-18: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-11-16: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2024-11-18: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2024-11-16: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-11-18: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-11-16: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-11-18: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-11-16: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2024-11-18: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2024-11-16: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2024-11-18: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2024-11-16: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2024-11-18: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2024-11-16: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2024-11-18: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2024-11-16: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-11-18: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-11-16: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2024-11-18: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2024-11-16: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-11-18: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-11-16: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-11-18: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-11-16: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-11-18: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-11-16: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2024-11-18: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2024-11-16: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-11-18: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-11-16: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-11-18: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2024-11-16: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2024-11-18: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -3911,11 +3917,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-16: projects/rewards.codes](./projects/rewards.codes).
+### [2024-11-18: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-11-16: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-11-18: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
