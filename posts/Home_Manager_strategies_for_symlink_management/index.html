@@ -1,0 +1,115 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Home Manager strategies for symlink management
+
+November 15th, 2024
+by *Julio César*
+
+We&rsquo;ve discussed before how Home Manager can be used for managing user level configuration, more specifically to manage the *&ldquo;dotfiles&rdquo;* on a linux based workstation, we discussed how Home Manager is a nice declarative alternative to plain symbolic links, a.k.a. &ldquo;*symlinks*&rdquo;. However, some times (hopefully just on a few occasions) it is necessary to have symlinks lying around, this was the case for my Emacs Doom configuration which for the moment I do not want to migrate to a Home Manager + Nix based setup since I&rsquo;d have to rebuild and switch my configuration every so often whenever I extend Emacs in any way - something that happens a lot.
+
+My usual approach was to to install my Emacs Doom configuration into place like this:
+
+```sh
+ln -s /path/to/dotfiles/doom ~/.config/doom
+```
+
+However, having to manually create this symlink separately of activating my Home Manager configuration wasn&rsquo;t ideal, the bike shed needed new paint. It turns out it is possible to *declare* symbolic links in the Home Manager configuration, there are three approaches I could use, and these are outlined below.
+
+
+# Using the `mkOutOfStoreSymlink` library function
+
+This is the current approach I&rsquo;m using right now, and it looks like this:
+
+```nix
+{
+  # some options ...
+
+  home.file.doom =
+    let
+      flakeRoot = "${config.home.homeDirectory}/workspace/config/dotfiles";
+    in
+    {
+      enable = true;
+      source = config.lib.file.mkOutOfStoreSymlink "${flakeRoot}/doom";
+      target = "${config.xdg.configHome}/doom";
+    };
+
+  # more options ...
+}
+```
+
+We instruct Home Manager to allocate a file with the `home.file` option and declare a variable to the location of the dotfiles repo (a flake itself) which contains Emacs Doom configuration in a `doom/` sub-directory, then the target is declared using the `xdg.configHome` option which expands to something like `~/.config` on my system, therefore linking the configuration into place (in `~/.config/doom`).
+
+
+# Using the `home.activation` option
+
+Home Manager allow us to hook some actions while the Home Manager configuration is being activated, we declare such actions using the `home.activation` option, example:
+
+```nix
+{
+  # some options ...
+
+  doomActivationAction =
+    let
+      flakeRoot = "${config.home.homeDirectory}/workspace/config/dotfiles";
+    in
+      lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        run ln -s $VERBOSE_ARG ${flakeRoot}/doom ${config.xdg.configHome}/doom
+      '';
+
+  # more options ...
+}
+```
+
+This just calls `ln` within a script to create a link in the right location, `run` is a shell function made available by home-manager that handles the output stream correctly when the user asked for a verbose behavior, `$VERBOSE_ARG` just expands to `--verbose`.
+
+
+# Declare a systemd bind mount unit
+
+This one is a bit far fetched but it is so cool we&rsquo;re able to declare systemd units with Home Manager and that systemd provides &ldquo;bind mounts&rdquo; which can be used as an alternative to symlinks, i.e. make a directory (or a file system) available at some other location in our file system:
+
+```nix
+{
+  # some options ...
+
+  systemd.user.mount =
+    let
+      flakeRoot = "${config.home.homeDirectory}/workspace/config/dotfiles";
+    in
+    {
+      emacs-doom-mount = {
+        Unit = {
+          Description = "Mount Emacs Doom configuration into place";
+        };
+
+        Install = {
+          WantedBy = [ "default.target" ];
+        };
+
+        Mount = {
+          What = "${flakeRoot}/doom";
+          Where = "${config.xdg.configHome}/doom";
+          Type = "none";
+          Options = "bind";
+        };
+      };
+    };
+
+  # other options ...
+}
+```
+
+
+# Conclusion
+
+The only disadvantage to all these strategies is that we have to hard-code the path of the source, in this case the `flakeRoot` value, as there&rsquo;s no way to say &ldquo;give me the path to this (self) nix file&rdquo; because such questions are considered &ldquo;impure&rdquo;. This is possible to work around by using something like [flake-root](https://github.com/srid/flake-root) which I&rsquo;ve not used yet but it would still feel like a hack.
+
+While we could try using something like `builtins.toPath ../../doom` (assuming our `doom` configuration is two levels up), it wouldn&rsquo;t be what we want even if it works, referring to &ldquo;the current path&rdquo; will resolve to a path within the `/nix/store` which will contain a copy of our Emacs Doom configuration, not the real one!.
+
+> ℹ️ when using flakes the whole git repository is copied verbatim to the Nix store.
+
+In any case, this only bothers me because the symlink I want to setup goes into my own flake configuration which makes things a bit circular, however, the premise of the post is that even symlinks are seen as &ldquo;resources&rdquo; in Home Manager and thus can be managed declaratively in our configuration.
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>

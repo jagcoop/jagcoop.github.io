@@ -1,0 +1,199 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+
+     ** How to show different perspectives for the same information **
+
+November 21st, 2024
+By Alejandro Garcia
+
+
+As I have said in my previous post:
+I love this image:
+
+![multiple perspectives](./shadow_cube_cas.jpg)
+
+It shows that the same object can be seen from multiple perspectives.
+
+So for several years now I have been trying to find:
+
+> "How to show different perspectives for the same information, in programming?"
+> -- Alejandro Garcia
+
+In this post I'm going to explain the different ways I have tried to solve this problem.
+
+## Text to Diagrams.
+
+Let's first start with two representations of the same idea:
+Text and diagrams.
+
+Here we have PlantUML text:
+
+``` plantuml
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+```
+
+And it generates this diagram:
+
+![Plantuml](https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBCoKnELT2rKt3AJx9IS2mjoKZDAybCJYp9pCzJ24ejB4qjBk42oYde0jM05MDHLLoGdrUSoeLkM5u-K5sHGY9MGw6ARNHryQb66EwGcfS2T300)
+
+Observe how brief the text to create the diagram is.
+And at the same time observe that the diagram is more understandable than the text
+used to create it.
+
+I have a collection of tools like this:
+
+https://elviejo79.github.io//2020-02-02-Awesome-list-of-text-to-X/
+
+So in general I love this kinds of tools.
+My only problems are so far:
+1. I cannot create DSL to create any kind of language I want so that it creates a diagram.
+2. I wish that the text to generate the diagrams where actual code.
+
+### For diagrams that are actual code.
+
+We have programming languages like https://ballerina.io
+That given this code,
+ that is executable
+
+``` java
+
+import ballerina/http;
+import ballerina/googleapis.sheets;
+
+configurable string githubPAT = ?;
+configurable string repository = "ballerina-platform/ballerina-lang";
+configurable string sheetsAccessToken = ?;
+configurable string spreadSheetId = ?;
+configurable string sheetName = "pull-requests";
+
+type PR record {
+    string url;
+    string title;
+    string state;
+    string created_at;
+    string updated_at;
+};
+
+public function main() returns error? {
+    http:Client github = check new ("https://api.github.com/repos");
+    map<string> headers = {
+        "Accept": "application/vnd.github.v3+json",
+        "Authorization": "token " + githubPAT
+    };
+    PR[] prs = check github->/[repository]/pulls(headers);
+
+    sheets:Client gsheets = check new ({auth: {token: sheetsAccessToken}});
+    _ = check gsheets->appendValue(spreadSheetId, ["Issue", "Title", "State", "Created At", "Updated At"],
+                {sheetName: sheetName});
+
+    foreach var {url, title, state, created_at, updated_at} in prs {
+        _ = check gsheets->appendValue(spreadSheetId, [url, title, state, created_at, updated_at],
+                    {sheetName: sheetName});
+    }
+}
+```
+
+will generate this diagram:
+
+![Ballerina](https://ballerina.io/images/consuming-services-diagram.svg)
+
+Now this is a powerful programming language for cloud services.
+
+However my problem is that it's only for that kind of system and only sequence diagram.
+
+I want to crate any kind of diagram, with DSL.
+
+### For creating a DSL that has concepts
+
+The most user friendly ways that I have found to generate DSL are
+
+#### Small-talk
+
+#### Scroll notation
+
+#### White-space lisp
+
+#### Racket
+
+# Ontologies and RDFa
+
+Triplets
+
+Wikidata
+
+SPRQL
+
+# lisp and homo-iconic languages
+
+# Bidirectional parsers
+
+Bidirectional parsers are an extremely interesting concept.
+
+In most programming languages, the Parser and the Pretty Printer are developed independently.
+So that means that if your parsers translate a Source Code file .Ne a Long String.
+Into an Abstract Syntax Tree (AST). Which is a tree data structure.
+And then you print the AST (data structure)
+What gets printer is NOT code that compiles.
+
+But having the pretty print code to be compilable is attractive.
+Because that way we can more easily build debuggers, or even transpiler.
+
+The idea is that we have the two functions:
+
+get
+: takes a source code and returns an abstract syntax tree
+
+	source_code_v1 |> get |> AST
+
+put
+: takes an AST and returns a source code
+
+  AST |> put |> source_code_v2
+
+but we need to clarify that source_code_v2 and source_code_v1 are not the same but they are equivalent.
+which means that generating the AST from both versions must generate the same AST
+
+	(source_code_v1 |> put) == (source_code_v2 |> put)
+
+Now the problem is that given an AST there is almost an infinite number of possible source_code representations:
+for example
+
+  if (A == 1) and (B == 2) then ...
+
+could as easily be represented by
+
+  if (B == 2) and (A == 1) then ...
+
+  or even more difficult
+
+	if (A == 1) then {
+		if ( == 2 ) then ...
+	}
+
+with a nested if.
+So we we have the problem that the _put_ function can have "infinite outputs.
+that's why the creators of BiGUL
+Created a third function called _put-back_
+
+	put-back(source_code_v1, AST_modified) and produce source_code_v2
+
+So in put-back the parameters are the original source code that you started with, the AST that it generates,
+that can or cannot be modified and then outputs source_code_v2.
+Since now we have two pieces of data we can actually generate a single deterministic output for put-back.
+
+And that makes all the difference.
+
+## BiGul
+
+## BiOOP
+
+# Json, YAML, XML, S-expressions
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
