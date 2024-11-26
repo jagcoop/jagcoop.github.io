@@ -321,6 +321,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](././posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Did_You_Read_This_Book](././posts/Did_You_Read_This_Book/) 
   	  </li>
   	</ul>
@@ -1184,6 +1188,88 @@ A final thought.
 ## People frequently think they know, but they don't.
 
 When this happens, go deeper. Both parts win.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Challenges for the new educational systems in the World. An historical perspective about the change from the Atlantic Countries dominion, to the Pacific emergent dominion of the economy
+By Pepe Hernandez
+November 26th, 2024
+
+The document "Oceans of Innovation. The Atlantic, the Pacific, Global Leadership and the future of education" is an essay written by Michael Barber, Katelyn Donnelly, and Saad Rizvi, education specialists. 
+
+## The Atlantic region dominion of the world over 300 hundred years
+The essay provides a historical perspective on the global leadership of the Atlantic region over 300 years and its transition to the Pacific region. It addresses the immense challenge Pacific countries face to maintain this leadership and tackle the challenges of the second half of the 21st century. The article emphasizes the importance of disruptive innovation in addressing these challenges and argues that Pacific countries—and, indirectly, the rest of the world—must revolutionize their educational systems.
+
+## The Pacific Global Leadership
+The authors acknowledge the success of current education systems but argue that Pacific countries' cultural values, such as collectivism, respect for authority, and achievements in mathematics, reading, and science, limit their ability to foster disruptive innovation and entrepreneurship. The challenge lies in maintaining leadership through profound changes in education systems, steering them toward creativity, entrepreneurship, and individualism to successfully confront these transformative challenges for the region (and humanity).
+
+## The keys of the success of the pacific countries education systems
+A complementary part of the essay discusses characteristics of Asian culture that contributed to the success of their education systems. These include valuing and appreciating teachers, the virtuous cycle created with parents and students due to the presence of excellent teachers, prioritizing education as a fundamental value, and a long-term mindset with consistent actions aligned to these goals. 
+
+## A new framework for actual education systems
+The article proposes an equation summarizing a framework for education systems: Well Educated = E(K + T + L)
+
+A good education equals the sum of Knowledge, Critical Thinking, and Leadership, all empowered by Ethics.
+
+## The agenda for the evolution of educational systems
+Additionally, the essay outlines complementary views on implementing this framework, such as curriculum changes, restructuring traditional schedules and daily classes, and transforming evaluation methods. It advocates for systemic reforms based on standards, accountability, human capital, structure, and organization.
+
+## Examples of good practices in educational initiatives in the world
+As articulated in the essay, these elements form the foundation of a new educational model for innovation and entrepreneurship. Finally, the essay references several successful cases in different countries that exemplify good practices that should ideally be disseminated within their respective educational systems and globally.
+High Tech High achieves 100% effectiveness in student university applications through innovative teacher-driven education.
+Raffles Girls' School constantly experiments with new approaches, openly sharing and distributing them.
+GEZH High School in Hong Kong has generated over 600 patents with the participation of students, parents, and teachers (40% of which are related to sustainability).
+The Jugaad low-cost school model, at $5 per student monthly, achieves better results than government programs, though perceived as a threat. Unlike Jugaad, Punjab schools in Pakistan are considered complementary low-cost options funded by the government to augment existing educational alternatives.
+
+## Two pivotal points from the essay
+This summary sets the stage for focusing on two main ideas:
+The recurrent use of dichotomies throughout the article is an open question, which is useful for us as a means of generating new ideas.
+The premise of disruptive innovation is to address transformative regional challenges.
+### Dichotomies for Idea Generation
+Some of the dichotomies identified in the essay include:
+- How do we foster disruptive innovation while preserving cultural values? Maintaining a love for work and respect for authority while being open to change and generating new ideas is an example of a dichotomy.
+- How can academic success be achieved while developing creativity and entrepreneurship in Asian cultures?
+- How do we leverage outstanding innovation cases, described as "islands of innovation," and democratize these practices quickly and effectively?
+
+The authors identify several dichotomies they label as false but useful for practical problem-solving exercises:
+- Universal standards vs. personalization
+- Entire systems vs. autonomous schools
+- Best practices vs. innovation
+- Teaching vs. technology
+- Public vs. private education
+- Strategy vs. Execution
+
+### TRIZ - Theory of Inventive Problem Solving
+TRIZ, developed by Heinrich Altshuller in 1945, provides algorithms and tools for systematically solving creative problems. Among its tools are separation principles, which include:
+- **Separation in time.** For this principle, you need a system to have a specific state at a particular time and another at a different time (e.g., airplane landing gear is used only for takeoff and landing).
+- **Separation in space.** Combining separate spaces for different purposes (e.g., a family dining area with a visible play area for children) can help cover both needs in different places.
+- **Coexistence of factors.** This principle allows managing two different states for the same object simultaneously. A typical example is, "I want my coffee hot and at environment temperature at the same time." I want my coffee hot to enjoy it and a template coffee to carry it. 
+
+For instance, consider the dichotomy of preserving cultural values while fostering openness to change. Applying TRIZ principles:
+- **Separation in time:** During class, build trust with teachers and superiors; maintain respect for parental authority outside classy.
+- **Separation in space:** Foster creativity within schools while maintaining traditional values at home.
+- **Coexistence:**  Show respect for authority while encouraging assertive communication with leaders to foster entrepreneurship, and disruptive innovation.
+
+### Goldratt's Conflict Resolution Diagram
+Eliyahu Goldratt's Conflict Resolution Diagram, part of the Logical Thinking Process in the Theory of Constraints, is another tool for resolving dichotomies. For example:
+- Universal standards vs. personalization.
+- Universal standards aim to scale processes.
+- Personalization focuses on nurturing students' unique talents.
+Potential solutions emerge by identifying underlying assumptions for each side. Often, these conflicts are apparent rather than real, such as standardizing personalized approaches to resolve the dichotomy.
+
+## Final Reflections
+This article resonated deeply with me. Education is a universal theme I've experienced from multiple perspectives—as a student (with two master's degrees and current doctoral studies), as an educator with 23 years of teaching experience, as a process improvement advisor for the Ministry of Education, as the coordinator of the Master's in Software Engineering program at CIMAT, and as a father of four. The article broadened my understanding of successful educational systems worldwide and their present challenges.
+It also stimulated critical thinking about tools like TRIZ and the Logical Thinking Process, which I've found invaluable for analyzing problems and generating innovative solutions.
+
+### On Disruptive Innovation:
+The authors argue it is the only solution to transformative challenges. However, Walter Isaacson's The Innovators suggests that innovation is incremental, building on existing technology. For instance, ENIAC and MARK I computers emerged because prior technologies enabled their creation. This incremental approach combines existing elements to develop innovative solutions.
+
+### On High-Performance Teams:
+The essay references The Lunar Men, a group of inventors and scientists whose collaborative efforts led to innovations like the steam engine. Similarly, Xerox PARC produced groundbreaking technologies through a formal and informal culture of collaboration. Creating such teams today could lead to similar transformative innovations.
+
+These themes warrant further exploration in another essay.
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
@@ -3667,147 +3753,151 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-22: posts/music_and_technology](./posts/music_and_technology).
+### [2024-11-26: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2024-11-22: posts/ideas](./posts/ideas).
+### [2024-11-26: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2024-11-22: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-11-26: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-11-22: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2024-11-26: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2024-11-22: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2024-11-26: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2024-11-22: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2024-11-26: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2024-11-22: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-11-26: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-11-22: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-11-26: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-11-22: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-11-26: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-11-22: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2024-11-26: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2024-11-22: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-11-26: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-11-22: posts/Single_text_file](./posts/Single_text_file).
+### [2024-11-26: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-11-22: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-11-26: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-11-22: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-11-26: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-11-22: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2024-11-26: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2024-11-22: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-11-26: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-11-22: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-11-26: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-11-22: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2024-11-26: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2024-11-22: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-11-26: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-11-22: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2024-11-26: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2024-11-22: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-11-26: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-11-22: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-11-26: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-11-22: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2024-11-26: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2024-11-22: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2024-11-26: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2024-11-22: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2024-11-26: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2024-11-22: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2024-11-26: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2024-11-22: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2024-11-26: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2024-11-22: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-11-26: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-11-22: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2024-11-26: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+[lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
+
+
+### [2024-11-26: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2024-11-22: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-11-26: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-11-22: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-11-26: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-11-22: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-11-26: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-11-22: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2024-11-26: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2024-11-22: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-11-26: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-11-22: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-11-26: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2024-11-22: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2024-11-26: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -3857,6 +3947,7 @@ Email
 		<li>[posts/Home_Manager_strategies_for_symlink_management](/posts/Home_Manager_strategies_for_symlink_management/index.html)</li>
 		<li>[posts/Frustration_in_the_face_of_improvement](/posts/Frustration_in_the_face_of_improvement/index.html)</li>
 		<li>[posts/Extending_the_Power_of_your_Personal_Cloud](/posts/Extending_the_Power_of_your_Personal_Cloud/index.html)</li>
+		<li>[posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](/posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion/index.html)</li>
 		<li>[posts/Did_You_Read_This_Book](/posts/Did_You_Read_This_Book/index.html)</li>
 		<li>[posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](/posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines/index.html)</li>
 		<li>[posts/Declarative_dotfiles_with_Home_Manager](/posts/Declarative_dotfiles_with_Home_Manager/index.html)</li>
@@ -4133,11 +4224,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-22: projects/rewards.codes](./projects/rewards.codes).
+### [2024-11-26: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-11-22: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-11-26: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -4438,6 +4529,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Extending_the_Power_of_your_Personal_Cloud](././posts/Extending_the_Power_of_your_Personal_Cloud/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](././posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
