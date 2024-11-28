@@ -233,6 +233,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/You_Need_To_Write_Here_is_Why](././posts/You_Need_To_Write_Here_is_Why/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Unlocking_the_Power_of_Personal_Cloud](././posts/Unlocking_the_Power_of_Personal_Cloud/) 
   	  </li>
   	</ul>
@@ -3027,6 +3031,70 @@ Here's a quick summary of the technologies that power each part of my personal c
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
+# You can finish today without writing something. Here is why.
+November 28th, 2024
+By Pepe Hernández
+
+## If you don't write, you don't think
+In his blog post https://paulgraham.com/writes.html,
+Paul Graham says he doesn't like to make predictions. But he is sure about the next one: "In 20 years, there won't be many people who will write." There will be only two types of people: those who write and those who don't. Artificial intelligence will replace those who don't write now.
+
+If you don't write, you don't think. You only think that you think.
+
+Again, in 20 years, there will be few people who could write. 
+
+As a group, we write a post every week at Jag Academy. So we can practice this valuable skill.
+
+And we do it to think. Practice, practice, practice... 
+
+## Importance of writing for science and experimentation
+
+	"The difference between science and screwing around is writing it down." - "Myth-busters".
+
+The bullet expert of the TV program said that each time, the program was about bullets and explosions. 
+
+As the cartoonist Guindon wrote, "Writing is nature's way of letting you know how sloppy your thinking is."
+
+## Writing is a serious thing. 
+
+The following video is a short review of the Book "Writing to Learn." Zinsser wrote this book. Here are some quotes that  Zinsser said:
+" I hate writing. It is painful for me. It 's slow and frustrating".
+
+"I don't like to write, but I take great pleasure in having written - finally made an arrangement with a certain inevitability like the solution to a mathematical problem.
+
+"In no other line of work is delayed gratification so delayed".
+
+"Writing is a tool that allows you to wrestle with words and ideas. It forces us to keep asking. I am saying what I want to say".
+
+"By becoming a better writer, you become a better learner".
+
+"Writing and rewriting allow you to think clearly, organize their ideas, tell them what they still need to know, and push them to one area of knowledge. Writing can do the same for you".
+
+Zinsser suggests that two types of writing are helpful: explanatory and exploratory. 
+
+## Learning practices to improve your English
+Zinsser recommends the following practices based on scientific studies. When I read about them, I immediately remembered the James Lang book Small Teaching. 
+Here are examples of how to apply the practice in writing:
+
+ **Retrieval**.  Retrieval practice could involve recalling writing techniques or grammar rules from memory, such as crafting topic sentences, without relying on notes, thereby strengthening retention. 
+**Spaced repetition**.  In this practice, you spread writing assignments or exercises over time, like revisiting essay drafts weekly, to reinforce skills and prevent forgetting. 
+**Elaboration**. This practice entails connecting new writing concepts to prior knowledge, such as linking narrative structure to a familiar story, to deepen understanding. 
+Finally, **interleaving** introduces varied writing tasks in a mixed sequence—practicing persuasive essays, descriptive paragraphs, and research-based summaries—to help students apply techniques across diverse contexts, fostering adaptability and mastery.
+
+Zinsser's most famous book is "On Writing Well." It is full of good writing advice. Here is just one jewel to show you the advice he gives in his book: "When you are ready to stop, stop. Look for the nearest exit. That is when you said what you were trying to say."
+
+
+P.S. Writing not only let you think. It allows as to be free. You can check the Freedom Writers movie. I remember, I enjoyed very much this movie, where high school students changed their world with the power of thew written voice. 
+
+This can be the topic for other post. Meanwhile, write please.
+
+
+https://www.youtube.com/watch?v=IsQUT9xRYSg
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
 
      **My Dozen Problems**
 
@@ -3754,151 +3822,155 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-26: posts/music_and_technology](./posts/music_and_technology).
+### [2024-11-28: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2024-11-26: posts/ideas](./posts/ideas).
+### [2024-11-28: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2024-11-26: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-11-28: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-11-26: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2024-11-28: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2024-11-26: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2024-11-28: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2024-11-26: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2024-11-28: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2024-11-26: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-11-28: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
+[lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
+
+
+### [2024-11-28: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-11-26: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-11-28: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-11-26: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-11-28: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-11-26: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2024-11-28: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2024-11-26: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-11-28: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-11-26: posts/Single_text_file](./posts/Single_text_file).
+### [2024-11-28: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-11-26: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-11-28: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-11-26: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-11-28: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-11-26: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2024-11-28: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2024-11-26: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-11-28: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-11-26: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-11-28: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-11-26: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2024-11-28: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2024-11-26: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-11-28: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-11-26: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2024-11-28: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2024-11-26: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-11-28: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-11-26: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-11-28: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-11-26: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2024-11-28: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2024-11-26: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2024-11-28: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2024-11-26: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2024-11-28: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2024-11-26: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2024-11-28: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2024-11-26: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2024-11-28: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2024-11-26: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-11-28: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-11-26: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+### [2024-11-28: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
 [lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
 
 
-### [2024-11-26: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2024-11-28: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2024-11-26: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-11-28: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-11-26: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-11-28: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-11-26: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-11-28: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-11-26: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2024-11-28: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2024-11-26: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-11-28: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-11-26: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-11-28: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2024-11-26: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2024-11-28: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -3926,6 +3998,7 @@ Email
 		<li>[posts/faust_a_musical_dsl](/posts/faust_a_musical_dsl/index.html)</li>
 		<li>[posts/different_perspectives_for_the_same_information](/posts/different_perspectives_for_the_same_information/index.html)</li>
 		<li>[posts/a_dozen_problems](/posts/a_dozen_problems/index.html)</li>
+		<li>[posts/You_Need_To_Write_Here_is_Why](/posts/You_Need_To_Write_Here_is_Why/index.html)</li>
 		<li>[posts/Unlocking_the_Power_of_Personal_Cloud](/posts/Unlocking_the_Power_of_Personal_Cloud/index.html)</li>
 		<li>[posts/Understanding_complexity_in_software_systems](/posts/Understanding_complexity_in_software_systems/index.html)</li>
 		<li>[posts/The_Rise_and_Fall_of_Abacus_Rationale](/posts/The_Rise_and_Fall_of_Abacus_Rationale/index.html)</li>
@@ -4225,11 +4298,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-11-26: projects/rewards.codes](./projects/rewards.codes).
+### [2024-11-28: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-11-26: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-11-28: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -4442,6 +4515,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/a_dozen_problems](././posts/a_dozen_problems/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/You_Need_To_Write_Here_is_Why](././posts/You_Need_To_Write_Here_is_Why/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
