@@ -2300,7 +2300,7 @@ Less is more.
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
 
-About the need to pay you dues... Learning BMP diagraming
+# About the need to pay you dues... Learning BMP diagraming
 By Pepe Hernandez, December 1st, 2024
 
 ## My first BPM sketchminer experience
@@ -2379,8 +2379,8 @@ I am sure they will have the power. No doubt about it.
 
 --------
 Notes.
-* By the way, from all the list, sketchminer is the favorite for Alejandro. And its my favorite too. 
-Today, while I review the list I remember the texttomindmap tool, and mermaid. I'll make a review of both later. 
+- By the way, from all the list, sketchminer is the favorite for Alejandro. And its my favorite too. 
+- Today, while I review the list I remember the texttomindmap tool, and mermaid. I'll make a review of both later. 
 
 
 
