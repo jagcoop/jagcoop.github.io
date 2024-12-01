@@ -269,6 +269,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](././posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/PMI_vs_Flight_Levels_Less_is_More](././posts/PMI_vs_Flight_Levels_Less_is_More/) 
   	  </li>
   	</ul>
@@ -2294,7 +2298,95 @@ Less is more.
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
-<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script> <meta charset="utf-8" emacsmode="-*- markdown -*-">
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+About the need to pay you dues... Learning BMP diagraming
+By Pepe Hernandez, December 1st, 2024
+
+## My first BPM sketchminer experience
+We were in La Vendimia. An italian style caffeteria in the Alameda in Zac. Good memories. Were were happy, and we didn't know. Well...
+La Vendimia had a coworking space. That was the place where several world class engineers were coached by Alex. I will talk about it in other post. Meanwhile I remember Alex we were mapping a process on sketchminer.ai
+It was different from what we've done other times, using bizagi. Another tool Alex had show us some time before.
+That time was different. 
+We were focused on the process, not in finding the right option in the tool bar.
+You write a line, and it immediatly were drawn on the righ side as a process in the BMP (Business Process Management) format.
+Alex told me. This is the only thing that we should know about Process Management. I our class of BPM we must had learned this.
+
+## It is so easy to diagram in sketchminer... or NOT 
+This type of tools are called Text to Diagram tools. It is one of the things that Alex likes to collect. https://elviejo79.github.io//2020-02-02-Awesome-list-of-text-to-X/ 
+I fall in love with sketch miner immediately.
+I though it will be useful soon or after.
+It looks easy to map a BPM diagram.
+Not so fast. It has its tricks.
+
+## Pay your dues
+I worked at Kueski for two years.
+The first time I needed to work on a process I remember sketchminer.ai
+The diagram was not too long, but it was a diagram with a pair of cycles.
+I couldn't diagram what I wanted.
+I though it was going to be easier, because in the sketchminer.ai page there are a lot of examples of diagrams. A lot of process diagrams from different domains.
+But if you review the text that generates the diagram, you don't understand.
+I went with Alex again. He told me "You have to pay your dues before".
+Go to Leanpub, but the PDF booklet from the Author. Cesar Pautasso. Do ALL the exercises. Type them in the tool. 
+It will take you a pair of hours.
+The you'll be ready.
+
+After doing so, I was ready.
+
+Knowledge enter through the fingers. That's true for developers. Developers learn by writing code with its fingers. You have to write to learn, as I said in my preious post (https://jagcoop.github.io/posts/You_Need_To_Write_Here_is_Why/) 
+Alex has a developer mindset. He learns by coding. He learns by writing. He learns by doing. 
+
+## The most personal, is the most universal. The story repeats.
+
+	"The most personal, is the most universal". -Stephen Covey.
+
+Same story repeats with a colleagues in my last job as Product Manager.
+I recommended the tool to other pears.
+I wasn't successful.
+The tool looks easy, well it is, but not at all.
+A very intelligent guy, a PhD, tried to use it.
+She couldn't.
+The Engineering Head tried too.
+He couldn't.
+I said to them, "You have to pay your dues".
+
+They didn't do it. 
+
+Why I could not convince them?
+The standard was a diagramming tool from Google, and FIGMA. 
+They had invested in those tools, didn't want a new tool.
+For the PhD, she didn't want to use a pair of hours for a simple diagram.
+
+I paid my dues, I have the super power. They didn't. 
+
+I think this is a pattern for people who sees sketchminer. They crash with a wall (not a big one, just a book and two hours). People are not used to pay their dues.
+
+## Coming back to sketchminer.ai
+In my work as a Product Manager, I wrote "problem specifications", and the "product specifications" of initiatives using several tools. One of them was sketchminer.ai. It helped me to map and describe the process without wasting too much time diagraming it. From your mind (through text) to diagram.
+
+Now, I am coming back. I am offering an online class about BPM.
+
+I discovered a second book from the author of skecthminer. ai. I immediately bought it to improve my skills. The book year of publication is 2023. You can bought both of them for 20-50 USD (It depends how much you want to pay for them. This is a feature of the Leanpub service).
+
+I review the book, made a 20 slied page intro presentation, and took the book again. 
+
+I will use flipped learning with my class. Theory off-line. And we will do the practice in class.
+
+Students will be paying their dues in class. All exercises from the book. 
+
+I am sure they will have the power. No doubt about it.
+
+
+--------
+Notes.
+* By the way, from all the list, sketchminer is the favorite for Alejandro. And its my favorite too. 
+Today, while I review the list I remember the texttomindmap tool, and mermaid. I'll make a review of both later. 
+
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+ <meta charset="utf-8" emacsmode="-*- markdown -*-">
 # Psychological Safety 
 September 23th, 2024
 by *Pepe Hernandez*
@@ -3932,6 +4024,10 @@ This are the innovations that have been ocupaying our minds lately
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
+### [2024-12-01: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
+[lab notes ongaing](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner)
+
+
 ### [2024-12-01: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
@@ -4061,6 +4157,7 @@ Email
 		<li>[posts/Single_text_file](/posts/Single_text_file/index.html)</li>
 		<li>[posts/Requirements_in_the_Age_of_AI](/posts/Requirements_in_the_Age_of_AI/index.html)</li>
 		<li>[posts/Psychological_Safety](/posts/Psychological_Safety/index.html)</li>
+		<li>[posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](/posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner/index.html)</li>
 		<li>[posts/PMI_vs_Flight_Levels_Less_is_More](/posts/PMI_vs_Flight_Levels_Less_is_More/index.html)</li>
 		<li>[posts/Navigating_GHC_compilation_errors_in_Emacs](/posts/Navigating_GHC_compilation_errors_in_Emacs/index.html)</li>
 		<li>[posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](/posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud/index.html)</li>
@@ -4606,6 +4703,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Psychological_Safety](././posts/Psychological_Safety/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](././posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
