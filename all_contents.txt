@@ -1346,6 +1346,7 @@ These themes warrant further exploration in another essay.
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
  <meta charset="utf-8" emacsmode="-*- markdown -*-">
 # Don't Waste Your Time with Skeptics. Go With the Interested ones in Your Projects.
+By Pepe Hernandez. December 3rd, 2024.
 
 ## Finding Radziwill again
 The post https://www.dxquality.com/blog/don-t-try-to-win-them-over was written by Nicole Radziwill, an expert in Statistics that wrote the book "Learn Statistics with "R"." She is currently a consultant on Data Analytics. 
