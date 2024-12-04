@@ -1345,15 +1345,17 @@ These themes warrant further exploration in another essay.
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
  <meta charset="utf-8" emacsmode="-*- markdown -*-">
-# Don't Waste Your Time with Skeptics. Go With the Interested ones in Your Projects.
+# Don't Waste Your Time with Skeptics. Go With the Interested ones in Your Projects. 
 By Pepe Hernandez. December 3rd, 2024.
 
 ## Finding Radziwill again
-The post https://www.dxquality.com/blog/don-t-try-to-win-them-over was written by Nicole Radziwill, an expert in Statistics that wrote the book "Learn Statistics with "R"." She is currently a consultant on Data Analytics. 
+Alex admires Nicole Radziwill. She wrote the better statistics book. He had lost the footprint of Radziwill, until last week. He found she is now a consultant, and she write in the blog of her company. Alex sharee with me the post https://www.dxquality.com/blog/don-t-try-to-win-them-over. It copes with a problem that we have faced many times. Trying to convince others from something good for them. 
 
 ## The futility of your time with Skeptics
 She points out the futility of Trying to Win Over Skeptics. She said that if she had read the book "Cascades. How to create a movement that drives transformational change", written by Greg Satell, she could have saved two months, a lot of agony, and about 150k USD.
 
+## How to detect that we are over investeing in our time in a lost battle
+Radziwill said, "if you repeat over, and over, and you feel anxious and mad about others dont listening, probably you need to let it go"...
 
 ## What to do instead
 Trying to convince skeptic is hard because of their beliefs. They are influenced for factors beyond reason. Skepticism, is driven by emotional, psychological, and social factors. It is better to use that energy in other activities like:
@@ -1378,7 +1380,7 @@ I worked for a project that the governor wanted.
 
 I remembar another ocassion, insted of working in the Secretary of Administration with all the government dependence, we focused in the internal needs. There were also, other small government areas that ask for help. We stopped to offer our innoations services to thos areas. We worked with the people who wanted to work with us.
 
-The same happened when I worked as a lean-Kanban consultant at the Secretary of Education. In the Undersecretary of Planning, there were a lot of areas and needs. We focus on the area, and the area improved their performance for adopting good agile practices and methods (like Kanban). We worked when someone we wanted to work.
+The same happened when I worked as a lean-Kanban consultant at the Secretary of Education. In the Undersecretary of Planning, there were a lot of areas and needs. We focus on the area, and the area improved their performance for adopting good agile practices and methods (like Kanban). We worked with someone who wanted to work with us.
 
 ## A final thought
 Thanks Alex for the blogpost. This is illuminating. 
