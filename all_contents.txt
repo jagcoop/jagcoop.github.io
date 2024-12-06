@@ -325,6 +325,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Going_Agile_The_Agile_Way](././posts/Going_Agile_The_Agile_Way/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Frustration_in_the_face_of_improvement](././posts/Frustration_in_the_face_of_improvement/) 
   	  </li>
   	</ul>
@@ -1493,6 +1497,56 @@ It is also necessary to find external support that can constructively criticize 
 
 In conclusion, frustration is a natural emotion in the creative process. To overcome it, we must accept obstacles as opportunities for learning and improvement, be patient, and seek inspiration from new sources. Constant practice and self-reflection are key to advancing and improving.
 
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Becoming agile the agile way. Its not always like this.
+By Pepe Hernandez. December 6th, 2024
+
+## Klaus Leopold Advice. Become agile the agile way.
+Klaus Leopld, the creator of Flight Levels, and Rethinking Agile, said that if you want to implement agility in on organization, the way you implement it must be agile too. If you are going to implement agile, and use all the knowledge areas, and all the processes from PMBoK something is wrong. You are sending mixed messages, as Donald Keough said in his book, the ten commandments of business failure. Your are trying to implement agile, by not being agile.
+
+Note. Acting agile means using an iterative approach with short feedback loops, instead of developing detailed transformation plans.
+
+The Agile way described in his last book "Flight Levels Architecture" points out a change management theory that goes together with the five steps to implement Flight Levels. Klaus said they are both sides of the same coin.
+
+In order to implement agile you must work on the system design, and in the change design.
+
+The systems design requires five steps:
+1. Visualize the situation
+2. Create focus
+3. Establish agile interactions
+4. Measure progress
+5. Operate & Improve
+
+On the other hand, the change design requires:
+1. Clarify where you start from
+2. Create focus for improvement
+3. Build a guiding coalition
+4. Engage People
+5. Apply and agile approach. Here lies the intro of this post.
+
+
+## A pragmatic approach to teach Project Management Book of Knowledge
+
+I've been thinking a lot about it, cause I am delivering a class about Project Management based on the PMBoK (Project Management Book of Knowledge). i would have liked to use the Agile Approach only. But this is the first time I am giving this class, and we need to be compliant with the contract offered 
+by the marketing area. How to offer the students a class to be compliant with the requirement, but at the same time guiding them to adopt agile practices? We found a contradiction, we can use TRIZ now.
+
+## Using innovation principles to cope with this challenge
+TRIZ separations principles can be applied to this contradiction.
+- Separation in Time. So I am going to do what I used to do. Reducing the time to speak about it, and go agile the rest of the time. 
+- Coexistence of Factors. In the class we are reviewing the processes, at the same time I am explain them alternative options for agile methods, and tools.
+
+TRIZ not only have the separation principles, TRIZ have 40 principles for solving technical contradictions". The principle number 13 is "The other way around". This principle change the action by asking. What will happen if you do de opposite. Using this approach you are going to the other extreme. You promote agile, then promote the opposite. You can find this advice in the Five Elements of Effective Thinking, in the first principle "Understand deeply simple things". The author suggest to "defend the opposite", as an example "if you are republican, go to a democrate event". I am an agile convinced today, I am offering a PMP class. By doing the opposite I am trying to understand better agile principles. One day I am a PMP Project Manager, and I explain the rationale of the approach to my students, and the following day I am and advocate of agile. Studying, and using PMP helps to understand better why agile, and rigid methods are equal, when is much better agile, of if they are the same in some things.
+
+Neither Product Management, nor Agile are ends by themselves. They are both a mean to create, and deliver value for customers, collaborators, shareholders, and stakeholders in general. 
+So I give my advice to students warning about becoming worshipers of a specific method. Let's the tool be the slave, not the master (said once Ellen Domb, my TRIZ coach).
+
+ps1. See my review of the book, "The Five Elementos of Effective Thinking". https://novador.blogspot.com/2014/11/los-5-elementos-del-pensamiento-efectivo.html
+ 
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
@@ -4189,6 +4243,10 @@ This are the innovations that have been ocupaying our minds lately
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
+### [2024-12-06: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
+[lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
+
+
 ### [2024-12-06: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
@@ -4288,6 +4346,7 @@ Email
 		<li>[posts/Ikigai_to_Evaluate_Education_Ideas](/posts/Ikigai_to_Evaluate_Education_Ideas/index.html)</li>
 		<li>[posts/How_To_Choose_a_Book](/posts/How_To_Choose_a_Book/index.html)</li>
 		<li>[posts/Home_Manager_strategies_for_symlink_management](/posts/Home_Manager_strategies_for_symlink_management/index.html)</li>
+		<li>[posts/Going_Agile_The_Agile_Way](/posts/Going_Agile_The_Agile_Way/index.html)</li>
 		<li>[posts/Frustration_in_the_face_of_improvement](/posts/Frustration_in_the_face_of_improvement/index.html)</li>
 		<li>[posts/Extending_the_Power_of_your_Personal_Cloud](/posts/Extending_the_Power_of_your_Personal_Cloud/index.html)</li>
 		<li>[posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](/posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones/index.html)</li>
@@ -4884,6 +4943,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Home_Manager_strategies_for_symlink_management](././posts/Home_Manager_strategies_for_symlink_management/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Going_Agile_The_Agile_Way](././posts/Going_Agile_The_Agile_Way/) 
 	  	  </li>
 	  	</ul>
 	      <ul>

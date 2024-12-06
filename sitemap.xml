@@ -171,6 +171,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/Going_Agile_The_Agile_Way/index.html</loc>
+  <lastmod>2024-12-06</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/Frustration_in_the_face_of_improvement/index.html</loc>
   <lastmod>2024-12-06</lastmod>
   <changefreq>weekly</changefreq>
