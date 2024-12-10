@@ -229,6 +229,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/argentina_coops](././posts/argentina_coops/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/a_dozen_problems](././posts/a_dozen_problems/) 
   	  </li>
   	</ul>
@@ -1676,7 +1680,7 @@ In any case, this only bothers me because the symlink I want to setup goes into 
 
 # How to Hack Your Reading? Imitate Those with Good Habits
 By Pepe Hernandez
-November 10, 2024
+November 10th, 2024
 
 ## How Not to Get a Good Book
 Borrowing books from the library or buying from a bookstore is usually a bad idea. In the knowledge economy, there’s an overwhelming supply of books and topics. I reiterate, almost always, at least in my case, picking a random book off the shelf at Walmart or any bookstore is a poor strategy. Although sometimes you might stumble upon treasures or good deals. Personally, after 38 years, I’ve found a way to increase the number of books I read by following the advice of those who know better.
@@ -1687,7 +1691,7 @@ So, How Do I Select Books That Contribute Most to My Growth? I’ve accumulated 
 ### Subscribe to Audible.com
 This Amazon service offers a trial period for the first three months at $7. If you like the service, there are various plans. I’m subscribed to the one-credit-per-month plan, which is sufficient for me. Listening to one book per month guarantees at least 12 books a year! Plus, it helps you practice your English.
 
-### Follow the masters, not the students 
+### Follow the masters, not the students
 
 There are iconic figures who are reference points for specific areas of study. For example, in Software Engineering, The Mythical Man-Month is a must-read. If Brooks writes another book, software engineers should read it. In the case of the Theory of Constraints, books or people recommended by Goldratt are safe references for experts in the field.
 
@@ -2016,8 +2020,8 @@ Why is that? We are constantly looking for better ways to teach and learn.
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
 
-# Karina La Humana 
-November 8, 2024
+# Karina La Humana
+November 8th, 2024
 by *Karina Chaires*
 
 
@@ -2776,8 +2780,7 @@ Click Add Shortcut.
 Set the Name to something like Append Date/Time to Journal.
 In the Command field, enter the path to your script:
 bash
-Copy code
-/home/your-username/append_datetime_to_jrnl.sh
+Copy code  "/home/your-username/append_datetime_to_jrnl.sh"
 Replace your-username with your actual username.
 Set the desired keyboard shortcut by pressing the keys you want to use (e.g., Ctrl + Alt + J).
 Click Add.
@@ -3533,6 +3536,121 @@ Maybe together, we can find new angles to approach these challenges.
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
+     **My Dozen Problems**
+
+December 9th, 2024
+By Alejandro Garcia
+
+# How a Trip to Argentina Renewed My Faith in Cooperatives
+
+Last week, I had the privilege of speaking with the leaders of two remarkable democratically run companies.
+These conversations gave me a renewed sense of hope in cooperative models as
+viable, ethical, and innovative structures for businesses.
+
+### Two Companies, Two Perspectives
+
+The first was Hernán Wilkinson of **10Pines**, a company I’ve long admired for its groundbreaking work in Smalltalk
+and its unique approach to organizational democracy.
+The second was Duncan Coutts of **Well-Typed**,
+a Haskell consulting firm I’ve had the pleasure of working with through my role at IOHK.
+Both organizations exemplify a commitment to values-driven leadership, and both,
+in their own way, stand as proof that a company can succeed while treating people with dignity and fairness.
+
+This article focuses on my conversation with Hernán Wilkinson and the lessons I learned from **10Pines**.
+
+---
+
+### The Four Values That Define 10Pines
+
+Hernán explained that **10Pines** was founded on four guiding principles:
+
+1. **We want to be happy.**
+2. **We want to pursue technical excellence.**
+3. **We don't need to be millionaires to be happy.**
+4. **We don't need to exploit people to become millionaires.**
+
+These values are not just words on a wall.
+They are embedded in every aspect of how the company operates,
+from how they charge clients to how they handle decision-making.
+It’s a philosophy that sets **10Pines** apart in the often cutthroat world of software development.
+
+---
+
+### Surprising Lessons from 10Pines
+
+1. **No Sales Team**
+   In an industry dominated by aggressive sales tactics,
+   **10Pines** has no salespeople.
+   Hernán explained this choice: salespeople, motivated primarily by commissions,
+   often end up selling "smoke"—overpromising results that engineers later struggle to deliver.
+   This practice, they realized, conflicted with their core value of happiness.
+   So, they eliminated the role entirely, ensuring engineers directly communicate with clients,
+   aligning expectations with reality.
+
+2. **Decisions by Consent**
+   One of the most fascinating practices at **10Pines** is their decision-making process.
+   They avoid both consensus (too slow) and majority voting (which alienates minorities).
+   Instead, they use **consent**. If one side feels strongly about a decision, they are allowed to proceed,
+   with the understanding that the results will be revisited in three months.
+   This approach fosters respect, experimentation, and collaboration.
+
+3. **Trust Over Exploitation**
+   When the company allowed employees to choose their own health insurance plans,
+   This could have been a "tragedy of the commons," where everyone would opt for the most expensive option.
+   To his surprise, only three people selected it, presumably those with genuine need.
+   This reinforced his faith in the inherent reasonableness and trustworthiness of people when given responsibility.
+
+4. **Transparency in Pay**
+   **10Pines** operates as an open-book company.
+   Salaries are public, and the pay structure is clear: the highest-paid employee earns 5.2 times what the lowest-paid employee earns.
+   This transparency fosters fairness and eliminates the resentment that secrecy often breeds in traditional organizations.
+
+5. **Projects as Learning Opportunities**
+   Projects at **10Pines** are structured to prioritize both quality and education.
+   Each team includes at least one junior engineer, who works alongside seniors to learn what "good" looks like in practice.
+   They charge by the team, not the level of individual contributors,
+   ensuring that training the next generation of engineers is baked into their business model.
+
+---
+
+### Challenges in a Democratic Company
+
+Of course, running a democratically managed company is not without its challenges.
+Hernán candidly shared two surprising experiences:
+
+1. **Positive:** Trust in Action
+   Allowing employees to choose their insurance plans was a leap of faith that paid off.
+   People chose responsibly, challenging the assumption that self-interest always leads to exploitation.
+
+2. **Negative:** Decision Paralysis
+   When the company needed to let an employee go,
+   the assembly—responsible for decision-making—took too long to act.
+   The delay forced the founders to step in, highlighting
+   the occasional need for executive authority in a predominantly democratic system.
+
+---
+
+### Why 10Pines Doesn't Build Products
+
+Interestingly, **10Pines** has not yet developed its own product.
+Achieving product-market fit is one of the hardest challenges for any company.
+Moreover, their natural inclination is to build tools for software engineers
+a notoriously difficult market in which to achieve profitability.
+For now, they focus on their core strength: delivering custom software with integrity and technical excellence.
+
+---
+
+### Final Thoughts
+
+Speaking with Hernán Wilkinson reminded me that cooperatives and democratically run businesses are not just idealistic experiments. They are viable, effective, and deeply human ways to run a company. By embedding values into every decision, **10Pines** has created a workplace where happiness and excellence coexist.
+
+My journey to Argentina—and this conversation in particular—has left me with a profound sense of possibility. If a company can thrive without exploitation, without secrecy, and without sacrificing its principles, then perhaps the future of work is brighter than we think.
+I'll be skilled enough.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
 
      ** How to show different perspectives for the same information **
 
@@ -3808,6 +3926,9 @@ In a nutshell, Faust is a powerful and versatile DSL that lets musicians and sou
 <meta property="og:url" content="https://example.com/page-url">
 
                             **How to define problems**
+
+October 21st, 2024
+by Alejandro Garcia
 
 We all have problems; they are everywhere and at every time.
 So, how could we better solve problems?
@@ -4178,179 +4299,183 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-12-08: posts/music_and_technology](./posts/music_and_technology).
+### [2024-12-10: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2024-12-08: posts/ideas](./posts/ideas).
+### [2024-12-10: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2024-12-08: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-12-10: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-12-08: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2024-12-10: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2024-12-08: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2024-12-10: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2024-12-08: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2024-12-10: posts/argentina_coops](./posts/argentina_coops).
+[lab notes ongaing](./posts/argentina_coops)
+
+
+### [2024-12-10: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2024-12-08: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
+### [2024-12-10: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
 [lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
 
 
-### [2024-12-08: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
+### [2024-12-10: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
 
-### [2024-12-08: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-12-10: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-12-08: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-12-10: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-12-08: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
+### [2024-12-10: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
 [lab notes ongaing](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding)
 
 
-### [2024-12-08: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-12-10: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-12-08: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2024-12-10: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2024-12-08: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-12-10: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-12-08: posts/Single_text_file](./posts/Single_text_file).
+### [2024-12-10: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-12-08: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-12-10: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-12-08: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-12-10: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-12-08: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
+### [2024-12-10: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
 [lab notes ongaing](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner)
 
 
-### [2024-12-08: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2024-12-10: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2024-12-08: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-12-10: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-12-08: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-12-10: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-12-08: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2024-12-10: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2024-12-08: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-12-10: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-12-08: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2024-12-10: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2024-12-08: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-12-10: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-12-08: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-12-10: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-12-08: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2024-12-10: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2024-12-08: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2024-12-10: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2024-12-08: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2024-12-10: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2024-12-08: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2024-12-10: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2024-12-08: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
+### [2024-12-10: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
 [lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
 
 
-### [2024-12-08: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2024-12-10: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2024-12-08: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-12-10: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-12-08: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
+### [2024-12-10: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
 [lab notes ongaing](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones)
 
 
-### [2024-12-08: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+### [2024-12-10: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
 [lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
 
 
-### [2024-12-08: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2024-12-10: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2024-12-08: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-12-10: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-12-08: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-12-10: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-12-08: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-12-10: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-12-08: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2024-12-10: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2024-12-08: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-12-10: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-12-08: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
+### [2024-12-10: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
 [lab notes ongaing](./posts/Another_post_on_Crypto_Assets)
 
 
-### [2024-12-08: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-12-10: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2024-12-08: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2024-12-10: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -4377,6 +4502,7 @@ Email
 		<li>[posts/how_to_define_a_problem](/posts/how_to_define_a_problem/index.html)</li>
 		<li>[posts/faust_a_musical_dsl](/posts/faust_a_musical_dsl/index.html)</li>
 		<li>[posts/different_perspectives_for_the_same_information](/posts/different_perspectives_for_the_same_information/index.html)</li>
+		<li>[posts/argentina_coops](/posts/argentina_coops/index.html)</li>
 		<li>[posts/a_dozen_problems](/posts/a_dozen_problems/index.html)</li>
 		<li>[posts/You_Need_To_Write_Here_is_Why](/posts/You_Need_To_Write_Here_is_Why/index.html)</li>
 		<li>[posts/Videogames_The_new_frontier_in_English_learning](/posts/Videogames_The_new_frontier_in_English_learning/index.html)</li>
@@ -4690,11 +4816,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-12-08: projects/rewards.codes](./projects/rewards.codes).
+### [2024-12-10: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-12-08: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-12-10: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -4903,6 +5029,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/different_perspectives_for_the_same_information](././posts/different_perspectives_for_the_same_information/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/argentina_coops](././posts/argentina_coops/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
