@@ -1,0 +1,49 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+     **The TDD Cloud: Wilkinson and Meyer on Software Design Practices**
+
+December 11th, 2024
+By Alejandro Garcia
+
+As I’ve recently written (link to argentina_coops), I had an enlightening conversation with Hernan Wilkinson, an agile developer and founder of the 10 Pines cooperative. During our discussion, I brought up my admiration for the Eiffel programming language and the work of Bertrand Meyer.
+
+Hernan, in turn, shared an anecdote about a conversation he had with Bertrand when he visited Argentina. The topic? Test-Driven Development (TDD). Hernan is a strong proponent of TDD, while Bertrand is a notable critic of the practice, preferring Design by Contract (DBC) instead. When two thought leaders of this caliber disagree, their perspectives deserve careful examination. Rather than picking sides, a more fruitful approach is to ask: under what circumstances might they both be right? And when might they both be wrong?
+
+# Enter the Cloud Tool
+
+Ely Goldratt’s “Cloud” tool, designed to resolve conflicts, provides a structured way to analyze this disagreement. Let’s assemble the cloud for this situation:
+
+1. **What Hernan wants:** To use TDD.
+2. **What Bertrand wants:** To use DBC and avoid TDD.
+3. **What Hernan needs:** A way to design software guided by concrete examples.
+4. **What Bertrand needs:** A way to assure software quality for all cases, not just those tested.
+5. **Their common goal:** To develop high-quality software.
+
+# Examining the Conflict
+
+Can TDD and DBC coexist in the same project? Technically, yes. But there are inefficiencies to consider. For example, certain TDD tests may become redundant in the presence of preconditions established by DBC. A test that checks for invalid input may be unnecessary if a precondition already specifies that such input is not allowed. On the other hand, all DBC assertions are inherently valuable because they externalize assumptions and are integral to the code itself.
+
+# Cause and Effect
+
+- **Hernan’s side:** Using TDD as an interactive tool for developing software guided by concrete examples is valid and valuable for guiding the design process.
+- **Bertrand’s side:** Design by Contract leads to higher software quality assurance because it provides a formal specification.
+
+# Resolving the Conflict
+
+The solution lies in synthesizing their approaches:
+
+- Use DBC always. Assertions such as preconditions and postconditions are critical for defining and validating the assumptions and guarantees of the code.
+- Use TDD selectively, focusing on concrete examples that guide the design. However, these examples should not be redundant with DBC assertions. Instead, they should illustrate the "happy path" and other key scenarios.
+
+This compromise respects the strengths of both approaches. DBC ensures rigorous quality assurance, while concrete examples—inspired by TDD but not strictly tests—can help developers think through design decisions.
+
+# Final Thoughts
+
+Would Bertrand oppose the idea of using examples to guide design? Likely not, as long as they aren’t referred to as tests and don’t duplicate what DBC already covers. Thinking about examples—how a feature will be used—is a pragmatic way to align both methodologies.
+
+By applying Goldratt’s Cloud, we see that Hernan and Bertrand’s perspectives are not mutually exclusive. Instead, their combined insights offer a balanced and effective approach to achieving their shared goal: the development of high-quality software.
+
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>

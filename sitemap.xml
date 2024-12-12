@@ -26,6 +26,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/tdd_cloud_wilkinson_vs_meyer/index.html</loc>
+  <lastmod>2024-12-12</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/music_and_technology/index.html</loc>
   <lastmod>2024-12-12</lastmod>
   <changefreq>weekly</changefreq>
