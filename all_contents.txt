@@ -2521,18 +2521,20 @@ Notes.
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
-
-
 # Creating Software AI Products, the AI Product Management Way.
 By Pepe Hernandez. December 13th, 2024
 
+## A new hope for my thesis topic
+
 Today Alex came at 5.00 with a WhatsApp message: Look at this post, Andrew NG thinks that your thesis theme is good: Product Management with AI.
 
-Andrew NG! What did he said? While I am studying the PhD, I have doubts about my topic. In fact I have  tried with five different topics. 
+Andrew NG! What did he said? I said outloud. While I have been studying the PhD, I have had several doubts about my topic. In fact I, since the first intent, I have  tried with five different topics. 
 
-When Alex recommend something, I am 99% sure the recommendation is good.
+I open the blog post from Andrew NG and, and start reading. When Alex recommend something, I am 99% sure the recommendation is good.
 
 -------------------
+
+## Andrew NG thinks AI is enabling Product Managers to make a better job
 
 In his recent blogpost, Andrew NG talks about new patters in the Product Management discipline due to the enabling AI tools. He refers to the AI Product opportunities. The tool is an AI tool, the product is an AI product. This change of the market, and the change of the tools enables new practices.
 
@@ -2544,7 +2546,7 @@ This new way of creating things is driving shifts in best practices in Product M
 
 Note. I like the definition of Andrew NG (Product Management is the discipline of defining what to build to serve users).
 
-## 1. Use concrete examples to specify AI products.
+### 1. Use concrete examples to specify AI products.
 
 When a requirement is vague, and general, Artificial Intelligence can generate anything. To have better results, we need to be more specific. By providing examples or scenarios, AI can generate something that includes the based scenarios. The more scenarios, the better the outcome of AI tools. 
 
@@ -2555,14 +2557,15 @@ A PM can literally take pictures, and write notes about what is happening. The A
 	"Using examples (such as inputs and desired outputs) to specify a product has been helpful for 	many years, but the explosion of possible AI applications is creating a need for more product 	managers to learn this practice."-Andrew NG 
 
 Example:
-If someone request "a vision system to detect pedestrians outside our store" it is to vague. But if a PM collects a handful of pictures and notates them with the desire output, the meaning "detect pedestrian" becomes concrete.
+If someone request "a vision system to detect pedestrians outside our store" it is to vague. But if a PM collects a handful of pictures and make some notes on it with the desire output, the meaning "detect pedestrian" becomes more concrete.
 
-## 2. Asses technical feasibility of LLM-based applications by prompting.
+### 2. Asses technical feasibility of LLM-based applications by prompting.
 PMs can prompt LLM to see if an idea is feasible without the need of some software engineer to help them to check. When the PM arrives with a feasible idea with the SW Engineers. PMs can do basic feasibility at a basic level, than before. 
-Andrew NG has the better Python course for AI (recommended for a friend that took several python courses to learn). It is on my list of things to do in 2025. You can find it in the following link https://tinyurl.com/2jc7r4eb 
+
+By the way, Andrew NG has the better Python course for AI (recommended from Nohemi. She has taken  several python courses to learn, and she thingks this is bthe best). It is on my list of things to do in 2025. You can find it in the following link https://tinyurl.com/2jc7r4eb 
 
 
-## 3. Prototype and test without engineers.
+### 3. Prototype and test without engineers.
 There are several AI tools, that NG recommends: Replit, Vercels, V0, Bolt, and Anthropic's Artifacts. These tools allow OT technical users to create prototypes, some coding can helps a lot. Technical, and not technical users use it to:
 - prototype
 - get user feedback
@@ -2570,65 +2573,80 @@ There are several AI tools, that NG recommends: Replit, Vercels, V0, Bolt, and A
 
 A final though from Andrew NG, implicitly says that Product Management is a useful and evolving discipline "I find this discipline fascinating, and will keep on sharing best practices as they grow and evolve.". 
 
-Who is Andrew NG?
+### Who is Andrew NG?
 Andrew NG is a computer scientists and tech entrepreneur focusing in Artificial Intelligence, and Machine Learning. He is cofounder of Google Brain, former Chief Scientists at Bauidu, associate professor of the Stanford AIL Lab, and cofounding Coursera, and DeepLearning.AI. His goal is to democratize deep learning teaching over 8 million students through his online courses!!!! 
 Alex, Karina, Arturo, among other created the Data Gallos 8 years before. Their objective was to acquire Data Science skills. Since then, they follow Andrew NG, and their opinions carefully. Andrew is a great educator. Alex, you can write a story about it...
 See more details at the Wikipedia page... https://en.wikipedia.org/wiki/Andrew_Ng 
 
+-----------------------
 
 ## My third PhD trial. Artificial Intelligence, and Product Management
 As I said, this is my third intent to study the PhD. I had not success with the first two. I will add a post with the three previous thesis proposals later. Meanwhile, lets talk about the third intent... 
 
 ### 3.1 AI aided Sw Development
-The general hypothesis was that AI will create super developers that will thrive in the AI-Software world. Those who uses complex machines and algorithms, will thrive (I am referring to Cal Newport advice in Deep Work). 
-The name for the proposal was "AI aided Sw Development".
-How a common outdated sw engineer, could perform as a professional sw developer using artificial intelligence tools, like chatgpt, GitHub copilot, amazon whisperer, among others...
-How a professional sw developer could increase his productivity by 10x using the same AI tools...
-How a professional sw developer could perform as a small sw team...
+The general hypothesis was that AI will create super developers that will thrive in the AI-Software world. Those who uses complex machines and algorithms, will thrive (I am referring to Cal Newport advice in Deep Work). My proposal is related to the use of AI for increasing my abilities as Sw Developer. The name for the proposal was "AI aided Sw Development".
+The proposal tried to answer the questions
+- "How a common outdated sw engineer, could perform as a professional sw developer using artificial intelligence tools, like chatgpt, GitHub copilot, amazon whisperer, among others...
+- How a professional sw developer could increase his productivity by 10x using the same AI tools...
+- How a professional sw developer could perform as a small sw team...
+
 The thesis Committee accepted my proposal, but during the first year I changed my mind... Some factors influenced me to take such decision...
 1. The topic was proposed by me. 
 2. My thesis director had no much time for me.
-3. My thesis codirector was not interested.
-4. I started to think about some topic aligned between my thesis directors, and me.
+3. My thesis codirector was not interested in the topic.
+4. I started to think about some topic aligned with my thesis directors, and me.
 
-## 3.2 All start with a Problem. Solutions Strategies suggested by AI to Daily PM problems
-Everything started with the article from springer about the common problems that face Product Managers. It is a well written academic article. I liked the form, and the content. Since I performed as a Software Product Manager for two years, and my Thesis Co-Director did it to, I proposed this new topic. What could be the solutions for that problems from the point of view of experts (the teachers, not the students).
+So I deferred the commitment, and thought about what could be a good topic. I asked Alex again. Alex asked me "Wasn't there a single PhD-worthy problem that you, and Perla faced while worked in Kueski?". 
 
-I linked the Product Manager's problems, and AI with the concept. "Learn from the teachers, not from the students". So I wanted to know what great teachers thinks about the Daily Product Managers Problems. Who are the great teachers? Well, the world topic experts, and authors of books. Those who all the PMs follow in order to learn good practices.
+As a Product Manager I had many problems... I thought it could be a good idea. 
 
-A disadvantage is that they are not easy to reach (this is an assumption). Why not ask AI, as if AI represent the thought of theses experts. Voila! 
+### 3.2 A common topic Product Managers Problems 
+So I came back with my thesis co-Director, Perla Velasco, and expose the question of Alex.
+Perla, and I thought. What problems did we face in Kueski as Product Managers? I previously asked a pair of PMs and Software Engineering Managers. The answer were not satisfactory. 
+
+Perla, had recommemnded to me an article a pair of months ago, about problems faced by PMs. It was published on the Empirical Software Engineering. It is a well written academic article. I liked the form, and the content. Since both of us were colleagues in a Fintech for two years, both performing Product Manager roles, this was the common theme we were looking for.At the end of the article, identifies solutuions strategies as a subsecuent work for her team. Look for the solutions to those problems could be a good idea. 
+
+I linked the Product Manager's problems, and AI with the concept. "Learn from the teachers, not from the students". So I wanted to know what great teachers thinks about the Daily Product Managers Problems. Who are the great teachers? Well, the world topic experts, and authors of books. Those who all the PMs follow in order to learn good practices. A clear disadvantage is that experts are not easy to reach (this is an assumption). Why not ask AI, as if AI represent the thought of theses experts. Voila! 
+
+I studied previously, how to build prompts, and I know that you can ask an LLM like CHATgtp to think like a specific Great Teacher, ask them a questions, and specify the format of the output. This is a basic pattern of Prompt Engineering... While I was writing the new thesis proposal, I found that Springer had writen an second article "Strategies for Dealing With Software Product Management Challenges". There Springer got solutions strategies provided by Product Mangers with experience for the top 5 problemas of her previous article. 
+
+The good news were that I had a base line, the problems on one side, and the solution strategies on the other side.  
+
+I need to refine the idea, the specific terms to look for, and the proposal. 
+
+### 3.3 Finding the right concepts for my proposal
+I came to Alex again, how would you name an AI fed with the public knowledge of experts? 
+Alex told me, it could be Artificial Intelligence Agent, or Digital Twins. At the end of summer I had the name for my proposal "Solution strategies generated by Artificial Intelligence Agents to common problems in Software Product Management."
+
+I had a review from my thesis Director, and co-Director. They accepted the proposal, but questioned in order to refine the idea:
+- What would answer an Artificial Intelligence Agent to my question. What answer are alike, what are different, and what is the rationale for each answer.
+- Choose a small scope. Focus only on five problems. 
+
+They also set a deadline for a Systematic Literature Review. I still working on it. It will be a topic for another post...
+
+What is an AI agent? 
+
+I jump directly to a "customized LLM" with knowledbe of a specific expert. But, general LLMs Agent ask to prompts without needing some feedback. Perla told me, why you dont ask directly to LLMs and verify if the solution strategies to common problems are the same. 
+
+I did it. Some answers are the same, most of them. And somee are different. There are two cases with the different ones. First, solutions strategies proposed by Product Managers that were not metioned by LLM Agent (for this case CHATGPT version 4.0). Second case, the solutions strategis proposed by ChatGPT, and not metioned by Product Managers with experience. A third questions arises, what is the rationale behind each solution strategy in each case?
+
+Yes but, I didnt like the 
+
+Is there a need for a Systematic Literature Review?
 
 
-
-I studied previously, how to build prompts, and I know that you can ask an LLM like CHATgtp to think like a specific Great Teacher, ask them a questions, and specify the format of the output. This is a basic pattern of Prompt Engineering.
-
-
-So, my next attempt was related to Product Management, and Artificial Intelligence. The topic that Andrew NG things is a good one. Why did I follow this path? I am interested in AI, because I thing its changing every aspect of human life. Why Product managers would be out of this trend? The use of Artificial Intelligence is relatively new.
-
-## Yes but, Springer solved that. She found the solutions strategies suggested by PMs.
-A second article of springer proposed solution strategies to common problems.
-The data from both articles come from Product Managers with Experience. Both common problems, and common solutions. Well, it was normal that a Product Management group will continue researching. They found a gold vein. They are mining it.
-
-The second article of Springer is a base line. 
-
-So I Proposed to create digital twins of experts in product management (the teachers), and not from the students (the product managers with experience). My idea was firs to create a "Customized Chatbot feed with the public information of Product Management experts (blogposts, youtube videos, etc.)" to ask them about solution strategies.
-
-A second approach, is to provide the problems to a LLM, like ChatGPT, and obtain the answers.
-I had two main questions. If I arrive to the same conclusions that PM with experience, it is not necessary to make studies, it is faster to do it with artificial intelligence.
-Some results will be identical, some results different. From the different results
-A third scenario is a customized
-
-Fall in love with the problem, not with your solution
-he two of 
+### 
 
 
+-----------
+Resume
+The AI topic como from the power of digital tools mastered of guided by humans.
+The Product Manager problems, comes from the shared experience of being a PM at a Fintch.
+The creating of the digital twin, or a customized exepert come from two ideas of Alex.
+- Follow the teachers, not the students
 
-
-All started with...
-
-
-What is next...
-
+----------
+What is next?
  
 
 
@@ -4475,195 +4493,195 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-12-14: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
+### [2024-12-16: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
 [lab notes ongaing](./posts/tdd_cloud_wilkinson_vs_meyer)
 
 
-### [2024-12-14: posts/music_and_technology](./posts/music_and_technology).
+### [2024-12-16: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2024-12-14: posts/ideas](./posts/ideas).
+### [2024-12-16: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2024-12-14: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-12-16: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-12-14: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2024-12-16: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2024-12-14: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2024-12-16: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2024-12-14: posts/argentina_coops](./posts/argentina_coops).
+### [2024-12-16: posts/argentina_coops](./posts/argentina_coops).
 [lab notes ongaing](./posts/argentina_coops)
 
 
-### [2024-12-14: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2024-12-16: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2024-12-14: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
+### [2024-12-16: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
 [lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
 
 
-### [2024-12-14: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
+### [2024-12-16: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
 
-### [2024-12-14: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-12-16: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-12-14: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-12-16: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-12-14: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
+### [2024-12-16: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
 [lab notes ongaing](./posts/Top_10_Questions_for_a_Job_Interview)
 
 
-### [2024-12-14: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
+### [2024-12-16: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
 [lab notes ongaing](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding)
 
 
-### [2024-12-14: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-12-16: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-12-14: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2024-12-16: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2024-12-14: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-12-16: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-12-14: posts/Single_text_file](./posts/Single_text_file).
+### [2024-12-16: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-12-14: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-12-16: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-12-14: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-12-16: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-12-14: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
+### [2024-12-16: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
 [lab notes ongaing](./posts/Product_Management_and_AI)
 
 
-### [2024-12-14: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
+### [2024-12-16: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
 [lab notes ongaing](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner)
 
 
-### [2024-12-14: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2024-12-16: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2024-12-14: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-12-16: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-12-14: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-12-16: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-12-14: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2024-12-16: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2024-12-14: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-12-16: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-12-14: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2024-12-16: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2024-12-14: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-12-16: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-12-14: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-12-16: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-12-14: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2024-12-16: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2024-12-14: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2024-12-16: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2024-12-14: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2024-12-16: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2024-12-14: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2024-12-16: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2024-12-14: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
+### [2024-12-16: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
 [lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
 
 
-### [2024-12-14: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2024-12-16: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2024-12-14: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-12-16: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-12-14: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
+### [2024-12-16: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
 [lab notes ongaing](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones)
 
 
-### [2024-12-14: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+### [2024-12-16: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
 [lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
 
 
-### [2024-12-14: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2024-12-16: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2024-12-14: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-12-16: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-12-14: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-12-16: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-12-14: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-12-16: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-12-14: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2024-12-16: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2024-12-14: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-12-16: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-12-14: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
+### [2024-12-16: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
 [lab notes ongaing](./posts/Another_post_on_Crypto_Assets)
 
 
-### [2024-12-14: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-12-16: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2024-12-14: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2024-12-16: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -5056,11 +5074,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-12-14: projects/rewards.codes](./projects/rewards.codes).
+### [2024-12-16: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-12-14: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-12-16: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
