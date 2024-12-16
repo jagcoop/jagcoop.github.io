@@ -2624,18 +2624,44 @@ I had a review from my thesis Director, and co-Director. They accepted the propo
 
 They also set a deadline for a Systematic Literature Review. I still working on it. It will be a topic for another post...
 
-What is an AI agent? 
-
+#### A direct experiment with CHATGPT. Whad CHATGPT answer to the promt "What are the top 10 solution strategies, for the top 5 problems detected on the article of Springer?"
 I jump directly to a "customized LLM" with knowledbe of a specific expert. But, general LLMs Agent ask to prompts without needing some feedback. Perla told me, why you dont ask directly to LLMs and verify if the solution strategies to common problems are the same. 
 
 I did it. Some answers are the same, most of them. And somee are different. There are two cases with the different ones. First, solutions strategies proposed by Product Managers that were not metioned by LLM Agent (for this case CHATGPT version 4.0). Second case, the solutions strategis proposed by ChatGPT, and not metioned by Product Managers with experience. A third questions arises, what is the rationale behind each solution strategy in each case?
 
-Yes but, I didnt like the 
+My thesis proposal focus on an experiment (an output), not an outcome (a solution). Is there a need for the output. Is it the output what is needed? It is better than other options? Which other options do you have? Have someone worked on this problem? Is it an important problem? 
 
-Is there a need for a Systematic Literature Review?
+Well, Andrew NG thinks the theme/problem is right. 
+
+### 3.4 AI tools that supports Product Management practices
+In Academic Research you need to know what others said about your idea. "Nothing is new under the sun", said the Ecleasiastes. So, I looked for customized LLMs as a first approach, then i complement with tailored AI agents, then passed to domain specific. One of my proffesors said that we need to clarifly what is, and what is not. At the end we generalize to AI tools that support Product Management.
+
+I design an experiment to map this three options. I could get product management practices from experts. But then a philosophical questinos arises. 
 
 
-### 
+### 3.5 Is not about gathering information, is about developing skills.
+
+---------------------------
+A philosophical Question. The problem is not to identify a good practice, but really develope expertise on the practice.
+
+Perla said, I think the problem is not the information gathering.
+If you build your prompt right, then you will get an acceptable answer.
+We teach students Software Engineering good practices. And they build crappy software. 
+How can a PM develope expertise?
+
+I thought, the problem is that students of Softwre Engineering have limited practice during college. If they build some kind of software or solution, it will be the first one. 
+One thing is to know something, another thing is to really understand it, and other thing is to dominate the practice at a proeficient level.
+Knowing wicha are the goood practices for a software product manager is no enough to help them dominate the practices.
+
+Then, our research questions refined. Is there some AI toos that supports knowing, understanding, and developing product management practices?
+
+I found none yet. If I look for AI tools that supports acquiring software product management practices you dont find any article.
+
+Ok, I though, lets go with a wider scope. 
+
+AI tools that support product management practices, as the main questions for the literature review. And then the questions about knowing, understtading and develop skill on a specific practices.
+
+Now, I am at that poing. I will continue writing about it.
 
 
 -----------
@@ -2644,10 +2670,18 @@ The AI topic como from the power of digital tools mastered of guided by humans.
 The Product Manager problems, comes from the shared experience of being a PM at a Fintch.
 The creating of the digital twin, or a customized exepert come from two ideas of Alex.
 - Follow the teachers, not the students
+Ellaborating a good prompt, will get a good answer solutions strategies for daily productm management problems.
+We can do a comparision between both of them. This can be a good article.
+Creating a customized, tailored, domain specific, AI agent, or digital twin
+The CHATBOT is the most popular way to interact with a LLM. 
+If there is a gap on the learning of skills for knowledge domain, what alternatives can you use that could take advantage of AI, to allow Software Product Managers to develop expertise.
 
 ----------
 What is next?
- 
+* Finish the Protocol
+* Finishing the SLR
+* Detect from 1 to 3 possibles journals that could evaluate the SLR
+* Refine it until it is published
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
