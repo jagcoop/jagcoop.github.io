@@ -4865,6 +4865,27 @@ Ely Goldratt’s “Cloud” tool, designed to resolve conflicts, provides a str
 4. **What Bertrand needs:** A way to assure software quality for all cases, not just those tested.
 5. **Their common goal:** To develop high-quality software.
 
+ ***********************************************************************************************
+ *                ┌─────────────────┐ ┌─────────────────────────────────┐                   
+ * Hernan         │Wants            │ │Needs                            │                   
+ * Wilkinson      │Use TDD          ┼─►Iterative development            ┼───────┐           
+ *                │                 │ │Guided by Concrete Examples      │       │           
+ *                │                 │ │                                 │       │           
+ *                └──────▲──────────┘ └─────────────────────────────────┘       │           
+ *                       │                                                      │           
+ *    ┌──────────────────┼─────────┐                                      ┌─────▼──────────┐
+ *    │ Conflict                   │                                      │Common Goal     │
+ *    │ How can we get both needs? │                                      │Develop High    │
+ *    └──────────────────┬─────────┘                                      │Quality Software│
+ *                       │                                                └─────▲──────────┘
+ *                       │                                                      │           
+ *               ┌───────▼──────────┐ ┌─────────────────────────────────┐       │           
+ *  Bertrand     │ Wants            │ │Needs                            │       │           
+ *  Meyer        │ Used DBC and     ┼─►Assurance the code works        ─┼───────┘           
+ *               │ Avoid TDD        │ │Don't waste code that is not used│                   
+ *               └──────────────────┘ └─────────────────────────────────┘                   
+ ***********************************************************************************************
+
 # Examining the Conflict
 
 Can TDD and DBC coexist in the same project? Technically, yes. But there are inefficiencies to consider. For example, certain TDD tests may become redundant in the presence of preconditions established by DBC. A test that checks for invalid input may be unnecessary if a precondition already specifies that such input is not allowed. On the other hand, all DBC assertions are inherently valuable because they externalize assumptions and are integral to the code itself.
