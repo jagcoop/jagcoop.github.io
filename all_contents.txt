@@ -1771,8 +1771,11 @@ Alex found this because someone studying psychology tried the technique... You c
 
 The psychology students spent several months trying to use the technique. Lastly, he could read 50 articles per day. But he thinks that instead of using a lot of time looking and filtering articles, he would select papers randomly and would finish in just a day. 
 
-## Propose exercise: Reading 16 articles in two hours.
+## Propose exercises
+1. Reading 16 articles in two hours.
+1. Read an article in 10 minutes.
 
+### This is the proceddure
 This is the receipt for the "Quick and Dirty Review QnDReview".
 
 1. Set the chronometer to 5 minutes.
@@ -1783,9 +1786,9 @@ This is the receipt for the "Quick and Dirty Review QnDReview".
 6. Go to the conclusions
 
 Write your observations.
-Go to the following article, and start the process
+Go to the following article, and start the process again...
 
-## The result for just one article
+### The result for the sencond exercise: just one article in 10 minutes.
 
 A quick exercise to determine what is the right journal to apply for a Systematic Literature Review on Software Product Management. 
 
@@ -1796,42 +1799,43 @@ MDPI search located 25 articles.
 
 From that articles, I choose those articles I choose
 
-What is the inclusion criteria:
+#### What is the inclusion criteria:
 - Articles that relates to both search terms.
 - Articles that include Software Engineering (a wider scope for Software Product Management) instead of SPM.
 
-What is the exclusion criteria:
+#### What is the exclusion criteria:
 - All articles related to Project Management are discarded.
 - The Potential of AI-Driven Assistants in Scaled Agile Software Development. Link: https://www.mdpi.com/2620418
 
+#### Resume of the Article  
+- Type of Article: Synthetic Knowledge Synthesis
+- Techniques: Bibliometric mapping, and content analysis
+- Research Questions:
+-- What is the volume of the research on using AI in Software Engineering?
+-- What is the maturity status of the research?
+-- What are the volume and dynamics of the production of the research literature on AI use in software?
+-- How is the research geographically distributed
+-- Which information sources informing the scientific community are the most prolific?
+-- Which funding bodies sponsoring research on AI in software engineering are the most prolific?
+-- What are the most prolific research themes?
 
-# Resume of the Articles  
-## Type of Article: Synthetic Knowledge Synthesis
-## Techniques: Bibliometric mapping, and content analysis
-## Research Questions:
-- What is the volume of the research on using AI in Software Engineering?
-- What is the maturity status of the research?
-- What are the volume and dynamics of the production of the research literature on AI use in software?
-- How is the research geographically distributed
-- Which information sources informing the scientific community are the most prolific?
-- Which funding bodies sponsoring research on AI in software engineering are the most prolific?
-- What are the most prolific research themes?
+#### Figures, and description
+- Figure 1. The dynamics of the research literature productivity.
+- Figure 2. The research landscape of AI use in software engineering, keywords appearing in 20 or more publications are shown. Colors represent clusters.
 
-## Figures, and description
-Figure 1. The dynamics of the research literature productivity.
-Figure 2. The research landscape of AI use in software engineering, keywords appearing in 20 or more publications are shown. Colors represent clusters.
-
-Insights:
+#### Insights:
 - It does not talk about Software Product Management, it includes Project Management.
 - Is software development management, software product management? What are the differences.
 
-Conclusions:
+#### Conclusions:
 - There is just a search string. Researches run the search string in Scopus.
 - There is a section for each theme.
 - There is a table with the
 
-Future work:
+#### Future work:
 - Include non-peer-reviewed media such as preprints, and do it periodically.
+
+Not so bad. I will work in the two hours exercise, and will link the experience in a new blogpost. Thanks Alex for your recommendations.
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
