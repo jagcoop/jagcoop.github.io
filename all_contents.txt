@@ -341,6 +341,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/How_to_Do_a_Dirty_and_Quick_Review](././posts/How_to_Do_a_Dirty_and_Quick_Review/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/How_To_Choose_a_Book](././posts/How_To_Choose_a_Book/) 
   	  </li>
   	</ul>
@@ -1723,6 +1727,111 @@ Bill Gates has a cool habit: during his summer vacations, he takes a pile of boo
 
 A final question. The Print or the Digital on Kindle or Audible Audiobooks
 This depends on the book and how fast I want to finish it. If I want to finish it very quickly, I buy it in two or three formats. This allows me to read practically anywhere—while waiting for someone, commuting, or as a bedtime read. If I want to take my time and the narrative is engaging, the audiobook suffices. But if the book is excellent, it’s worth having in physical format as well. If the book I want to read isn’t available in audio, I’ll buy it in digital format.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+#Quick and Dirty Review, as an alternative to be aware and exposed to ideas of specific field.
+By Pepe Hernandez. December 23th, 2024
+
+I am working in my PhD. A pair of moths ago I was looking for information in the field of "Software Product Management", and "Artificial Intelligence". Alex suggested to me use QnDReviews. We had a very interesting conversation.
+Right now, I did an exercise with a paper.
+The conclusions of the teacher make sense: this is an exercise to be aware of the field very fast, and also, to be exposed to new ideas.
+It is a useful exercise for someone looking for a topic to research, or need to knows fastly the state of the art.
+If you do this, you will have a good context.
+
+## What is an QnDReview
+Ji Soo Yi is a academic research teacher.
+He has an assignment for his students called the dirty research.
+Students need to read 100 papers each in four minutes.
+Students write their observations and follow with the next article in and xls document.
+The observations need to be more precise than "this was a good paper".
+
+## What is the goal of the QnDReview
+The goal of this exercise is to be aware of how their field is changing, and be exposed to a new ideas.
+ 
+This is the link where the technique is explained "QnDReview: read 100 CHI papers in 7 hours" 
+https://dl.acm.org/doi/10.1145/2559206.2578884
+
+In the same link there is a slideshow:
+If you could read 3326 papers you would need between 1 or 2 hours per paper. If you read 8 hours per day, you will need between 416 to 832 hours. That is impossible.
+
+https://www.slideshare.net/slideshow/qndreview-read-100-chi-papers-in-7-hours/38302070
+
+## Conclusions about using it with his students in five years 
+Half of students thing this exercise is boring. 
+A quarter of students things is boring but useful.
+And, the last quarter enjoy the exercise.
+
+Here you have the thirty seconds intro to the technique. 
+https://www.youtube.com/watch?v=5RmRNETY_OY
+
+Alex found this because someone studying psychology tried the technique... You can see the exercise here https://www.scattered-thoughts.net/writing/qnd-review-of-ppig-1989-2015.
+
+The psychology students spent several months trying to use the technique. Lastly, he could read 50 articles per day. But he thinks that instead of using a lot of time looking and filtering articles, he would select papers randomly and would finish in just a day. 
+
+## Propose exercise: Reading 16 articles in two hours.
+
+This is the receipt for the "Quick and Dirty Review QnDReview".
+
+1. Set the chronometer to 5 minutes.
+2. Review the abstract
+3. Review the research question
+4. Review the method
+5. See all graphics
+6. Go to the conclusions
+
+Write your observations.
+Go to the following article, and start the process
+
+## The result for just one article
+
+A quick exercise to determine what is the right journal to apply for a Systematic Literature Review on Software Product Management. 
+
+I am looking in the MDPI webpage articles related to Artificial Intelligence, and Software Product Management.
+
+I look for the terms "Software Product Management", and "Artificial Intelligence".
+MDPI search located 25 articles.
+
+From that articles, I choose those articles I choose
+
+What is the inclusion criteria:
+- Articles that relates to both search terms.
+- Articles that include Software Engineering (a wider scope for Software Product Management) instead of SPM.
+
+What is the exclusion criteria:
+- All articles related to Project Management are discarded.
+- The Potential of AI-Driven Assistants in Scaled Agile Software Development. Link: https://www.mdpi.com/2620418
+
+
+# Resume of the Articles  
+## Type of Article: Synthetic Knowledge Synthesis
+## Techniques: Bibliometric mapping, and content analysis
+## Research Questions:
+- What is the volume of the research on using AI in Software Engineering?
+- What is the maturity status of the research?
+- What are the volume and dynamics of the production of the research literature on AI use in software?
+- How is the research geographically distributed
+- Which information sources informing the scientific community are the most prolific?
+- Which funding bodies sponsoring research on AI in software engineering are the most prolific?
+- What are the most prolific research themes?
+
+## Figures, and description
+Figure 1. The dynamics of the research literature productivity.
+Figure 2. The research landscape of AI use in software engineering, keywords appearing in 20 or more publications are shown. Colors represent clusters.
+
+Insights:
+- It does not talk about Software Product Management, it includes Project Management.
+- Is software development management, software product management? What are the differences.
+
+Conclusions:
+- There is just a search string. Researches run the search string in Scopus.
+- There is a section for each theme.
+- There is a table with the
+
+Future work:
+- Include non-peer-reviewed media such as preprints, and do it periodically.
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
@@ -4588,199 +4697,203 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-12-19: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
+### [2024-12-24: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
 [lab notes ongaing](./posts/tdd_cloud_wilkinson_vs_meyer)
 
 
-### [2024-12-19: posts/music_and_technology](./posts/music_and_technology).
+### [2024-12-24: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2024-12-19: posts/ideas](./posts/ideas).
+### [2024-12-24: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2024-12-19: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-12-24: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-12-19: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2024-12-24: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2024-12-19: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2024-12-24: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2024-12-19: posts/argentina_coops](./posts/argentina_coops).
+### [2024-12-24: posts/argentina_coops](./posts/argentina_coops).
 [lab notes ongaing](./posts/argentina_coops)
 
 
-### [2024-12-19: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2024-12-24: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2024-12-19: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
+### [2024-12-24: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
 [lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
 
 
-### [2024-12-19: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
+### [2024-12-24: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
 
-### [2024-12-19: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-12-24: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-12-19: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-12-24: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-12-19: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
+### [2024-12-24: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
 [lab notes ongaing](./posts/Top_10_Questions_for_a_Job_Interview)
 
 
-### [2024-12-19: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
+### [2024-12-24: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
 [lab notes ongaing](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding)
 
 
-### [2024-12-19: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-12-24: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-12-19: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2024-12-24: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2024-12-19: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-12-24: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-12-19: posts/Single_text_file](./posts/Single_text_file).
+### [2024-12-24: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-12-19: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-12-24: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-12-19: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-12-24: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-12-19: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
+### [2024-12-24: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
 [lab notes ongaing](./posts/Product_Management_and_AI)
 
 
-### [2024-12-19: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
+### [2024-12-24: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
 [lab notes ongaing](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner)
 
 
-### [2024-12-19: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2024-12-24: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2024-12-19: posts/One_more_year](./posts/One_more_year).
+### [2024-12-24: posts/One_more_year](./posts/One_more_year).
 [lab notes ongaing](./posts/One_more_year)
 
 
-### [2024-12-19: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-12-24: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-12-19: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-12-24: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-12-19: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2024-12-24: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2024-12-19: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-12-24: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-12-19: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2024-12-24: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2024-12-19: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-12-24: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-12-19: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-12-24: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-12-19: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2024-12-24: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2024-12-19: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2024-12-24: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2024-12-19: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2024-12-24: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
+[lab notes ongaing](./posts/How_to_Do_a_Dirty_and_Quick_Review)
+
+
+### [2024-12-24: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2024-12-19: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2024-12-24: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2024-12-19: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
+### [2024-12-24: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
 [lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
 
 
-### [2024-12-19: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2024-12-24: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2024-12-19: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-12-24: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-12-19: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
+### [2024-12-24: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
 [lab notes ongaing](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones)
 
 
-### [2024-12-19: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+### [2024-12-24: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
 [lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
 
 
-### [2024-12-19: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2024-12-24: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2024-12-19: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-12-24: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-12-19: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-12-24: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-12-19: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-12-24: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-12-19: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2024-12-24: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2024-12-19: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-12-24: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-12-19: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
+### [2024-12-24: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
 [lab notes ongaing](./posts/Another_post_on_Crypto_Assets)
 
 
-### [2024-12-19: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-12-24: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2024-12-19: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2024-12-24: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -4835,6 +4948,7 @@ Email
 		<li>[posts/Kanban_Case_Study_in_Public_Sector_Part_I](/posts/Kanban_Case_Study_in_Public_Sector_Part_I/index.html)</li>
 		<li>[posts/Innovation_Methods_Comparison](/posts/Innovation_Methods_Comparison/index.html)</li>
 		<li>[posts/Ikigai_to_Evaluate_Education_Ideas](/posts/Ikigai_to_Evaluate_Education_Ideas/index.html)</li>
+		<li>[posts/How_to_Do_a_Dirty_and_Quick_Review](/posts/How_to_Do_a_Dirty_and_Quick_Review/index.html)</li>
 		<li>[posts/How_To_Choose_a_Book](/posts/How_To_Choose_a_Book/index.html)</li>
 		<li>[posts/Home_Manager_strategies_for_symlink_management](/posts/Home_Manager_strategies_for_symlink_management/index.html)</li>
 		<li>[posts/Going_Agile_The_Agile_Way](/posts/Going_Agile_The_Agile_Way/index.html)</li>
@@ -5195,11 +5309,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-12-19: projects/rewards.codes](./projects/rewards.codes).
+### [2024-12-24: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-12-19: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-12-24: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -5520,6 +5634,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Ikigai_to_Evaluate_Education_Ideas](././posts/Ikigai_to_Evaluate_Education_Ideas/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/How_to_Do_a_Dirty_and_Quick_Review](././posts/How_to_Do_a_Dirty_and_Quick_Review/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
