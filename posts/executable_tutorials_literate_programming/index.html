@@ -1,0 +1,159 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+
+     **Executable Documentation: Literate programming**
+
+December 27th, 2024
+By Alejandro Garcia
+
+One of my dozen problems is how to do Literate Programming.
+to write tutorials that:
+
+* Always execute correctly
+* Can be used as unit test for the software you are doing.
+* Are easy to write.
+
+I have tried so many tools to attempt this.
+And none of them have been satisfactory to me.
+But in this post I want to talk about the least disapointing one.
+
+# Writing Executable Documentation
+
+Has many challenges.
+But the one that I have find the most difficult is to keep
+My mind straight into what I'm trying to communicate.
+
+For example:
+
+## Hello World Tutorial.
+
+Let's say I'm writing a programming tutorial.
+On how to write `hello world` to the screen using python
+
+This task is so common that we can ask ChatGPT to do it for us:
+
+``` markdown
+### **How to Print "Hello, World!" Using Python**
+
+Python is one of the easiest programming languages to learn, and printing "Hello, World!" is often the first program beginners write. This tutorial will guide you through the steps of writing and running your first Python program.
+
+---
+
+### **What You’ll Need**
+- Python installed on your computer (download from [python.org](https://www.python.org/) if you don’t have it installed).
+- A text editor (e.g., Notepad, Visual Studio Code, or any Python IDE like PyCharm).
+- A terminal or command prompt to execute the program.
+
+---
+
+### **Step 1: Write the Code**
+
+Open a text editor and type the following code:
+
+```python
+print("Hello, World!")
+```
+
+#### **Explanation of the Code**
+- **`print`**: A built-in Python function used to display output on the screen.
+- **`"Hello, World!"`**: The text string that will be displayed. Strings in Python are enclosed in double (`"`) or single (`'`) quotes.
+
+---
+
+### **Step 2: Save the File**
+
+1. Save the file with a `.py` extension. For example:
+   ```
+   hello_world.py
+   ```
+2. Choose a folder where you can easily find the file later.
+
+---
+
+### **Step 3: Run the Program**
+
+#### **Option 1: Using a Terminal or Command Prompt**
+1. Open your terminal or command prompt.
+2. Navigate to the folder where you saved your file. For example:
+   ```bash
+   cd path/to/your/folder
+   ```
+3. Run the script by typing:
+   ```bash
+   python hello_world.py
+   ```
+   (On some systems, you may need to use `python3` instead of `python`.)
+
+#### **Option 2: Using an IDE**
+1. Open your Python file in an IDE like PyCharm or Visual Studio Code.
+2. Look for a "Run" button or menu option.
+3. Click "Run" to execute the program.
+
+---
+
+### **Step 4: See the Output**
+
+If everything is set up correctly, you’ll see the following output in your terminal or IDE console:
+
+```
+Hello, World!
+```
+
+---
+
+### **Tips for Beginners**
+- **Case Sensitivity**: Python is case-sensitive. Ensure you type `print` in lowercase.
+- **Python Version**: The `print` function works in Python 3 and later. If you're using Python 2 (obsolete), the syntax is slightly different: `print "Hello, World!"` (no parentheses).
+- **Debugging**: If you encounter errors, check your file name and syntax.
+
+---
+
+### **Next Steps**
+
+Now that you've written your first Python program, you can explore:
+- Variables: Store data using names.
+- Loops: Repeat actions.
+- Functions: Write reusable code blocks.
+
+Python's simplicity and readability make it an excellent language for beginners. Enjoy your Python journey! 🚀
+```
+
+Such a simple tutorial and yet we have many things to consider:
+
+- The student must have python installed.
+- The student must know that it needs to type in a *text edito* the instructions `print ("hell world~")`
+- Then *Outside* the editor (in bash) the student must execute `python hello_world.py`
+- and finally the student needs to know that its program was correct.
+
+As we can see in this image
+
+![A stuedent journey through a tutorial](./student_journey_through_a_tutorial.svg)
+
+The student has to change through many contexts in order to execut a tutorial.
+
+## On TRIZ
+
+Of course we are not the first ones to identify this problem.
+In the inovation methodology TRIZ they have this method to analize a problem,
+Called the [9 windows](https://en.wikipedia.org/wiki/Nine_windows)
+
+
+| | supra system | system  | subsystem |
+|---|---|---|---|
+|past | | | |
+|present| | our current tool | |
+|future | | | |
+
+In our case the supra system, is the students shell.
+the supra system is the students Operating system
+the subsystem is the `hello.py` code.
+The time dimensions, is all the different 
+states that the student is going through while following the tutorial.
+
+In order to explain with clarity, 
+we need to keep the 9 windows, clear at all times.
+And trying not to jump back and forth contiously.
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
