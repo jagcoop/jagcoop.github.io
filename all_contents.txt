@@ -261,6 +261,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Track_your_day](././posts/Track_your_day/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Top_10_Questions_for_a_Job_Interview](././posts/Top_10_Questions_for_a_Job_Interview/) 
   	  </li>
   	</ul>
@@ -3654,6 +3658,186 @@ https://www.youtube.com/watch?v=Csl2ccBpo4g
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+**Track our day**
+
+Dec 28Th, 2024
+By Alejandro Garcia
+
+As I mentioned [before](/posts/Single_text_file),
+I love using a text file to jot down what I'm working on
+or capture unexpected thoughts that come to mind.
+
+I acknowledge these distractions by writing them down.
+With just a quick `Super + N` (or `windows + N`).
+I can immediately type the idea, let it go,
+and refocus in the task at hand.
+
+Even with that love.
+Sometimes I still forget to type my ideas.
+and since I'm a believer in:
+
+> Have Systems, not Goals.
+> - James Clear and Mark Manson
+
+On this post I explain my new system.
+
+# Not a nagging reminder
+
+What I want is a reminder to write in my single text file.
+But one that doesn’t nag me too often,
+only when necessary.
+
+this is what I wrote:
+
+``` bash
+    $ cat ~/active_dirs/track_your_progress.nu
+    #!/usr/bin/env nu
+
+    let wrote_recently = /home/agarciafdz/.local/bin/jrnl --format json -from ("30 minutes ago" | into datetime | format date "%F %T") err> /dev/null | is-not-empty
+    print $wrote_recently
+
+    if not $wrote_recently {
+       # Prompt the user for their daily affirmation using Zenity
+
+       let last_title = /home/agarciafdz/.local/bin/jrnl -n 1 --format json   | from json | get entries.0.title
+       let affirmation = (zenity --entry --title="Keep your focus" --text=$"Your last entry:\n ($last_title)")
+       $affirmation | /home/agarciafdz/.local/bin/jrnl
+
+    }
+```
+
+First, the script checks if I `$wrote_recently`,
+defining 'recently' as the last 30 minutes."
+
+If I haven't then it displays a little window (zenity).
+Asking me to type what I'm doing.
+While reminding me of the last entry in Single Text File.
+
+This idea of reminding me of my last entry.
+Helps me to find out if I have diverted from my actual goal.
+Or If I'm distracted by a new shiny object.
+
+# Schedule it every 5 minutes
+
+On Linux, users schedule recurring tasks using a program called `cron`.
+With `crontab -l` we can see a list of my current scheduled tasks.
+With `tail -n 1` we can see the last line.
+Which is the one I care about.
+
+```bash
+    $ crontab -l | tail -n 1
+    */5 * * * * DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus /home/agarciafdz/.cargo/bin/nu /home/agarciafdz/active_dirs/track_your_progress.nu
+```
+
+The part `*/5` means if the current minute is divisible by 5 (12:05, 12,10... etc.),
+The `track_your_progress.nu` script will execute.
+
+The advantage of this system.
+Is that If wrote a note at 12:03,
+then the cron task will check on me at 12:05.
+Since I have written in the past half an hour.
+That means I *won't* get an interruption.
+But if at 12:35 I haven't written any other entry.
+Then I get the popup asking me to update my activity log.
+
+So if I keep continuously writing notes, no window might appear in a whole day.
+
+# So how does it look?
+
+In this screenshot,
+you can see the dialog window in the top-right corner,
+asking me to type what I’m doing.
+
+![poup asking about my current task on top right corner](./poup_asking_about_my_current_task_on_top_right_corner.jpg)
+
+At this time,
+I was writing this article,
+which made the reminder feel timely.
+
+# I don't think this breaks flow.
+
+The state of flow
+(losing track of time when immersed in an enjoyable and demanding activity)
+is very important to me.
+
+I don't think this popup, breaks flow.
+Because it is asking a question, related to the /current task/.
+So it is actually a way to /remain in flow/.
+Maybe, I'm not entirely sure,
+because the window opening in the middle of my work *is* distracting.
+But at the same time, it can be an opportunity to reflect on the current task.
+
+
+Besides, If I really don't want to see the window,
+just need to append to activity log more frequently.
+Which is my goal anyway.
+
+
+# Some lessons learned
+
+## Chatgpt can help, but still it is a long way to go.
+
+Although ChatGPT was a big help in creating the cronjob and script,
+I still spent about 4 hours on this relatively simple task.
+I think without ChatGPT it would have taken me like 2 days.
+
+## Jrnl can generate json output
+
+I didn't remember, but `jrnl` can generate json output.
+of my saved activities and tags.
+Which is great for further processing my notes.
+
+For example this is my last note viewed as a json object
+
+```json
+    $ jrnl -n 1 --format json
+    {
+      "tags": {},
+      "entries": [
+        {
+          "title": "reviewing the article with the suggestion by chatgpt.",
+          "body": "",
+          "date": "2024-12-28",
+          "time": "21:30",
+          "tags": [],
+          "starred": false
+        }
+      ]
+    }
+```
+
+## and NuShell is great at processing json output.
+
+As you can see the `track_your_progress.nu` is a NuShell script.
+I find the script surprisingly concise and readable.
+
+I think this readability comes from:
+
+- It uses pipes for everything, so script are read from left to right.
+- it can process json in native way.
+
+## I love tools that are well thought out.
+
+There are very few tools that I love
+But in this little project I got to play with 3 of them:
+
+  - jrnl.sh
+  - NuShell
+  - Emacs (always ;-) )
+
+
+# Conclusion
+
+Writing remains the most important habit for a knowledge worker,
+yet I still don’t practice it as often as I’d like.
+But, by setting up *systems*, I can better support the *habits* I want to *cultivate*.
+
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
  <meta charset="utf-8" emacsmode="-*- markdown -*-">
 # Understanding complexity in software systems
 
@@ -5013,215 +5197,219 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-12-28: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
+### [2024-12-29: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
 [lab notes ongaing](./posts/tdd_cloud_wilkinson_vs_meyer)
 
 
-### [2024-12-28: posts/music_and_technology](./posts/music_and_technology).
+### [2024-12-29: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2024-12-28: posts/ideas](./posts/ideas).
+### [2024-12-29: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2024-12-28: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2024-12-29: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2024-12-28: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2024-12-29: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2024-12-28: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
+### [2024-12-29: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
 [lab notes ongaing](./posts/executable_tutorials_literate_programming)
 
 
-### [2024-12-28: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2024-12-29: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2024-12-28: posts/argentina_coops](./posts/argentina_coops).
+### [2024-12-29: posts/argentina_coops](./posts/argentina_coops).
 [lab notes ongaing](./posts/argentina_coops)
 
 
-### [2024-12-28: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2024-12-29: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2024-12-28: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
+### [2024-12-29: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
 [lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
 
 
-### [2024-12-28: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
+### [2024-12-29: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
 
-### [2024-12-28: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2024-12-29: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2024-12-28: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2024-12-29: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2024-12-28: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
+### [2024-12-29: posts/Track_your_day](./posts/Track_your_day).
+[lab notes ongaing](./posts/Track_your_day)
+
+
+### [2024-12-29: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
 [lab notes ongaing](./posts/Top_10_Questions_for_a_Job_Interview)
 
 
-### [2024-12-28: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
+### [2024-12-29: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
 [lab notes ongaing](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding)
 
 
-### [2024-12-28: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2024-12-29: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2024-12-28: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2024-12-29: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2024-12-28: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2024-12-29: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2024-12-28: posts/Single_text_file](./posts/Single_text_file).
+### [2024-12-29: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2024-12-28: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2024-12-29: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2024-12-28: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
+### [2024-12-29: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
 [lab notes ongaing](./posts/Real_Life_Movies_as_a_Teaching_Method)
 
 
-### [2024-12-28: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2024-12-29: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2024-12-28: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
+### [2024-12-29: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
 [lab notes ongaing](./posts/Product_Management_and_AI)
 
 
-### [2024-12-28: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
+### [2024-12-29: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
 [lab notes ongaing](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner)
 
 
-### [2024-12-28: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2024-12-29: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2024-12-28: posts/One_more_year](./posts/One_more_year).
+### [2024-12-29: posts/One_more_year](./posts/One_more_year).
 [lab notes ongaing](./posts/One_more_year)
 
 
-### [2024-12-28: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2024-12-29: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2024-12-28: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2024-12-29: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2024-12-28: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2024-12-29: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2024-12-28: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2024-12-29: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2024-12-28: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2024-12-29: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2024-12-28: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2024-12-29: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2024-12-28: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2024-12-29: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2024-12-28: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
+### [2024-12-29: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
 [lab notes ongaing](./posts/Innovation_on_Water_Management_from_The)
 
 
-### [2024-12-28: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2024-12-29: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2024-12-28: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2024-12-29: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2024-12-28: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
+### [2024-12-29: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
 [lab notes ongaing](./posts/How_to_Do_a_Dirty_and_Quick_Review)
 
 
-### [2024-12-28: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2024-12-29: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2024-12-28: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2024-12-29: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2024-12-28: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
+### [2024-12-29: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
 [lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
 
 
-### [2024-12-28: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2024-12-29: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2024-12-28: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2024-12-29: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2024-12-28: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
+### [2024-12-29: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
 [lab notes ongaing](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones)
 
 
-### [2024-12-28: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+### [2024-12-29: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
 [lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
 
 
-### [2024-12-28: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2024-12-29: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2024-12-28: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2024-12-29: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2024-12-28: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2024-12-29: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2024-12-28: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2024-12-29: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2024-12-28: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2024-12-29: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2024-12-28: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2024-12-29: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2024-12-28: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
+### [2024-12-29: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
 [lab notes ongaing](./posts/Another_post_on_Crypto_Assets)
 
 
-### [2024-12-28: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2024-12-29: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2024-12-28: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2024-12-29: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -5256,6 +5444,7 @@ Email
 		<li>[posts/Videogames_The_new_frontier_in_English_learning](/posts/Videogames_The_new_frontier_in_English_learning/index.html)</li>
 		<li>[posts/Unlocking_the_Power_of_Personal_Cloud](/posts/Unlocking_the_Power_of_Personal_Cloud/index.html)</li>
 		<li>[posts/Understanding_complexity_in_software_systems](/posts/Understanding_complexity_in_software_systems/index.html)</li>
+		<li>[posts/Track_your_day](/posts/Track_your_day/index.html)</li>
 		<li>[posts/Top_10_Questions_for_a_Job_Interview](/posts/Top_10_Questions_for_a_Job_Interview/index.html)</li>
 		<li>[posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](/posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding/index.html)</li>
 		<li>[posts/The_Rise_and_Fall_of_Abacus_Rationale](/posts/The_Rise_and_Fall_of_Abacus_Rationale/index.html)</li>
@@ -5640,11 +5829,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2024-12-28: projects/rewards.codes](./projects/rewards.codes).
+### [2024-12-29: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2024-12-28: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2024-12-29: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -5885,6 +6074,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Understanding_complexity_in_software_systems](././posts/Understanding_complexity_in_software_systems/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Track_your_day](././posts/Track_your_day/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
