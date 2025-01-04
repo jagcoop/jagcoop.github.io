@@ -3796,7 +3796,7 @@ While tools and methodologies have evolved, the human element remains critical. 
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
-#Simple example of liveview 1.0.1
+# Simple example of liveview 1.0.1
 
 January 04th, 2025
 By Miguel Iñiguez
