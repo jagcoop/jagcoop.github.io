@@ -585,18 +585,7 @@ For me, the first strategy has been helpful, and I've implemented it by keeping 
 October 5th, 2024
 by *Julio César*
 
-## Outline
-
-- [Introduction](#orge6f2010)
-- [Prometheus relabelling](#orge6f2011)
-- [Handling authentication to AWS](#org702d506)
-- [Leveraging tags](#orgeeeec83)
-- [Debugging Prometheus relabelling rules](#org4c8b1df)
-- [Conclusion](#org505723e)
-        
 ## Introduction
-
-<a id="orge6f2010"></a>
 
 Nowadays Prometheus is one of the most used solutions for monitoring services. After having Prometheus installed we&rsquo;re able to configure &ldquo;targets&rdquo; that Prometheus should monitor, really what we do is to register a collection of metrics endpoints, variations of the form &ldquo;http(s)://my.other.service:9999/metrics&rdquo; these endpoints are served by the actual services to be monitored.
 
@@ -623,8 +612,6 @@ This means once that Prometheus is running we need to reload it in order to add 
 
 This basically tells Prometheus to query the AWS API and add all instances tagged as `service=my_service`. But this is not enough configuration, if we were to configure alerts based on this service&rsquo;s metrics we wouldn&rsquo;t know which instance went rogue other than `"my_service"`, if we run only a single service this is enough but what if we manage hundreds of instances? We need to define labels that allow us to identify what instance serves the faulty service.
 
-
-<a id="orge6f2011"></a>
 
 ## Prometheus relabelling
 
@@ -712,8 +699,6 @@ A bit cryptic no? but it&rsquo;s all *&ldquo;very intuitive&rdquo;* (?), we list
 
 Ah! ready to copy-and-paste when SSH-ing to it in the heat of the moment.
 
-
-<a id="org702d506"></a>
 
 ## Handling authentication to AWS
 
@@ -818,8 +803,6 @@ aws ec2 --region us-east-1 describe-instances
 Using EC2 instance profiles is way better than to ship the AWS credentials within your applications, in this case while prometheus can be configured to use a pair of AWS credentials it is strongly advised to not do so.
 
 
-<a id="orgeeeec83"></a>
-
 ## Leveraging tags
 
 We can even go a bit further, we could assign a tag to all EC2 instances we wish to monitor with Prometheus, or perhaps we only care about instances running `production` and we wish to leave other environments such as `uat` or `dev` outside of prometheus.
@@ -906,8 +889,6 @@ Now, back in the `prometheus.yml` configuration file, we can further filter the 
 ```
 
 
-<a id="org4c8b1df"></a>
-
 ## Debugging Prometheus relabelling rules
 
 Whenever we work with prometheus labelling rules we almost always feel like being in the dark, there&rsquo;s no visibility of that is happening whatsoever, you may have to run and restart prometheus often till you get it right.
@@ -916,8 +897,6 @@ But fear no more! There&rsquo;s an official online-tool that allow us to evaluat
 
 In there, you write your rules in the &ldquo;Rellabelling rules&rdquo; text area, and write some mock values for the source labels in the &ldquo;Object labels&rdquo; text area. At any point you can click &ldquo;Analyze Rules&rdquo; to see what Prometheus will actually relabel to by following your rules. Pretty handy!
 
-
-<a id="org505723e"></a>
 
 ## Conclusion
 
