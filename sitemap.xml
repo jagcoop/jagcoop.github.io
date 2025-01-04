@@ -126,6 +126,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/Simple_example_of_liveview1_phx/index.html</loc>
+  <lastmod>2025-01-04</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/Requirements_in_the_Age_of_AI/index.html</loc>
   <lastmod>2025-01-04</lastmod>
   <changefreq>weekly</changefreq>

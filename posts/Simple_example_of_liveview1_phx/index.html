@@ -1,0 +1,103 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+#Simple example of liveview 1.0.1
+
+January 04th, 2025
+By Miguel Iñiguez
+
+# What is LiveView?
+
+> "LiveViews are processes that receive events, update their state, and render updates to a page as diffs.
+> The LiveView programming model is declarative: instead of saying once event X happens, change Y on the page,
+> events in LiveView are regular messages which may cause changes to the state. Once the state changes, the
+> LiveView will re-render the relevant parts of its HTML template and push it to the browser, which updates the page in
+> the most efficient manner.    
+>      -- [Phoenix LiveView Documentation](https://hexdocs.pm/phoenix_live_view/welcome.html) 
+
+# Example
+1. Create a new project
+```console
+mix phx.new todo_live --live --no-ecto
+```
+
+2. Start the server
+```console
+cd todo_live
+mix phx.server
+```
+
+3. Create a new LiveView file ```lib/todo_live_web/live/todo_live.ex```
+```elixir
+defmodule TodoLiveWeb.TodoLive do
+  use TodoLiveWeb, :live_view
+
+  def mount(_params, _session, socket) do
+    {:ok, assign(socket, tasks: [], new_task: "")}
+  end
+
+  def handle_event("add_task", %{"task" => task}, socket) do
+    updated_tasks = socket.assigns.tasks ++ [task]
+    {:noreply, assign(socket, tasks: updated_tasks, new_task: "")}
+  end
+
+  def handle_event("update_task", %{"value" => value}, socket) do
+    {:noreply, assign(socket, new_task: value)}
+  end
+
+  def render(assigns) do
+    ~H"""
+    <div class="todo-list">
+      <h1>Todo List</h1>
+      <form phx-submit="add_task">
+        <input type="text" name="task" value={@new_task} placeholder="Add a new task"
+               phx-keyup="update_task" />
+        <button type="submit">Add Task</button>
+      </form>
+      <ul>
+        <%= for task <- @tasks do %>
+          <li><%= task %></li>
+        <% end %>
+      </ul>
+    </div>
+    """
+  end
+end
+```
+4. What does the code do? 
+
+* mount/3: Initializes the state with an empty list of tasks (tasks) and a field for the new task (new_task).
+* handle_event/3:
+    * "add_task": Adds the new task to the list.
+    * "update_task": Updates the text field as you type.
+* render/1: Generates the dynamic HTML with the current state. 
+
+5. Add new LiveView route ```lib/todo_live_web/router.ex```
+```elixir
+scope "/", TodoLiveWeb do
+  pipe_through :browser
+
+  live "/todo", TodoLive
+end
+```
+
+6. Add a basic style ```assets/css/app.css```
+```css
+.todo-list {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 5px 0;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+
+```
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
