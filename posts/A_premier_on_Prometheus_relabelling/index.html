@@ -1,0 +1,331 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# A premier on Prometheus rellabelling
+
+October 5th, 2024
+by *Julio César*
+
+# Introduction
+
+Nowadays Prometheus is one of the most used solutions for monitoring services. After having Prometheus installed we&rsquo;re able to configure &ldquo;targets&rdquo; that Prometheus should monitor, really what we do is to register a collection of metrics endpoints, variations of the form &ldquo;http(s)://my.other.service:9999/metrics&rdquo; these endpoints are served by the actual services to be monitored.
+
+Such &ldquo;targets&rdquo; should be configured within the Prometheus configuration, something like this:
+
+```yaml
+scrape_configs:
+  - job_name: my_service
+    static_configs:
+      - targets: ["my.service.com:9999"]
+```
+
+This means once that Prometheus is running we need to reload it in order to add new targets, that&rsquo;s a shame. However, in order to solve this Prometheus has basic service discovery mechanism that will allow it to dynamically discover new targets. One of the most useful ones is \`ec2<sub>sd</sub><sub>configs</sub>\` which allow us to register AWS EC2 instances as Prometheus targets, this is an example on how to use it:
+
+```yaml
+- job_name: my_service
+  ec2_sd_configs:
+    - region: "us-east-1"
+      port: 9999
+      filters:
+          - name: "tag:service"
+            values: ["my_service"]
+```
+
+This basically tells Prometheus to query the AWS API and add all instances tagged as `service=my_service`. But this is not enough configuration, if we were to configure alerts based on this service&rsquo;s metrics we wouldn&rsquo;t know which instance went rogue other than `"my_service"`, if we run only a single service this is enough but what if we manage hundreds of instances? We need to define labels that allow us to identify what instance serves the faulty service.
+
+
+# Prometheus relabelling
+
+To define prometheus labels we use the `relabel_configs` stanza in the prometheus target configuration, see:
+
+```yaml
+- job_name: my_service
+  ec2_sd_configs:
+    - region: "us-east-1"
+      port: 9999
+      filters:
+          - name: "tag:service"
+            values: ["my_service"]
+  relabel_configs:
+    - source_labels: ["__meta_ec2_tag_service"]
+      target_label: service
+    - source_labels: ["__meta_ec2_tag_instance"]
+      target_label: instance
+    - source_labels: ["__meta_ec2_tag_environment"]
+      target_label: environment
+    - source_labels: ["__meta_ec2_tag_datacenter"]
+      target_label: datacenter
+```
+
+`relabel_configs` is a half-baked DSL on top of Yaml to define rules about what labels to add to the metrics, yes, a **DSL on top of Yaml**, and not even that!. Understandably reading Prometheus relabelling rules is almost like reading Brainfuck programs, let&rsquo;s explain.
+
+Each discovery mechanism like `ec2_sd_configs` exposes labels on each target discovered, in this case we&rsquo;ve available AWS related labels like `__meta_ec2_ami` of the AWS EC2 AMI, `__meta_ec2_private_ip` for the instance&rsquo;s private IP, `__meta_ec2_region` for the AWS region, and many more (see [here](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#ec2_sd_config)). The most useful ones are the ones that expose labels that we set on the AWS EC2 instance, in this example the AWS instance is tagged with `service`, `instance`, `environment`, and `datacenter`. We could imagine an instance with the following values:
+
+-   `instance: "sales-1a"`
+-   `service: "invoicing"`
+-   `environment: "production"`
+-   `datacenter: "primary"`
+
+Therefore by using `ec2_sd_configs` we would also have the following labels around:
+
+-   `__meta_ec2_tag_service`
+-   `__meta_ec2_tag_instance`
+-   `__meta_ec2_tag_environment`
+-   `__meta_ec2_tag_datacenter`
+
+Now, `relabel_configs` lists relabelling rules that Prometheus processes in turn, the anatomy of a basic relabelling rule is as demostrated above:
+
+```yaml
+    - source_labels: ["__meta_ec2_tag_service"]
+      target_label: service
+```
+
+It basically means *&ldquo;define a new label for the metrics on this target named `service` and set the value of whatever value is in the existing label `__meta_ec2_tag_service`&rdquo;*; why would we want to do this? turns out Prometheus will remove all labels from our metrics that begin with double underscore (`__`), the reason for this is because metrics may be indexed by labels downstream and having too many labels could cause excessive storage issues. This is the way of Prometheus saying to us *&ldquo;create your labels or I will set none&rdquo;*, so that&rsquo;s why we can&rsquo;t know the failing instance if we don&rsquo;t have labels for it.
+
+> To be fair, Prometheus does always set a `job` label, the value will be whatever we put in the `job_name` property on the target, so by default, at least we know something, but not enough IMHO.
+
+So now we now what this means:
+
+```yaml
+  relabel_configs:
+    - source_labels: ["__meta_ec2_tag_service"]
+      target_label: service
+    - source_labels: ["__meta_ec2_tag_instance"]
+      target_label: instance
+    - source_labels: ["__meta_ec2_tag_environment"]
+      target_label: environment
+    - source_labels: ["__meta_ec2_tag_datacenter"]
+      target_label: datacenter
+```
+
+Create a label and use the value of the original soon to be removed label. This will precisely give us the same labeling scheme we have on the AWS EC2 instance itself, e.g.:
+
+-   `instance: "sales-1a"`
+-   `service: "invoicing"`
+-   `environment: "production"`
+-   `datacenter: "primary"`
+
+Now, why am I writing this post? after all this can be understood from the documentation and other resources online. Let me put it bluntly, 1) I have to write about something to avoid being charged (shout-out to [beeminder.com](https://www.beeminder.com/)) and 2) I needed to set a new `host` label that would be a composite of other labels, and I did not find a clear explanation on how to do that; check this out:
+
+```yaml
+    - source_labels: ["__meta_ec2_tag_instance", "__meta_ec2_tag_environment", "__meta_ec2_tag_datacenter"]
+      regex: "(.*);(.*);(.*)"
+      replacement: "$1.$2.$3.example.com"
+      target_label: host
+```
+
+A bit cryptic no? but it&rsquo;s all *&ldquo;very intuitive&rdquo;* (?), we list the labels in the order we want to &ldquo;manipulate&rdquo; them within a regex, by default they are concatenated with a semi-colon (`;`) as a separator (we&rsquo;re able to use our own if we include `separator: ","` but I don&rsquo;t do that here), within the `regex` field we capture each of the label values (in the same order as they&rsquo;re listed), and instruct to do a `replacement` on the value of the label by using the regex capture groups, finally we instruct to save that value in the `host` target label. After all is said and done we end-up with a label formatted as:
+
+-   `host: "sales-1a.production.primary.example.com"`
+
+Ah! ready to copy-and-paste when SSH-ing to it in the heat of the moment.
+
+
+# Handling authentication to AWS
+
+To the trained eye there&rsquo;s a missing piece, how is Prometheus able to query AWS API to get our targets in the first place? After all we need to authenticate to correctly identify our instances or else we get denied errors.
+
+This might be it&rsquo;s own post but since words count the same I&rsquo;ll do it here. The gist of it is that when provisioning the EC2 instance we&rsquo;re able to set an AWS role to be used as the &ldquo;instance profile&rdquo; for it. EC2 instances in AWS are able to query AWS API without issue, **if** the profile we set for the instance has permissions to do so.
+
+> Some of this happens behind the scenes and this explains why AWS takes some IPs out of the subnet IP range, because it uses them among other things to set an internal DNS resolver which allows them to know when resources withing the subnet need to talk to other services, plus enforcing security group rules and all that.
+
+As an example this is how we tie the key pieces together using Terraform:
+
+```hcl
+# This defines the actual EC2 instance
+# there are many supported attributes but we use a few to keep this minimal
+resource "aws_instance" "example_instance" {
+  ami           = "ami-0c55b159cbfafe1f0" # Just as an example
+  instance_type = "t2.micro"
+
+  # This is the key
+  # We assign an AWS role as the instance profile on the EC2 box
+  iam_instance_profile = aws_iam_instance_profile.prometheus.name
+
+  # For good measure this is how we tag an instance
+  tags = {
+    instance = "sales-1a"
+    service = "invoicing"
+    environment = "production"
+    datacenter = "primary"
+  }
+}
+
+# The instance profile is a resource in and of itself that needs to be provisioned
+# since many EC2 instance may use the same instance profile
+resource "aws_iam_instance_profile" "prometheus" {
+  name = "PrometheusInstanceProfile"
+
+  # An instance profile is linked to an AWS role
+  role = aws_iam_role.prometheus_scrapping_role.name
+}
+
+# An AWS Role is like a "hat" a service or user can use to acquire temporary permissions
+# Here we create a "PrometheusScrappingRole" so that the instance that "wears this hat"
+# is able to do whatever permissions are set in any policy linked to this role.
+resource "aws_iam_role" "prometheus_scrapping_role" {
+  name = "PrometheusScrappingRole"
+
+  # This is an almost mandatory permission on almost every role
+  # it gives the permission to the role be assumed by someone (or something)
+  # in this case this is a "hat" only available to EC2 instances.
+  # No other service or user is allowed to "grab this hat" (assume this role).
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Principal = {
+          Service = "ec2.amazonaws.com"
+        }
+        Action = "sts:AssumeRole"
+      }
+    ]
+  })
+}
+
+# An AWS Role is nothing in and of itself, it actually needs some policies
+# associated with it to be useful.
+# Here we link the role (bound to `prometheus_scrapping_role`) to
+# a `prometheus_scrapping` policy we define next.
+resource "aws_iam_role_policy_attachment" "attachment_prometheus_role_policy" {
+  role       = aws_iam_role.prometheus_scrapping_role.name
+  policy_arn = aws_iam_policy.prometheus_scrapping.arn
+}
+
+# This is the AWS Policy that we link to the Role we created above.
+# A Policy defines permissions, in this case the policy allows
+# to describe all EC2 instances to whomever gets this policy assigned.
+resource "aws_iam_policy" "prometheus_scrapping" {
+  name        = "PrometheusScrapping"
+  description = "Policy to allow Prometheus describe EC2 instances."
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = "ec2:DescribeInstances"
+        Resource = "*"
+      }
+    ]
+  })
+}
+```
+
+After having this setup any process running within the EC2 instance (including Prometheus itself) will be able to query the AWS EC2 instances in our AWS account, making the `ec2_sd_configs` discovery mechanism work. One way to test this is to login into the instance and querying the instances using the AWS SDK:
+
+```bash
+aws ec2 --region us-east-1 describe-instances
+```
+
+> The AWS SDK is not installed by default on EC2 instances, you have to install it yourself, Nix is a great way to do so BTW&#x2026; [I use NixOS BTW](https://knowyourmeme.com/memes/btw-i-use-arch)&#x2026;
+
+Using EC2 instance profiles is way better than to ship the AWS credentials within your applications, in this case while prometheus can be configured to use a pair of AWS credentials it is strongly advised to not do so.
+
+
+# Leveraging tags
+
+We can even go a bit further, we could assign a tag to all EC2 instances we wish to monitor with Prometheus, or perhaps we only care about instances running `production` and we wish to leave other environments such as `uat` or `dev` outside of prometheus.
+
+Let&rsquo;s do both, suppose we work along with dinosaurs and also use Nagios for monitoring, we&rsquo;re slowly migrating away before catching a meteorite. In the meantime wish to allow Prometheus to see only instances to be monitored by Prometheus itself.
+
+For the sake of the example, we tag the monitoring system on the instance itself:
+
+```hcl
+  # ...
+
+  tags = {
+    monitoring = "prometheus" # or "nagios" if you still dig it... it's just an example!
+    # ...
+  }
+
+  # ...
+```
+
+Now, following the principle of least privilege, we could change the policy we assign to the prometheus AWS role so that it is only able to describe the instances we&rsquo;re going to monitor with it:
+
+```hcl
+  # ...
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = "ec2:DescribeInstances"
+        Resource = "*"
+
+        # We use a condition on the policy so that only instances
+        # with the `monitoring="prometheus"` tag are "describable".
+        Condition = {
+          StringEquals = {
+            "aws:ResourceTag/monitoring" = "prometheus"
+          }
+        }
+      }
+    ]
+  })
+
+  # ...
+```
+
+After this change the Prometheus instance will only be able to see instances with the `monitoring` tag set to `"prometheus"`.
+
+Now, back in the `prometheus.yml` configuration file, we can further filter the targets we wish to add:
+
+```yaml
+- job_name: my_service
+  ec2_sd_configs:
+    - region: "us-east-1"
+      port: 9999
+      # Of all described EC2 instances we only care to add the ones tagged with `environment="production"`.
+      filters:
+          - name: "tag:environment"
+            values: ["production"]
+
+    # As a bonus, suppose the metrics endpoint exposed by the service isn't the standard "/metrics"
+    # we can set it this way:
+    metrics_path: "/v1/agent/metrics"
+
+    # We can specify query string parameters in the metrics endpoint URL
+    # Fox example if the service's metrics endpoint supports distinct formats
+    # (perhaps the cretaceous nagios agent format) we can append `?format=prometheus`:
+    params:
+      format: ["prometheus"]
+
+  relabel_configs:
+    - source_labels: ["__meta_ec2_tag_service"]
+      target_label: service
+    - source_labels: ["__meta_ec2_tag_instance"]
+      target_label: instance
+    - source_labels: ["__meta_ec2_tag_environment"]
+      target_label: environment
+    - source_labels: ["__meta_ec2_tag_datacenter"]
+      target_label: datacenter
+    - source_labels: ["__meta_ec2_tag_instance", "__meta_ec2_tag_environment", "__meta_ec2_tag_datacenter"]
+      regex: "(.*);(.*);(.*)"
+      replacement: "$1.$2.$3.example.com"
+      target_label: host
+```
+
+
+# Debugging Prometheus relabelling rules
+
+Whenever we work with prometheus labelling rules we almost always feel like being in the dark, there&rsquo;s no visibility of that is happening whatsoever, you may have to run and restart prometheus often till you get it right.
+
+But fear no more! There&rsquo;s an official online-tool that allow us to evaluate our rules on the fly till we get them right: <https://relabeler.promlabs.com/>.
+
+In there, you write your rules in the &ldquo;Rellabelling rules&rdquo; text area, and write some mock values for the source labels in the &ldquo;Object labels&rdquo; text area. At any point you can click &ldquo;Analyze Rules&rdquo; to see what Prometheus will actually relabel to by following your rules. Pretty handy!
+
+
+# Conclusion
+
+In this post we learned how to configure AWS EC2 instances as Prometheus targets so that we&rsquo;re able to read metrics for all our services, we learned how to leverage tags to control the exact instances to scrape, and also how to write Prometheus labeling rules to merge multiple labels into one single label.
+
+We also saw how to define an EC2 instance, and the associated AWS instance profile, roles and policies to make this all work within Terraform.
+
+I could keep rambling about the this stuff, after all every word counts, I could write and write about the myriads adventures I saw on a movie or elsewhere, the point is to fill in some text to please beeminder.com. But I&rsquo;ll remain sensible and stop here.
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>

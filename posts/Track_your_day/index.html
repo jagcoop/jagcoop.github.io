@@ -1,0 +1,180 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+**Track our day**
+
+Dec 28Th, 2024
+By Alejandro Garcia
+
+As I mentioned [before](/posts/Single_text_file),
+I love using a text file to jot down what I'm working on
+or capture unexpected thoughts that come to mind.
+
+I acknowledge these distractions by writing them down.
+With just a quick `Super + N` (or `windows + N`).
+I can immediately type the idea, let it go,
+and refocus in the task at hand.
+
+Even with that love.
+Sometimes I still forget to type my ideas.
+and since I'm a believer in:
+
+> Have Systems, not Goals.
+> - James Clear and Mark Manson
+
+On this post I explain my new system.
+
+# Not a nagging reminder
+
+What I want is a reminder to write in my single text file.
+But one that doesn’t nag me too often,
+only when necessary.
+
+this is what I wrote:
+
+``` bash
+    $ cat ~/active_dirs/track_your_progress.nu
+    #!/usr/bin/env nu
+
+    let wrote_recently = /home/agarciafdz/.local/bin/jrnl --format json -from ("30 minutes ago" | into datetime | format date "%F %T") err> /dev/null | is-not-empty
+    print $wrote_recently
+
+    if not $wrote_recently {
+       # Prompt the user for their daily affirmation using Zenity
+
+       let last_title = /home/agarciafdz/.local/bin/jrnl -n 1 --format json   | from json | get entries.0.title
+       let affirmation = (zenity --entry --title="Keep your focus" --text=$"Your last entry:\n ($last_title)")
+       $affirmation | /home/agarciafdz/.local/bin/jrnl
+
+    }
+```
+
+First, the script checks if I `$wrote_recently`,
+defining 'recently' as the last 30 minutes."
+
+If I haven't then it displays a little window (zenity).
+Asking me to type what I'm doing.
+While reminding me of the last entry in Single Text File.
+
+This idea of reminding me of my last entry.
+Helps me to find out if I have diverted from my actual goal.
+Or If I'm distracted by a new shiny object.
+
+# Schedule it every 5 minutes
+
+On Linux, users schedule recurring tasks using a program called `cron`.
+With `crontab -l` we can see a list of my current scheduled tasks.
+With `tail -n 1` we can see the last line.
+Which is the one I care about.
+
+```bash
+    $ crontab -l | tail -n 1
+    */5 * * * * DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus /home/agarciafdz/.cargo/bin/nu /home/agarciafdz/active_dirs/track_your_progress.nu
+```
+
+The part `*/5` means if the current minute is divisible by 5 (12:05, 12,10... etc.),
+The `track_your_progress.nu` script will execute.
+
+The advantage of this system.
+Is that If wrote a note at 12:03,
+then the cron task will check on me at 12:05.
+Since I have written in the past half an hour.
+That means I *won't* get an interruption.
+But if at 12:35 I haven't written any other entry.
+Then I get the popup asking me to update my activity log.
+
+So if I keep continuously writing notes, no window might appear in a whole day.
+
+# So how does it look?
+
+In this screenshot,
+you can see the dialog window in the top-right corner,
+asking me to type what I’m doing.
+
+![poup asking about my current task on top right corner](./poup_asking_about_my_current_task_on_top_right_corner.jpg)
+
+At this time,
+I was writing this article,
+which made the reminder feel timely.
+
+# I don't think this breaks flow.
+
+The state of flow
+(losing track of time when immersed in an enjoyable and demanding activity)
+is very important to me.
+
+I don't think this popup, breaks flow.
+Because it is asking a question, related to the /current task/.
+So it is actually a way to /remain in flow/.
+Maybe, I'm not entirely sure,
+because the window opening in the middle of my work *is* distracting.
+But at the same time, it can be an opportunity to reflect on the current task.
+
+
+Besides, If I really don't want to see the window,
+just need to append to activity log more frequently.
+Which is my goal anyway.
+
+
+# Some lessons learned
+
+## Chatgpt can help, but still it is a long way to go.
+
+Although ChatGPT was a big help in creating the cronjob and script,
+I still spent about 4 hours on this relatively simple task.
+I think without ChatGPT it would have taken me like 2 days.
+
+## Jrnl can generate json output
+
+I didn't remember, but `jrnl` can generate json output.
+of my saved activities and tags.
+Which is great for further processing my notes.
+
+For example this is my last note viewed as a json object
+
+```json
+    $ jrnl -n 1 --format json
+    {
+      "tags": {},
+      "entries": [
+        {
+          "title": "reviewing the article with the suggestion by chatgpt.",
+          "body": "",
+          "date": "2024-12-28",
+          "time": "21:30",
+          "tags": [],
+          "starred": false
+        }
+      ]
+    }
+```
+
+## and NuShell is great at processing json output.
+
+As you can see the `track_your_progress.nu` is a NuShell script.
+I find the script surprisingly concise and readable.
+
+I think this readability comes from:
+
+- It uses pipes for everything, so script are read from left to right.
+- it can process json in native way.
+
+## I love tools that are well thought out.
+
+There are very few tools that I love
+But in this little project I got to play with 3 of them:
+
+  - jrnl.sh
+  - NuShell
+  - Emacs (always ;-) )
+
+
+# Conclusion
+
+Writing remains the most important habit for a knowledge worker,
+yet I still don’t practice it as often as I’d like.
+But, by setting up *systems*, I can better support the *habits* I want to *cultivate*.
+
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
