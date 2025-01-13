@@ -4411,10 +4411,10 @@ What about you? What unexpected surprises has technology brought into your life?
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
  <meta charset="utf-8" emacsmode="-*- markdown -*-">
-The Sunk Costs Fallacy. A new obstacle in my phd journey
+# The Sunk Costs Fallacy. A new obstacle in my phd journey
 By Pepe Hernandez. January 13th, 2025.
 
-### Nothing lasts forever. 
+## Nothing lasts forever. 
 
 In December, my Thesis Co-Director and I decided to go our separate ways.
 I evaluated my options and asked PhD I Know. She is a professional, hardworking, intelligent, and a friend who accepted me as a PhD student. 
@@ -4429,7 +4429,7 @@ My PhD Thesis Co-Director was busy in December, and she went out on vacation. As
 
 I had invested six months, so why not a couple more weeks? 
 
-### First Meeting with my "new" PhD Thesis Co-Director
+## First Meeting with my "new" PhD Thesis Co-Director
 She asked me what the problem was. 
 
 I talked and showed the articles that I found valuable, but I couldn't make an impactful, shorter pitch about the problem.
@@ -4438,7 +4438,7 @@ Okay, this is the first meeting, so to better understand the problem, she asked 
 
 That upsets me a little. I send a message to Alex.
 
-### We don't have a problem, Houston
+## We don't have a problem, Houston
 
 My problem is that the problem is not well defined. 
 
@@ -4452,7 +4452,7 @@ I share that with Alex. A day later, Alex called me and questioned me:
 "I can't believe that with so much experience, you don't have a problem that interests you." 
 It was hard but true. It was hard because it was partially true but not wholly accurate. I do have problems that interest me!!!!
 
-### The second meeting
+## The second meeting
 
 I did the job (the coherence matrix). In the resume, there is literature about the problems of Product Managers. Some very well-structured articles address those problems. Some academic research tools, like interviews, surveys, and focus groups, were used to obtain and classify those problems directly from Product Managers with experience. PMs who participated in those studies work and live primarily for Russian and Polish companies. Yesterday, I found preliminary results from another study in Brazil. 
 
@@ -4460,7 +4460,7 @@ There is a set of known problems and a set of known solutions.
 
 Based on that, in the second meeting, Jani suggested to me, "Why not research the problems of the PMs in Mexico? Do you know them?" I said no. Then, we can make an instrument and gather the data. Right. Well, not so fast.
 
-#### Gathering data is a nonstarter.
+### Gathering data is a nonstarter.
 
 Alex told me, "Gathering data is a nonstarter signal. If you don't have the data, you won't finish your PhD." The same happened to my wife, Nohemi. Out of four students who studied for a Master's Degree in Statistics, she chose a PhD topic where data existed. She finished her work; the other three pairs of Nohemi had not finished. 
 
@@ -4472,7 +4472,7 @@ I have sunk costs, and I am afraid to lose. That is common.
 
 What is best for me, regardless of what I've invested?
 
-### How to assess the rightness of a problem.
+## How to assess the rightness of a problem.
 
 That's okay, but it does not make me interested in it. If it only interests me, it is not enough.
 
@@ -4485,7 +4485,7 @@ We talked about Ikigai recently: https://jagcoop.github.io/posts/Ikigai_to_Evalu
 
 What can be something that qualifies in the four dimensions?
 
-### Product Management and AI are good topics, but NOT for me.
+## Product Management and AI are good topics, but NOT for me.
 
 Why did I do that? It started with Alex's question: Do you and your Thesis Director have a problem in common?
 
@@ -4499,7 +4499,7 @@ Yes, we had a problem in common. Both of us performed as Senior Software Product
 I will not apply for a PM role. I am not attractive to the market anymore, but that is not bad news. When life gives you lemons, make lemonade.
 
 
-#### It is the sunk cost, stupid!
+## It is the sunk cost, stupid!
 I've invested a lot (well, six months of work on Product Management and AI). But a year and a half of the PhD, so I don't want to lose that effort and investment. I feel the obligation to continue. I've fallen into the sunk costs fallacy.
 
 I looked for Advice to avoid falling into the sunk cost trap:
@@ -4521,17 +4521,17 @@ The first step is to be aware of the situation. Now, I am.
 
 What's next? Well, I am finding the Ikigai for my PhD project.
 
-### Finding the Ikigai. Teaching, and Kanban.
-#### What am I good at?
+## Finding the Ikigai. Teaching, and Kanban.
+### What am I good at?
 I am good at teaching.
 I am good at Kanban.
 I am good as a consultant.
 
-#### What the worlds need.
+### What the worlds need.
 The world needs to be more efficient.
 The world needs to know the right topics (Kanban is the right topic, and Lean).
 
-#### What can I be paid for?
+### What can I be paid for?
 Why have people paid me for my services in the last five years (NOT Senior Product Management)?
 
 Well, there are three things related:
@@ -4539,16 +4539,16 @@ Well, there are three things related:
 - Teaching (Mainly Lean-Agile, Kanban, and Management)
 - Offering certified training.
 
-#### What Do I love?
+### What Do I love?
 I love teaching, and I love Kanban.
 I love working with my friends.
 
-#### Some unfair advantages
+### Some unfair advantages
 Additionally, my new relationship with my advisor, who shares an interest in serious games, educational technology, and LEAN (she is an expert in LEAN), and Alex, who is also interested in education and Kanban, puts me in a better position than two months ago.
 
 It would be a waste not to take advantage of this opportunity.
 
-### The Creativity List, or a Dozen Problems as Alex says.
+## The Creativity List, or a Dozen Problems as Alex says.
 As a parallel exercise of the "A Dozen Problems" blogpost of Alex where he enumerates and describes his multi-annual obsessions in
 https://jagcoop.github.io/posts/a_dozen_problems/, I am making a list of the problems that intersect with all factors. 
 
@@ -4567,8 +4567,7 @@ I've tried simulations and serious games.
 3.1 What would be a monetizing model for Kanban Software for the Mexican and LA countries?
 
 * There are many Kanban Software Systems, but they are not widely used in Mexico and LATAM. 
-The Kanban Software Market is expected to reach 1521 billion globally in 2032. https://www.globenewswire.com/news-release/2024/10/15/2963382/0/en/Kanban-Software-Market-to-Reach-1521-8-Billion-Globally-by-2032-at-18-3-CAGR-Allied-Market-Research.html#:~:text=In%20November%202023%2C%20Thomson%20Reuters,Thomson%20Reuters%20Generative%20AI%20Platform. 
-Note. 
+The Kanban Software Market is expected to reach 1521 billion globally in 2032. https://www.globenewswire.com
 
 4. How can we accelerate Kanban adoption in the Mexican Market?
 
@@ -4592,7 +4591,7 @@ We have proposed that the Technical Schools in Mexico and the SW Engineering Car
 
 **The simulation, the Kanban software, and the metrics software are related (to make a simulation, I need a motor that processes a basic Kanban behavior), and all have their justifications.**
 
-### What can happen if I miss the deadline?
+## What can happen if I miss the deadline?
 
 **The 50% Scholarship will be stopped for a semester.** If I don't deliver that, I will miss the deadline, and my Thesis Director will notify CONAHCYT, preventing my scholarship. Next semester, the Thesis Director will make the assessment again.
 The good news is I could work on my new topic and stay up to date next semester for a new assessment. Also, I will need to obtain those economic resources elsewhere (120k). 
