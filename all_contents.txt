@@ -277,6 +277,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](././posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](././posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding/) 
   	  </li>
   	</ul>
@@ -4406,6 +4410,200 @@ What about you? What unexpected surprises has technology brought into your life?
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+ <meta charset="utf-8" emacsmode="-*- markdown -*-">
+The Sunk Costs Fallacy. A new obstacle in my phd journey
+By Pepe Hernandez. January 13th, 2025.
+
+### Nothing lasts forever. 
+
+In December, my Thesis Co-Director and I decided to go our separate ways.
+I evaluated my options and asked PhD I Know. She is a professional, hardworking, intelligent, and a friend who accepted me as a PhD student. 
+And now I am here.
+I have a deadline for January.
+I have to finish a Systematic Literature Review. 
+I had a lot of information to finish it. 
+
+Due to the change of thesis Co-Director, I considered changing the topic (again); this will be the third. I resist that because it will result in rejection from the thesis committee.
+
+My PhD Thesis Co-Director was busy in December, and she went out on vacation. As I was a little bit desperate, I started to plan and work on something to show her when she came back. https://jagcoop.github.io/posts/Re-Discovering_My_PhD_Challenge_for_the_Semester/
+
+I had invested six months, so why not a couple more weeks? 
+
+### First Meeting with my "new" PhD Thesis Co-Director
+She asked me what the problem was. 
+
+I talked and showed the articles that I found valuable, but I couldn't make an impactful, shorter pitch about the problem.
+
+Okay, this is the first meeting, so to better understand the problem, she asked me to fill out a coherence matrix.
+
+That upsets me a little. I send a message to Alex.
+
+### We don't have a problem, Houston
+
+My problem is that the problem is not well defined. 
+
+It is worth taking a brief tour to understand the situation of my PhD today. Regardless of Andrew Ng's previous post, https://jagcoop.github.io/posts/Product_Management_and_AI/, which mentioned that Product Management and AI are relevant topics, I believe I have fallen into the sunk cost fallacy. I am rationalizing why I must continue with that topic.
+
+I didn't realize until this week. 
+
+I struggle with that simple question.
+
+I share that with Alex. A day later, Alex called me and questioned me:
+"I can't believe that with so much experience, you don't have a problem that interests you." 
+It was hard but true. It was hard because it was partially true but not wholly accurate. I do have problems that interest me!!!!
+
+### The second meeting
+
+I did the job (the coherence matrix). In the resume, there is literature about the problems of Product Managers. Some very well-structured articles address those problems. Some academic research tools, like interviews, surveys, and focus groups, were used to obtain and classify those problems directly from Product Managers with experience. PMs who participated in those studies work and live primarily for Russian and Polish companies. Yesterday, I found preliminary results from another study in Brazil. 
+
+There is a set of known problems and a set of known solutions.
+
+Based on that, in the second meeting, Jani suggested to me, "Why not research the problems of the PMs in Mexico? Do you know them?" I said no. Then, we can make an instrument and gather the data. Right. Well, not so fast.
+
+#### Gathering data is a nonstarter.
+
+Alex told me, "Gathering data is a nonstarter signal. If you don't have the data, you won't finish your PhD." The same happened to my wife, Nohemi. Out of four students who studied for a Master's Degree in Statistics, she chose a PhD topic where data existed. She finished her work; the other three pairs of Nohemi had not finished. 
+
+I am preparing for the third meeting and returning to the same obstacle. I don't have a problem with my PhD. 
+
+I've invested 6 months in this topic, well a year and a half. 
+
+I have sunk costs, and I am afraid to lose. That is common.
+
+What is best for me, regardless of what I've invested?
+
+### How to assess the rightness of a problem.
+
+That's okay, but it does not make me interested in it. If it only interests me, it is not enough.
+
+We talked about Ikigai recently: https://jagcoop.github.io/posts/Ikigai_to_Evaluate_Education_Ideas/
+
+- What you love
+- What the world needs
+- What you are good at
+- What you can be paid for
+
+What can be something that qualifies in the four dimensions?
+
+### Product Management and AI are good topics, but NOT for me.
+
+Why did I do that? It started with Alex's question: Do you and your Thesis Director have a problem in common?
+
+Yes, we had a problem in common. Both of us performed as Senior Software Product Managers.
+
+- What you love. Not so much. However, my previous thesis director was familiar with the topic.
+- What the world needs. Not too much. There are other more significant problems in the world (and bigger problems for myself).
+- What you are good at. I learned a lot from my experience as an SW product manager, but I am much better at other topics.
+- What you can be paid for. I have applied for about 100 positions as a product manager. The maximum has been two finals, but they have always been rejected (this is a topic for a new post).
+
+I will not apply for a PM role. I am not attractive to the market anymore, but that is not bad news. When life gives you lemons, make lemonade.
+
+
+#### It is the sunk cost, stupid!
+I've invested a lot (well, six months of work on Product Management and AI). But a year and a half of the PhD, so I don't want to lose that effort and investment. I feel the obligation to continue. I've fallen into the sunk costs fallacy.
+
+I looked for Advice to avoid falling into the sunk cost trap:
+- Consider the utility of the decision for the future, not just past costs.
+- Seek Advice from people who are not emotionally involved.
+- Recognize the positives of what has already been lost.
+
+My dad has a phrase for this: "Stop throwing good money after bad." In English, it would be "cut your losses."
+
+Why do I fall into this trap?
+- Fear of losing my scholarship. 
+- Fear of challenging my Thesis Co-Director
+- I feel I lost my investment.
+- There is the commitment bias: "I said I would do it, so now I have to finish it."
+
+The sunk cost fallacy is preventing me from acting in My best interest. 😮
+
+The first step is to be aware of the situation. Now, I am.
+
+What's next? Well, I am finding the Ikigai for my PhD project.
+
+### Finding the Ikigai for my PhD project
+#### What am I good at?
+I am good at teaching.
+I am good at Kanban.
+I am good as a consultant.
+
+#### What the worlds need.
+The world needs to be more efficient.
+The world needs to know the right topics (Kanban is the right topic, and Lean).
+
+#### What can I be paid for?
+Why have people paid me for my services in the last five years (NOT Senior Product Management)?
+
+Well, there are three things related:
+- Providing Management Consultancy (Product Development, Kanban, Lean-Agile, Management).
+- Teaching (Mainly Lean-Agile, Kanban, and Management)
+- Offering certified training.
+
+#### What Do I love?
+I love teaching, and I love Kanban.
+I love working with my friends.
+
+#### Some unfair advantages
+Additionally, my new relationship with my advisor, who shares an interest in serious games, educational technology, and LEAN (she is an expert in LEAN), and Alex, who is also interested in education and Kanban, puts me in a better position than two months ago.
+
+It would be a waste not to take advantage of this opportunity.
+
+### Founding the Ikigai. Teaching, and Kanban.
+As a parallel exercise of the "A Dozen Problems" blogpost of Alex where he enumerates and describes his multi-annual obsessions in
+https://jagcoop.github.io/posts/a_dozen_problems/, I am making a list of the problems that intersect with all factors. 
+
+I will use the Creativity List from Edward the Bono using one primary focus: Kanban.
+
+1. How can we help to increase productivity in Mexico?
+* in our state, our city, our organization, our government, our team?
+
+Productivity in different countries around the world is an issue. Mexico is the second country with the highest average working hours per worker in the world, with 2226 hours per year (OCDE 2019). The first is Colombia. But Ireland produces five times more USD dollars per power hour worked than a Mexican hour worked. 
+
+2. How can we teach Kanban better?
+I've tried with traditional methods.
+I've tried simulations and serious games.
+
+3. How would Kanban Software be for the Mexican and LA countries?
+3.1 What would be a monetizing model for Kanban Software for the Mexican and LA countries?
+
+* There are many Kanban Software Systems, but they are not widely used in Mexico and LATAM. 
+The Kanban Software Market is expected to reach 1521 billion globally in 2032. https://www.globenewswire.com/news-release/2024/10/15/2963382/0/en/Kanban-Software-Market-to-Reach-1521-8-Billion-Globally-by-2032-at-18-3-CAGR-Allied-Market-Research.html#:~:text=In%20November%202023%2C%20Thomson%20Reuters,Thomson%20Reuters%20Generative%20AI%20Platform. 
+Note. 
+
+4. How can we accelerate Kanban adoption in the Mexican Market?
+
+5. How can we create a hybrid (physical and digital) Kanban model to combine the benefits of the digital and analog worlds?
+
+6. How can I assure the continuity of a Kanban Initiative?
+
+7. How to create a configurable simulation for various industries?
+
+Many simulations, open sources, and private teaching methods are available to Kanban students. Simulations, games, etc. What are their advantages and disadvantages?
+The simulations and serious games are designed ex-profeso for one industry or domain (in most cases, the IT software domain).
+Note. The ESEI has a simulation created for jewelry (a job shop).
+
+A metrics software for Kanban flow metrics is needed...
+
+Another focus: Software Industry in Mexico, Education, Serious Games
+Mexico does not have qualified software developers.
+
+Focus: Education
+We have proposed that the Technical Schools in Mexico and the SW Engineering Careers Curricula have more updated specializations (Data Science, etc.). The Tecs did want it, but they didn't have money. We arrived with the wrong patron; the patron was the general direction of the Mexican Tecs. 
+
+**The simulation, the Kanban software, and the metrics software are related (to make a simulation, I need a motor that processes a basic Kanban behavior), and all have their justifications.**
+
+### What can happen if I miss the deadline?
+
+**The 50% Scholarship will be stopped for a semester.** If I don't deliver that, I will miss the deadline, and my Thesis Director will notify CONAHCYT, preventing my scholarship. Next semester, the Thesis Director will make the assessment again.
+The good news is I could work on my new topic and stay up to date next semester for a new assessment. Also, I will need to obtain those economic resources elsewhere (120k). 
+
+**The 50% Scholarship will continue due to the director's empathy and confidence in me, my new thesis co-director, and my new topic.
+We'll see.
+ 
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 
@@ -6184,239 +6382,243 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2025-01-07: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
+### [2025-01-13: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
 [lab notes ongaing](./posts/tdd_cloud_wilkinson_vs_meyer)
 
 
-### [2025-01-07: posts/music_and_technology](./posts/music_and_technology).
+### [2025-01-13: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2025-01-07: posts/ideas](./posts/ideas).
+### [2025-01-13: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2025-01-07: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2025-01-13: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2025-01-07: posts/haskell_musical_paradigm](./posts/haskell_musical_paradigm).
+### [2025-01-13: posts/haskell_musical_paradigm](./posts/haskell_musical_paradigm).
 [lab notes ongaing](./posts/haskell_musical_paradigm)
 
 
-### [2025-01-07: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2025-01-13: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2025-01-07: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
+### [2025-01-13: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
 [lab notes ongaing](./posts/executable_tutorials_literate_programming)
 
 
-### [2025-01-07: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2025-01-13: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2025-01-07: posts/argentina_coops](./posts/argentina_coops).
+### [2025-01-13: posts/argentina_coops](./posts/argentina_coops).
 [lab notes ongaing](./posts/argentina_coops)
 
 
-### [2025-01-07: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2025-01-13: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2025-01-07: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
+### [2025-01-13: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
 [lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
 
 
-### [2025-01-07: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
+### [2025-01-13: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
 
-### [2025-01-07: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2025-01-13: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2025-01-07: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2025-01-13: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2025-01-07: posts/Track_your_day](./posts/Track_your_day).
+### [2025-01-13: posts/Track_your_day](./posts/Track_your_day).
 [lab notes ongaing](./posts/Track_your_day)
 
 
-### [2025-01-07: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
+### [2025-01-13: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
 [lab notes ongaing](./posts/Top_10_Questions_for_a_Job_Interview)
 
 
-### [2025-01-07: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
+### [2025-01-13: posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD).
+[lab notes ongaing](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD)
+
+
+### [2025-01-13: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
 [lab notes ongaing](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding)
 
 
-### [2025-01-07: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2025-01-13: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2025-01-07: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2025-01-13: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2025-01-07: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2025-01-13: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2025-01-07: posts/Single_text_file](./posts/Single_text_file).
+### [2025-01-13: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2025-01-07: posts/Simple_example_of_liveview1_phx](./posts/Simple_example_of_liveview1_phx).
+### [2025-01-13: posts/Simple_example_of_liveview1_phx](./posts/Simple_example_of_liveview1_phx).
 [lab notes ongaing](./posts/Simple_example_of_liveview1_phx)
 
 
-### [2025-01-07: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2025-01-13: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2025-01-07: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
+### [2025-01-13: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
 [lab notes ongaing](./posts/Real_Life_Movies_as_a_Teaching_Method)
 
 
-### [2025-01-07: posts/Re-Discovering_My_PhD_Challenge_for_the_Semester](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester).
+### [2025-01-13: posts/Re-Discovering_My_PhD_Challenge_for_the_Semester](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester).
 [lab notes ongaing](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester)
 
 
-### [2025-01-07: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2025-01-13: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2025-01-07: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
+### [2025-01-13: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
 [lab notes ongaing](./posts/Product_Management_and_AI)
 
 
-### [2025-01-07: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
+### [2025-01-13: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
 [lab notes ongaing](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner)
 
 
-### [2025-01-07: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2025-01-13: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2025-01-07: posts/One_more_year](./posts/One_more_year).
+### [2025-01-13: posts/One_more_year](./posts/One_more_year).
 [lab notes ongaing](./posts/One_more_year)
 
 
-### [2025-01-07: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2025-01-13: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2025-01-07: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2025-01-13: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2025-01-07: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2025-01-13: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2025-01-07: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2025-01-13: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2025-01-07: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2025-01-13: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2025-01-07: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2025-01-13: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2025-01-07: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2025-01-13: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2025-01-07: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
+### [2025-01-13: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
 [lab notes ongaing](./posts/Innovation_on_Water_Management_from_The)
 
 
-### [2025-01-07: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2025-01-13: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2025-01-07: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2025-01-13: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2025-01-07: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
+### [2025-01-13: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
 [lab notes ongaing](./posts/How_to_Do_a_Dirty_and_Quick_Review)
 
 
-### [2025-01-07: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2025-01-13: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2025-01-07: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2025-01-13: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2025-01-07: posts/Haskell](./posts/Haskell).
+### [2025-01-13: posts/Haskell](./posts/Haskell).
 [lab notes ongaing](./posts/Haskell)
 
 
-### [2025-01-07: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
+### [2025-01-13: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
 [lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
 
 
-### [2025-01-07: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2025-01-13: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2025-01-07: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2025-01-13: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2025-01-07: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
+### [2025-01-13: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
 [lab notes ongaing](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones)
 
 
-### [2025-01-07: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+### [2025-01-13: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
 [lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
 
 
-### [2025-01-07: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2025-01-13: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2025-01-07: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2025-01-13: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2025-01-07: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2025-01-13: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2025-01-07: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2025-01-13: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2025-01-07: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2025-01-13: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2025-01-07: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2025-01-13: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2025-01-07: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
+### [2025-01-13: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
 [lab notes ongaing](./posts/Another_post_on_Crypto_Assets)
 
 
-### [2025-01-07: posts/A_premier_on_Prometheus_relabelling](./posts/A_premier_on_Prometheus_relabelling).
+### [2025-01-13: posts/A_premier_on_Prometheus_relabelling](./posts/A_premier_on_Prometheus_relabelling).
 [lab notes ongaing](./posts/A_premier_on_Prometheus_relabelling)
 
 
-### [2025-01-07: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2025-01-13: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2025-01-07: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2025-01-13: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
@@ -6454,6 +6656,7 @@ Email
 		<li>[posts/Understanding_complexity_in_software_systems](/posts/Understanding_complexity_in_software_systems/index.html)</li>
 		<li>[posts/Track_your_day](/posts/Track_your_day/index.html)</li>
 		<li>[posts/Top_10_Questions_for_a_Job_Interview](/posts/Top_10_Questions_for_a_Job_Interview/index.html)</li>
+		<li>[posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](/posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD/index.html)</li>
 		<li>[posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](/posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding/index.html)</li>
 		<li>[posts/The_Rise_and_Fall_of_Abacus_Rationale](/posts/The_Rise_and_Fall_of_Abacus_Rationale/index.html)</li>
 		<li>[posts/The_Photovoltaics_Dilemma](/posts/The_Photovoltaics_Dilemma/index.html)</li>
@@ -6902,11 +7105,11 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2025-01-07: projects/rewards.codes](./projects/rewards.codes).
+### [2025-01-13: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2025-01-07: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2025-01-13: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -7163,6 +7366,10 @@ This process ensures the response feels highly personalized, increasing the chan
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Top_10_Questions_for_a_Job_Interview](././posts/Top_10_Questions_for_a_Job_Interview/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](././posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
