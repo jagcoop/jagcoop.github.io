@@ -1,0 +1,191 @@
+   <meta charset="utf-8" emacsmode="-*- markdown -*-"> <link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/journal.css?">
+
+                        **Yaml Resume Database**
+                           Version 1.1
+
+
+Json Resume is a great way to keep your resume updated.
+However there two things missing:
+
+1. Json its an ugly format to look by hand.
+2. It would be nice to build a database of the knowledge and skills of team,
+   based on their json resume.
+
+
+
+2025-01-12: Starting the project
+=================================================================
+
+In order to start this project I need:
+
+1. A couple of json resumes
+1. the json schema of json resumes.
+1. Translate the json schema to a terminus db instance.
+1. insert the json resume in terminusdb
+1. query the terminusdb  to get the tag cloud of projects we know on.
+
+Now I hope to make this document a literate program.
+So let's see how far I get it to be.
+
+Get a couple of json resumes
+---------------------------------------------------------------
+
+```nushell
+    $ mkdir test
+    $ http get https://gist.githubusercontent.com/thomasdavis/c9dcfa1b37dec07fb2ee7f36d7278105/raw/c0399b7abb13fe63912843ca6f6c90af63fb28ae/resume.json |
+    > save --force test/1.json
+    $ http get https://gist.githubusercontent.com/elviejo79/ab0802ef51ac9f53defe686e7fae452b/raw/1d0be3cb5c3fb03259a1141779b632397524cb55/resume.json |
+    > save --force test/2.json
+```
+
+
+Let's get the schema to validate the files
+
+```nushell
+    $ http get https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json | 
+    > save test/old.schema.json
+```
+
+The schema that is in json schema store is for draf-04 of schema specification. 
+And we need to update. it
+
+```nushell
+    > ajv migrate -s test/old.schema.json -o test/resume.schema.json
+```
+
+
+We also must make sure that they are
+[valid json resumes according to the schema](https://chatgpt.com/share/67849193-d2c0-8007-82ce-26ae4d84f5d9).
+
+```nushell
+$ ajv validate -s test/resume.schema.json -d test/1.json --strict=false -c ajv-formats
+    $ ajv validate -s test/resume.schema.json -d test/2.json --strict=false -c ajv-formats
+```
+
+I'm leaving the contents of the template here for future reference.
+------
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat. Duis aute irure dolor in
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+pariatur. 
+
+ Maine | Iowa | Colorado 
+-------|------|----------
+   1   |  4   |   10
+  ME   |  IA  |   CO
+ Blue  | Red  | Brown
+[Table [states]: Caption with label.]
+
+
+Code
+---------------------------------------------------------------
+
+Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum:
+
+- Incididunt
+- Bonus Unum
+- Quibusdam
+
+```````````````````````````````````````````````
+count_lines () {
+  local f=$1  
+  local m
+  m=`wc -l $f | sed 's/^\([0-9]*\).*$/\1/'`
+  return $m
+}
+```````````````````````````````````````````````
+
+
+2019-02-20: Procedural Synthesis
+===================================================================
+
+At vero eos et accusamus et iusto odio dignissimos ducimus qui
+blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+et quas molestias excepturi sint occaecati cupiditate non provident,
+similique sunt in culpa qui officia deserunt mollitia animi, id est
+laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+distinctio. 
+
+
+2019-02-19: Flow Diagram
+===================================================================
+
+**************************************************************
+*                                                            
+* .---.       .-.        .-.       .-.                       
+* | A +----->| 1 +<---->| 2 |<----+ 4 +------------------.   
+* '---'       '-'        '+'       '-'                    |  
+*                         |         ^                     |  
+*                         v         |                     v  
+*                        .-.      .-+-.        .-.      .-+-.
+*                       | 3 +---->| B |<----->| 5 +---->| C |
+*                        '-'      '---'        '-'      '---'
+**************************************************************
+
+Nam libero tempore, cum `soluta` nobis est eligendi optio
+cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
+autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
+eveniet ut et voluptates repudiandae sint et molestiae non
+recusandae. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+2019-02-15: Example
+==============================================================
+
+Nam libero tempore, cum soluta nobis est eligendi optio
+cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+omnis voluptas assumenda est, omnis dolor repellendus.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ rust
+fn main() {
+    let x = 5u32;
+
+    let y = {
+        let x_squared = x * x;
+        let x_cube = x_squared * x;
+
+        // This expression will be assigned to `y`
+        x_cube + x_squared + x
+    };
+
+    let z = {
+        // The semicolon suppresses this expression and `()` is assigned to `z`
+        2 * x;
+    };
+
+    println!("x is {:?}", x);
+    println!("y is {:?}", y);
+    println!("z is {:?}", z);
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<!--
+![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
+![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
+-->
+
+[Link to nowhere](nowhere).
+
+
+
+2019-02-01: Started Project
+==============================================================
+
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+voluptatibus maiores alias consequatur aut perferendis doloribus
+asperiores repellat.
+
+
+ 
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
