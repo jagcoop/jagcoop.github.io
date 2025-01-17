@@ -199,6 +199,10 @@ This are the innovations that have been ocupaying our minds lately
 <ul>
   <li>[./projects](././projects/) 
       <ul>
+  	  <li>[./projects/yaml_resume_db](././projects/yaml_resume_db/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./projects/rewards.codes](././projects/rewards.codes/) 
   	  </li>
   	</ul>
@@ -514,7 +518,7 @@ When discussing research, particularly in the context of Mexico, a prevailing mi
 The process often starts with a personal or industry problem in countries where research drives practical innovation. The mindset shifts from merely filling a gap in academic literature to addressing real-world challenges. Here's how this alternative process unfolds:
 
 ### Step 1. Identify the Problem:
-This approach comes from someone with experience in a practical field. For example: 
+This approach comes from someone with experience in a practical field. For example:
 - An engineer might ask, "How do I build a solution to this problem I know, I saw, I already have, or as an organization I discovered?"
 - Meanwhile, a scientist with no practical experience could inquire, "What has been done written before about this area of interest? and what are the existing challenges?"
 
@@ -541,9 +545,11 @@ Using this method, researchers can pivot from broad trends to pinpoint specific 
 These insights emphasize a critical point: impactful research often emerges from practical problems, not abstract gaps in the literature. This shift in mindset aligns research more closely with real-world applications, making it more relevant and valuable.
 
 ## A refinement of the approach in BPM format.
-Alex designs a diagram that starts with identifying and putting them in the proper context. 
- 
-I am adding the link to edit the diagram directly in Sketchminer. https://www.bpmn-sketch-miner.ai/index.html#EYBwNgdgXAbgjAKALRIQdQKZgMYHsC2GABAC65EBCACgLIByRAygNYYnYAWRNAlhBgCcoCBABFyAT1wBXIhwCGMYvKJUBuYGAz4EAYXkQiU2RgAeIARgDOVojxJF5tlQCo8EEgPkATHthI8uBAuAPwIEtYIABRWGBDeRACaMnKKykSW8mCq6praAJQiCAB0pXoGRilmFta29o7ORG5Bnj5+AUGhCHS4CAAqHHGVst5BAOQOCkqOORpaOsmyU8RWEvggZDoAqrFEAOK4YN5eJCRjtrrSApYeRABKGFn2EkR9lsS4Aq93AJIAWo4IFkJFYeLYyEQAGZ8BIkQZEXQtLy+fyBCDlQzGIjVSw2OwOJwzZoeZHtNFdUrFIp0MwkKBEaKWbAYHjTRapaYqTLZNRzAoIACClmGgKIAFEIABzPgYQRET5MbA8OIBKwkMKMJUqsEkdAKSaE4CywyjfhEI2Qz7EPikDhgogWPn4MLiIgAGXsgnkJCuxAeMGVAHcELF4vdHr4pSIPSQvT7hf6g8ImSzpg82lHGI8BJw7IYDrhJVpFRxDvIBAAaJjaAwBbAlsuVxwCUysqtsbBUgAShLh9sdeXw5uNRCshyUCQtVrCESsCB+mJkXxh0jVAgkM8iaHsXBUktwuASY7A0g6EE3c5icQS8hA4D83rR8sho8Op7RhRKZW3cJm+8Pr4nmeYQ9HomSxjM-CBoB75BIKd5gC89h6AQIDltaDgQnCxA1AGMi2MesGGFEFBxJw+DlswhRXmGfBKB4rIrG+Z6fl+VILsMy7xKungbt0vQCt4t4OPUBg3ghSGYZIS55t4PHrtEoYJIGAieo4wAyASQkbI+QT5AyIiUggPbgnatgDvMw5DMeE7Dpalggb0HFZNkuAvthRBdjqnwvG5nnSBREDPCK6G2sQ0ICGqDqCGOhgQsstr9rk8wXgg7KhSyEBqpl-TroCEh9lKtreqOdbMLYUTYBI-DQoY+CHlgrFoKpARSsIUQpoxeb0QE0yESxCAqWp8gaaenHddqfXMWijIYMyXVDRBI2aY42kkLpECFM1w2jQ4xhfO4a7SKiQTPmFMFnrN82cghD5nmd-UfugLXKLt43VIIyoQMyjgSXwkrnY9p1YfCFnaM9O0rftRBCetENLW90NGt9HAUQIzBEJVqHlmCT4Qrg2FfEDWVbS96krYG+oioGMhHDD5C+JCkKCCqmNaDYQS2Fo5b8N4pOQ2NlMlViNPSHToxEPwphSTDGBKGAuAgID02nfVwpRJCp6+kQNPo6xNLS-SbGCsKWIVBK0r8HKCqal9qrqggFsyoIxlpCKNkYEePD4DwYDlg6yXaHZ07hJEwDSL7sLwsTIgG3SDJGT20xYh7Xs+37Xxg0OU4OQgEC9Gq5Yy5k3ghte4YZpKRRAA
+Alex designs a diagram that starts with identifying and putting them in the proper context.
+
+![process to find a reseach project (click to open)](bpmn_research_problem.svg)
+
+I am adding the link to edit the diagram directly in [Sketchminer](https://www.bpmn-sketch-miner.ai/index.html#EYBwNgdgXAbgjAKALRIQdQKZgMYHsC2GABAC65EBCACgLIByRAygNYYnYAWRNAlhBgCcoCBABFyAT1wBXIhwCGMYvKJUBuYGAz4EAYXkQiU2RgAeIARgDOVojxJF5tlQCo8EEgPkATHthI8uBAuAPwIEtYIABRWGBDeRACaMnKKykSW8mCq6praAJQiCAB0pXoGRilmFta29o7ORG5Bnj5+AUGhCHS4CAAqHHGVst5BAOQOCkqOORpaOsmyU8RWEvggZDoAqrFEAOK4YN5eJCRjtrrSApYeRABKGFn2EkR9lsS4Aq93AJIAWo4IFkJFYeLYyEQAGZ8BIkQZEXQtLy+fyBCDlQzGIjVSw2OwOJwzZoeZHtNFdUrFIp0MwkKBEaKWbAYHjTRapaYqTLZNRzAoIACClmGgKIAFEIABzPgYQRET5MbA8OIBKwkMKMJUqsEkdAKSaE4CywyjfhEI2Qz7EPikDhgogWPn4MLiIgAGXsgnkJCuxAeMGVAHcELF4vdHr4pSIPSQvT7hf6g8ImSzpg82lHGI8BJw7IYDrhJVpFRxDvIBAAaJjaAwBbAlsuVxwCUysqtsbBUgAShLh9sdeXw5uNRCshyUCQtVrCESsCB+mJkXxh0jVAgkM8iaHsXBUktwuASY7A0g6EE3c5icQS8hA4D83rR8sho8Op7RhRKZW3cJm+8Pr4nmeYQ9HomSxjM-CBoB75BIKd5gC89h6AQIDltaDgQnCxA1AGMi2MesGGFEFBxJw+DlswhRXmGfBKB4rIrG+Z6fl+VILsMy7xKungbt0vQCt4t4OPUBg3ghSGYZIS55t4PHrtEoYJIGAieo4wAyASQkbI+QT5AyIiUggPbgnatgDvMw5DMeE7Dpalggb0HFZNkuAvthRBdjqnwvG5nnSBREDPCK6G2sQ0ICGqDqCGOhgQsstr9rk8wXgg7KhSyEBqpl-TroCEh9lKtreqOdbMLYUTYBI-DQoY+CHlgrFoKpARSsIUQpoxeb0QE0yESxCAqWp8gaaenHddqfXMWijIYMyXVDRBI2aY42kkLpECFM1w2jQ4xhfO4a7SKiQTPmFMFnrN82cghD5nmd-UfugLXKLt43VIIyoQMyjgSXwkrnY9p1YfCFnaM9O0rftRBCetENLW90NGt9HAUQIzBEJVqHlmCT4Qrg2FfEDWVbS96krYG+oioGMhHDD5C+JCkKCCqmNaDYQS2Fo5b8N4pOQ2NlMlViNPSHToxEPwphSTDGBKGAuAgID02nfVwpRJCp6+kQNPo6xNLS-SbGCsKWIVBK0r8HKCqal9qrqggFsyoIxlpCKNkYEePD4DwYDlg6yXaHZ07hJEwDSL7sLwsTIgG3SDJGT20xYh7Xs+37Xxg0OU4OQgEC9Gq5Yy5k3ghte4YZpKRRAA).
 
 If you want to know more about sketchminer, check my latest blog post about it: https://jagcoop.github.io/posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner/
 
@@ -7160,6 +7166,10 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
+### [2025-01-17: projects/yaml_resume_db](./projects/yaml_resume_db).
+[lab notes ongaing](./projects/yaml_resume_db)
+
+
 ### [2025-01-17: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
@@ -7186,6 +7196,7 @@ Email
 
 <ul>
     <li><a href="/">index</a></li>
+		<li>[projects/yaml_resume_db](/projects/yaml_resume_db/index.html)</li>
 		<li>[projects/rewards.codes](/projects/rewards.codes/index.html)</li>
 		<li>[projects/AOP_in_Eiffel](/projects/AOP_in_Eiffel/index.html)</li>
 </ul>
@@ -7340,9 +7351,204 @@ This process ensures the response feels highly personalized, increasing the chan
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+   <meta charset="utf-8" emacsmode="-*- markdown -*-"> <link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/journal.css?">
+
+                        **Yaml Resume Database**
+                           Version 1.1
+
+
+Json Resume is a great way to keep your resume updated.
+However there two things missing:
+
+1. Json its an ugly format to look by hand.
+2. It would be nice to build a database of the knowledge and skills of team,
+   based on their json resume.
+
+
+
+2025-01-12: Starting the project
+=================================================================
+
+In order to start this project I need:
+
+1. A couple of json resumes
+1. the json schema of json resumes.
+1. Translate the json schema to a terminus db instance.
+1. insert the json resume in terminusdb
+1. query the terminusdb  to get the tag cloud of projects we know on.
+
+Now I hope to make this document a literate program.
+So let's see how far I get it to be.
+
+Get a couple of json resumes
+---------------------------------------------------------------
+
+```nushell
+    $ mkdir test
+    $ http get https://gist.githubusercontent.com/thomasdavis/c9dcfa1b37dec07fb2ee7f36d7278105/raw/c0399b7abb13fe63912843ca6f6c90af63fb28ae/resume.json |
+    > save --force test/1.json
+    $ http get https://gist.githubusercontent.com/elviejo79/ab0802ef51ac9f53defe686e7fae452b/raw/1d0be3cb5c3fb03259a1141779b632397524cb55/resume.json |
+    > save --force test/2.json
+```
+
+
+Let's get the schema to validate the files
+
+```nushell
+    $ http get https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json | 
+    > save test/old.schema.json
+```
+
+The schema that is in json schema store is for draf-04 of schema specification. 
+And we need to update. it
+
+```nushell
+    > ajv migrate -s test/old.schema.json -o test/resume.schema.json
+```
+
+
+We also must make sure that they are
+[valid json resumes according to the schema](https://chatgpt.com/share/67849193-d2c0-8007-82ce-26ae4d84f5d9).
+
+```nushell
+$ ajv validate -s test/resume.schema.json -d test/1.json --strict=false -c ajv-formats
+    $ ajv validate -s test/resume.schema.json -d test/2.json --strict=false -c ajv-formats
+```
+
+I'm leaving the contents of the template here for future reference.
+------
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat. Duis aute irure dolor in
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+pariatur. 
+
+ Maine | Iowa | Colorado 
+-------|------|----------
+   1   |  4   |   10
+  ME   |  IA  |   CO
+ Blue  | Red  | Brown
+[Table [states]: Caption with label.]
+
+
+Code
+---------------------------------------------------------------
+
+Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum:
+
+- Incididunt
+- Bonus Unum
+- Quibusdam
+
+```````````````````````````````````````````````
+count_lines () {
+  local f=$1  
+  local m
+  m=`wc -l $f | sed 's/^\([0-9]*\).*$/\1/'`
+  return $m
+}
+```````````````````````````````````````````````
+
+
+2019-02-20: Procedural Synthesis
+===================================================================
+
+At vero eos et accusamus et iusto odio dignissimos ducimus qui
+blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+et quas molestias excepturi sint occaecati cupiditate non provident,
+similique sunt in culpa qui officia deserunt mollitia animi, id est
+laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+distinctio. 
+
+
+2019-02-19: Flow Diagram
+===================================================================
+
+**************************************************************
+*                                                            
+* .---.       .-.        .-.       .-.                       
+* | A +----->| 1 +<---->| 2 |<----+ 4 +------------------.   
+* '---'       '-'        '+'       '-'                    |  
+*                         |         ^                     |  
+*                         v         |                     v  
+*                        .-.      .-+-.        .-.      .-+-.
+*                       | 3 +---->| B |<----->| 5 +---->| C |
+*                        '-'      '---'        '-'      '---'
+**************************************************************
+
+Nam libero tempore, cum `soluta` nobis est eligendi optio
+cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
+autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
+eveniet ut et voluptates repudiandae sint et molestiae non
+recusandae. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+2019-02-15: Example
+==============================================================
+
+Nam libero tempore, cum soluta nobis est eligendi optio
+cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+omnis voluptas assumenda est, omnis dolor repellendus.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ rust
+fn main() {
+    let x = 5u32;
+
+    let y = {
+        let x_squared = x * x;
+        let x_cube = x_squared * x;
+
+        // This expression will be assigned to `y`
+        x_cube + x_squared + x
+    };
+
+    let z = {
+        // The semicolon suppresses this expression and `()` is assigned to `z`
+        2 * x;
+    };
+
+    println!("x is {:?}", x);
+    println!("y is {:?}", y);
+    println!("z is {:?}", z);
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<!--
+![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
+![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
+-->
+
+[Link to nowhere](nowhere).
+
+
+
+2019-02-01: Started Project
+==============================================================
+
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+voluptatibus maiores alias consequatur aut perferendis doloribus
+asperiores repellat.
+
+
+ 
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <li>[.](././) 
     <ul>
 	  <li>[./projects](././projects/) 
+	      <ul>
+	  	  <li>[./projects/yaml_resume_db](././projects/yaml_resume_db/) 
+	  	  </li>
+	  	</ul>
 	      <ul>
 	  	  <li>[./projects/rewards.codes](././projects/rewards.codes/) 
 	  	  </li>
