@@ -200,6 +200,10 @@ This are the innovations that have been ocupaying our minds lately
   <li>[./projects](././projects/) 
       <ul>
   	  <li>[./projects/yaml_resume_db](././projects/yaml_resume_db/) 
+  	      <ul>
+  	  	  <li>[./projects/yaml_resume_db/test](././projects/yaml_resume_db/test/) 
+  	  	  </li>
+  	  	</ul>
   	  </li>
   	</ul>
       <ul>
@@ -6438,247 +6442,247 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2025-01-17: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
+### [2025-01-18: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
 [lab notes ongaing](./posts/tdd_cloud_wilkinson_vs_meyer)
 
 
-### [2025-01-17: posts/music_and_technology](./posts/music_and_technology).
+### [2025-01-18: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2025-01-17: posts/ideas](./posts/ideas).
+### [2025-01-18: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2025-01-17: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2025-01-18: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2025-01-17: posts/haskell_musical_paradigm](./posts/haskell_musical_paradigm).
+### [2025-01-18: posts/haskell_musical_paradigm](./posts/haskell_musical_paradigm).
 [lab notes ongaing](./posts/haskell_musical_paradigm)
 
 
-### [2025-01-17: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2025-01-18: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2025-01-17: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
+### [2025-01-18: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
 [lab notes ongaing](./posts/executable_tutorials_literate_programming)
 
 
-### [2025-01-17: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2025-01-18: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2025-01-17: posts/argentina_coops](./posts/argentina_coops).
+### [2025-01-18: posts/argentina_coops](./posts/argentina_coops).
 [lab notes ongaing](./posts/argentina_coops)
 
 
-### [2025-01-17: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2025-01-18: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2025-01-17: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
+### [2025-01-18: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
 [lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
 
 
-### [2025-01-17: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
+### [2025-01-18: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
 
-### [2025-01-17: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2025-01-18: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2025-01-17: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2025-01-18: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2025-01-17: posts/Track_your_day](./posts/Track_your_day).
+### [2025-01-18: posts/Track_your_day](./posts/Track_your_day).
 [lab notes ongaing](./posts/Track_your_day)
 
 
-### [2025-01-17: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
+### [2025-01-18: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
 [lab notes ongaing](./posts/Top_10_Questions_for_a_Job_Interview)
 
 
-### [2025-01-17: posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD).
+### [2025-01-18: posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD).
 [lab notes ongaing](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD)
 
 
-### [2025-01-17: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
+### [2025-01-18: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
 [lab notes ongaing](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding)
 
 
-### [2025-01-17: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2025-01-18: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2025-01-17: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2025-01-18: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2025-01-17: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2025-01-18: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2025-01-17: posts/Single_text_file](./posts/Single_text_file).
+### [2025-01-18: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2025-01-17: posts/Simple_example_of_liveview1_phx](./posts/Simple_example_of_liveview1_phx).
+### [2025-01-18: posts/Simple_example_of_liveview1_phx](./posts/Simple_example_of_liveview1_phx).
 [lab notes ongaing](./posts/Simple_example_of_liveview1_phx)
 
 
-### [2025-01-17: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2025-01-18: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2025-01-17: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
+### [2025-01-18: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
 [lab notes ongaing](./posts/Real_Life_Movies_as_a_Teaching_Method)
 
 
-### [2025-01-17: posts/Re-Discovering_My_PhD_Challenge_for_the_Semester](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester).
+### [2025-01-18: posts/Re-Discovering_My_PhD_Challenge_for_the_Semester](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester).
 [lab notes ongaing](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester)
 
 
-### [2025-01-17: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2025-01-18: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2025-01-17: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
+### [2025-01-18: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
 [lab notes ongaing](./posts/Product_Management_and_AI)
 
 
-### [2025-01-17: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
+### [2025-01-18: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
 [lab notes ongaing](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner)
 
 
-### [2025-01-17: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2025-01-18: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2025-01-17: posts/One_more_year](./posts/One_more_year).
+### [2025-01-18: posts/One_more_year](./posts/One_more_year).
 [lab notes ongaing](./posts/One_more_year)
 
 
-### [2025-01-17: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2025-01-18: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2025-01-17: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2025-01-18: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2025-01-17: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2025-01-18: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2025-01-17: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2025-01-18: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2025-01-17: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2025-01-18: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2025-01-17: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2025-01-18: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2025-01-17: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2025-01-18: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2025-01-17: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
+### [2025-01-18: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
 [lab notes ongaing](./posts/Innovation_on_Water_Management_from_The)
 
 
-### [2025-01-17: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2025-01-18: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2025-01-17: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2025-01-18: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2025-01-17: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
+### [2025-01-18: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
 [lab notes ongaing](./posts/How_to_Do_a_Dirty_and_Quick_Review)
 
 
-### [2025-01-17: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2025-01-18: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2025-01-17: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2025-01-18: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2025-01-17: posts/Haskell](./posts/Haskell).
+### [2025-01-18: posts/Haskell](./posts/Haskell).
 [lab notes ongaing](./posts/Haskell)
 
 
-### [2025-01-17: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
+### [2025-01-18: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
 [lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
 
 
-### [2025-01-17: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2025-01-18: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2025-01-17: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2025-01-18: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2025-01-17: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
+### [2025-01-18: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
 [lab notes ongaing](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones)
 
 
-### [2025-01-17: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+### [2025-01-18: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
 [lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
 
 
-### [2025-01-17: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2025-01-18: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2025-01-17: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2025-01-18: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2025-01-17: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2025-01-18: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2025-01-17: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2025-01-18: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2025-01-17: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2025-01-18: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2025-01-17: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2025-01-18: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2025-01-17: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
+### [2025-01-18: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
 [lab notes ongaing](./posts/Another_post_on_Crypto_Assets)
 
 
-### [2025-01-17: posts/A_premier_on_Prometheus_relabelling](./posts/A_premier_on_Prometheus_relabelling).
+### [2025-01-18: posts/A_premier_on_Prometheus_relabelling](./posts/A_premier_on_Prometheus_relabelling).
 [lab notes ongaing](./posts/A_premier_on_Prometheus_relabelling)
 
 
-### [2025-01-17: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2025-01-18: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2025-01-17: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2025-01-18: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
-### [2025-01-17: posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience).
+### [2025-01-18: posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience).
 [lab notes ongaing](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience)
 
 
@@ -7166,15 +7170,15 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2025-01-17: projects/yaml_resume_db](./projects/yaml_resume_db).
+### [2025-01-18: projects/yaml_resume_db](./projects/yaml_resume_db).
 [lab notes ongaing](./projects/yaml_resume_db)
 
 
-### [2025-01-17: projects/rewards.codes](./projects/rewards.codes).
+### [2025-01-18: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2025-01-17: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2025-01-18: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -7411,134 +7415,44 @@ We also must make sure that they are
 [valid json resumes according to the schema](https://chatgpt.com/share/67849193-d2c0-8007-82ce-26ae4d84f5d9).
 
 ```nushell
-$ ajv validate -s test/resume.schema.json -d test/1.json --strict=false -c ajv-formats
+    $ ajv validate -s test/resume.schema.json -d test/1.json --strict=false -c ajv-formats
     $ ajv validate -s test/resume.schema.json -d test/2.json --strict=false -c ajv-formats
 ```
 
-I'm leaving the contents of the template here for future reference.
-------
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. 
+2025-01-17 Transform the json_resume.scha to terminsdb schema
+================================================================
+It took me 5 days of 14 hours to create this migration script from jsonata.
+But now I can automaticall translate from json_resume.schema to terminusdb.schema.
 
- Maine | Iowa | Colorado 
--------|------|----------
-   1   |  4   |   10
-  ME   |  IA  |   CO
- Blue  | Red  | Brown
-[Table [states]: Caption with label.]
+!!! note
+    I hope someday this transformation script can transform all the json schemas to jsonata.
 
+so now let's execute the jsonata query that transforms this one schema
 
-Code
+```nushell
+   $ cat test/resume.schema.json | jfq --query-file test/resume_schema_to_terminusdb.jsonata | save --force test/terminus.resume.schema.json
+```
+
+So simple and yet that query has been one of the most difficult things I've written.
+
+What should I do next?
 ---------------------------------------------------------------
 
-Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum:
-
-- Incididunt
-- Bonus Unum
-- Quibusdam
-
-```````````````````````````````````````````````
-count_lines () {
-  local f=$1  
-  local m
-  m=`wc -l $f | sed 's/^\([0-9]*\).*$/\1/'`
-  return $m
-}
-```````````````````````````````````````````````
-
-
-2019-02-20: Procedural Synthesis
-===================================================================
-
-At vero eos et accusamus et iusto odio dignissimos ducimus qui
-blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-et quas molestias excepturi sint occaecati cupiditate non provident,
-similique sunt in culpa qui officia deserunt mollitia animi, id est
-laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
-distinctio. 
-
-
-2019-02-19: Flow Diagram
-===================================================================
-
-**************************************************************
-*                                                            
-* .---.       .-.        .-.       .-.                       
-* | A +----->| 1 +<---->| 2 |<----+ 4 +------------------.   
-* '---'       '-'        '+'       '-'                    |  
-*                         |         ^                     |  
-*                         v         |                     v  
-*                        .-.      .-+-.        .-.      .-+-.
-*                       | 3 +---->| B |<----->| 5 +---->| C |
-*                        '-'      '---'        '-'      '---'
-**************************************************************
-
-Nam libero tempore, cum `soluta` nobis est eligendi optio
-cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
-autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-eveniet ut et voluptates repudiandae sint et molestiae non
-recusandae. 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-2019-02-15: Example
-==============================================================
-
-Nam libero tempore, cum soluta nobis est eligendi optio
-cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-omnis voluptas assumenda est, omnis dolor repellendus.
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ rust
-fn main() {
-    let x = 5u32;
-
-    let y = {
-        let x_squared = x * x;
-        let x_cube = x_squared * x;
-
-        // This expression will be assigned to `y`
-        x_cube + x_squared + x
-    };
-
-    let z = {
-        // The semicolon suppresses this expression and `()` is assigned to `z`
-        2 * x;
-    };
-
-    println!("x is {:?}", x);
-    println!("y is {:?}", y);
-    println!("z is {:?}", z);
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-<!--
-![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
-![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
--->
-
-[Link to nowhere](nowhere).
-
-
-
-2019-02-01: Started Project
-==============================================================
-
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-voluptatibus maiores alias consequatur aut perferendis doloribus
-asperiores repellat.
-
-
+[ ] Mutate one of the example resumes so that is almos the same as another 
+    To demonstrate that eventhough we are storing several resumes.
+    The quantity of entinties in the database doesn't grow because the entities are the same
+    Just linked from different documents
+[ ] Maybe run the schema commands by hand. So that I get to learn what I need to write.
+[ ] Personalize the resume_schema_to_terminusdb.json I think the main table JSON_RESUME
+    shouldn't have the @unfolded:[] key BUT  maybe it does... I need to check it.
+[ ] Run terminusdb store init to create a new storage
+[ ] Think I'll need to set up the routes of the schema and the instances... although I don't know how
+[ ] Once the schema is created by hand:
+    Try to insert 3 resumes!
+[ ] Run queries to show that eventhough you inserted 3 resumes you don't have 3 different entities
+    They should repeat!
+[ ] Once I know the process by hand:
+    try to pipe resume_schema_to_terminusdb.json file | terminusdb db doc -g
  
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
@@ -7547,6 +7461,10 @@ asperiores repellat.
 	  <li>[./projects](././projects/) 
 	      <ul>
 	  	  <li>[./projects/yaml_resume_db](././projects/yaml_resume_db/) 
+	  	      <ul>
+	  	  	  <li>[./projects/yaml_resume_db/test](././projects/yaml_resume_db/test/) 
+	  	  	  </li>
+	  	  	</ul>
 	  	  </li>
 	  	</ul>
 	      <ul>
