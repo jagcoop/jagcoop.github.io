@@ -58,134 +58,44 @@ We also must make sure that they are
 [valid json resumes according to the schema](https://chatgpt.com/share/67849193-d2c0-8007-82ce-26ae4d84f5d9).
 
 ```nushell
-$ ajv validate -s test/resume.schema.json -d test/1.json --strict=false -c ajv-formats
+    $ ajv validate -s test/resume.schema.json -d test/1.json --strict=false -c ajv-formats
     $ ajv validate -s test/resume.schema.json -d test/2.json --strict=false -c ajv-formats
 ```
 
-I'm leaving the contents of the template here for future reference.
-------
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in
-reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-pariatur. 
+2025-01-17 Transform the json_resume.scha to terminsdb schema
+================================================================
+It took me 5 days of 14 hours to create this migration script from jsonata.
+But now I can automaticall translate from json_resume.schema to terminusdb.schema.
 
- Maine | Iowa | Colorado 
--------|------|----------
-   1   |  4   |   10
-  ME   |  IA  |   CO
- Blue  | Red  | Brown
-[Table [states]: Caption with label.]
+!!! note
+    I hope someday this transformation script can transform all the json schemas to jsonata.
 
+so now let's execute the jsonata query that transforms this one schema
 
-Code
+```nushell
+   $ cat test/resume.schema.json | jfq --query-file test/resume_schema_to_terminusdb.jsonata | save --force test/terminus.resume.schema.json
+```
+
+So simple and yet that query has been one of the most difficult things I've written.
+
+What should I do next?
 ---------------------------------------------------------------
 
-Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum:
-
-- Incididunt
-- Bonus Unum
-- Quibusdam
-
-```````````````````````````````````````````````
-count_lines () {
-  local f=$1  
-  local m
-  m=`wc -l $f | sed 's/^\([0-9]*\).*$/\1/'`
-  return $m
-}
-```````````````````````````````````````````````
-
-
-2019-02-20: Procedural Synthesis
-===================================================================
-
-At vero eos et accusamus et iusto odio dignissimos ducimus qui
-blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-et quas molestias excepturi sint occaecati cupiditate non provident,
-similique sunt in culpa qui officia deserunt mollitia animi, id est
-laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
-distinctio. 
-
-
-2019-02-19: Flow Diagram
-===================================================================
-
-**************************************************************
-*                                                            
-* .---.       .-.        .-.       .-.                       
-* | A +----->| 1 +<---->| 2 |<----+ 4 +------------------.   
-* '---'       '-'        '+'       '-'                    |  
-*                         |         ^                     |  
-*                         v         |                     v  
-*                        .-.      .-+-.        .-.      .-+-.
-*                       | 3 +---->| B |<----->| 5 +---->| C |
-*                        '-'      '---'        '-'      '---'
-**************************************************************
-
-Nam libero tempore, cum `soluta` nobis est eligendi optio
-cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
-autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-eveniet ut et voluptates repudiandae sint et molestiae non
-recusandae. 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block a long preformatted code block
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-2019-02-15: Example
-==============================================================
-
-Nam libero tempore, cum soluta nobis est eligendi optio
-cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-omnis voluptas assumenda est, omnis dolor repellendus.
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ rust
-fn main() {
-    let x = 5u32;
-
-    let y = {
-        let x_squared = x * x;
-        let x_cube = x_squared * x;
-
-        // This expression will be assigned to `y`
-        x_cube + x_squared + x
-    };
-
-    let z = {
-        // The semicolon suppresses this expression and `()` is assigned to `z`
-        2 * x;
-    };
-
-    println!("x is {:?}", x);
-    println!("y is {:?}", y);
-    println!("z is {:?}", z);
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-<!--
-![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
-![`a long code caption a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg) ![`a long code caption`](robot.jpg)
--->
-
-[Link to nowhere](nowhere).
-
-
-
-2019-02-01: Started Project
-==============================================================
-
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-voluptatibus maiores alias consequatur aut perferendis doloribus
-asperiores repellat.
-
-
+[ ] Mutate one of the example resumes so that is almos the same as another 
+    To demonstrate that eventhough we are storing several resumes.
+    The quantity of entinties in the database doesn't grow because the entities are the same
+    Just linked from different documents
+[ ] Maybe run the schema commands by hand. So that I get to learn what I need to write.
+[ ] Personalize the resume_schema_to_terminusdb.json I think the main table JSON_RESUME
+    shouldn't have the @unfolded:[] key BUT  maybe it does... I need to check it.
+[ ] Run terminusdb store init to create a new storage
+[ ] Think I'll need to set up the routes of the schema and the instances... although I don't know how
+[ ] Once the schema is created by hand:
+    Try to insert 3 resumes!
+[ ] Run queries to show that eventhough you inserted 3 resumes you don't have 3 different entities
+    They should repeat!
+[ ] Once I know the process by hand:
+    try to pipe resume_schema_to_terminusdb.json file | terminusdb db doc -g
  
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>

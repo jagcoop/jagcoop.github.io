@@ -1,0 +1,36 @@
+    Error: 
+      × Nushell launched as a REPL, but STDIN is not a TTY; either launch in a
+      │ valid terminal or provide arguments to invoke a script!
+   <meta charset="utf-8" emacsmode="-*- markdown -*-"> <link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/journal.css?">
+
+
+
+Json Resume is a great way to keep your resume updated.
+However there two things missing:
+
+1. Json its an ugly format to look by hand.
+2. It would be nice to build a database of the knowledge and skills of team,
+   based on their json resume.
+
+
+
+2025-01-12: Starting the project
+=================================================================
+
+In order to start this project I need:
+
+1. A couple of json resumes
+1. the json schema of json resumes.
+1. Translate the json schema to a terminus db instance.
+1. insert the json resume in terminusdb
+1. query the terminusdb  to get the tag cloud of projects we know on.
+
+Now I hope to make this document a literate program.
+So let's see how far I get it to be.
+
+Get a couple of json resumes
+---------------------------------------------------------------
+
+```nushell
+    $ http get https://gist.githubusercontent.com/thomasdavis/c9dcfa1b37dec07fb2ee7f36d7278105/raw/c0399b7abb13fe63912843ca6f6c90af63fb28ae/resume.json |
+    > save --force test/1.json
