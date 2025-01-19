@@ -191,6 +191,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/Our_New_Approach_for_Developing_Products/index.html</loc>
+  <lastmod>2025-01-19</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/One_more_year/index.html</loc>
   <lastmod>2025-01-19</lastmod>
   <changefreq>weekly</changefreq>
