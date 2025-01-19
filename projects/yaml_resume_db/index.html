@@ -96,6 +96,168 @@ What should I do next?
     They should repeat!
 [ ] Once I know the process by hand:
     try to pipe resume_schema_to_terminusdb.json file | terminusdb db doc -g
+
+2025-01-19 Let's try to make the schema run in TermunsDB
+==============================================================================
+
+Are you feeling lucky?
+----------------------------
+First let's try to see if we are lucky and all of our generated schema works.
+
+```nushell
+    $ tdb-cli doc insert family --full-replace --graph_type schema < ./test/terminus.resume.schema.json
+    Too many arguments to parse an organizatin
+```
+Ok no luck.
+
+
+One by one it is
+----------------------------
+
+So now let's do it one by one:
+
+```nushell
+    $ "
+    > {
+    >  "@id": "PROFILES",
+    >  "@type": "class",
+    >  "@unfolded": [],
+    >  "network": "xsd:string",
+    >  "url": "xsd:uri",
+    >  "username": "xsd:string"
+    > }
+    > " | save --force ./test/test_one_schema.json
+```
+
+```nushell
+    $ tdb-cli doc insert family --full-replace --graph_type schema < ./test/test_one_schema.json
+    Too many arguments to parse an organization
+```
+
+Ok so what is the current `family` schema (`family`) is just what I inhereted from the tutorial
+I'm following.
+
+```nushell 
+    $ tdb-cli doc get family --graph_type schema | tee ./test/current_organization.json
+    {"@base":"terminusdb:///data/", "@schema":"terminusdb:///schema#", "@type":"@context"}
+```
+
+let me append it to prepend it to the one schema we have:
+
+```nushell
+    $ tdb-cli doc get family --graph_type schema |
+    > tee ./test/current_organization.json
+    $ cat ./test/current_organization.json ./test/test_one_schema.json |
+    > cat ./test/current_organization.json ./test/test_one_schema.json |
+    > tdb-cli doc insert family --full-replace --graph_type schema 
+    {"@type":"api:InsertDocumentErrorResponse", "api:error": {"@type":"api:UnknownSchemaType", "api:type":"class"}, "api:message":"The '@type' field referred to an unimplemented schema type.", "api:status":"api:failure"}    
+```
+
+Ok so it seems the organization problem is over,
+now I need to chek the *class* word.
+looking at the tutorials seems that it should be "Class"
+
+```nushell
+    $ "{
+        "@id": "PROFILES",
+        "@type": "Class",
+        "@unfolded": [],
+        "network": "xsd:string",
+        "url": "xsd:uri",
+        "username": "xsd:string"
+      }" | save --force ./test/test_one_schema.json 
+```
+
+Next attempt
+```nushell
+    $ cat ./test/current_organization.json ./test/test_one_schema.json |
+    > tdb-cli doc insert family --full-replace --graph_type schema | jfq
+    {
+      "@type": "api:InsertDocumentErrorResponse",
+      "api:error": {
+        "@type": "api:SchemaCheckFailure",
+        "api:witnesses": [
+          {
+            "@type": "not_a_class_or_base_type",
+            "class": "http://www.w3.org/2001/XMLSchema#uri"
+          }
+        ]
+      },
+      "api:message": "Schema check failure",
+      "api:status": "api:failure"
+    }
+```
+Ok `uri` is not recognized as a valid type.
+What happens If I just eliminate it from the data.
+Now I'm going to use jfq to modify the json schema
+
+```nushell
+    $ cat ./test/terminus.resume.schema.json | jfq '($[`@id`="PROFILES"] ~>|$|{"@type":"Class"},["url"]|)' | save --force ./test/test_one_schema.json
+    $ cat ./test/current_organization.json ./test/test_one_schema.json | tdb-cli doc insert family --full-replace --graph_type schema | jfq
+    PROFILES
+```
+
+Success!!!
+
+Now let's put the url back
+---------------------------------------------------------------
+
+
+```nushell
+    $ cat ./test/terminus.resume.schema.json | jfq '($[`@id`="PROFILES"] ~>|$|{"@type":"Class", "url":"xsd:anyURI"}|)' | save --force ./test/test_one_schema.json
+    $ cat ./test/current_organization.json ./test/test_one_schema.json | tdb-cli doc insert family --full-replace --graph_type schema | jfq
+    PROFILES
+```
+
+Double success!!!
+
+Now let's make all the corrections to the transformer.
+----------------------------
+Ok now let's try our luck one more time with all the json schema.
+but with the Class correction and xsd:anyURI
+for that will change the original jsonata query.
+
+```nushell
+    $ pbpaste | save --force test/transform_json_resume_schema_to_terminusdb_schema.jsonata
+    $ cat test/resume.schema.json | jfq --query-file test/transform_json_resume_schema_to_terminusdb_schema.jsonata | save --force ./test/terminus.resume.schema.json
+    $ cat test/terminus.resume.schema.json | tdb-cli doc insert family --full-replace --graph_type schema | jfq
+    JSON_RESUME
+    BASICS
+    WORK
+    VOLUNTEER
+    EDUCATION
+    AWARDS
+    CERTIFICATES
+    PUBLICATIONS
+    SKILLS
+    LANGUAGES
+    INTERESTS
+    REFERENCES
+    PROJECTS
+    META
+    LOCATION
+    PROFILES
+```
  
+Triple success!!!
+
+Lets prepare for the next steps
+---------------------------------------------------------------
+
+I'll still need to continue to improve the jsonata transformer.
+so might as well automate the testing of my variatons
+
+```nushell
+alias process-resume = {
+    pbpaste | save --force test/transform_json_resume_schema_to_terminusdb_schema.jsonata;
+    cat test/resume.schema.json | jfq --query-file test/transform_json_resume_schema_to_terminusdb_schema.jsonata | save --force ./test/terminus.resume.schema.json;
+    cat test/terminus.resume.schema.json | tdb-cli doc insert family --full-replace --graph_type schema | jfq
+}
+
+```
+
+next steps... store the json resumes that I already have.
+
+
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
