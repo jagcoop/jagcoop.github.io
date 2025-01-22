@@ -1,0 +1,53 @@
+#!/usr/bin/env -S nu --stdin
+
+use std assert
+
+let instance_transformer_jsonata = "./test/transform_resume_instance_to_terminunsdb.jsonata"
+
+def main [] {
+
+}
+
+def "main init_terminus" [] {
+    rm -rf ./storage
+    terminusdb store init
+    terminusdb db create admin/family
+}
+
+
+def "main save_schema_transformer" [] {
+    $in | save --force "test/transform_json_resume_schema_to_terminusdb_schema.jsonata" |
+    cat ./test/transform_json_resume_schema_to_terminusdb_schema.jsonata
+}
+
+def "main replace_terminus_schema" [ ] {
+    cat test/resume.json_schema |
+    jfq --query-file test/transform_json_resume_schema_to_terminusdb_schema.jsonata |
+    save --force ./test/resume.terminus_schema;
+    cat test/resume.terminus_schema |
+    tee { terminusdb doc insert admin/family --full-replace --graph_type schema }
+}
+
+def "main save_instance_transformer" [] {
+    $in | save --force $instance_transformer_jsonata |
+    cat $instance_transformer_jsonata
+}
+
+def "main insert_a_resume" [resumeNum:int] {
+    let resume_path = $"./test/($resumeNum).json"
+    assert ($resume_path | path exists) $"The resume must exist: ($resume_path)"
+
+    echo $"\{\"original_resume\": (cat $resume_path) ,  \"terminus_schema\": (cat ./test/resume.terminus_schema) \}" | jq |
+    tee { save --force $"./test/tmp_($resumeNum).json"} |
+    jfq --query-file $instance_transformer_jsonata | jq |
+    tee {save --force $"./test/terminus.($resumeNum).json" } |
+    terminusdb doc insert admin/family 
+}
+
+def "main insert_single_table" [resumeNum:int, table_name:string] {
+    let resume_path = $"./test/terminus.($resumeNum).json"
+    assert ($resume_path | path exists ) $"The resume must exist: ($resume_path)"
+    cat $resume_path | jfq $"\$.($table_name)";
+
+    cat $resume_path | jfq $"\$.($table_name)" | terminusdb doc insert admin/family
+}
