@@ -71,13 +71,15 @@ $foreach := function($item,$key,$f)<o-sf:a<o>>{
 
 $transformer := function($p,$k){(
     $known := {
-        "$ref":{$k:($p.`$ref`="#/definitions/iso8601")?"xsd:date":$p.`$ref`},
+        "$ref":{$k:($p.`$ref`="#/definitions/iso8601")?
+                    {"@type":"Optional", "@class":"xsd:date"}:
+                    {"@type":"Optional", "@class":$p.`$ref`}},
         "uri":{$k:{"@type":"Optional", "@class":"xsd:anyURI"}},
         "email":{$k:{"@type":"Optional", "@class":"xsd:string"}},
         "object": {$k:{"@type":"Optional", "@class":$k.$as_class()}},
-        "array_objects": {$k:{"@type":"List", "@class":$k.$as_class()}},
-        "array_units": {$k:{"@type":"List", "@class": "xsd:"&$p.items.$preferredType()}},
-        "_default": {$k:"xsd:"&$p.$preferredType()}
+        "array_objects": {$k:{"@type":"Set",  "@max_cardinality":1,"@class":$k.$as_class()}},
+        "array_units": {$k:{"@type":"Set",  "@max_cardinality":1,"@class": "xsd:"&$p.items.$preferredType()}},
+        "_default": {$k:{"@type":"Optional", "@class":"xsd:"&$p.$preferredType()}}
     };
     $known.$lookup_default($p.$preferredType())
 )};
@@ -91,16 +93,14 @@ $transformer := function($p,$k){(
 $json_resume := {"properties":{"json_resume":$}};
 $tables_direct := $json_resume.**.properties.$split_into_tables().(
     $merge([{"@id":$.table,"@type":"Class","@unfolded":[],"@key":{ "@type" : "ValueHash" }}
-    ,($.content.additionalProperties)? {"additionalProperties":"sys:JSON"}:{}
-    ,($.content.additionalItems)?{"additionalItems":"sys:JSON"}:{}
+    ,($.content.additionalProperties)? {"additionalProperties":{"@type":"Optional","@class":"sys:JSON"}}:{}
+    ,($.content.*.additionalProperties)? {"additionalProperties":{"@type":"Optional","@class":"sys:JSON"}}:{}
+    ,($.content.additionalItems)?{"additionalItems":{"@type":"Optional","@class":"sys:JSON"}}:{}
     ,$.content.$foreach("properties",$transformer)
     ]));
 
 /* Eliminate the schema field */
 $tables := $tables_direct ~> | $ | {},["$schema"] |;
-/* add the property website */
-$tables := $tables~>| $[`@id`="BASICS"] | {"website":"xsd:anyURI"}|;
-
 
 $database_def := [{"@base":"terminusdb:///data/", "@schema":"terminusdb:///schema#", "@type":"@context"}];
 $database_def ~>$append( $tables);

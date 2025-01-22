@@ -42,11 +42,11 @@ Get a couple of json resumes
 Let's get the schema to validate the files
 
 ```nushell
-    $ http get https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json |
+    $ http get https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json | 
     > save test/old.schema.json
 ```
 
-The schema that is in json schema store is for draf-04 of schema specification.
+The schema that is in json schema store is for draf-04 of schema specification. 
 And we need to update. it
 
 ```nushell
@@ -81,7 +81,7 @@ So simple and yet that query has been one of the most difficult things I've writ
 What should I do next?
 ---------------------------------------------------------------
 
-[ ] Mutate one of the example resumes so that is almos the same as another
+[ ] Mutate one of the example resumes so that is almos the same as another 
     To demonstrate that eventhough we are storing several resumes.
     The quantity of entinties in the database doesn't grow because the entities are the same
     Just linked from different documents
@@ -137,7 +137,7 @@ So now let's do it one by one:
 Ok so what is the current `family` schema (`family`) is just what I inhereted from the tutorial
 I'm following.
 
-```nushell
+```nushell 
     $ tdb-cli doc get family --graph_type schema | tee ./test/current_organization.json
     {"@base":"terminusdb:///data/", "@schema":"terminusdb:///schema#", "@type":"@context"}
 ```
@@ -149,8 +149,8 @@ let me append it to prepend it to the one schema we have:
     > tee ./test/current_organization.json
     $ cat ./test/current_organization.json ./test/test_one_schema.json |
     > cat ./test/current_organization.json ./test/test_one_schema.json |
-    > tdb-cli doc insert family --full-replace --graph_type schema
-    {"@type":"api:InsertDocumentErrorResponse", "api:error": {"@type":"api:UnknownSchemaType", "api:type":"class"}, "api:message":"The '@type' field referred to an unimplemented schema type.", "api:status":"api:failure"}
+    > tdb-cli doc insert family --full-replace --graph_type schema 
+    {"@type":"api:InsertDocumentErrorResponse", "api:error": {"@type":"api:UnknownSchemaType", "api:type":"class"}, "api:message":"The '@type' field referred to an unimplemented schema type.", "api:status":"api:failure"}    
 ```
 
 Ok so it seems the organization problem is over,
@@ -165,7 +165,7 @@ looking at the tutorials seems that it should be "Class"
         "network": "xsd:string",
         "url": "xsd:uri",
         "username": "xsd:string"
-      }" | save --force ./test/test_one_schema.json
+      }" | save --force ./test/test_one_schema.json 
 ```
 
 Next attempt
@@ -218,12 +218,13 @@ but with the Class correction and xsd:anyURI
 for that will change the original jsonata query.
 
 ```nushell
-    $ pbpaste |
-    save --force test/transform_json_resume_schema_to_terminusdb_schema.jsonata ;
-    cat ./test/resume.json_schema |
-    jfq --query-file test/transform_json_resume_schema_to_terminusdb_schema.jsonata |
-    tee { save --force ./test/resume.terminus_schema} | tdb-cli doc insert family --full-replace --graph_type schema | jfq
-
+    $ pbpaste | 
+    save --force test/transform_json_resume_schema_to_terminusdb_schema.jsonata ; 
+    cat ./test/resume.json_schema | 
+    jfq --query-file test/transform_json_resume_schema_to_terminusdb_schema.jsonata | 
+    tee { save --force ./test/resume.terminus_schema} |
+    tdb-cli doc insert family --full-replace --graph_type schema |
+    jfq
 
     JSON_RESUME
     BASICS
@@ -242,7 +243,7 @@ for that will change the original jsonata query.
     LOCATION
     PROFILES
 ```
-
+ 
 Triple success!!!
 
 Lets prepare for the next steps
@@ -252,15 +253,15 @@ I'll still need to continue to improve the jsonata transformer.
 so might as well automate the testing of my variatons
 
 ```nushell
-    pbpaste | save --force "test/resume_instance_transformer_with_schema.jsonata" |
-    cat ./test/resume_instance_transformer_with_schema.jsonata
+    pbpaste | save --force "test/transform_json_resume_schema_to_terminusdb_schema.jsonata" |
+    cat ./test/transform_json_resume_schema_to_terminusdb_schema.jsonata 
 ```
 
 Esta es la parte reptitiva si no has cambiado la query en jsonata explorer
 
 ```nushell
-    cat test/resume.json_schema | jfq --query-file test/transform_json_resume_schema_to_terminusdb_schema.jsonata | save --force ./test/resume.terminus_schema;
-    cat test/resume.terminus_schema | tee { tdb-cli doc insert family --full-replace --graph_type schema | jfq}
+cat test/resume.json_schema | jfq --query-file test/transform_json_resume_schema_to_terminusdb_schema.jsonata | save --force ./test/resume.terminus_schema;
+cat test/resume.terminus_schema | tee { tdb-cli doc insert family --full-replace --graph_type schema | jfq}
 ```
 
 Could I store a json resume
@@ -274,7 +275,7 @@ Too many arguments to parse an organization
 $ tdb-cli doc insert admin/family  < ./test/1.json
 ```
 
-It seems I need to skip validations :-(
+It seems I need to skip validations :-( 
 ```nushell
     $ cat ./test/2.json | tdb-cli doc insert --raw-json admin/family
 ["terminusdb:///data/JSONDocument/7EtuLipEyOCx9Nb-" ]
@@ -310,7 +311,7 @@ I have work around
 In this conversation with chatgpt inspired me with the solution:
 https://chatgpt.com/share/678e916a-1304-8007-8aa8-32b84d50dbbe
 
-For this fields that are NOT part of the json.schema I need to classify them in a field
+For this fields that are NOT part of the json.schema I need to classify them in a field 
 called metadata. And then In that field create store extra json fields.
 
 Changes to the schema_transformer and the instance_transformer
@@ -320,31 +321,100 @@ Because it implied changes to the schema_transformer and the instance_transforme
 And yes I was able to create such a query.
 It needed to change schema transformer
 and also query that process the resume.
-and I need another query that compares the original resume against the json_schema
+and I need another query that compares the original resume against the json_schema 
 
 ``` nushell
-    $ pbpaste | save --force "test/resume_instance_transformer_with_schema.jsonata" |
-    cat ./test/resume_instance_transformer_with_schema.jsonata |
-    echo $"\{\"original_resume\": (cat ./test/1.json), \n \"terminus_schema\": (cat ./test/resume.terminus_schema) \}" | jq |
-    tee { save --force "./test/tmp_1.json"} |
-    jfq --query-file ./test/resume_instance_transformer_with_schema.jsonata | jq |
-    tee {save --force ./test/terminus.1.json } |
-    tdb-cli doc insert admin/family | jq | pbcopy
+    $ pbpaste | save --force "./test/transform_resume_to_terminunsdb_instance.jsonata" |
+    cat ./test/transform_resume_to_terminunsdb_instance.jsonata
+
+    $ echo $"\{\"original_resume\": (cat ./test/1.json), \n \"terminus_schema\": (cat ./test/resume.terminus_schema) \}" | jq |
+    tee { save --force "./test/tmp_1.json"} | 
+    jfq --query-file ./test/transform_resume_to_terminunsdb_instance.jsonata | jq |
+    tee {save --force ./test/terminus.1.json } | 
+    tdb-cli doc insert admin/family | jq 
 ```
+
+This has generated many errors... 
+that I have been fixing.
+but now I thin I'll just insert one by one.
 
 What should I try next
 ----------------------------
-I will tri to feed terminus.1.json part by part :-(
+I will tri to feed terminus.1.json part by part :-( 
+I did try it and it complained on every kind of document (awrads,basics, etc)
 
-this works now:
+Trying with terminsdb NOT tdb-cli
+----------------------------
+I suspect that the terminsudb app is more complete than tdb-cli 
+
 ```nushell
-    ./jresume_transformer init_terminus
-    ./jresume_transformer replace_terminus_schema
-    #this one tries to insert the whole resume and fails, but is necessary to run it becaus it create temp files
-    ./jresume_transformer insert_a_resume 2
-    ./jresume_transformer insert_single_table 2 skills
+    terminusdb store init #creates the directory structure where we are going to store
+    terminusdb db create admin/family 
+    terminusdb doc insert admin/family --full-replace --graph_type (the terminuss.schema)
+    terminusdb doc insert admin/fmaily (the instance you want)
 ```
 
+2025-01-21 Now lets insert one by One
+=================================================
+Ok today will try to insert each table one by one.
+
+```nushell
+cat ../test/terminus.2.json | jfq "$.basics" | terminusdb doc insert admin/family 
+Error: Schema check failure
+{
+  "@type":"api:InsertDocumentErrorResponse",
+  "api:error": {
+    "@type":"api:SchemaCheckFailure",
+    "api:witnesses": [
+      {
+	"terminusdb:///schema#location": {
+	  "@type":"no_unique_type_for_document",
+	  "document": {"address":"Mexico", "countryCode":"US"},
+	  "reason": {
+	    "@type":"required_field_does_not_exist_in_document",
+	    "document": {
+	      "terminusdb:///schema#address": {
+		"@type":"http://www.w3.org/2001/XMLSchema#string",
+		"@value":"Mexico"
+	      },
+	      "terminusdb:///schema#countryCode":"US"
+	    },
+	    "field":"terminusdb:///schema#city"
+	  }
+	}
+      }
+    ]
+  },
+  "api:message":"Schema check failure",
+  "api:status":"api:failure"
+}
+
+```
+
+Ok so the first thing is that the schema lacks #city 
+I'll make that property optional in the transformer_json_schema.
+
+2025-01-22 Last strech 
+=================================
+Eureka: I was able to insert two json resumes in the database !!!
+
+```nushell
+   ./jresume_transformer init_terminus
+   ./jresume_transformer replace_terminus_schema
+   ./jresume_transformer insert_a_resume 1
+   ./jresume_transfromer insert_a_resume 2
+```
+
+Some things that I have learned:
+1. I made all the properties optional. Since json_resume dosen't mark any property as requried.
+   But I think I'll need to change this in the future for other json schemas.
+2. I need to store nested data as Sets not Lists, because Sets are optional
+3. max_cardinality:1 is supposed to mean the same as "Optional"
+4. I needed to store the additionalInformation valuas in a nested object. of type sys:JSON 
+   because the entities in the database have strict record.
+5. The main difference between json_schema nad terminusdb is that 
+   in json_schema all fields are optional and can have extra fields.
+    wereas in terminusdb the schema is strong. 
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
