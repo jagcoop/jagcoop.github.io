@@ -416,6 +416,88 @@ Some things that I have learned:
    in json_schema all fields are optional and can have extra fields.
     wereas in terminusdb the schema is strong. 
 
+2025-01-23 An insight on temporal queries
+=========================================================================
+
+Now that I was able to insert data there are a few challenges left.
+But as usual I got distracted thinking on the next project...
+After I finish this json_resume database.
+I want to builda Kanban board like Trello, Kanbanize or Jira.
+
+Thinking about the next kanban board
+---------------------------------------------------------------------
+And in order to do that I need to record when A card changes column.
+So let's think of simple kanban board with:
+
+|Swimlanes|todo | Doing | Review | Doe |
+|---------|-----|-------|--------|-----|
+| Urgent  |     |Card1  |        |     |
+|         |Card2|       |        |     |
+|---------|-----|-------|--------|-----|
+| Bugs    |     |       |Card3   |     |
+|---------|-----|-------|--------|-----|
+
+
+So the first thing to realize is that a Kanban board is *not* a list of lists.
+[Like Joel spolsky said](https://www.joelonsoftware.com/2012/01/06/how-trello-is-different/).
+
+A kanban board is a matrix with Columns (Stages) and rows (Classes of Service).
+And a matrix is actually a graph.
+So I thikn the most natural thing is to store the kanban board as graph.
+Now the next thing is that we not only want matrix.
+But we want to record how it changes *over time*.
+
+But we need to ask of it:
+How has this card status changed over time.
+
+```yaml
+Card_1:
+    Status:
+        2024-01-01 : Todo
+        2024-01-05 : Doing
+        2024-01-12 : Review
+        2024-01-14 : Done
+    Lead_Time:
+        Done_minus_todo: 13 days
+```
+
+or perhaps we want to know of each column what their cards were:
+
+```yaml
+Column:
+    Todo:
+        2024-01-10: 
+            - Card_2
+            - Card_4
+    Doing
+        2024-01-01: 
+            - Card_1
+    Review
+        2024-01-01:
+            - Card_3
+```
+
+And of coures you can also ask by row (class of service) and column
+
+The important thing is that we need to know how a value changed over time.
+And terminus DB *can* do that.
+But it is only as 'patch' changes.
+as a *checking out* a branch to a certain state of time.
+
+Of course it is NOT natural to do the time queries.
+But is possible.
+
+I think my next experiment an Online Collaborative Kanban Board.
+Will start with terminus DB.
+But will consider to chage to SirixDB
+
+Because I don't think TerminusDB can give me the time queries in an easy way. 
+Since it encodes changes in time as patches.. ie. operations to fields.
+And then I would need to re-process those patches as changes in time.
+and maybe in sirixdb that is easier to do.
+
+
+-------
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
