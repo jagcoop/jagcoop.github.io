@@ -216,6 +216,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/More_About_Zettelkaster/index.html</loc>
+  <lastmod>2025-01-26</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development/index.html</loc>
   <lastmod>2025-01-26</lastmod>
   <changefreq>weekly</changefreq>

@@ -361,6 +361,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/More_About_Zettelkaster](././posts/More_About_Zettelkaster/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](././posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development/) 
   	  </li>
   	</ul>
@@ -2864,6 +2868,78 @@ As Einstein said: "We cannot solve a problem at the same level of thinking that 
 - Ted (July 2011). Geoff Mulgan: A short intro to the Studio School. Retrieved September 17, 2011, from http://www.ted.com/talks/geoff_mulgan_a_short_intro_to_the_studio_school.html
 - Vembu, Sridhar (June 2008). How We Recruit – On Formal Credentials vs. Experience-based Education. Retrieved September 12, 2012, from https://www.zoho.com/general/blog/how-we-recruit-on-formal-credentials-vs-experience-based-education.html
 
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+More about Zettlekasten
+By Pepe Hernandez. January 26th, 2025.
+
+The author of Zettlekasten is Niklas Luhmann (+70 books, 400 academic articles).His Zettlekaste contained over 90,000 ideas. Very good. "Even after his deaths, his ideas were combined to write MORE BOOKS!!"
+
+Zettelkasten means "slip box" of "box of cards".
+Each slip or card represent a SINGLE, ATOMIC IDEA that makes sense by ITSELF, and also in combination with other ideas.
+
+Zettlekasten as a Workflow
+
+1. Fleeting Notes
+2. Literature Notes
+3. Permanent Notes
+4. Index Notes
+5. Keyword notes
+
+How to take Fleeting Notes in Zettelkasten
+Where to write it: a physical notebook.
+
+Fleeting notes from a book
+Criteria:
+You want to remember the idea permanently.
+You want to use the idea in your work
+
+Method:
+Write the reference of the book at the top (author, year, name, publisher)
+Write all the notes that are compliant with the criteria in consecutive numbers.
+
+Example:
+	HOW TO LAERN ANYTHING
+	Kaufman, J. (2014). The irst 20 Hours: How to Learnd 	Anythig... Fast. United Stats Publishing Group.
+	...
+	11 10,000 HOURS TO EXPERT (Ref to Malcom Gladwell's 	2008 Outlier book).
+	...
+
+## At the end write a Literature Note.
+Choose among your fleeting notes.
+Write a paragraph for the ideas selected.
+Criteria:
+Write in in YOUR OWN WORDS.
+Write it in such away that if you read it 10 years later it would MAKE SENSE BYITSELF.
+One idea per note.
+If you need to define a term for the idea/concept to make sense, CREATE A DEFINITION card and link it.
+Include the complete reference for the source you got the idea form.
+Include relevant situation.
+
+Example:
+Niklas Luhman was a german sociologist who published over 70 books and 400 academic articles (Ahrens, 2017, pp.30). Luhman credited his achievements to his Zettelkasten, which contained over 90,000 ideas that helped him develop topics by knitting together ideas into a cohesive whole. His books wrote themselves, idea by idea (even after his death, his ideas could be combined to publish more books on his behalf).
+
+
+## Permanent notes
+Literature notes ONLY HAVE A CONNECTION with its source (the book, etc.)
+Permanente notes are written in the context of YOUR IDEAS AND INTERSTS.
+Literature notes must contain a SINGLE IDEA on each page.
+The moment you BIND TWO IDEAS they lose the ability to insert ne ideas between them.
+
+## How to connect permanent notes to other permanent notes
+- Chronologically.
+Example: A note which contradicts findings in a note that contains a fact, study, opinion.
+- A bridge note
+Your explanation of why those notes seems related to you.
+- Topic index.
+This is a note which contains links of ideas  that are directly relevant to your topic.
+- Index Notes.
+An index note represent a cluster of related permanent notes.
+
+## References
+https://medium.com/@fairylights_io/the-zettelkasten-method-examples-to-help-you-get-started-8f8a44fa9ae6
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
@@ -6840,6 +6916,10 @@ This are the innovations that have been ocupaying our minds lately
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
+### [2025-01-26: posts/More_About_Zettelkaster](./posts/More_About_Zettelkaster).
+[lab notes ongaing](./posts/More_About_Zettelkaster)
+
+
 ### [2025-01-26: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
@@ -7009,6 +7089,7 @@ Email
 		<li>[posts/One_more_year](/posts/One_more_year/index.html)</li>
 		<li>[posts/Navigating_GHC_compilation_errors_in_Emacs](/posts/Navigating_GHC_compilation_errors_in_Emacs/index.html)</li>
 		<li>[posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](/posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud/index.html)</li>
+		<li>[posts/More_About_Zettelkaster](/posts/More_About_Zettelkaster/index.html)</li>
 		<li>[posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](/posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development/index.html)</li>
 		<li>[posts/Manage_complexity_behind_simple_interfaces](/posts/Manage_complexity_behind_simple_interfaces/index.html)</li>
 		<li>[posts/Karina_La_Humana](/posts/Karina_La_Humana/index.html)</li>
@@ -8296,6 +8377,10 @@ and maybe in sirixdb that is easier to do.
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](././posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/More_About_Zettelkaster](././posts/More_About_Zettelkaster/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
