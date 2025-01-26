@@ -1,0 +1,71 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+# Continuous Integration (CI): Garnix
+January 25th, 2025
+by *Karina Chaires*
+
+
+## Garnix is a hosted CI service based on Nix that integrates seamlessly with GitHub.
+
+Compared to GitHub Actions, CI jobs on Garnix run faster while providing free Nix caching (no need to manually upload to Cachix). It currently only works with flake-enabled repos. 
+
+## Features:
+
+- **Integration with Nix Flakes:**
+Garnix uses the configurations defined in the `flake.nix` file, eliminating the need for CI-specific YAML configurations. This means that the same configuration running on your local machine will be executed in the CI environment.
+
+- **Shared Binary Cache:**
+Garnix offers a globally shared binary cache. This means that build results from various projects are stored and shared, making the compilation process faster. Pre-compiled components can be reused, enhancing overall efficiency.
+
+- **Multi-Platform Support:**
+Garnix supports multiple platforms on both x86_64 and aarch64 architectures,
+including Linux and macOS. Projects targeting different environments can be
+seamlessly integrated and tested within the CI pipeline.
+
+- **Efficient Build Processes:**
+Unlike some CI services that clear the `/nix/store` folder after each execution, Garnix retains this store, allowing for faster subsequent builds.
+
+## Considerations:
+
+It’s important to note that Garnix is not currently open-source. However, the service emphasizes minimal vendor lock-in. Configurations rely primarily on standard Nix practices, so transitioning away from Garnix, if needed, would not require extensive reconfiguration.
+
+## Example:
+
+```nix
+{
+  description = "A simple sample Nix project";
+  outputs = { ... }:
+    {
+
+     checks = {
+        x86_64-linux.test = ...;
+      };
+
+
+
+      packages = {
+        x86_64-linux.frontend = ...;
+        aarch64-darwin.devServer = ...;
+      };
+
+
+
+      nixosConfigurations = {
+        server = ...;
+        db = ...;
+      };
+  };
+}
+```
+
+
+## Conclusion:
+
+Garnix offers an attractive CI solution that combines simplicity, efficiency, and robust features. Its deep integration with Nix and user-friendly design make it a compelling option for achieving an optimized CI workflow.
+
+According to the official site, integrating Garnix is as simple as "Click. Push. Done." All you need to do is install the Garnix GitHub App and push a `flake.nix` file to your repository. Garnix takes care of everything else: building your software, running tests, and even provisioning and deploying your servers.
+
+[garnix.io](https://garnix.io/)
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
