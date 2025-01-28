@@ -265,6 +265,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/What_a_mechanic_understans_about_free_software](././posts/What_a_mechanic_understans_about_free_software/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Videogames_The_new_frontier_in_English_learning](././posts/Videogames_The_new_frontier_in_English_learning/) 
   	  </li>
   	</ul>
@@ -5564,6 +5568,95 @@ In conclusion, video games offer an innovative and effective approach to studyin
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
+     **What a mechanic understands about Free(dom) Software**
+
+January 27th, 2025
+By Alejandro Garcia
+
+My father is 76-year-old mechanic, farmer and bureaucrat.
+His daily drive is a 1982 Ford Bronco.
+His older cars are 1970's Ford Mustang and a Chevrolet Corvette.
+And he understands more about Free-software than  most of us, so-called software engineers.
+
+Free(dom) Software as defined by the Free Software Foundation.
+Is software that fulfills the 4 freedoms which are:
+
+> The freedom to run the program as you wish, for any purpose (freedom 0).
+> The freedom to study how the program works, and change it so it does your computing as you wish (freedom 1). Access to the source code is a precondition for this.
+> The freedom to redistribute copies so you can help your neighbor (freedom 2).
+> The freedom to distribute copies of your modified versions to others (freedom 3). By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.
+
+# The freedom to run the program as you wish, for any purpose (freedom 0).
+
+Would a mechanic buy a car, that he can only drive on city roads?
+Of course not. Because a mechanic OWNS his car and can bend it to its will.
+So why we as software engineers accept platforms that we can only use for certain approved purposes?
+
+# The freedom to study how the program works, and change it so it does your computing as you wish (freedom 1).
+
+Would a mechanic buy a car, that he cannot disassembly?
+Of course not!
+The mere idea that he couldn't disassembly his own car goes against
+What makes him a mechanic.
+How would a mechanic learn How cars work?
+If he couldn't take one apart. And Could only read about how cars are made
+Or if there were only "teaching" cars.
+But the real cars he couldn't open the hood.
+
+And some companies like John Deere and Tesla, are making it so that only their company employees can fix *your* car.
+A mechanic would never touch those companies.
+
+# The freedom to redistribute copies so you can help your neighbor (freedom 2).
+
+Would a mechanic buy a car, that he *can't* later give to his daughter?
+Of course no!
+Because a mechanic understands that he *OWNS* his car.
+To do with his car what he pleases.
+
+And yet with software, and books, we happily accept that we cannot re-sell it?
+Why?
+
+# The freedom to distribute copies of your modified versions to others (freedom 3).
+
+Would a mechanic accept a car that he cannot modify?
+My Father's '82 Bronco was a 4x4.
+He didn't like that suspension because He felt it was to rigid.
+So he actually changed the suspension for softer one.
+He has also changed the Engine at least 4 times.
+and the drive shaft at least 3.
+He changed the gear box so many times that he lost count.
+Until he found one that felt exactly like he wanted.
+And you know what?
+He can give his truck to me if he so wishes!
+
+Why would we take anything less from the software that we run?
+
+# The biggest freedom of all
+
+A mechanic knows:
+
+> That he doesn't buy cars that he doesn't understand.
+> He doesn't buy cars that come with planned obsolescence
+> Or that are designed to limit his freedoms!
+
+Now someone can make the argument, that that is all good for mechanics.
+But most of the people are not mechanics, and don't know and don't want to know how their cars work.
+So they happily take their car to the dealer, where they get charged handsomely for the most basic service.
+
+And that is true. But the customer *doesn't have* to take their car to the dealer.
+They can take it to a cheaper mechanic if they want.
+
+So that is the biggest lesson of all:
+
+> Don't buy car that you can't fix, or take to a mechanic that can fix it.
+> Don't buy software that you cannot fix, or take to a software engineer to modify it for you.
+> Especially if you are a mechanic, in the case of the former.
+> and especially if you are a software engineer, in the case of the latter.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
 # You can finish today without writing something. Here is why.
 November 28th, 2024
 By Pepe Hernández
@@ -6877,6 +6970,10 @@ This are the innovations that have been ocupaying our minds lately
 [lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
 
 
+### [2025-01-28: posts/What_a_mechanic_understans_about_free_software](./posts/What_a_mechanic_understans_about_free_software).
+[lab notes ongaing](./posts/What_a_mechanic_understans_about_free_software)
+
+
 ### [2025-01-28: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
@@ -7126,6 +7223,7 @@ Email
 		<li>[posts/argentina_coops](/posts/argentina_coops/index.html)</li>
 		<li>[posts/a_dozen_problems](/posts/a_dozen_problems/index.html)</li>
 		<li>[posts/You_Need_To_Write_Here_is_Why](/posts/You_Need_To_Write_Here_is_Why/index.html)</li>
+		<li>[posts/What_a_mechanic_understans_about_free_software](/posts/What_a_mechanic_understans_about_free_software/index.html)</li>
 		<li>[posts/Videogames_The_new_frontier_in_English_learning](/posts/Videogames_The_new_frontier_in_English_learning/index.html)</li>
 		<li>[posts/Unlocking_the_Power_of_Personal_Cloud](/posts/Unlocking_the_Power_of_Personal_Cloud/index.html)</li>
 		<li>[posts/Understanding_complexity_in_software_systems](/posts/Understanding_complexity_in_software_systems/index.html)</li>
@@ -8269,9 +8367,23 @@ Since it encodes changes in time as patches.. ie. operations to fields.
 And then I would need to re-process those patches as changes in time.
 and maybe in sirixdb that is easier to do.
 
+Why is time important?
+------------------------------------------------------------
+Newton (and Leibniz) invented calculus to deal with the fact that the planets change across time.
+However our software and our databases (relational) acts as if it was only the present time all the time.
+But the fact of the mater is that time exists.
+Fields in the database change in time.
+People change names, and last names.
+Systems where using one version in 1995 and a new version in 2025.
+And we need to reflect this in our systems.
+But not as somethnig exceptional.
+But as the true nature of software.
 
--------
+What we have currently in most systems are "rules of thumb" and exceptions when the need for time is undeniable.
 
+But I think we must work in things that recognize time.
+as the "constant" that it is.
+ 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <li>[.](././) 
@@ -8343,6 +8455,10 @@ and maybe in sirixdb that is easier to do.
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/You_Need_To_Write_Here_is_Why](././posts/You_Need_To_Write_Here_is_Why/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/What_a_mechanic_understans_about_free_software](././posts/What_a_mechanic_understans_about_free_software/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
