@@ -273,6 +273,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Using_Elixir_Flow_To_Process_Data](././posts/Using_Elixir_Flow_To_Process_Data/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Unlocking_the_Power_of_Personal_Cloud](././posts/Unlocking_the_Power_of_Personal_Cloud/) 
   	  </li>
   	</ul>
@@ -5531,7 +5535,106 @@ Here's a quick summary of the technologies that power each part of my personal c
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
-December 5th, 2024
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+# Implementing Elixir Flow
+
+January 28th, 2025
+By Miguel Iñiguez
+
+# Problem
+
+I have a database containing 400,000 lead records. I need to process a CSV file by reading it row by row to check if each phone number already exists in the database. Afterward, I need to generate a new CSV file with an additional column indicating whether each row is duplicated (exists in the database) or not.
+A simple query in the database, such as SELECT * FROM leads WHERE phone = '964480916', takes approximately 5 milliseconds. Therefore, processing 5,000 records sequentially would take 5,000×5 ms=25,000 ms5,000 \times 5 \, \text{ms} = 25,000 \, \text{ms}5,000×5ms=25,000ms, or 25 seconds.
+
+To optimize this process, I plan to use concurrency to reduce the total time required for processing the data.
+
+# Solution using Flow
+## What is Flow?
+Flow is a library in Elixir designed for handling concurrent and parallel data processing, leveraging Elixir's concurrency capabilities and the Erlang runtime system. It is particularly useful for working with large datasets distributed across multiple nodes or CPU cores.
+
+Key Features:
+
+* Parallel Processing: Allows splitting tasks into multiple processes that can run concurrently to take advantage of multicore CPUs.
+* Stream-based Model: Flow uses a model inspired by Apache Spark's data processing approach, processing data in stages like a pipeline.
+* Compatible with Enumerable: Works with any data source that implements the Enumerable protocol, such as lists, maps, or streams.
+* Memory-efficient: Processes data in configurable batches to avoid loading the entire dataset into memory at once.
+* Support for Grouping: Allows grouping of data before processing, which is useful for operations like aggregations.
+
+# Explaning the main module
+
+```elixir
+def process_csv_concurrently(file_path, output_path) do
+  # Read the file as a stream to process it row by row without loading the entire file into memory.
+  file_path
+  |> File.stream!()
+  
+  # Parse the CSV stream into rows, where each row is represented as a list of values.
+  |> CSV.parse_stream()
+  
+  # Create a Flow pipeline from the enumerable (the parsed rows).
+  # Flow allows concurrent processing of the rows across multiple cores.
+  |> Flow.from_enumerable()
+  
+  # Apply the `process_row` function to each row in the stream concurrently.
+  |> Flow.map(&(process_row(&1)))
+  
+  # Partition the data for better parallelism. This splits the workload into partitions
+  # to ensure efficient concurrent processing.
+  |> Flow.partition()
+  
+  # Collect the results of the Flow processing as a list.
+  |> Enum.to_list()
+  
+  # Generate the final output CSV file with the processed data and write it to the given path.
+  |> generate_output_csv(output_path)
+end
+
+# Helper function to process a single row.
+defp process_row([name, phone]) do
+  # Check if a record with the given phone number exists in the database (using Ecto).
+  is_duplicate =
+    Repo.exists?(
+      from l in Lead, where: l.phone == ^phone
+    )
+
+  # Return the processed row with the original name and phone,
+  # plus a boolean indicating if the record is a duplicate.
+  [name, phone, is_duplicate]
+end
+
+# Helper function to generate and write the output CSV file.
+defp generate_output_csv(data, output_path) do
+  # Map over the processed data (row by row).
+  # This step doesn't modify the rows but prepares them for output.
+  processed_data = Enum.map(data, fn row -> row end)
+  
+  # Define the headers for the output CSV.
+  headers = ["name", "phone", "is_duplicate"]
+
+  # Combine the headers and processed rows into CSV format:
+  # 1. Add the headers to the data.
+  # 2. Convert each row into a comma-separated string.
+  # 3. Join all rows with newlines to form the complete CSV content.
+  csv_content =
+    [headers | processed_data]
+    |> Enum.map(fn row -> Enum.join(row, ",") end)
+    |> Enum.join("\n")
+
+  # Write the generated CSV content to the specified output path.
+  File.write!(output_path, csv_content)
+end
+
+```
+
+# Result
+
+The file containing 5,000 rows was processed in less than 2 seconds. This demonstrates the efficiency of using Elixir's concurrency model through the Flow library, which allowed for parallel processing of rows while interacting with the database. The system efficiently identified duplicate records by querying a database with 400,000 existing records, showcasing its capability to handle large datasets quickly and reliably.
+
+# Repo
+https://github.com/miniguez/sandbox_flow
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>December 5th, 2024
 By Ruben Mevy
 
 
@@ -6978,6 +7081,10 @@ This are the innovations that have been ocupaying our minds lately
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
 
+### [2025-01-28: posts/Using_Elixir_Flow_To_Process_Data](./posts/Using_Elixir_Flow_To_Process_Data).
+[lab notes ongaing](./posts/Using_Elixir_Flow_To_Process_Data)
+
+
 ### [2025-01-28: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
@@ -7225,6 +7332,7 @@ Email
 		<li>[posts/You_Need_To_Write_Here_is_Why](/posts/You_Need_To_Write_Here_is_Why/index.html)</li>
 		<li>[posts/What_a_mechanic_understans_about_free_software](/posts/What_a_mechanic_understans_about_free_software/index.html)</li>
 		<li>[posts/Videogames_The_new_frontier_in_English_learning](/posts/Videogames_The_new_frontier_in_English_learning/index.html)</li>
+		<li>[posts/Using_Elixir_Flow_To_Process_Data](/posts/Using_Elixir_Flow_To_Process_Data/index.html)</li>
 		<li>[posts/Unlocking_the_Power_of_Personal_Cloud](/posts/Unlocking_the_Power_of_Personal_Cloud/index.html)</li>
 		<li>[posts/Understanding_complexity_in_software_systems](/posts/Understanding_complexity_in_software_systems/index.html)</li>
 		<li>[posts/Track_your_day](/posts/Track_your_day/index.html)</li>
@@ -8463,6 +8571,10 @@ as the "constant" that it is.
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Videogames_The_new_frontier_in_English_learning](././posts/Videogames_The_new_frontier_in_English_learning/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Using_Elixir_Flow_To_Process_Data](././posts/Using_Elixir_Flow_To_Process_Data/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
