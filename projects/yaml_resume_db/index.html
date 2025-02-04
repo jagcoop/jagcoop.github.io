@@ -1,0 +1,517 @@
+   <meta charset="utf-8" emacsmode="-*- markdown -*-"> <link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/journal.css?">
+
+                        **Yaml Resume Database**
+                           Version 1.1
+
+
+Json Resume is a great way to keep your resume updated.
+However there two things missing:
+
+1. Json its an ugly format to look by hand.
+2. It would be nice to build a database of the knowledge and skills of team,
+   based on their json resume.
+
+
+
+2025-01-12: Starting the project
+=================================================================
+
+In order to start this project I need:
+
+1. A couple of json resumes
+1. the json schema of json resumes.
+1. Translate the json schema to a terminus db instance.
+1. insert the json resume in terminusdb
+1. query the terminusdb  to get the tag cloud of projects we know on.
+
+Now I hope to make this document a literate program.
+So let's see how far I get it to be.
+
+Get a couple of json resumes
+---------------------------------------------------------------
+
+```nushell
+    $ mkdir test
+    $ http get https://gist.githubusercontent.com/thomasdavis/c9dcfa1b37dec07fb2ee7f36d7278105/raw/c0399b7abb13fe63912843ca6f6c90af63fb28ae/resume.json |
+    > save --force test/1.json
+    $ http get https://gist.githubusercontent.com/elviejo79/ab0802ef51ac9f53defe686e7fae452b/raw/1d0be3cb5c3fb03259a1141779b632397524cb55/resume.json |
+    > save --force test/2.json
+```
+
+
+Let's get the schema to validate the files
+
+```nushell
+    $ http get https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json | 
+    > save test/old.schema.json
+```
+
+The schema that is in json schema store is for draf-04 of schema specification. 
+And we need to update. it
+
+```nushell
+    > ajv migrate -s test/old.schema.json -o test/resume.schema.json
+```
+
+
+We also must make sure that they are
+[valid json resumes according to the schema](https://chatgpt.com/share/67849193-d2c0-8007-82ce-26ae4d84f5d9).
+
+```nushell
+    $ ajv validate -s test/resume.schema.json -d test/1.json --strict=false -c ajv-formats
+    $ ajv validate -s test/resume.schema.json -d test/2.json --strict=false -c ajv-formats
+```
+
+2025-01-17 Transform the json_resume.scha to terminsdb schema
+================================================================
+It took me 5 days of 14 hours to create this migration script from jsonata.
+But now I can automaticall translate from json_resume.schema to terminusdb.schema.
+
+!!! note
+    I hope someday this transformation script can transform all the json schemas to jsonata.
+
+so now let's execute the jsonata query that transforms this one schema
+
+```nushell
+   $ cat test/resume.schema.json | jfq --query-file test/resume_schema_to_terminusdb.jsonata | save --force test/terminus.resume.schema.json
+```
+
+So simple and yet that query has been one of the most difficult things I've written.
+
+What should I do next?
+---------------------------------------------------------------
+
+[ ] Mutate one of the example resumes so that is almos the same as another 
+    To demonstrate that eventhough we are storing several resumes.
+    The quantity of entinties in the database doesn't grow because the entities are the same
+    Just linked from different documents
+[ ] Maybe run the schema commands by hand. So that I get to learn what I need to write.
+[ ] Personalize the resume_schema_to_terminusdb.json I think the main table JSON_RESUME
+    shouldn't have the @unfolded:[] key BUT  maybe it does... I need to check it.
+[ ] Run terminusdb store init to create a new storage
+[ ] Think I'll need to set up the routes of the schema and the instances... although I don't know how
+[ ] Once the schema is created by hand:
+    Try to insert 3 resumes!
+[ ] Run queries to show that eventhough you inserted 3 resumes you don't have 3 different entities
+    They should repeat!
+[ ] Once I know the process by hand:
+    try to pipe resume_schema_to_terminusdb.json file | terminusdb db doc -g
+
+2025-01-19 Let's try to make the schema run in TermunsDB
+==============================================================================
+
+Are you feeling lucky?
+----------------------------
+First let's try to see if we are lucky and all of our generated schema works.
+
+```nushell
+    $ tdb-cli doc insert family --full-replace --graph_type schema < ./test/terminus.resume.schema.json
+    Too many arguments to parse an organizatin
+```
+Ok no luck.
+
+
+One by one it is
+----------------------------
+
+So now let's do it one by one:
+
+```nushell
+    $ "
+    > {
+    >  "@id": "PROFILES",
+    >  "@type": "class",
+    >  "@unfolded": [],
+    >  "network": "xsd:string",
+    >  "url": "xsd:uri",
+    >  "username": "xsd:string"
+    > }
+    > " | save --force ./test/test_one_schema.json
+```
+
+```nushell
+    $ tdb-cli doc insert family --full-replace --graph_type schema < ./test/test_one_schema.json
+    Too many arguments to parse an organization
+```
+
+Ok so what is the current `family` schema (`family`) is just what I inhereted from the tutorial
+I'm following.
+
+```nushell 
+    $ tdb-cli doc get family --graph_type schema | tee ./test/current_organization.json
+    {"@base":"terminusdb:///data/", "@schema":"terminusdb:///schema#", "@type":"@context"}
+```
+
+let me append it to prepend it to the one schema we have:
+
+```nushell
+    $ tdb-cli doc get family --graph_type schema |
+    > tee ./test/current_organization.json
+    $ cat ./test/current_organization.json ./test/test_one_schema.json |
+    > cat ./test/current_organization.json ./test/test_one_schema.json |
+    > tdb-cli doc insert family --full-replace --graph_type schema 
+    {"@type":"api:InsertDocumentErrorResponse", "api:error": {"@type":"api:UnknownSchemaType", "api:type":"class"}, "api:message":"The '@type' field referred to an unimplemented schema type.", "api:status":"api:failure"}    
+```
+
+Ok so it seems the organization problem is over,
+now I need to chek the *class* word.
+looking at the tutorials seems that it should be "Class"
+
+```nushell
+    $ "{
+        "@id": "PROFILES",
+        "@type": "Class",
+        "@unfolded": [],
+        "network": "xsd:string",
+        "url": "xsd:uri",
+        "username": "xsd:string"
+      }" | save --force ./test/test_one_schema.json 
+```
+
+Next attempt
+```nushell
+    $ cat ./test/current_organization.json ./test/test_one_schema.json |
+    > tdb-cli doc insert family --full-replace --graph_type schema | jfq
+    {
+      "@type": "api:InsertDocumentErrorResponse",
+      "api:error": {
+        "@type": "api:SchemaCheckFailure",
+        "api:witnesses": [
+          {
+            "@type": "not_a_class_or_base_type",
+            "class": "http://www.w3.org/2001/XMLSchema#uri"
+          }
+        ]
+      },
+      "api:message": "Schema check failure",
+      "api:status": "api:failure"
+    }
+```
+Ok `uri` is not recognized as a valid type.
+What happens If I just eliminate it from the data.
+Now I'm going to use jfq to modify the json schema
+
+```nushell
+    $ cat ./test/terminus.resume.schema.json | jfq '($[`@id`="PROFILES"] ~>|$|{"@type":"Class"},["url"]|)' | save --force ./test/test_one_schema.json
+    $ cat ./test/current_organization.json ./test/test_one_schema.json | tdb-cli doc insert family --full-replace --graph_type schema | jfq
+    PROFILES
+```
+
+Success!!!
+
+Now let's put the url back
+---------------------------------------------------------------
+
+
+```nushell
+    $ cat ./test/terminus.resume.schema.json | jfq '($[`@id`="PROFILES"] ~>|$|{"@type":"Class", "url":"xsd:anyURI"}|)' | save --force ./test/test_one_schema.json
+    $ cat ./test/current_organization.json ./test/test_one_schema.json | tdb-cli doc insert family --full-replace --graph_type schema | jfq
+    PROFILES
+```
+
+Double success!!!
+
+Now let's make all the corrections to the transformer.
+----------------------------
+Ok now let's try our luck one more time with all the json schema.
+but with the Class correction and xsd:anyURI
+for that will change the original jsonata query.
+
+```nushell
+    $ pbpaste | 
+    save --force test/transform_json_resume_schema_to_terminusdb_schema.jsonata ; 
+    cat ./test/resume.json_schema | 
+    jfq --query-file test/transform_json_resume_schema_to_terminusdb_schema.jsonata | 
+    tee { save --force ./test/resume.terminus_schema} |
+    tdb-cli doc insert family --full-replace --graph_type schema |
+    jfq
+
+    JSON_RESUME
+    BASICS
+    WORK
+    VOLUNTEER
+    EDUCATION
+    AWARDS
+    CERTIFICATES
+    PUBLICATIONS
+    SKILLS
+    LANGUAGES
+    INTERESTS
+    REFERENCES
+    PROJECTS
+    META
+    LOCATION
+    PROFILES
+```
+ 
+Triple success!!!
+
+Lets prepare for the next steps
+---------------------------------------------------------------
+
+I'll still need to continue to improve the jsonata transformer.
+so might as well automate the testing of my variatons
+
+```nushell
+    pbpaste | save --force "test/transform_json_resume_schema_to_terminusdb_schema.jsonata" |
+    cat ./test/transform_json_resume_schema_to_terminusdb_schema.jsonata 
+```
+
+Esta es la parte reptitiva si no has cambiado la query en jsonata explorer
+
+```nushell
+cat test/resume.json_schema | jfq --query-file test/transform_json_resume_schema_to_terminusdb_schema.jsonata | save --force ./test/resume.terminus_schema;
+cat test/resume.terminus_schema | tee { tdb-cli doc insert family --full-replace --graph_type schema | jfq}
+```
+
+Could I store a json resume
+----------------------------
+
+```nushell
+$ tdb-cli doc insert family < ./test/1.json
+Too many arguments to parse an organization
+$ tdb-cli doc insert family/JSON_RESUME < ./test/1.json
+Too many arguments to parse an organization
+$ tdb-cli doc insert admin/family  < ./test/1.json
+```
+
+It seems I need to skip validations :-( 
+```nushell
+    $ cat ./test/2.json | tdb-cli doc insert --raw-json admin/family
+["terminusdb:///data/JSONDocument/7EtuLipEyOCx9Nb-" ]
+
+```
+
+However it does insert *a* json
+
+```nushell
+    $ tdb-cli doc get admin/family --id JSONDocument/7EtuLipEyOCx9Nb- | jfq
+```
+
+And it works!!!
+
+BUT BUT
+
+It's storinga single json document.
+NOT all the previous subdocuments.
+
+2025-01-20
+==================================================
+What is happening is that the actual json_resumes have:
+- Extra properties, like website. that are not part of the schema
+- lacking properties, that are optional en json schema, but in terminusdb are mandatory.
+
+And this comes from the fact that in, json_schema all properties are optional unless marked as required.
+allowing even "additionalInfo" properties.
+And in terminusdb is exactly the opposite every property is mandatory, unless marked as optional.
+And it doesn't allow extra fields!
+
+I have work around
+----------------------------
+In this conversation with chatgpt inspired me with the solution:
+https://chatgpt.com/share/678e916a-1304-8007-8aa8-32b84d50dbbe
+
+For this fields that are NOT part of the json.schema I need to classify them in a field 
+called metadata. And then In that field create store extra json fields.
+
+Changes to the schema_transformer and the instance_transformer
+----------------------------
+Because it implied changes to the schema_transformer and the instance_transformer
+
+And yes I was able to create such a query.
+It needed to change schema transformer
+and also query that process the resume.
+and I need another query that compares the original resume against the json_schema 
+
+``` nushell
+    $ pbpaste | save --force "./test/transform_resume_to_terminunsdb_instance.jsonata" |
+    cat ./test/transform_resume_to_terminunsdb_instance.jsonata
+
+    $ echo $"\{\"original_resume\": (cat ./test/1.json), \n \"terminus_schema\": (cat ./test/resume.terminus_schema) \}" | jq |
+    tee { save --force "./test/tmp_1.json"} | 
+    jfq --query-file ./test/transform_resume_to_terminunsdb_instance.jsonata | jq |
+    tee {save --force ./test/terminus.1.json } | 
+    tdb-cli doc insert admin/family | jq 
+```
+
+This has generated many errors... 
+that I have been fixing.
+but now I thin I'll just insert one by one.
+
+What should I try next
+----------------------------
+I will tri to feed terminus.1.json part by part :-( 
+I did try it and it complained on every kind of document (awrads,basics, etc)
+
+Trying with terminsdb NOT tdb-cli
+----------------------------
+I suspect that the terminsudb app is more complete than tdb-cli 
+
+```nushell
+    terminusdb store init #creates the directory structure where we are going to store
+    terminusdb db create admin/family 
+    terminusdb doc insert admin/family --full-replace --graph_type (the terminuss.schema)
+    terminusdb doc insert admin/fmaily (the instance you want)
+```
+
+2025-01-21 Now lets insert one by One
+=================================================
+Ok today will try to insert each table one by one.
+
+```nushell
+cat ../test/terminus.2.json | jfq "$.basics" | terminusdb doc insert admin/family 
+Error: Schema check failure
+{
+  "@type":"api:InsertDocumentErrorResponse",
+  "api:error": {
+    "@type":"api:SchemaCheckFailure",
+    "api:witnesses": [
+      {
+	"terminusdb:///schema#location": {
+	  "@type":"no_unique_type_for_document",
+	  "document": {"address":"Mexico", "countryCode":"US"},
+	  "reason": {
+	    "@type":"required_field_does_not_exist_in_document",
+	    "document": {
+	      "terminusdb:///schema#address": {
+		"@type":"http://www.w3.org/2001/XMLSchema#string",
+		"@value":"Mexico"
+	      },
+	      "terminusdb:///schema#countryCode":"US"
+	    },
+	    "field":"terminusdb:///schema#city"
+	  }
+	}
+      }
+    ]
+  },
+  "api:message":"Schema check failure",
+  "api:status":"api:failure"
+}
+
+```
+
+Ok so the first thing is that the schema lacks #city 
+I'll make that property optional in the transformer_json_schema.
+
+2025-01-22 Last strech 
+=================================
+Eureka: I was able to insert two json resumes in the database !!!
+
+```nushell
+   ./jresume_transformer init_terminus
+   ./jresume_transformer replace_terminus_schema
+   ./jresume_transformer insert_a_resume 1
+   ./jresume_transfromer insert_a_resume 2
+```
+
+Some things that I have learned:
+1. I made all the properties optional. Since json_resume dosen't mark any property as requried.
+   But I think I'll need to change this in the future for other json schemas.
+2. I need to store nested data as Sets not Lists, because Sets are optional
+3. max_cardinality:1 is supposed to mean the same as "Optional"
+4. I needed to store the additionalInformation valuas in a nested object. of type sys:JSON 
+   because the entities in the database have strict record.
+5. The main difference between json_schema nad terminusdb is that 
+   in json_schema all fields are optional and can have extra fields.
+    wereas in terminusdb the schema is strong. 
+
+2025-01-23 An insight on temporal queries
+=========================================================================
+
+Now that I was able to insert data there are a few challenges left.
+But as usual I got distracted thinking on the next project...
+After I finish this json_resume database.
+I want to builda Kanban board like Trello, Kanbanize or Jira.
+
+Thinking about the next kanban board
+---------------------------------------------------------------------
+And in order to do that I need to record when A card changes column.
+So let's think of simple kanban board with:
+
+|Swimlanes|todo | Doing | Review | Doe |
+|---------|-----|-------|--------|-----|
+| Urgent  |     |Card1  |        |     |
+|         |Card2|       |        |     |
+|---------|-----|-------|--------|-----|
+| Bugs    |     |       |Card3   |     |
+|---------|-----|-------|--------|-----|
+
+
+So the first thing to realize is that a Kanban board is *not* a list of lists.
+[Like Joel spolsky said](https://www.joelonsoftware.com/2012/01/06/how-trello-is-different/).
+
+A kanban board is a matrix with Columns (Stages) and rows (Classes of Service).
+And a matrix is actually a graph.
+So I thikn the most natural thing is to store the kanban board as graph.
+Now the next thing is that we not only want matrix.
+But we want to record how it changes *over time*.
+
+But we need to ask of it:
+How has this card status changed over time.
+
+```yaml
+Card_1:
+    Status:
+        2024-01-01 : Todo
+        2024-01-05 : Doing
+        2024-01-12 : Review
+        2024-01-14 : Done
+    Lead_Time:
+        Done_minus_todo: 13 days
+```
+
+or perhaps we want to know of each column what their cards were:
+
+```yaml
+Column:
+    Todo:
+        2024-01-10: 
+            - Card_2
+            - Card_4
+    Doing
+        2024-01-01: 
+            - Card_1
+    Review
+        2024-01-01:
+            - Card_3
+```
+
+And of coures you can also ask by row (class of service) and column
+
+The important thing is that we need to know how a value changed over time.
+And terminus DB *can* do that.
+But it is only as 'patch' changes.
+as a *checking out* a branch to a certain state of time.
+
+Of course it is NOT natural to do the time queries.
+But is possible.
+
+I think my next experiment an Online Collaborative Kanban Board.
+Will start with terminus DB.
+But will consider to chage to SirixDB
+
+Because I don't think TerminusDB can give me the time queries in an easy way. 
+Since it encodes changes in time as patches.. ie. operations to fields.
+And then I would need to re-process those patches as changes in time.
+and maybe in sirixdb that is easier to do.
+
+Why is time important?
+------------------------------------------------------------
+Newton (and Leibniz) invented calculus to deal with the fact that the planets change across time.
+However our software and our databases (relational) acts as if it was only the present time all the time.
+But the fact of the mater is that time exists.
+Fields in the database change in time.
+People change names, and last names.
+Systems where using one version in 1995 and a new version in 2025.
+And we need to reflect this in our systems.
+But not as somethnig exceptional.
+But as the true nature of software.
+
+What we have currently in most systems are "rules of thumb" and exceptions when the need for time is undeniable.
+
+But I think we must work in things that recognize time.
+as the "constant" that it is.
+ 
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>

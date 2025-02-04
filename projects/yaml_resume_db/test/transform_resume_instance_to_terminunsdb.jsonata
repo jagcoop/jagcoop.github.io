@@ -1,0 +1,26 @@
+(
+    $object_each := function($i,$f,$parent)<o-fo?:o>{(
+        $assert("object"=$type($i), "PRE: input must be an object");
+        $Result:=$i.$each(function($v,$h){ 
+            {$h: "array"=$type($v)? 
+            [$map($v,function($vv){$tag($vv,$h)})]:
+            $tag($v,$h)
+            }});
+        $Result := $Result~>$merge()
+        
+    )};
+
+    $tag:=function($v,$name)<os:o>{(
+    $expected_keys:= $$.terminus_schema[`@id`=$uppercase($name)].$keys();
+    $expected_values := $v.$sift(function($v,$k){$k in $expected_keys});
+    $additional_values := $v.$sift(function($v,$k){$not($k in $expected_keys)});
+    $assert($v = $merge($expected_values~>$append($additional_values)), "The expected values plus the additional ones should be the same as the original object");
+    $merge([{"@type":$uppercase($name)},
+    {"additionalProperties":$additional_values},
+    $expected_values
+    ]);
+    )};
+
+    $Result := $$.original_resume.$object_each(function($v,$k){{$k:$v}});
+    $Result := $Result ~> |$|{"@type":"JSON_RESUME"}|
+)

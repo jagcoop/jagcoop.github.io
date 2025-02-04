@@ -1,0 +1,99 @@
+(
+
+/* 
+ * ? Cualos son tus mayores aprendizajes?
+  * spliting type object into tables must be done at the beginnig.
+  * you only need to recurse when it is an item of type object or type array_of_objects
+  * when it is an array_unit DON't recurse, just try to find the type inside items.
+  * the properties of an object are $object.properties
+  * the propertie of an aray_unit are in $object.item.type
+  * wildocard opertaros * and ** don't start at current level they start one level below
+  * next time I propbabl will need to change the functions $preferredType and $transformer
+  */
+
+$preferredType := function($prop)<o-:s>{
+    $exists($prop.`$ref`)? "$ref":
+    $exists($prop.format)? $prop.format:
+    ($prop.type  = "object") ? "object":
+    (($prop.type  = "array") and $exists($prop.items.properties)) ? "array_objects":
+    (($prop.type  = "array") and $not($exists($prop.items.properties))) ? "array_units":
+    $exists($prop.type)? $prop.type:
+    $error("couldn't find type of: " & $prop)
+};
+
+$lookup_default := function($obj,$key)<o-s:(of)>{(
+    $assert($exists($obj.`_default`), "Must contain a deault vuale, given:" & $obj);
+    $exists($obj.$lookup($key))?$obj.$lookup($key):$obj.`_default`
+)};
+
+$as_class:=function($name)<s-:s>{
+    $uppercase($name)
+};
+
+$append_object:=function($original,$extra)<o-o:o>{(
+    $merge([$original,$extra])
+)};
+
+/* 
+ * este regresa un array con todos los objetos separados,
+ * esos objetos van a ser cada uno tablas en terminusdb
+ */
+
+$split_into_tables := function($properties)<o-:a<o>>{(
+    $isObject := function($p)<o:b>{
+      $p.[type="object" or items.type="object"]
+    };
+    $decorator := function($v,$k){{"table":$k.$as_class(), "content":$v}};
+    $properties.$sift($isObject).$each($decorator)
+    )};
+
+
+/* esta funcion busca en las propiedades del object actual.
+ * y tambien en 'items' del subobjeto
+ * esto debido a que el operador * y ** no buscan desde el principio
+ * la propiedad en el objeto actual 
+ * a lo mejor un meor nombre sería:
+ * $here_and_subobject
+ * $_* para crear una version del wildcard que busque aqui y un nivel más abajo
+ */
+
+$foreach := function($item,$key,$f)<o-sf:a<o>>{
+    $merge([$item.$lookup($key), $item.items.$lookup($key)])
+    .$each($f)
+};
+
+/* Esta funcion es la que dado un tipo de objetos
+ * regresa como se debe representar ese valor en terminusdb
+ * casitodo es con preferred type
+ * array_units es especial porque aunque se comporta casi como un tipo normalize
+ * su valor se saca del items anidado.
+ */
+
+$transformer := function($p,$k){(
+    $known := {
+        "$ref":{$k:($p.`$ref`="#/definitions/iso8601")?"xsd:dateTime":$p.`$ref`},
+        "uri":{$k:"xsd:anyURI"},
+        "email":{$k:"xsd:string"},
+        "object": {$k:$k.$as_class()},
+        "array_objects": {$k:{"@type":"List", "@class":$k.$as_class()}},
+        "array_units": {$k:{"@type":"List", "@class": "xsd:"&$p.items.$preferredType()}},
+        "_default": {$k:"xsd:"&$p.$preferredType()}
+    };
+    $known.$lookup_default($p.$preferredType())
+)};
+
+
+/* normalize the json resume so that it looks like the other's inside 
+ * we needed the 'external' {"properties":{"json_resume":..}} 
+ * because the ** operator dosn't start in the current object it has to be nested deeply one more"
+ */
+
+$json_resume := {"properties":{"json_resume":$}};
+$tables := $json_resume.**.properties.$split_into_tables().(
+    $merge([{"@id":$.table,"@type":"Class","@unfolded":[]}
+    ,$.content.$foreach("properties",$transformer)
+    ]));
+
+$database_def := [{"@base":"terminusdb:///data/", "@schema":"terminusdb:///schema#", "@type":"@context"}];
+$database_def ~>$append( $tables)
+)
