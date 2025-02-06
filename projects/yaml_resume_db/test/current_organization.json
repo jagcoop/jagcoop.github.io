@@ -1,0 +1,17 @@
+{"@base":"terminusdb:///data/", "@schema":"terminusdb:///schema#", "@type":"@context"}
+{"@id":"PROFILES", "@type":"Class", "network":"xsd:string", "url":"xsd:anyURI", "username":"xsd:string"}
+{"@id":"WORK", "@type":"Class", "description":"xsd:string", "endDate":"xsd:dateTime", "highlights": {"@class":"xsd:string", "@type":"List"}, "location":"xsd:string", "name":"xsd:string", "position":"xsd:string", "startDate":"xsd:dateTime", "summary":"xsd:string", "url":"xsd:anyURI"}
+{"@id":"INTERESTS", "@type":"Class", "keywords": {"@class":"xsd:string", "@type":"List"}, "name":"xsd:string"}
+{"@id":"CERTIFICATES", "@type":"Class", "date":"xsd:date", "issuer":"xsd:string", "name":"xsd:string", "url":"xsd:anyURI"}
+{"@id":"BASICS", "@type":"Class", "email":"xsd:string", "image":"xsd:string", "label":"xsd:string", "location":"LOCATION", "name":"xsd:string", "phone":"xsd:string", "profiles": {"@class":"PROFILES", "@type":"List"}, "summary":"xsd:string", "url":"xsd:anyURI"}
+{"$schema":"xsd:anyURI", "@id":"JSON_RESUME", "@type":"Class", "awards": {"@class":"AWARDS", "@type":"List"}, "basics":"BASICS", "certificates": {"@class":"CERTIFICATES", "@type":"List"}, "education": {"@class":"EDUCATION", "@type":"List"}, "interests": {"@class":"INTERESTS", "@type":"List"}, "languages": {"@class":"LANGUAGES", "@type":"List"}, "meta":"META", "projects": {"@class":"PROJECTS", "@type":"List"}, "publications": {"@class":"PUBLICATIONS", "@type":"List"}, "references": {"@class":"REFERENCES", "@type":"List"}, "skills": {"@class":"SKILLS", "@type":"List"}, "volunteer": {"@class":"VOLUNTEER", "@type":"List"}, "work": {"@class":"WORK", "@type":"List"}}
+{"@id":"PROJECTS", "@type":"Class", "description":"xsd:string", "endDate":"xsd:dateTime", "entity":"xsd:string", "highlights": {"@class":"xsd:string", "@type":"List"}, "keywords": {"@class":"xsd:string", "@type":"List"}, "name":"xsd:string", "roles": {"@class":"xsd:string", "@type":"List"}, "startDate":"xsd:dateTime", "type":"xsd:string", "url":"xsd:anyURI"}
+{"@id":"REFERENCES", "@type":"Class", "name":"xsd:string", "reference":"xsd:string"}
+{"@id":"VOLUNTEER", "@type":"Class", "endDate":"xsd:dateTime", "highlights": {"@class":"xsd:string", "@type":"List"}, "organization":"xsd:string", "position":"xsd:string", "startDate":"xsd:dateTime", "summary":"xsd:string", "url":"xsd:anyURI"}
+{"@id":"EDUCATION", "@type":"Class", "area":"xsd:string", "courses": {"@class":"xsd:string", "@type":"List"}, "endDate":"xsd:dateTime", "institution":"xsd:string", "score":"xsd:string", "startDate":"xsd:dateTime", "studyType":"xsd:string", "url":"xsd:anyURI"}
+{"@id":"AWARDS", "@type":"Class", "awarder":"xsd:string", "date":"xsd:dateTime", "summary":"xsd:string", "title":"xsd:string"}
+{"@id":"LANGUAGES", "@type":"Class", "fluency":"xsd:string", "language":"xsd:string"}
+{"@id":"META", "@type":"Class", "canonical":"xsd:anyURI", "lastModified":"xsd:string", "version":"xsd:string"}
+{"@id":"PUBLICATIONS", "@type":"Class", "name":"xsd:string", "publisher":"xsd:string", "releaseDate":"xsd:dateTime", "summary":"xsd:string", "url":"xsd:anyURI"}
+{"@id":"SKILLS", "@type":"Class", "keywords": {"@class":"xsd:string", "@type":"List"}, "level":"xsd:string", "name":"xsd:string"}
+{"@id":"LOCATION", "@type":"Class", "address":"xsd:string", "city":"xsd:string", "countryCode":"xsd:string", "postalCode":"xsd:string", "region":"xsd:string"}

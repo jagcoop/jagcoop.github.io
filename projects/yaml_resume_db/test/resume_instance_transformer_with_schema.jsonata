@@ -1,0 +1,46 @@
+(
+    $strict_each := function ($o,$f)<o-f:o>{
+        $each($o,$f)
+    };
+
+    $strict_sift := function($o,$f)<o-f:o>{
+        $sift($o,$f)
+    };
+    
+
+    $classify_value := function ($tbl_values, $tbl_name) {(
+        $get_new_tbl_value := function($tbl_val, $tbl_n){(
+            $properties_in_schema := $$.terminus_schema[`@id`=$uppercase($tbl_n)].$keys();
+            $newValues := $merge([$classify_just_value($tbl_val, $properties_in_schema), {"@class": $uppercase($tbl_n)} ]);
+        )};
+
+        $not($type($tbl_values)="array")?
+        ({$tbl_name: $get_new_tbl_value($tbl_values,$tbl_name)}):
+        (
+            $properties_in_schema := $$.terminus_schema[`@id`=$uppercase($tbl_name)].$keys();
+            {$tbl_name: $map($tbl_values, function($element){ $get_new_tbl_value($element,$tbl_name)}) }
+        )
+
+    )};
+
+    $classify_just_value := function ($tbl_values,$properties_in_schema) {(
+
+        $not($type($tbl_values)="array")?(
+        $is_additional_property := function($property, $name){
+            $not($name in $properties_in_schema)
+        };
+        $additionalPropertiesValues := $strict_sift($tbl_values,$is_additional_property);
+
+        $deleteAdditionalPropertiesKeys := $additionalPropertiesValues.$keys();
+        $newValues := $tbl_values ~> | $ | {"additionalProperties": $additionalPropertiesValues} ,$deleteAdditionalPropertiesKeys |;
+        $Result := $newValues;
+        ):(
+            $error("this is a nested array I haven't implemented the manaement of those")
+        )
+
+    )};
+
+    $Result := $$.original_resume.$strict_each($classify_value)~>$merge();
+    $Result := $Result ~> | $ | {"@class": $uppercase("json_resume")} ,$deleteAdditionalPropertiesKeys |;
+    $Result;
+)

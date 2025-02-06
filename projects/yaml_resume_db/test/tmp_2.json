@@ -1,0 +1,786 @@
+{
+  "original_resume": {
+    "basics": {
+      "name": "Alejandro Garcia",
+      "label": "Project Manager at Input Output (IOHK)",
+      "image": "https://github.com/elviejo79.png?size=256",
+      "email": "agarciafdz@gmail.com",
+      "phone": "+524921228171",
+      "url": "https://www.linkedin.com/in/elviejo79/",
+      "summary": "I'm a software developer, CS teacher and Entrepreneur with experience creating small tech companies. I love leading small focused teams to achieve success and I also love teaching introduction to programming to high school, college and graduated students. My favorite technologies right now: Elixir, Elm, Haskell, GraphQL, Emacs, Ubuntu.",
+      "location": {
+        "countryCode": "US",
+        "address": "Mexico"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "elviejo79",
+          "url": "https://www.linkedin.com/in/elviejo79/"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Input Output (IOHK)",
+        "position": "Project Manager",
+        "startDate": "2017-07-31",
+        "summary": "IOHK is a Hong Kong-based software development company that builds custom cryptocurrencies for corporations, governments and academic institutions. Our mission is to build cryptocurrencies to provide the world's 3-billion unbanked people with the financial services that they are missing. We were founded in 2015 by Jeremy Wood and Charles Hoskinson who have built Ethereum (the most powerful and successful smart contracts technology) and Bitshares (the first attempt at creating a value-stable cryptocurrency). Our executive team also includes academics and entrepreneurs with experience building cryptocurrency-related businesses and services.",
+        "url": "https://www.linkedin.com/company/input-output-global/"
+      },
+      {
+        "name": "CIMAT",
+        "position": "Associate Professor",
+        "startDate": "2013-06-30",
+        "endDate": "2019-05-31",
+        "summary": "I teach classes in: * Software Quarity Assurance (agile) * Discrete Math (haskell) * Distributed Systems ( RabbitMQ) * Software Components (APIs, REST)",
+        "url": "https://www.linkedin.com/company/cimat/",
+        "location": "Zacatecas, México"
+      },
+      {
+        "name": "Softlogik",
+        "position": "CEO / CTO",
+        "startDate": "2010-02-28",
+        "endDate": "2010-08-31",
+        "summary": "I started the company step strategic vision Trained the first employees in Scrum, Kanban and Unit Testing",
+        "location": "Zacatecas, México"
+      },
+      {
+        "name": "OmniTI",
+        "position": "Software Analyst",
+        "startDate": "2006-11-30",
+        "endDate": "2009-09-30",
+        "summary": "Software developer mainly in PHP",
+        "url": "https://www.linkedin.com/company/omniti/"
+      },
+      {
+        "name": "Tecnologias DEXA",
+        "position": "CEO / Cofounder",
+        "startDate": "2002-01-31",
+        "endDate": "2006-02-28",
+        "summary": "5 friends and I started this software Company in Zacatecas. Probably the first software company on the state. Although there some earlier individual attempts at it. Got it grow to 13 employees and Later \"collapsed\" I was director for a period of 2 years."
+      },
+      {
+        "name": "ITESM Campus Zacatecas",
+        "position": "DBA Servicios Escolares",
+        "startDate": "2001-07-31",
+        "endDate": "2003-08-31",
+        "summary": "Write SQL queries.. Create AD-Hoc reports to decision makers Ensure the quality of the Database",
+        "url": "https://www.linkedin.com/school/tecdemonterrey/"
+      }
+    ],
+    "volunteer": [
+      {
+        "organization": "Startup Weekend",
+        "url": "https://twitter.com/SWZac",
+        "position": "Mentor",
+        "startDate": "2012-09-30",
+        "endDate": "2015-01-01",
+        "summary": "I've been a mentor for this event in 4 ocasions. Teaching young entrepreneurs about Business Model Canvas, Lean Startup and Fast Prototyping."
+      },
+      {
+        "organization": "Zacatecas Fuck Up Nights",
+        "position": "Organizer",
+        "startDate": "2014-01-31",
+        "endDate": "2015-01-31",
+        "summary": "Once a month Five diferrent entrepreneurs share their Failure stories in order to inspire young people to try and start their own business. Without fear of failure."
+      }
+    ],
+    "education": [
+      {
+        "institution": "Centro de Investigación en Matemáticas A.C.",
+        "area": "Software Engineering, Project Management",
+        "studyType": "Master in Software Engineering",
+        "startDate": "2010-12-31",
+        "url": "https://www.cimat.mx/"
+      },
+      {
+        "institution": "Tecnológico de Monterrey",
+        "area": "Systems Engineering",
+        "studyType": "BS",
+        "startDate": "1996-12-31",
+        "endDate": "2000-12-31",
+        "score": "96/100"
+      }
+    ],
+    "certificates": [
+      {
+        "name": "AKT - Accredited Kanban Trainner",
+        "issuer": "Lean Kanban Inc.",
+        "startDate": "2015-05-31",
+        "url": "http://edu.leankanban.com/users/alejandro-garcia"
+      },
+      {
+        "name": "CSP - Certified Scrum Professional",
+        "issuer": "Scrum Alliance",
+        "startDate": "2015-04-30",
+        "url": "https://www.scrumalliance.org/community/profile/agarc9afer"
+      },
+      {
+        "name": "CSPO - Certified Scrum Product Owner",
+        "issuer": "Scrum Alliance",
+        "endDate": "2017-04-30",
+        "startDate": "2014-11-30",
+        "url": "https://www.scrumalliance.org/community/profile/agarc9afer"
+      },
+      {
+        "name": "CSD - Certified Scrum Developer",
+        "issuer": "Scrum Alliance",
+        "startDate": "2014-08-31",
+        "url": "https://www.scrumalliance.org/community/profile/agarc9afer"
+      },
+      {
+        "name": "CSM - Certified Scrum Master",
+        "issuer": "Scrum Alliance",
+        "startDate": "2011-09-30",
+        "url": "https://www.scrumalliance.org/community/profile/agarc9afer"
+      },
+      {
+        "name": "Machine Learning",
+        "issuer": "Coursera Course Certificates",
+        "startDate": "2016-03-31",
+        "url": "https://www.coursera.org/account/accomplishments/verify/DZLDNG6LW9R5"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Backend",
+        "level": "Senior",
+        "keywords": [
+          "Haskell",
+          "Eiffel",
+          "PHP",
+          "Python",
+          "Linux",
+          "Design Patterns",
+          "Bash Scripting"
+        ]
+      },
+      {
+        "name": "Frontend",
+        "level": "Junior",
+        "keywords": [
+          "Typescript",
+          "Elm",
+          "htmx"
+        ]
+      },
+      {
+        "name": "Agile Methods / Project Management",
+        "level": "Senior",
+        "keywords": [
+          "Kanban Trainner",
+          "Scrum",
+          "PSP Personal Software Process",
+          "TOC thinking Processes",
+          "Coaching & Mentoring"
+        ]
+      },
+      {
+        "name": "Ops",
+        "level": "Junior",
+        "keywords": [
+          "Google Cloud",
+          "AWS",
+          "REST ?"
+        ]
+      },
+      {
+        "name": "Database",
+        "level": "Mid",
+        "keywords": [
+          "MySQL",
+          "SQL",
+          "Neo4j",
+          "TypeDB"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "fluency": "Professional Working",
+        "language": "English"
+      },
+      {
+        "fluency": "Native Speaker",
+        "language": "Spanish"
+      }
+    ],
+    "meta": {
+      "theme": "kendall",
+      "version": "v1.0.0",
+      "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+    }
+  },
+  "terminus_schema": [
+    {
+      "@base": "terminusdb:///data/",
+      "@schema": "terminusdb:///schema#",
+      "@type": "@context"
+    },
+    {
+      "@id": "JSON_RESUME",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "basics": {
+        "@type": "Optional",
+        "@class": "BASICS"
+      },
+      "work": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "WORK"
+      },
+      "volunteer": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "VOLUNTEER"
+      },
+      "education": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "EDUCATION"
+      },
+      "awards": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "AWARDS"
+      },
+      "certificates": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "CERTIFICATES"
+      },
+      "publications": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "PUBLICATIONS"
+      },
+      "skills": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "SKILLS"
+      },
+      "languages": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "LANGUAGES"
+      },
+      "interests": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "INTERESTS"
+      },
+      "references": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "REFERENCES"
+      },
+      "projects": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "PROJECTS"
+      },
+      "meta": {
+        "@type": "Optional",
+        "@class": "META"
+      }
+    },
+    {
+      "@id": "BASICS",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "name": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "label": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "image": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "email": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "phone": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "url": {
+        "@type": "Optional",
+        "@class": "xsd:anyURI"
+      },
+      "summary": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "location": {
+        "@type": "Optional",
+        "@class": "LOCATION"
+      },
+      "profiles": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "PROFILES"
+      }
+    },
+    {
+      "@id": "WORK",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "name": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "location": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "description": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "position": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "url": {
+        "@type": "Optional",
+        "@class": "xsd:anyURI"
+      },
+      "startDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "endDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "summary": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "highlights": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "VOLUNTEER",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "organization": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "position": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "url": {
+        "@type": "Optional",
+        "@class": "xsd:anyURI"
+      },
+      "startDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "endDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "summary": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "highlights": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "EDUCATION",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "institution": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "url": {
+        "@type": "Optional",
+        "@class": "xsd:anyURI"
+      },
+      "area": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "studyType": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "startDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "endDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "score": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "courses": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "AWARDS",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "title": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "date": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "awarder": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "summary": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "CERTIFICATES",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "name": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "date": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "url": {
+        "@type": "Optional",
+        "@class": "xsd:anyURI"
+      },
+      "issuer": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "PUBLICATIONS",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "name": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "publisher": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "releaseDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "url": {
+        "@type": "Optional",
+        "@class": "xsd:anyURI"
+      },
+      "summary": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "SKILLS",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "name": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "level": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "keywords": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "LANGUAGES",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "language": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "fluency": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "INTERESTS",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "name": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "keywords": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "REFERENCES",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "name": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "reference": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "PROJECTS",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "name": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "description": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "highlights": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "xsd:string"
+      },
+      "keywords": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "xsd:string"
+      },
+      "startDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "endDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "url": {
+        "@type": "Optional",
+        "@class": "xsd:anyURI"
+      },
+      "roles": {
+        "@type": "Set",
+        "@max_cardinality": 1,
+        "@class": "xsd:string"
+      },
+      "entity": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "type": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "META",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "canonical": {
+        "@type": "Optional",
+        "@class": "xsd:anyURI"
+      },
+      "version": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "lastModified": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "LOCATION",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "address": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "postalCode": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "city": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "countryCode": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "region": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      }
+    },
+    {
+      "@id": "PROFILES",
+      "@type": "Class",
+      "@unfolded": [],
+      "@key": {
+        "@type": "ValueHash"
+      },
+      "additionalProperties": {
+        "@type": "Optional",
+        "@class": "sys:JSON"
+      },
+      "network": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "username": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "url": {
+        "@type": "Optional",
+        "@class": "xsd:anyURI"
+      }
+    }
+  ]
+}
