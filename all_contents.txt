@@ -8788,7 +8788,7 @@ And I have hade several issues:
 4. I couldn't get a URI library to work.
 
 Too low level
-=================================================
+---------------------------------------------------------
 Eiffel web framework has two objects `request` and `response`
 In one comes the http request and of course in the other we write the response.
 
@@ -8802,6 +8802,18 @@ with it's types and have it automatically create a form for me.
 Also when  I submit it. 
 It sholud be hydrated by the framework in to the same type that the object was created.
 THi will work with Magritte.
+
+I couldn't get the URI library to work.
+----------------------------------------------------------------
+I think this was my mistake.
+after ading the URI class.
+I probably need to compile.
+
+
+I couldn't get regex to work.
+-----------------------------------------------------------------
+This was a problem of documentation.
+I needed to compile the RegEx before doing the match.
 
  
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
