@@ -1,0 +1,11 @@
+(
+    $ ~> | $ | {"@type":"JSON_RESUME"} |;
+    
+$.$each(function($d,$h){(
+  $tmp := $d ~> | $ | {"@type":$uppercase($h)} |;
+  {$h:$tmp}
+)})~>$merge();
+
+$ ~> | basics.location| {"address":"not empty"} |;
+
+)
