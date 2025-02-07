@@ -409,6 +409,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Intellectual_Property_Analysis_The_Founder_Movie](././posts/Intellectual_Property_Analysis_The_Founder_Movie/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Innovation_on_Water_Management_from_The](././posts/Innovation_on_Water_Management_from_The/) 
   	  </li>
   	</ul>
@@ -2645,6 +2649,126 @@ The nonprofit organization Litro x Litro presented a proposal on Shark Tank: for
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
+The Founder. The history Ray Croc and McDonalds from the Intellectual Property Point of View
+By Pepe Hernandez. February 6th, 2025.
+
+# Introduction  
+
+*"History is written by the victors."*  
+— Winston Churchill  
+
+On McDonald's Spanish website, under the "About Us" section, we can read:  
+*"Our story begins with a man. In 1954, a man named Ray Kroc discovered a small burger restaurant in California and wrote the first page of our history..."*  
+
+According to McDonald's, the story begins with Ray Kroc, despite the fact that it actually started 14 years earlier with the first restaurant owned by the McDonald brothers.  
+
+---
+
+## Summary of *The Founder*  
+
+*The Founder* is a film based on true events, meaning it is an adaptation with a certain degree of creative interpretation by the authors. The movie narrates the story of Ray Kroc, a milkshake machine salesman struggling to make sales.  
+
+When his company assigns him to deliver six machines to a single restaurant—the McDonald brothers' restaurant—he becomes curious about how a single location could need so many machines. There, he discovers the **Speedy System**, the innovative fast-food production method invented by the McDonald brothers.  
+
+Ray proposes franchising the restaurant and, after multiple attempts and negotiations, convinces the brothers. As the chain expands, he realizes that despite the growing number of locations, the business is not as profitable as he desires. He attempts to cut costs by replacing vanilla ice cream with a powdered substitute, leading to conflicts with the McDonald brothers, as he had agreed not to alter internal operations.  
+
+Kroc then seeks a loan to continue expanding and meets a financial advisor who advises him to focus on **real estate**. Ray establishes a real estate firm, effectively **bypassing** the McDonald brothers. This decision enables McDonald's to expand globally and become what it is today.  
+
+With full control, Kroc negotiates the purchase of the entire franchise, including the **McDonald's brand**, for **$1.4 million per brother**—equivalent to **$10 million today**. The McDonald brothers become millionaires, but their original restaurant is left out of the deal. Meanwhile, the **McDonald's name and the golden arches design** become the property of Kroc’s newly established company.  
+
+### Criticism of the Film  
+
+One common critique of *The Founder* is that it portrays Ray Kroc as a manipulative businessman who **exploited** two small entrepreneurs and **took** their intellectual property.  
+
+According to a Reddit user, Ray Kroc was the one responsible for making McDonald's a global brand, and he identified himself as the founder of the company.  
+
+---
+
+## Key Events in McDonald's Franchise Development  
+
+| Year  | Event Description |
+|-------|------------------|
+| 1937  | The McDonald brothers start selling hot dogs as business partners. |
+| 1940  | The first McDonald's restaurant opens—a barbecue and ribs joint. |
+| 1948  | The McDonald brothers open their first burger and fast-food restaurant. |
+| 1953  | The first McDonald's franchise opens in Phoenix, Arizona, under Neil Fox. Their direct supervision model limited scalability. |
+| 1953  | Another location opens in Downey, California. |
+| 1954  | Ray Kroc visits the McDonald brothers' restaurant. |
+| 1955  | **McDonald's Systems, Inc.** is established to formalize the franchise model. The first Kroc-franchised restaurant opens in Des Plaines, Illinois. |
+| 1956  | Kroc and Harry Sonnenborn develop a business model in which McDonald's owns the land of its restaurant locations—one of Kroc’s most significant strategic moves. |
+| 1959  | Kroc becomes CEO of McDonald's. |
+| 1961  | Kroc purchases McDonald's from the brothers for **$2.7 million** (around **$27.7 million today**). The brothers retain their original restaurant but must rename it **Big M**. Kroc opens a McDonald's right across from it, leading the McDonald brothers out of business within a decade. |
+| 1962  | The **golden arches logo** and **Ronald McDonald** character debut. |
+| 1965  | McDonald's goes public on the **New York Stock Exchange**. |
+| 1967  | Kroc ousts Sonnenborn and becomes **CEO**. The first international franchise opens in **Canada**. |
+| 1974  | The first **Ronald McDonald House** opens. |
+| 1984  | Kroc dies in 1984. By this time, McDonald's has **7,500** franchises across **31 countries**, generating over **$8 billion** in annual sales. Kroc’s **personal fortune** exceeds **$600 million**. |
+
+---
+
+## Intellectual Property Identification and Analysis  
+
+In **1961**, McDonald's key intellectual property assets included:  
+
+1. **Trademarks** – The **McDonald's name**, the **golden arches design**, and the **jingle**.  
+2. **Trade Secrets** – The **Speedy System**, the innovative production method created by the McDonald brothers.  
+3. **Franchise Agreements** – The structured franchise model agreed upon between Kroc and the McDonald brothers.  
+
+### Lack of Patents  
+
+The McDonald brothers **could have patented** several of their innovations, as they modified and created new equipment to implement their system. However, since the **Speedy System** was **not patented**, there was no legal barrier preventing Kroc from **adopting and imposing** his own vision.  
+
+### Trademarks and Branding  
+
+The **McDonald's name** was recognized for evoking warmth and trust. The **golden arches**, originally conceived by the McDonald brothers in **1952**, later became the company's official logo when Kroc took over in **1961**. By **1968**, the logo had evolved into a design similar to today's version.  
+
+---
+
+## McDonald's Global Expansion  
+
+The following table outlines the brand’s international growth:  
+
+| Year  | Number of Franchises | Expansion Highlights |
+|-------|---------------------|---------------------|
+| 1955  | 1   | First **Kroc-model McDonald's** opens in Des Plaines, Illinois. |
+| 1959  | 100 | Expansion reaches **East Coast states** in the U.S. |
+| 1961  | 228 | Kroc **buys McDonald's** and continues national growth. |
+| 1965  | 700 | First **international** franchise in **Canada**. |
+| 1967  | 1,000 | McDonald's expands to **Puerto Rico, Canada, and beyond**. |
+| 1970  | 1,600 | Rapid expansion in **Latin America and Europe**, including **Spain**. |
+| 1978  | 10,000 | Major growth in **Asia, Europe, and Latin America**, including **Japan** and **Brazil**. |
+| 1980  | 6,000 | Expansion into **Asia and Australia**. |
+| 1990  | 11,800 | Entry into **Eastern Europe**, including **Russia**. |
+| 2000  | 28,707 | Presence in over **119 countries**. |
+| 2020  | 38,695 | Growth in **Africa and the Middle East**. |
+| 2024  | 43,000 | Continued expansion worldwide. |
+
+This table highlights key milestones in McDonald's global growth.  
+
+---
+
+## Study of the Franchise Model and Intellectual Property  
+
+According to the **World Intellectual Property Organization (WIPO)**, franchises typically integrate multiple intellectual property elements, including **trademarks, trade secrets, patents, and business models**.  
+
+McDonald's success was largely due to the **franchise model**, which combined:  
+
+- The **Speedy System** for production.  
+- The **design of buildings and logos**.  
+- Standardized **operational processes**.  
+- **Trademarks** and branding elements.  
+
+The McDonald brothers **underestimated** the **global potential** of their brand. While Kroc’s **legal acquisition** of the brand was valid, its **ethical implications** remain debatable. However, as Steve Jobs once said:  
+
+*"It's very difficult to connect the dots looking forward; it's easy to do it looking backward."*  
+
+McDonald's became a **global brand** thanks to the **initial groundwork** laid by the McDonald brothers, Kroc’s **business acumen**, and his strategic acquisition of the **trademark** and **franchise system**. 
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
 # A Kanban Case Study in the Public Sector (Part I of N)
 
 October 14th, 2024
@@ -4601,6 +4725,65 @@ This is gold.
 Enjoy the resume...
 
 Learn from the masters, not from the students.
+
+------------------------------------
+## My journey to master academic writing
+
+Searching for guidance on academic papers.
+I expected my thesis director would guide me trought this journey.
+My thesis director ask me to investigate how to write an RSL.
+Then I ask, for the expert I know in Sw Engineering about Systematic Literature Review.
+I knew she followed the Kitchenham Method.
+She suggested me to investigage about PRISMA. Another method.
+I pass a semester investigating, and finding tools in accordance with both methods.
+At the end of the semester, and a lot of pain, Alex suggested to me Macro-Tulmin.
+Why did I choose the "right" way.
+Ask the people that I supposed to know how to do it.
+Alex told me.
+I dont expect a lot for my colleagues, I thing by default that they are wrong.
+Then I start to read.
+When I read something that I rationalize is good.
+I read more from that author.
+And, then I try to read for criticisms to the ideas proposed for the author.
+And, that is how I found the Macro-Tulming.
+Assuming everybody is wrong (most of them), but a few illuminated people, and frequently not understood, not popular, and outside the domain have a good answer to my question.
+You did the normal way. 
+I do it differently.
+
+------------------------------------
+## Experience is not synonym of a best practice, neither a good practice
+
+- I have forthy years doing this in the same way.
+- You have forthy years doing this in a bad way.
+Our colleagues have been teaching academic writing for 20 years.
+Well, they have been mis-teaching academic writing. Because the followed the same path, ask to someone who assume they were doing well.
+
+------------------------------------
+
+## An exercise before the explanation. Macro-Tulmin with ChatGPT
+Now, that I know the elements of the Model that foster academic writing, its time to make a persona exercise, and automate it with artifitial intelligence.
+
+Lets, go.
+
+### First iteration. Find the elements of Macro-Tulmin y 3 papers.
+Ientify the elementos of Macro-Tulmin
+Make a LiteraryNote on Zettlekasten. 
+Make a PermanentNote, adding my reflextion about the MacroTulmin.
+Make a plus/delta Analysis. This will be an input for the next iteration.
+
+This will be a post for the blog.
+
+### Second iteration. Elaborate the prompts from ChatGPT.
+Elaborate the adequate prompts, to CHATGPT. 
+Ask them to elaborate a assesment of the paper respect to the model.
+Make a LiteraryNote on Zettlekasten foe reach article.
+Add the content to the reflection of the permanent note.
+Make a plus/delta Analysis. This will be an input for the next iteration.
+
+### Thir iteration.
+Adjust the prompt.
+Evaluate if this is something for all the papers you will read from then.
+Add a final reflection to the permanent note.
 
 ------------------------------------
 
@@ -7266,283 +7449,287 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2025-02-06: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
+### [2025-02-07: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
 [lab notes ongaing](./posts/tdd_cloud_wilkinson_vs_meyer)
 
 
-### [2025-02-06: posts/sonic_pi](./posts/sonic_pi).
+### [2025-02-07: posts/sonic_pi](./posts/sonic_pi).
 [lab notes ongaing](./posts/sonic_pi)
 
 
-### [2025-02-06: posts/music_and_technology](./posts/music_and_technology).
+### [2025-02-07: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2025-02-06: posts/ideas](./posts/ideas).
+### [2025-02-07: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2025-02-06: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2025-02-07: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2025-02-06: posts/haskell_musical_paradigm](./posts/haskell_musical_paradigm).
+### [2025-02-07: posts/haskell_musical_paradigm](./posts/haskell_musical_paradigm).
 [lab notes ongaing](./posts/haskell_musical_paradigm)
 
 
-### [2025-02-06: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2025-02-07: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2025-02-06: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
+### [2025-02-07: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
 [lab notes ongaing](./posts/executable_tutorials_literate_programming)
 
 
-### [2025-02-06: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2025-02-07: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2025-02-06: posts/argentina_coops](./posts/argentina_coops).
+### [2025-02-07: posts/argentina_coops](./posts/argentina_coops).
 [lab notes ongaing](./posts/argentina_coops)
 
 
-### [2025-02-06: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2025-02-07: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2025-02-06: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
+### [2025-02-07: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
 [lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
 
 
-### [2025-02-06: posts/What_a_mechanic_understans_about_free_software](./posts/What_a_mechanic_understans_about_free_software).
+### [2025-02-07: posts/What_a_mechanic_understans_about_free_software](./posts/What_a_mechanic_understans_about_free_software).
 [lab notes ongaing](./posts/What_a_mechanic_understans_about_free_software)
 
 
-### [2025-02-06: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
+### [2025-02-07: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
 
-### [2025-02-06: posts/Using_Elixir_Flow_To_Process_Data](./posts/Using_Elixir_Flow_To_Process_Data).
+### [2025-02-07: posts/Using_Elixir_Flow_To_Process_Data](./posts/Using_Elixir_Flow_To_Process_Data).
 [lab notes ongaing](./posts/Using_Elixir_Flow_To_Process_Data)
 
 
-### [2025-02-06: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2025-02-07: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2025-02-06: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2025-02-07: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2025-02-06: posts/Track_your_day](./posts/Track_your_day).
+### [2025-02-07: posts/Track_your_day](./posts/Track_your_day).
 [lab notes ongaing](./posts/Track_your_day)
 
 
-### [2025-02-06: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
+### [2025-02-07: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
 [lab notes ongaing](./posts/Top_10_Questions_for_a_Job_Interview)
 
 
-### [2025-02-06: posts/The_Zettelkasten_Note_Taking_Method](./posts/The_Zettelkasten_Note_Taking_Method).
+### [2025-02-07: posts/The_Zettelkasten_Note_Taking_Method](./posts/The_Zettelkasten_Note_Taking_Method).
 [lab notes ongaing](./posts/The_Zettelkasten_Note_Taking_Method)
 
 
-### [2025-02-06: posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD).
+### [2025-02-07: posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD).
 [lab notes ongaing](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD)
 
 
-### [2025-02-06: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
+### [2025-02-07: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
 [lab notes ongaing](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding)
 
 
-### [2025-02-06: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2025-02-07: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2025-02-06: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2025-02-07: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2025-02-06: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2025-02-07: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2025-02-06: posts/Teaching_Academic_Writing_with_the_Macro-Tulmin](./posts/Teaching_Academic_Writing_with_the_Macro-Tulmin).
+### [2025-02-07: posts/Teaching_Academic_Writing_with_the_Macro-Tulmin](./posts/Teaching_Academic_Writing_with_the_Macro-Tulmin).
 [lab notes ongaing](./posts/Teaching_Academic_Writing_with_the_Macro-Tulmin)
 
 
-### [2025-02-06: posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw](./posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw).
+### [2025-02-07: posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw](./posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw).
 [lab notes ongaing](./posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw)
 
 
-### [2025-02-06: posts/Single_text_file](./posts/Single_text_file).
+### [2025-02-07: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2025-02-06: posts/Simple_example_of_liveview1_phx](./posts/Simple_example_of_liveview1_phx).
+### [2025-02-07: posts/Simple_example_of_liveview1_phx](./posts/Simple_example_of_liveview1_phx).
 [lab notes ongaing](./posts/Simple_example_of_liveview1_phx)
 
 
-### [2025-02-06: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2025-02-07: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2025-02-06: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
+### [2025-02-07: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
 [lab notes ongaing](./posts/Real_Life_Movies_as_a_Teaching_Method)
 
 
-### [2025-02-06: posts/Re-Discovering_My_PhD_Challenge_for_the_Semester](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester).
+### [2025-02-07: posts/Re-Discovering_My_PhD_Challenge_for_the_Semester](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester).
 [lab notes ongaing](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester)
 
 
-### [2025-02-06: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2025-02-07: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2025-02-06: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
+### [2025-02-07: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
 [lab notes ongaing](./posts/Product_Management_and_AI)
 
 
-### [2025-02-06: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
+### [2025-02-07: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
 [lab notes ongaing](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner)
 
 
-### [2025-02-06: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2025-02-07: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2025-02-06: posts/Our_New_Approach_for_Developing_Products](./posts/Our_New_Approach_for_Developing_Products).
+### [2025-02-07: posts/Our_New_Approach_for_Developing_Products](./posts/Our_New_Approach_for_Developing_Products).
 [lab notes ongaing](./posts/Our_New_Approach_for_Developing_Products)
 
 
-### [2025-02-06: posts/One_more_year](./posts/One_more_year).
+### [2025-02-07: posts/One_more_year](./posts/One_more_year).
 [lab notes ongaing](./posts/One_more_year)
 
 
-### [2025-02-06: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2025-02-07: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2025-02-06: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2025-02-07: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2025-02-06: posts/Moving_to_DeepSeek](./posts/Moving_to_DeepSeek).
+### [2025-02-07: posts/Moving_to_DeepSeek](./posts/Moving_to_DeepSeek).
 [lab notes ongaing](./posts/Moving_to_DeepSeek)
 
 
-### [2025-02-06: posts/More_About_Zettelkaster](./posts/More_About_Zettelkaster).
+### [2025-02-07: posts/More_About_Zettelkaster](./posts/More_About_Zettelkaster).
 [lab notes ongaing](./posts/More_About_Zettelkaster)
 
 
-### [2025-02-06: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2025-02-07: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2025-02-06: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2025-02-07: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2025-02-06: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2025-02-07: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2025-02-06: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2025-02-07: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2025-02-06: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2025-02-07: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2025-02-06: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
+### [2025-02-07: posts/Intellectual_Property_Analysis_The_Founder_Movie](./posts/Intellectual_Property_Analysis_The_Founder_Movie).
+[lab notes ongaing](./posts/Intellectual_Property_Analysis_The_Founder_Movie)
+
+
+### [2025-02-07: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
 [lab notes ongaing](./posts/Innovation_on_Water_Management_from_The)
 
 
-### [2025-02-06: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2025-02-07: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2025-02-06: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2025-02-07: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2025-02-06: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
+### [2025-02-07: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
 [lab notes ongaing](./posts/How_to_Do_a_Dirty_and_Quick_Review)
 
 
-### [2025-02-06: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2025-02-07: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2025-02-06: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2025-02-07: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2025-02-06: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
+### [2025-02-07: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
 [lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
 
 
-### [2025-02-06: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2025-02-07: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2025-02-06: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2025-02-07: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2025-02-06: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
+### [2025-02-07: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
 [lab notes ongaing](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones)
 
 
-### [2025-02-06: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+### [2025-02-07: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
 [lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
 
 
-### [2025-02-06: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2025-02-07: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2025-02-06: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2025-02-07: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2025-02-06: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2025-02-07: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2025-02-06: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2025-02-07: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2025-02-06: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2025-02-07: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2025-02-06: posts/Continuous_Integration_CI_Garnix](./posts/Continuous_Integration_CI_Garnix).
+### [2025-02-07: posts/Continuous_Integration_CI_Garnix](./posts/Continuous_Integration_CI_Garnix).
 [lab notes ongaing](./posts/Continuous_Integration_CI_Garnix)
 
 
-### [2025-02-06: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2025-02-07: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2025-02-06: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
+### [2025-02-07: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
 [lab notes ongaing](./posts/Another_post_on_Crypto_Assets)
 
 
-### [2025-02-06: posts/A_premier_on_Prometheus_relabelling](./posts/A_premier_on_Prometheus_relabelling).
+### [2025-02-07: posts/A_premier_on_Prometheus_relabelling](./posts/A_premier_on_Prometheus_relabelling).
 [lab notes ongaing](./posts/A_premier_on_Prometheus_relabelling)
 
 
-### [2025-02-06: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2025-02-07: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2025-02-06: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2025-02-07: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
-### [2025-02-06: posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience).
+### [2025-02-07: posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience).
 [lab notes ongaing](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience)
 
 
@@ -7611,6 +7798,7 @@ Email
 		<li>[posts/Karina_La_Humana](/posts/Karina_La_Humana/index.html)</li>
 		<li>[posts/Kanban_Serious_Games_Intro](/posts/Kanban_Serious_Games_Intro/index.html)</li>
 		<li>[posts/Kanban_Case_Study_in_Public_Sector_Part_I](/posts/Kanban_Case_Study_in_Public_Sector_Part_I/index.html)</li>
+		<li>[posts/Intellectual_Property_Analysis_The_Founder_Movie](/posts/Intellectual_Property_Analysis_The_Founder_Movie/index.html)</li>
 		<li>[posts/Innovation_on_Water_Management_from_The](/posts/Innovation_on_Water_Management_from_The/index.html)</li>
 		<li>[posts/Innovation_Methods_Comparison](/posts/Innovation_Methods_Comparison/index.html)</li>
 		<li>[posts/Ikigai_to_Evaluate_Education_Ideas](/posts/Ikigai_to_Evaluate_Education_Ideas/index.html)</li>
@@ -8076,15 +8264,15 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2025-02-06: projects/yaml_resume_db](./projects/yaml_resume_db).
+### [2025-02-07: projects/yaml_resume_db](./projects/yaml_resume_db).
 [lab notes ongaing](./projects/yaml_resume_db)
 
 
-### [2025-02-06: projects/rewards.codes](./projects/rewards.codes).
+### [2025-02-07: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2025-02-06: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2025-02-07: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -9031,6 +9219,10 @@ I needed to compile the RegEx before doing the match.
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Kanban_Case_Study_in_Public_Sector_Part_I](././posts/Kanban_Case_Study_in_Public_Sector_Part_I/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Intellectual_Property_Analysis_The_Founder_Movie](././posts/Intellectual_Property_Analysis_The_Founder_Movie/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
