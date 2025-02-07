@@ -8056,11 +8056,11 @@ By applying Goldratt’s Cloud, we see that Hernan and Bertrand’s perspectives
 
      **Xilenial Discovers Perseverance**
 
-October 6th, 2024
+February 6th, 2025
 By Alejandro Garcia
 
-> "Most peopelo overestimate what they can do in one year
-> and underestimate what they can accomplish in ten yers.
+> "Most people overestimate what they can do in one year
+> and underestimate what they can accomplish in ten years.
 >
 >      -- Bill Gates
 
@@ -8070,27 +8070,53 @@ Here in Mexico we have a meme:
 ![When the idea of co-living became famous](./coliving_space.png)
 
 When the idea of co-living became famous.
-Milenials re-discovered the vecindad.
+Millenials re-discovered the vecindad.
 
-![Milenials discover the vicinity](./chavodel8.jpg)
+![Millenials discover the vicinity](./chavodel8.jpg)
 
 
 A place where multiple families live in the same building,
 sharing services and central garden.
 
-## Well I have a similar experienece.
+## What is a Xilenial?
+
+When talking about Demographic Generations.
+The millenials and the Baby Boomers are the most famous.
+
+![Genarations](https://en.wikipedia.org/wiki/Millennials#/media/File:Generation_timeline.svg)
+
+As you see: Gen X are people born between 1965 and 1980s.
+The Millenials are people born between 1981.
+
+However I was born in 1979. And for me the millenials were kids...
+And the GenX were the "old" people, you know the ones that were in college, when I was in HighSchool.
+
+Turns out, I'm not the only one that feels that way.
+And demographers have identified the  [Xennials](https://en.wikipedia.org/wiki/Xennials)
+People between into 1977 and 1983.
+
+> Xennials are described as having had an analog childhood and a digital young adulthood.
+
+So I'm a Xennial
+
+> and recently discovered:
+> the secret to accomplishing our goals.
+
+
+
+## Well I have a similar experience.
 
 
 As you know for the past month.
 I have been slowly reading and transcribing the book:
 
-[ObjectStructures](https://openlibrary.org/books/OL811478M/Object_structures)
+[Object Structures](https://openlibrary.org/books/OL811478M/Object_structures)
 
-Which I think is the best book on Datrastructures I have ever read.
+Which I think is the best book on Data Structures I have ever read.
 I wish I had read it when It was first published.
 
 The thing is that the book has 469 pages.
-And currently, I have only transalted all the way to chapter 4.
+And currently, I have only translated all the way to chapter 4.
 So only page 84.
 
 With my slow progress, sometimes, I have felt that It will take me for ever to finish the book.
@@ -8116,17 +8142,17 @@ As you know one of my favorites ideas from the book Atomic Habits is;
 > -- James Clear
 
 So the system that I setup.
-To make finish this, inevitable is that I have setup as goal in beeminder that I'll have 10 lines of code **inside** markdown files.
+To make finish this, inevitable is that I have setup as goal in Beeminder that I'll have 10 lines of code **inside** markdown files.
 So that way I force myself to translate the markdown and the code.
 But the goal is NOT specific to say 500 words of text.
 Instead it is 10 lines of code daily, inside markdown files.
 So sometimes in code heavy chapters I can reach that goal very easily.
 But in other chapters I need to transcribe a lot of text, before actually reaching the 10 lines of code.
-So that keeps the goal a little bit variable. 
+So that keeps the goal a little bit variable.
 Enough to not make it boring.
 
 With this system.
-It seems it is **inevitable** that I'm going to finish transcrbing that book.
+It seems it is **inevitable** that I'm going to finish transcribing that book.
 and you know what.
 In this uncertain world, knowing that I'm going to finish something.
 feels pretty good!
