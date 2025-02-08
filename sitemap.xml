@@ -166,6 +166,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://example.com/posts/The_Future_of_Money/index.html</loc>
+  <lastmod>2025-02-08</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://example.com/posts/Terravision_vs_Google_Earth/index.html</loc>
   <lastmod>2025-02-08</lastmod>
   <changefreq>weekly</changefreq>
