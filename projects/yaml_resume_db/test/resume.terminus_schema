@@ -1,0 +1,571 @@
+[
+  {
+    "@base": "terminusdb:///data/",
+    "@schema": "terminusdb:///schema#",
+    "@type": "@context"
+  },
+  {
+    "@id": "JSON_RESUME",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "basics": {
+      "@type": "Optional",
+      "@class": "BASICS"
+    },
+    "work": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "WORK"
+    },
+    "volunteer": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "VOLUNTEER"
+    },
+    "education": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "EDUCATION"
+    },
+    "awards": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "AWARDS"
+    },
+    "certificates": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "CERTIFICATES"
+    },
+    "publications": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "PUBLICATIONS"
+    },
+    "skills": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "SKILLS"
+    },
+    "languages": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "LANGUAGES"
+    },
+    "interests": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "INTERESTS"
+    },
+    "references": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "REFERENCES"
+    },
+    "projects": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "PROJECTS"
+    },
+    "meta": {
+      "@type": "Optional",
+      "@class": "META"
+    }
+  },
+  {
+    "@id": "BASICS",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "name": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "label": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "image": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "email": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "phone": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "url": {
+      "@type": "Optional",
+      "@class": "xsd:anyURI"
+    },
+    "summary": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "location": {
+      "@type": "Optional",
+      "@class": "LOCATION"
+    },
+    "profiles": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "PROFILES"
+    }
+  },
+  {
+    "@id": "WORK",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "name": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "location": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "description": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "position": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "url": {
+      "@type": "Optional",
+      "@class": "xsd:anyURI"
+    },
+    "startDate": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "endDate": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "summary": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "highlights": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "VOLUNTEER",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "organization": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "position": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "url": {
+      "@type": "Optional",
+      "@class": "xsd:anyURI"
+    },
+    "startDate": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "endDate": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "summary": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "highlights": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "EDUCATION",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "institution": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "url": {
+      "@type": "Optional",
+      "@class": "xsd:anyURI"
+    },
+    "area": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "studyType": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "startDate": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "endDate": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "score": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "courses": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "AWARDS",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "title": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "date": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "awarder": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "summary": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "CERTIFICATES",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "name": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "date": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "url": {
+      "@type": "Optional",
+      "@class": "xsd:anyURI"
+    },
+    "issuer": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "PUBLICATIONS",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "name": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "publisher": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "releaseDate": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "url": {
+      "@type": "Optional",
+      "@class": "xsd:anyURI"
+    },
+    "summary": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "SKILLS",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "name": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "level": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "keywords": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "LANGUAGES",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "language": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "fluency": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "INTERESTS",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "name": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "keywords": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "REFERENCES",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "name": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "reference": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "PROJECTS",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "name": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "description": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "highlights": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "xsd:string"
+    },
+    "keywords": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "xsd:string"
+    },
+    "startDate": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "endDate": {
+      "@type": "Optional",
+      "@class": "xsd:date"
+    },
+    "url": {
+      "@type": "Optional",
+      "@class": "xsd:anyURI"
+    },
+    "roles": {
+      "@type": "Set",
+      "@max_cardinality": 1,
+      "@class": "xsd:string"
+    },
+    "entity": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "type": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "META",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "canonical": {
+      "@type": "Optional",
+      "@class": "xsd:anyURI"
+    },
+    "version": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "lastModified": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "LOCATION",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "address": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "postalCode": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "city": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "countryCode": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "region": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    }
+  },
+  {
+    "@id": "PROFILES",
+    "@type": "Class",
+    "@unfolded": [],
+    "@key": {
+      "@type": "ValueHash"
+    },
+    "additionalProperties": {
+      "@type": "Optional",
+      "@class": "sys:JSON"
+    },
+    "network": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "username": {
+      "@type": "Optional",
+      "@class": "xsd:string"
+    },
+    "url": {
+      "@type": "Optional",
+      "@class": "xsd:anyURI"
+    }
+  }
+]

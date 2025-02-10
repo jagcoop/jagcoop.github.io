@@ -1,0 +1,8 @@
+{
+  "@id": "PROFILES",
+  "@type": "Class",
+  "@unfolded": [],
+  "network": "xsd:string",
+  "username": "xsd:string",
+  "url": "xsd:anyURI"
+}
