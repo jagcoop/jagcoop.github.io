@@ -25,19 +25,18 @@ Limit on the number of words
 Input Restrictions
 
 ## What are different Training Methods?
-Zero-shot: Performing a task without prior examples.
-Example: "Give me 10 spelling questions for a 7-year-old child."
-One-shot: Provide a single example before the task.
-Example: "Give me 10 questions for a 7-year-old similar to: 'Spell the name of an animal that barks.'"
-Few-shot: Provide multiple examples before the task.
-Example: "A software architect defines microservices architecture as '...'. Based on their words, define the three main characteristics of a microservices architecture."
 
-##How does Chain-of-Thought Prompting work?
+- Zero-shot: Performing a task without prior examples. Example: "Give me 10 spelling questions for a 7-year-old child."
+
+- One-shot: Provide a single example before the task. Example: "Give me 10 questions for a 7-year-old similar to: 'Spell the name of an animal that barks.'"
+
+- Few-shot: Provide multiple examples before the task. Example: "A software architect defines microservices architecture as '...'. Based on their words, define the three main characteristics of a microservices architecture."
+
+## How does Chain-of-Thought Prompting work?
 Chain-of-Thought (CoT) Prompting guides the model to break down a problem into intermediate reasoning steps, leading to a more structured and accurate response.
 
 ### Example: Math Problem Using Chain-of-Thought Prompting
-Prompt:
-"A farmer has 3 fields. Each field grows 5 rows of crops. Each row contains 4 plants. How many plants does the farmer have in total?"
+Prompt: "A farmer has 3 fields. Each field grows 5 rows of crops. Each row contains 4 plants. How many plants does the farmer have in total?"
 
 #### Without Chain-of-Thought Prompting (Direct Answer)
 "The farmer has 60 plants."
@@ -52,8 +51,7 @@ Each row contains 4 plants.
 So, the total number of plants is 15 × 4 = 60.
 Thus, the farmer has 60 plants in total."*
 
-## Which Complex Output Formats can ChatGPT generate?
-LLMs can generate more structured text formats, such as:
+## Which Complex Output Formats can ChatGPT generate? LLMs can generate more structured text formats, such as:
 - Tables: "Generate a table with the following columns about..."
 - Mind maps using Markdown
 - Outline format
@@ -62,16 +60,20 @@ Experimenting with output formats and refining results through iteration is a go
 
 ## Is there a harmful use of the Role-Playing Techniques?
 There are role-playing techniques where ChatGPT can be instructed to behave as a specific character, such as a hacker, terrorist, or unethical person. Security teams actively monitor these behaviors to block them.
+
 ## What is the difference between Knowledge Integration vs. Knowledge Generation?
 Knowledge Generation: Creating a response based on a prompt about a specific topic.
 Knowledge Integration: Enhancing a response with additional input information.
+
 ## How to adjust Model Behavior?
 The parameters top_p and temperature can be adjusted to control the diversity and Creativity of responses:
 Conservative approach: Temperature = 0.5
 Creative approach: Temperature = 1.0
+
 ### Adjusting Model Behavior: top_p and temperature
 Large language models allow users to control the diversity and Creativity of responses using the top_p and temperature parameters.
-#### temperature – Controls Creativity
+
+#### Temperature – Controls Creativity
 The temperature parameter determines the randomness of the model's output.
 A higher temperature (e.g., 1.0) makes responses more creative and varied but less predictable.
 A lower temperature (e.g., 0.1) makes responses more focused and deterministic, favoring the most probable words.
@@ -101,18 +103,19 @@ If you increase temperature, lower top_p to maintain coherence.
 If you lower the temperature, you can increase top_p to allow for some variety.
 
 ## Additional notes
-"Do you understand your purpose?" This refers to rephrasing your request to ensure alignment with your intended message.
-A notable example in Lesson 18 covers the creation of a play, including the theme, characters, and main ideas.
-Summarizing Content
-ChatGPT can summarize a URL or a PDF!
-Example: "Summarize this link with the following characteristics..."
-How to configure the Text Writing and Style Editing?
+- "Do you understand your purpose?" This refers to rephrasing your request to ensure alignment with your intended message.
+- A notable example in Lesson 18 covers the creation of a play, including the theme, characters, and main ideas.
+- Summarizing Content. ChatGPT can summarize a URL or a PDF!. Example: "Summarize this link with the following characteristics..."
+
+## How to configure the Text Writing and Style Editing?
 You can ask CHATgpt to:
-Act as a text editor."
-"Write an article on artificial intelligence for beginners."
-"Change the tone to make it more academic or formal."
-"Provide a list of references on task automation using APA format."
-"Adjust the temperature and top_p settings."
+
+- "Act as a text editor."
+- "Write an article on artificial intelligence for beginners."
+- "Change the tone to make it more academic or formal."
+- "Provide a list of references on task automation using APA format."
+- "Adjust the temperature and top_p settings."
+
 You can input a text fragment (from a book, article, or speech) and request a rewrite in a different tone or style:
 - More formal
 - More modern
@@ -135,8 +138,6 @@ You can input a text fragment (from a book, article, or speech) and request a re
 - "Write an email with a cheerful yet professional tone."
 
 This first course allowed me to ask better questions about CHATgpt. I will post more basic techniques soon.
-
-
 
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
