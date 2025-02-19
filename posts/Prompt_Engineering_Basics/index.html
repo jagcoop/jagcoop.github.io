@@ -1,0 +1,143 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Prompt Engineering 101
+By Pepe Hernandez
+February 18th, 2025
+
+I recently took the Prompt Engineering Course of Platzi with Carlos Alarcón. This is a collection of notes from the class. I hope it is helpful to you. 
+
+## What is prompt engineering?
+Prompt engineering consists of a set of skills for interacting with large language models (LLMs) such as ChatGPT. Interacting with these artificial intelligence tools involves using text as input, which the tool generates as output, which could be an image (as with DALL·E 2) or text (as with ChatGPT).
+
+## Generating Prompts
+Creating prompts or input texts is essential to guide an AI tool toward generating specific outputs. This is a basic Example:
+Input:
+Context: Act as an expert in art history.
+Specific Task: Contrast and compare Leonardo da Vinci's paintings.
+Output: Provide the response in a numbered list format.
+These models do not deeply comprehend their responses. They generate outputs with a high probability of coherence based on previous text.
+
+## What are some limitations of LLMs?
+LLMs have some constraints, such as:
+Difficulty maintaining context over long conversations
+Vulnerabilities and biases
+Limit on the number of words
+Input Restrictions
+
+## What are different Training Methods?
+Zero-shot: Performing a task without prior examples.
+Example: "Give me 10 spelling questions for a 7-year-old child."
+One-shot: Provide a single example before the task.
+Example: "Give me 10 questions for a 7-year-old similar to: 'Spell the name of an animal that barks.'"
+Few-shot: Provide multiple examples before the task.
+Example: "A software architect defines microservices architecture as '...'. Based on their words, define the three main characteristics of a microservices architecture."
+
+##How does Chain-of-Thought Prompting work?
+Chain-of-Thought (CoT) Prompting guides the model to break down a problem into intermediate reasoning steps, leading to a more structured and accurate response.
+
+### Example: Math Problem Using Chain-of-Thought Prompting
+Prompt:
+"A farmer has 3 fields. Each field grows 5 rows of crops. Each row contains 4 plants. How many plants does the farmer have in total?"
+
+#### Without Chain-of-Thought Prompting (Direct Answer)
+"The farmer has 60 plants."
+✅ The answer is correct, but there's no reasoning provided.
+
+#### With Chain-of-Thought Prompting (Step-by-Step Reasoning)
+*"Let's break this down step by step:
+The farmer has 3 fields.
+Each field has 5 rows of crops.
+So, the total number of rows is 3 × 5 = 15.
+Each row contains 4 plants.
+So, the total number of plants is 15 × 4 = 60.
+Thus, the farmer has 60 plants in total."*
+
+## Which Complex Output Formats can ChatGPT generate?
+LLMs can generate more structured text formats, such as:
+- Tables: "Generate a table with the following columns about..."
+- Mind maps using Markdown
+- Outline format
+- JSON format
+Experimenting with output formats and refining results through iteration is a good idea.
+
+## Is there a harmful use of the Role-Playing Techniques?
+There are role-playing techniques where ChatGPT can be instructed to behave as a specific character, such as a hacker, terrorist, or unethical person. Security teams actively monitor these behaviors to block them.
+## What is the difference between Knowledge Integration vs. Knowledge Generation?
+Knowledge Generation: Creating a response based on a prompt about a specific topic.
+Knowledge Integration: Enhancing a response with additional input information.
+## How to adjust Model Behavior?
+The parameters top_p and temperature can be adjusted to control the diversity and Creativity of responses:
+Conservative approach: Temperature = 0.5
+Creative approach: Temperature = 1.0
+### Adjusting Model Behavior: top_p and temperature
+Large language models allow users to control the diversity and Creativity of responses using the top_p and temperature parameters.
+#### temperature – Controls Creativity
+The temperature parameter determines the randomness of the model's output.
+A higher temperature (e.g., 1.0) makes responses more creative and varied but less predictable.
+A lower temperature (e.g., 0.1) makes responses more focused and deterministic, favoring the most probable words.
+##### Example of temperature Effect
+Prompt: "Write a sentence about the moon."
+Temperature = 0.1 (conservative, predictable)
+"The moon orbits the Earth and reflects sunlight."
+Temperature = 1.0 (creative, diverse)
+"The moon, a silent guardian of the night, paints the sky with silver whispers."
+top_p – Controls Word Probability Selection (Nucleus Sampling)
+The top_p parameter (also called nucleus sampling) determines how many word choices the model considers.
+A higher value (e.g., 1.0) allows the model to choose from a wide range of words, making responses more diverse.
+A lower value (e.g., 0.3) restricts choices to only the most probable words, making responses more focused and safe.
+
+#####Example of top_p Effect
+Prompt: "Describe a sunset."
+top_p = 0.3 (focused, safe choice of words)
+"The sunset paints the sky with hues of orange and red as the sun dips below the horizon."
+top_p = 0.9 (more varied and expressive choices)
+"The sunset, a fiery spectacle, drenches the sky in molten gold and crimson waves, bidding farewell to the day."
+
+#### How to Use temperature and top_p Together
+If both are set high (temperature = 1.0, top_p = 1.0), the output will be highly creative but potentially less coherent.
+The output will be very structured and predictable if both are set low (temperature = 0.2, top_p = 0.3).
+A common practice is to adjust one parameter at a time:
+If you increase temperature, lower top_p to maintain coherence.
+If you lower the temperature, you can increase top_p to allow for some variety.
+
+## Additional notes
+"Do you understand your purpose?" This refers to rephrasing your request to ensure alignment with your intended message.
+A notable example in Lesson 18 covers the creation of a play, including the theme, characters, and main ideas.
+Summarizing Content
+ChatGPT can summarize a URL or a PDF!
+Example: "Summarize this link with the following characteristics..."
+How to configure the Text Writing and Style Editing?
+You can ask CHATgpt to:
+Act as a text editor."
+"Write an article on artificial intelligence for beginners."
+"Change the tone to make it more academic or formal."
+"Provide a list of references on task automation using APA format."
+"Adjust the temperature and top_p settings."
+You can input a text fragment (from a book, article, or speech) and request a rewrite in a different tone or style:
+- More formal
+- More modern
+- More academic
+- More sarcastic
+- More comedic
+- More dramatic
+
+## How can you ask ChatGPT to be your tutor?
+- "Be my tutor."
+- "Be my basic PyTorch instructor."
+- "Teach several lessons and include exercises."
+
+## How do you ask CHATGPT to be your Personal Assistant?
+- "Act as my personal assistant."
+- "Organize my calendar."
+- "Create a meal plan based on a specific diet."
+- "Generate a meal plan using ingredients that can be prepared with a Thermomix."
+- "Create a to-do list for [task], considering that I usually do the following..."
+- "Write an email with a cheerful yet professional tone."
+
+This first course allowed me to ask better questions about CHATgpt. I will post more basic techniques soon.
+
+
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
