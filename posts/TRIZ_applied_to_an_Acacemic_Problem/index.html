@@ -84,6 +84,180 @@ For our exercise, to define the contradiction, we need to identify the **key ele
 
 > *"How can I increase the productivity of independent software developers so they can effectively compete in an environment dominated by super-developers using advanced AI tools—without incurring prohibitive costs or requiring an unattainable level of technical skills?"*  
 
+                    +----------------+    +---------------+                      
+                    |                |    |               |                      
+                    |    General     +--->|  General      |                      
+                    |    problem     |    |  solution     |                      
+                    |                |    |               |                      
+                    +----------------+    +-------+-------+                      
+                            ^                     |                              
+                            |                     v                              
++--------------+    +----------------+    +---------------+     +---------------+
+|              |    |                |    |               |     |               |
+|  Problem     |    |     Specific   |    |   Specific    |     |               |
+|  analysis    |--->|     problem    |    |   solution    +---> |               |
+|              |    |                |    |               |     |               |
++--------------+    +----------------+    +---------------+     +---------------+
+Figure 1. General algorithm of TRIZ. Source: Phillips.
+
+## TRIZ and Its Applications  
+
+TRIZ is used in multiple companies around the world for **solving invention-related problems**. The previous diagram was obtained from a review of a **masterclass by Philips**, where the methodology is promoted  (*Masterclass: How to Solve Your Technical Problems Using TRIZ | Philips Engineering Solutions, 2019*).  
+
+TRIZ is based on the assumption that:  
+
+> **"Someone, somewhere, has already solved your problem—just in a different field."**  
+
+Creativity consists of **finding that solution and adapting it** to the specific circumstances of the problem.  
+
+### TRIZ Problem-Solving Process  
+
+1. **Problem Analysis** – Identify and understand the problem.  
+2. **Generalization of the Problem** – Abstract the issue into a broader context.  
+3. **Search for Solutions in Other Fields** – Investigate how similar problems have been solved elsewhere.  
+4. **Adapt the General Solution** – Apply the identified solution to the specific problem.  
+5. **Evaluate the Alternatives** – Assess the effectiveness of the adapted solution.  
+
+If **undesired effects** arise, the analysis must be **refined or redefined**.  
+
+If a **new problem emerges** from the evaluated alternative, a **new TRIZ iteration** is necessary.  
+
+---
+
+### **The Concept of Idealization in TRIZ**  
+
+A guiding principle in TRIZ is **idealization**. The **equation that defines idealization** in TRIZ is:  
+
+\[
+\text{Idealization} = \frac{\sum \text{Benefits}}{\sum \text{Costs} + \sum \text{Harms}}
+\]  
+
+This equation helps to **easily determine** whether a solution improves a problem compared to the baseline.  
+
+---
+
+## **Exercise 2: General TRIZ Framework**  
+
+### **Analysis and Solutions for Increasing Software Engineers' Productivity**
+
+##### **Specific Problem**  
+➡ **Increase the productivity of independent software engineers** so they can **compete against more specialized engineers** equipped with **support tools such as artificial intelligence tools.**  
+
+#### **General Problem**  
+➡ **How to increase the productivity of knowledge workers** to **compete against better-equipped and more skilled workers?**  
+
+#### **General Solution**  
+Peter Drucker proposes **four key points** to improve the efficiency of knowledge workers:  
+- **Focus on the task at hand.**  
+- **Consider the knowledge worker as an investment**, as they are a means of production.  
+- **Knowledge workers are responsible for their own contribution.**  
+- **Quality is as important as quantity.**  
+
+#### **Specific Solution**  
+To **increase the productivity of independent software engineers**, applying **Drucker’s general solution:**  
+
+##### **1. Focus on the task at hand → Focus on outcomes**  
+Josh Seiden defines **outcomes** as a **change in the behavior of people or elements in the system we are working on.**  
+
+##### **2. The worker is an investment → Treat independent professionals as service providers**  
+David Anderson states that, **as independent professionals, we offer services to others, and these services must be managed accordingly.**  
+
+##### **3. Workers are responsible for their own contribution**  
+Each independent worker should:  
+- Define **what they offer and the quality criteria** for their service.  
+- **Continuously improve** their services and skills.  
+
+##### **4. Quality is as important as quantity → What is the optimal service quality?**  
+A **2004 study by Ramírez and Nembhard** analyzed **23 productivity models** and created a **taxonomy of 13 dimensions** grouping the metrics used in each model. Their findings include:  
+- **71% of the models** define productivity in terms of **quantity.**  
+- **Only 21%** explicitly consider **quality.**  
+- Each model examined **only uses 2 or 3 productivity dimensions.**  
+
+This raises a **key research question** for our study:  
+➡ **What are the relevant productivity metrics for independent software developers?**  
+
+#### **Summary: Key Insights from TRIZ for Our Doctoral Thesis**  
+The **TRIZ methodology** helped us identify **two key areas** to advance in our doctoral research:  
+1. **Focus on tasks and outcomes.**  
+2. **Define the interfaces of independent developers as a microservice.**  
+3. **Establish quality metrics related to the service.**  
+4. **Identify productivity metrics relevant to independent software developers.**  
+
+## **The "Nine Windows" Tool in TRIZ**  
+
+
+               Past System   Present System   Future System  
+            +--------------++---------------++--------------+
+            |              ||               ||              |
+    Supra   |              ||               ||              |
+    System  |              ||               ||              |
+            |              ||               ||              |
+            +--------------++---------------++--------------+
+            +--------------++---------------++--------------+
+    System  |              ||               ||              |
+            |              ||               ||              |
+            |              ||               ||              |
+            |              ||               ||              |
+            +--------------++---------------++--------------+
+            +--------------++---------------++--------------+
+            |              ||               ||              |
+    Sub     |              ||               ||              |
+    System  |              ||               ||              |
+            |              ||               ||              |
+            +--------------++---------------++--------------+
+		  Future 2. Nine Windows Architectura.
+                    Source: The Innovator's Toolkit  
+
+The **"Nine Windows"** tool in **TRIZ** is a technique used to **expand the perspective of a problem** and explore **more comprehensive solutions.** It consists of a **3x3 diagram,** where:  
+- The **columns** represent **different moments in time** (**past, present, and future**).  
+- The **rows** represent **different system levels** (**system, subsystem, and supersystem**).  
+
+By analyzing a problem through these **"nine windows,"** we consider a **broader context,** its **possible evolution,** and **interactions between system components.**  
+This methodology helps us **identify non-obvious solutions** that might be missed if we only focus on the **immediate problem and its current scale.**  
+
+### **Figure 3. Example of the Nine Windows application.**  
+
+
+               Past System   Present System   Future System  
+            +--------------++---------------++--------------+
+            |              ||               ||              |
+    Supra   |  Forest      ||    Ikea       ||  Forest      |
+    System  |              ||               ||  Stewardship |
+            |              ||               ||  Council     |
+            +--------------++---------------++--------------+
+            +--------------++---------------++--------------+
+    System  |              ||               ||              |
+            |  Tree        ||   Table       ||  Recycling   |
+            |              ||               ||              |
+            |              ||               ||              |
+            +--------------++---------------++--------------+
+            +--------------++---------------++--------------+
+            |              ||               ||              |
+    Sub     |  Sapling     ||   Wood        ||  Soil        |
+    System  |              ||               ||              |
+            |              ||               ||              |
+            +--------------++---------------++--------------+
+		  Future 2. An example of the nine windows.
+                  **Source: "9 Windows - Sketchplanations"**  
+
+On the **Sketchplanations** website, an example of a **system** (in this case, a **table**) placed at the center of the diagram demonstrates how:  
+- **Looking back in time:** The table originates from a **tree.**  
+- **Looking forward in time:** The table might become a **second-hand piece of furniture** in the future.  
+
+Each level (**system, subsystem, and supersystem**) can be analyzed:  
+- **Present:**  
+  - At the **system level**, the table is a product sold by companies like **IKEA.**  
+  - At the **subsystem level**, it consists of components such as **wood.**  
+- **Future:**  
+  - The **recycled table** might turn into **compost.**  
+  - At the **supersystem level**, this waste could become part of a **reforestation program.**  
+- **Past:**  
+  - At the **system level**, the table was once a **tree.**  
+  - At the **supersystem level**, it belonged to a **forest.**  
+  - At the **subsystem level**, it started as a **sapling** that eventually grew into a mature tree producing wood.  
+
+
+
 to be continued...
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
