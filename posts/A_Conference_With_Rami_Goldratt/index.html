@@ -1,0 +1,125 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+
+     **A Conference With Rami Goldratt**
+
+February 26th, 2025
+By Alejandro Garcia
+
+> "The forecast is wrong,
+> The moment you write it down."
+>
+>      -- Eli Goldratt, as recounted by Rami Goldratt
+
+Today I had the privilege of attending a lecture by  Rami Goldratt.
+Rami is son of Eli Goldratt; author of the Best Seller the Goal and the inventor of Theory of Constraints.
+
+Rami's lecture was about the software solution for retail: https://1beat.com
+It is the evolution of the solution of Theory of Constraints for Inventory Management.
+
+Retail has 3 main challenges:
+
+- Personalization
+- Impatience
+- Innovation
+
+Let's examine this challenges in more detail.
+
+# Retail Challenges
+
+## Personalization
+
+The number of products (SKUs) that chains has to carry has duplicated in only 3 years.
+And more personalization begets more personalization
+He showed the example of a retailer of sports with presence in Spain and Portugal.
+And it went from 11000 SKUs in (2019) to 23000 SKUs in (2022).
+
+## Impatience
+
+Customers want the product right now.
+They won't wait for reorder from another store, or another week to get it.
+This means that you need to have more inventory of more SKUs
+
+## More Innovation equals shorter product life cycles.
+
+In the 80s how long could a TV be in the store and still sell it at full price?
+3 years,
+Now?
+6 months... 3 months in Japan.
+So that means we need to push new products to the stores.
+But the stores already have too much inventory of too many SKUs so it is already full,
+or if you put the new product side to side with the old one then it won't sell.
+
+Given those challenges
+
+# What is the solution?
+
+## Protect the Dino.
+
+- Protect the head
+- Control the waist
+- Chop the tail
+
+![Dino aka a Pareto Distribution](dino.jpg)
+
+## The Dino is the representation of a Pareto distribution
+
+The head is the 20% of products that give you 80% of sales.
+The waist are products that make the change of the curve.
+And the tail are 80% of products that generate only the 20% of sales.
+
+# How to implement the solution
+
+## Protecting the head
+Means measuring the speed and acceleration of sales.
+
+The speed is calculated by measuring how many products are sold per unit of time.
+For example: 3 books sold on monday means: 3 books / day.
+2 books sold on tuesday means 2 books / day.
+
+Acceleration is the rate of change between two speeds.
+
+That is:
+Final velocity - Initial Velocity / Time period.
+
+In our example:
+
+velocity of tuesday minus velocity on monday over 1 day of difference between the two.
+
+(2 books / day - 3 books / day)  / 1 day = - 1 book / day squared.
+
+That means sales are decelerating.
+We don't need to replenish all the books.
+
+In practice it means having dynamic points of reorder for the book, according to the tendencies in each specific store.
+
+But those calculations, cannot be done by hand or excel.
+Retailers require a software capable doing that in real time, for all the SKUs in all the stores.
+
+
+## Chopping the tail
+Means cut products that are losers across all stores
+But we need to be very careful because.
+In one company they found out that 15% of the long tail were the lovers in one store... but the best sellers in another.
+Only 30% of long tail products were loser across all stores this are the ones that we must chop.
+But it is only 30% of the 80% long tail... so that is only 24% of the total.
+
+## What are my conclusions?
+
+- I'm happy that I came to the talk
+- This knowledge is going to be in book form in a few years but now I have it now that is going to start#
+- Even Goldratt found that he needed to sale a software product to scale#
+- We must create the smart Kanban board. Which would be the evolution of the TOC solution for project management.
+
+But most importantly:
+
+> I got to tell Rami,
+> that I loved his father Eli
+> That he was a light in this world of conflict.
+> and that we really need him.
+
+![Rami and I](rami_and_me.jpg)
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
