@@ -5405,11 +5405,62 @@ According to Jon Younger from *Forbes*, the trends for independent professionals
 - Some companies are creating their own portals for independent workers.
 - Complementary jobs for individuals who already have a formal job.
 
+## The Conflict Zones
+
+The Conflict Zones tool in TRIZ involves applying the 5W2H quality methodology, which refers to the basic questions in English: Who, Where, When, What, Why, How, and How much. This approach is a standard in journalism and, when applied to our problem, allows for a comprehensive analysis of the actual issue.
+
 Simply reflecting on different perspectives allows us to better understand our problem. As Albert Einstein once said, *"The formulation of a problem is often more important than its solution."*
 
+| **Conflict Zone**                                | **Response**                                                                                                      |
+|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| **Who has the problem?**                         | Knowledge workers in general, but specifically software developers.                                             |
+| **When does the problem occur?**                 | It started with the pandemic crisis, worsened with the economic slowdown due to the U.S. debt crisis, and continues today with the conflicts in Ukraine and Israel. It is further intensified by the maturity of tools like ChatGPT and artificial intelligence. |
+| **What seems to be the problem?** The threat of being displaced by AI tools and developers who are competitive using AI tools. | **How can I increase the productivity of independent software developers so they can compete effectively in an environment dominated by super developers who use advanced AI tools, without incurring prohibitive costs or requiring an unreachable level of technical skills?** |
+| **What resources do developers use to be more productive with AI tools?** | Existing development communities, MOOCs, AI tools, freelancer communities, online job platforms. |
+| **Where does the problem occur?**                | In the world’s most powerful economy, but also in Latin America and Mexico.                                    |
+| **Why does the problem occur?** Using Deeming’s "5 Whys" technique to find the root cause of the problem. | **Branch 1:**<br> - Few job opportunities <br> - Massive layoffs <br> - Economic recession <br> - Lack of investment in tech companies <br> - Shift from artificial growth strategies to organic growth. <br> **Branch 2:** <br> - More competitive developers <br> - Better training <br> - More resources available for successful developers <br> - Use of correct practices <br> - Access to better tools, training, and opportunities. |
+| **How does the problem occur?**                   | There have been layoffs since 2019, and few job opportunities, which are highly competitive.                     |
+| **What are the costs and damages of the problem (consequences)?** | Decrease in job availability for tech workers, salary reductions due to high labor supply. |
+
+## Conclusions
+
+TRIZ stands as a powerful tool within Innovation Management, providing a framework and specific techniques to address challenges creatively and systematically. TRIZ focuses on problem analysis and the generation of innovative ideas.
+
+TRIZ consists of more than 30 tools, including the general TRIZ framework, the Nine Windows technique, and the Conflict Zones tool. For this study, we used these three tools to reflect on the problem posed in the thesis protocol **"Combination of Product Development Techniques, Agile Methods, and Artificial Intelligence to Increase the Productivity of Software Developers"**, proposed by the author.
+
+TRIZ begins with the assumption that the problem we are facing has already been solved elsewhere under different circumstances. The challenge is to find that solution and adapt it to our problem.
+
+Using the **general TRIZ framework tool**, we generalized the problem to knowledge workers and identified three possible themes to complement the research:
+
+- For knowledge workers, it is crucial to determine the task to be performed and the expected outcome. Based on this, we can identify the process, context, tools, and skills needed to achieve it.
+- The knowledge worker offers a specific service, which must be delimited using criteria and metrics to evaluate this service.
+- Productivity metrics vary significantly and depend heavily on the expected outcomes and how the knowledge worker contributes to achieving them.
+
+### Three ideas obtained from the Nine Windows exercise:
+
+- The necessary sub-skills or software development lifecycle stages that complement AI automation tools, such as modeling.
+- Online platforms that offer services for independent professionals.
+- Efficiency metrics for product discovery.
+
+Regarding the **Conflict Zones tool**, which describes the problem using the **5W + 2H** technique, which in turn incorporates the **5 Whys** technique, the main conclusion is that the insistence on increasing productivity is driven by the need for developers to remain competitive within the current economic status quo. That is, within today’s economic model.
+
+> *"I want to be productive to cope with today’s competition, at the expense of flexibility to learn new tools."*
+
+This concludes the TRIZ exercise.
+
+## References
+
+- Dumb, Ellen. *Finding the Zones of Conflict: Tutorial.* Triz Journal. Retrieved on November 22, 2023.
+- Drucker, Peter F. "Knowledge-worker productivity: The biggest challenge." *California Management Review* 41.2 (1999): 79-94.
+- Cameron, Gordon. *Trizics.* Gordon Cameron, 2010.
+- De Bono, Edward. *Six Thinking Hats: The multi-million bestselling guide to running better meetings and making faster decisions.* Penguin UK, 2017.
+- Forsgren, Nicole, Humble, Jez, and Kim, Gene. *Accelerate: The Science of Lean Software and DevOps: Building and Scaling High-Performing Technology Organizations.* IT Revolution, March 27, 2018.
+- Harvard Business School Press. *The Innovator's Toolkit: 10 Practical Strategies to Help You Develop and Implement Innovation.* Harvard Business Press, 2009.
+- Ramírez, Yuri W., and Nembhard, David A. "Measuring knowledge worker productivity: A taxonomy." *Journal of Intellectual Capital* 5.4 (2004): 602-628.
+- Seiden, Josh. *Outcomes Over Output: Why Customer Behavior is the Key Metric for Business Success.* Sense & Respond Press, 2019.
+- Younger, Jon. Forbes: *"The Trends Shaping The Freelance Revolution In 2023."*
 
 
-to be continued...
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
