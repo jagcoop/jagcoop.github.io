@@ -1,0 +1,83 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+
+     **State Machines and Programming Languages**
+
+March 2nd, 2025
+By Alejandro Garcia
+
+> Any program you write has a state machine in it.
+> Either it is explicit or implicit in a bunch of if's through the code
+> But its there
+>      -- A Hacker News comment, from my memory
+
+# Advantages of Making State Machines Visible
+
+Making state machines explicit has several benefits:
+- Clarity and Visibility:
+  By showing state transitions clearly (as in the Elm architecture or the P9 protocol), the flow of the program becomes easier to understand.
+- Simplified Reasoning:
+  Centralizing state logic helps avoid the pitfalls of hidden or scattered state transitions.
+- Less Defects:
+  Given the two previous points, there cannot be a state that we haven't coded.
+
+## Example: The P9 Protocol
+- The P9 protocol is used as a state machine in this example:
+  [Socrates is a State Machine](https://www.sminez.dev/socrates-is-a-state-machine/)
+
+# Programming Languages and Tools that Use State Machines
+
+## Ragel
+A tool that compiles state machine definitions into code in various programming languages.
+
+- Pros:
+  - The state machine is explicit and easy to follow.
+- Cons:
+  - After compilation, the state machine essentially becomes documentation within another language.
+  - It can suffer from the state explosion problem.
+
+## Plaid
+Plaid introduces object-state programming, integrating state machines into object-oriented design.
+
+- Pros:
+  - The state machine is part of the object-oriented structure.
+  - It represents Harel state charts as objects.
+- Cons:
+  - The state machine can become diluted because the logic is mixed with state transition code.
+
+## Eiffel
+Eiffel implements state machines in two distinct ways:
+
+### 1. State Machine Pattern / Component
+As proposed by Karine Arnout in her thesis, this approach treats the state machine as a separate component.
+
+- **Pros:**
+  - It is the most documented method for implementing state machines in objects.
+- **Cons:**
+  - It creates new objects at runtime.
+  - The state machine logic is spread across multiple regions of the code.
+
+### 2. As Part of the Features of a Class
+This method integrates the state machine within the class itself.
+
+- **Method:**
+  - Uses boolean flags to indicate the current state.
+  - Employs preconditions to ensure that transitions between states are valid.
+
+# Desired Characteristics for State Machine Implementations
+
+What is the ideal approach?
+- **Centralized State Management:**
+  The entire state machine and its transitions should be defined in a single location (as seen in Ragel).
+- **Avoidance of State Explosion:**
+  The design should prevent the exponential growth of states, a common issue in hierarchical state machines (like Harel charts).
+- **Visibility:**
+  The state machine should be clearly visible and accessible, similar to the Elm architecture.
+- **Compilation Guarantees:**
+  It should provide the robust assurances of correctness offered by component-based approaches in Eiffel.
+
+I'm writing this here so that I can come back and create my desired tool.
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
