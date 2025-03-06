@@ -473,6 +473,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Have_you_felt_exponential_era](././posts/Have_you_felt_exponential_era/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Going_Agile_The_Agile_Way](././posts/Going_Agile_The_Agile_Way/) 
   	  </li>
   	</ul>
@@ -2297,6 +2301,63 @@ ps1. See my review of the book, "The Five Elementos of Effective Thinking". http
 
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Have You Felt the Exponential Era?
+March 6th, 2025
+by *Agus Rumayor*
+
+There are very few exponential sensations in our culture. Why? Because most of our systems seem to be linear, and truly exponential phenomena—like bacterial growth or international debt—are not easy to perceive. We are used to feeling linear changes, where progress happens gradually and predictably.  
+
+I’m bringing this up because I’ve been searching for something that *feels* like an exponential experience. And one memory popped into my head: my niece blacking out on a roller coaster last summer and only remembering half of the ride. She went from excitement to unconsciousness and back to excitement in a matter of seconds, missing the middle part of the ride completely and all the family laughing even she was frightened.  
+
+I know that G-force is technically a linear acceleration, but the sensation? It feels *exponential*. One moment, everything is under control, and the next, the intensity ramps up so fast that your brain can't keep up. That’s the kind of change we’re starting to experience with AI and technology—it’s not a smooth transition; it’s a *whiplash*.
+
+## The First AI Case
+
+There have been multiple claims of AI passing the Turing test. Honestly, it's a great debate topic—not just in IT, but in any field—because of how subjective the test really is. Passing the Turing test isn’t just about logic or knowledge; it’s about *perception*, about making humans *feel* like they’re talking to another human.  
+
+Some university experiments have been impressive, but for me, the moment that truly stood out was Google’s *Duplex* demo. Watching an AI book a hair appointment with perfect timing, natural speech patterns, and even realistic hesitation made it clear that something big had shifted.  
+
+For the first time, AI wasn’t just answering questions; it was navigating real-world interactions in a way that felt unsettlingly... *human*.
+
+## Losing Faith
+
+The first few times I used ChatGPT for my daily tasks, I was impressed. But at the same time, I was *seriously* disappointed every time the AI confidently gave me false information.  
+
+Nothing kills the magic faster than being lied to by an algorithm.  
+
+I remember relying on it for research, only to find that some of the citations didn’t exist. I asked it for coding help, and sometimes it made up functions that weren’t real. It felt like working with someone who’s incredibly knowledgeable but has zero accountability—like a coworker who talks a big game but vanishes when it’s time to show real results.  
+
+It made me wonder: If AI is supposed to be the future, why does it still feel so unreliable?
+
+## Feeling the Exponential Era
+
+Even though I was skeptical about relying on AI for everyday tasks, I gave Claude 3.7 with Cline a shot. And honestly? It felt like jumping from 1G to 2G to 4G to 6G—*on every single prompt*.  
+
+It wasn’t just faster; it was thinking. It debugged my code the way *I* would, but at an extreme speed. It suggested changes not just within the same technology, but across different software versions, even switching tech stacks when necessary. It wasn’t just answering questions; it was solving *problems*.  
+
+For the first time, I wasn’t just using AI as a tool—I was *collaborating* with it.  
+
+Of course, it wasn’t perfect. When the prompt cache got too large, the AI struggled to maintain context, and there were moments when I had to nudge it back on track. But the *feeling* of working with it was completely different. It wasn’t just an assistant; it was an *exponential accelerator*.  
+
+That’s when I truly felt it: oh! This is 2G!
+
+## Buckle Up, the Exponential Era is Here  
+
+The exponential era is going to change *everything*—from how we grow food to how we interact with one another (and not just with other humans). AI, automation, and all something-techs aren’t just improving incrementally; they’re shifting at a pace that rewrites the rules of every industry overnight.  
+
+The realization that my job might no longer be needed feels both terrifying and thrilling at the same time.  
+
+It’s like that moment on a roller coaster—when you're climbing up, feeling the tension, knowing that soon there will be a point of no return. For a split second, your brain screams, *This was a mistake!*, but then gravity takes over, and suddenly, you're in free fall.  
+
+And there’s no way back.  
+
+Are you going to blackout? or hold on, embrace the speed, and enjoy the ride.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 # Home Manager strategies for symlink management
@@ -8670,6 +8731,10 @@ This are the innovations that have been ocupaying our minds lately
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
+### [2025-03-06: posts/Have_you_felt_exponential_era](./posts/Have_you_felt_exponential_era).
+[lab notes ongaing](./posts/Have_you_felt_exponential_era)
+
+
 ### [2025-03-06: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
 [lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
 
@@ -8823,6 +8888,7 @@ Email
 		<li>[posts/How_to_Do_a_Dirty_and_Quick_Review](/posts/How_to_Do_a_Dirty_and_Quick_Review/index.html)</li>
 		<li>[posts/How_To_Choose_a_Book](/posts/How_To_Choose_a_Book/index.html)</li>
 		<li>[posts/Home_Manager_strategies_for_symlink_management](/posts/Home_Manager_strategies_for_symlink_management/index.html)</li>
+		<li>[posts/Have_you_felt_exponential_era](/posts/Have_you_felt_exponential_era/index.html)</li>
 		<li>[posts/Going_Agile_The_Agile_Way](/posts/Going_Agile_The_Agile_Way/index.html)</li>
 		<li>[posts/Frustration_in_the_face_of_improvement](/posts/Frustration_in_the_face_of_improvement/index.html)</li>
 		<li>[posts/Extending_the_Power_of_your_Personal_Cloud](/posts/Extending_the_Power_of_your_Personal_Cloud/index.html)</li>
@@ -10569,6 +10635,10 @@ I needed to compile the RegEx before doing the match.
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Home_Manager_strategies_for_symlink_management](././posts/Home_Manager_strategies_for_symlink_management/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Have_you_felt_exponential_era](././posts/Have_you_felt_exponential_era/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
