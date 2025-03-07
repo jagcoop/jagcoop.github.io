@@ -9384,7 +9384,9 @@ Sonic Pi's creator, Sam Aaron, has emphasized numerous times the importance of m
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
-
+<script
+      src="https://state-machine-cat.js.org/state-machine-cat-inpage.min.js"
+      type="module" defer> </script>
 
      **State Machines and Programming Languages**
 
@@ -9396,6 +9398,50 @@ By Alejandro Garcia
 > But its there
 >      -- A Hacker News comment, from my memory
 
+I didn't fully comprehend the power of state machines, until I saw the Elm Architecture.
+
+On this article, We will explore different representations of state machines in different programming languages.
+To see which notations make it clear, What the state machine is doing.
+And which notations actually hide the state machine in different parts of the code.
+
+# What are state machines?
+
+State machines are a graphical representation and a mathematical abstraction, of the change of a system overtime.
+
+For example, let's think of a lamp. A lamp can be Off or On
+
+![A lamp can be off or on](./a_lamp.jpeg)
+
+And we can represent it a state machine like:
+
+<script type="text/x-smcat" data-direction="top-down">
+initial,
+off, on;
+initial => off : plug it to wall;
+off => on : press button;
+on => off : press button;
+</script>
+
+Observe that initially the Lamp is not plugged to the wall.
+Once we plug it, it starts as being off.
+It is until we press the button that it is turned on.
+if we press the button again then it turns off.
+
+However, if we have a lamp that has 3 different levels of light: Dim, Medium, Bright.
+Then we can represent it as Hierarchical state machine:
+
+<script type="text/x-smcat" data-direction="top-down">
+initial,
+off,
+on {
+    Dim => Medium : press button;
+    Medium => Bright: press button;
+};
+initial => off : plug it to wall;
+off => on : press button;
+on => off: press button;
+</script>
+
 # Advantages of Making State Machines Visible
 
 Making state machines explicit has several benefits:
@@ -9406,29 +9452,478 @@ Making state machines explicit has several benefits:
 - Less Defects:
   Given the two previous points, there cannot be a state that we haven't coded.
 
-## Example: The P9 Protocol
-- The P9 protocol is used as a state machine in this example:
+# Motivating examples
+
+
+## The Elm architecture
+
+Elm is a programming language that looks like Haskell, but is used as a replacement to JavaScript in building web user interfaces.
+
+But what makes Elm such a powerful language is something called the 'Elm Architecture' which is a design pattern,
+that organizes the code of all Elm web pages.
+
+Well the Elm architecture is just a state machine.
+
+for example our Lamp state machine, would look in elm like this
+
+```elm
+module Lamp-Machine exposing (LampState(..), BrightnessLevel(..), Msg(..), update, init)
+
+-- Define the possible brightness levels
+type BrightnessLevel
+    = Dim
+    | Medium
+    | Bright
+
+
+-- Define the possible states of our lamp
+type LampState
+    = Initial
+    | Off
+    | On BrightnessLevel
+
+
+-- Define the possible messages/events
+type Msg
+    = PlugIn
+    | Press
+
+
+-- Initialize the lamp state
+init : LampState
+init =
+    Initial
+```
+
+And Elm's update function would make the transitions clear like this:
+
+
+```Elm
+-- Update function to handle state transitions
+update : Msg -> LampState -> LampState
+update msg state =
+    case ( state, msg ) of
+        -- From initial state
+        ( Initial, PlugIn ) ->
+            Off
+
+        ( Initial, _ ) ->
+            state
+
+        -- From off state
+        ( Off, Press ) ->
+            On Dim
+
+        ( Off, _ ) ->
+            state
+
+        -- From on state with different brightness levels
+        ( On Dim, Press ) ->
+            On Medium
+
+        ( On Medium, Press ) ->
+            On Bright
+
+        ( On Bright, Press ) ->
+            Off
+```
+
+The important thing is that with just those pieces of logic we can generate a website that reflects a lamp.
+and that is defect free. Because every possible combination of changes is known before hand.
+
+<details>
+<summary>Complete code of the Lamp State machine in Elm</summary>
+
+```Elm
+module Main exposing (main)
+
+import Browser
+import Html exposing (Html, button, div, text)
+import Html.Events exposing (onClick)
+import Html.Attributes exposing (style)
+
+
+-- TYPES
+
+type BrightnessLevel
+    = Dim
+    | Medium
+    | Bright
+
+
+type LampState
+    = Initial
+    | Off
+    | On BrightnessLevel
+
+
+type Msg
+    = PlugIn
+    | Press
+
+
+-- MODEL
+
+type alias Model =
+    { state : LampState
+    }
+
+
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( { state = Initial }, Cmd.none )
+
+
+-- UPDATE
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    let
+        newState =
+            case ( model.state, msg ) of
+                -- From initial state
+                ( Initial, PlugIn ) ->
+                    Off
+
+                ( Initial, _ ) ->
+                    model.state
+
+                -- From off state
+                ( Off, Press ) ->
+                    On Dim
+
+                ( Off, _ ) ->
+                    model.state
+
+                -- From on state with different brightness levels
+                ( On Dim, Press ) ->
+                    On Medium
+
+                ( On Medium, Press ) ->
+                    On Bright
+
+                ( On Bright, Press ) ->
+                    Off
+    in
+    ( { model | state = newState }, Cmd.none )
+
+
+-- VIEW
+
+view : Model -> Html Msg
+view model =
+    div [ style "padding" "20px" ]
+        [ div [ style "margin-bottom" "20px" ]
+            [ text <| "Current state: " ++ stateToString model.state ]
+        , div [ style "margin-bottom" "20px" ]
+            [ viewLamp model.state ]
+        , div [ style "display" "flex", style "gap" "10px" ]
+            [ button [ onClick PlugIn, style "padding" "8px" ] [ text "Plug In" ]
+            , button [ onClick Press, style "padding" "8px" ] [ text "Press" ]
+            ]
+        ]
+
+
+viewLamp : LampState -> Html Msg
+viewLamp state =
+    let
+        (color, intensity) =
+            case state of
+                Initial ->
+                    ("gray", "0")
+
+                Off ->
+                    ("gray", "0")
+
+                On Dim ->
+                    ("yellow", "0.3")
+
+                On Medium ->
+                    ("yellow", "0.6")
+
+                On Bright ->
+                    ("yellow", "1")
+    in
+    div
+        [ style "width" "100px"
+        , style "height" "100px"
+        , style "border-radius" "50%"
+        , style "background-color" color
+        , style "opacity" intensity
+        , style "border" "2px solid black"
+        ]
+        []
+
+
+stateToString : LampState -> String
+stateToString state =
+    case state of
+        Initial ->
+            "Initial (unplugged)"
+
+        Off ->
+            "Off"
+
+        On Dim ->
+            "On (Dim)"
+
+        On Medium ->
+            "On (Medium)"
+
+        On Bright ->
+            "On (Bright)"
+
+
+-- MAIN
+
+main : Program () Model Msg
+main =
+    Browser.element
+        { init = init
+        , update = update
+        , view = view
+        , subscriptions = \_ -> Sub.none
+        }
+```
+<details>
+
+
+
+## The P9 Protocol
+
+The P9 protocol is a protocol that is fundamental to the Planet9 Operating system.
+The Planet 9 OS was the next evolution of Unix.
+Done by the creators of Unix, C++ , etc.
+One of it's characteristics is that everything and we mean everything looks like a file.
+- A network connection? that is a file.
+- A web browser, that is a also a file
+- USB-port also a file.
+
+And the key to make that inter-operativity work is the P9 protocol.
+In this article they specify the P9 protocol as state machine.
+
   [Socrates is a State Machine](https://www.sminez.dev/socrates-is-a-state-machine/)
 
 # Programming Languages and Tools that Use State Machines
 
+## State
+Is very well developed library to represent state machines.
+The lamp state machine is written like this in XState:
+
+```JavaScript
+export const lampMachine = createMachine({
+  id: 'lamp',
+  initial: 'initial',
+  states: {
+    initial: {
+      on: {
+        PLUGIN: 'off'
+      }
+    },
+    off: {
+      on: {
+        PRESS: 'on'
+      }
+    },
+    on: {
+      initial: 'dim',
+      states: {
+        dim: {
+          on: {
+            PRESS: 'medium'
+          }
+        },
+        medium: {
+          on: {
+            PRESS: 'bright'
+          }
+        },
+        bright: {
+          on: {
+            PRESS: {
+              target: '#lamp.off'
+            }
+          }
+        }
+      }
+    }
+  }
+})
+```
+[Implementation of the Lamp State Machine in XState, (according to Claude 3.7) ]
+
+Perhaps it is also useful to see this Json document also as a graph:
+
+```plantuml
+@startjson
+{
+  "id": "'lamp',",
+  "initial": "'initial',",
+  "states": {
+    "initial": {
+      "on": {
+        "PLUGIN": "'off'"
+      }
+    },
+    "off": {
+      "on": {
+        "PRESS": "'on'"
+      }
+    },
+    "on": {
+      "initial": "'dim',",
+      "states": {
+        "dim": {
+          "on": {
+            "PRESS": "'medium'"
+          }
+        },
+        "medium": {
+          "on": {
+            "PRESS": "'bright'"
+          }
+        },
+        "bright": {
+          "on": {
+            "PRESS": {
+              "target": "'#lamp.off'"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@endjson
+```
+
+### Pros
+
++ the code just reflects the state machine
++ Observe that, it clearly defines the sub-sates Dim, Medium and Bright inside the On state.
++ It is json, so you can programatically generate the code for the state machine.
+
+### Cons
+
+It has very few cons:
+
+- It only works with JavaScript, although we could probably create interpreters of the state machine in other languages.
+- Looking at all the states
+- It doesn't have encapsulation meaning the sub-states of ON are declared in the same state machine...  but in order to manage complexity we wouldn't want to see them.
+
+### How to link it with code?
+
+Now how do we use the state machine in the code?
+
+```JavaScript
+// Create a service with logging
+const lampService = interpret(lampMachine)
+  .onTransition((state) => {
+    console.log('Current state:', state.value);
+  })
+  .start(); // Start the service
+
+// Example usage
+lampService.send('PLUGIN');   // Logs: Current state: off
+lampService.send('PRESS');    // Logs: Current state: on.dim
+lampService.send('PRESS');    // Logs: Current state: on.medium
+lampService.send('PRESS');    // Logs: Current state: on.bright
+lampService.send('PRESS');    // Logs: Current state: off
+```
+
+observe that `.onTransition` we create a function that receives as parameter the state `(state) => {...}`
+and that function gets called on every state change. So the function is "subscribed" to the state change.
+
 ## Ragel
+
 A tool that compiles state machine definitions into code in various programming languages.
 
-- Pros:
-  - The state machine is explicit and easy to follow.
-- Cons:
+For example, our previous state machine could be represented in Ragel:
+
+```c
+%%{
+    machine lamp;
+
+    # Main states
+    initial = 'initial';
+    off = 'off';
+    on_dim = 'on.dim';
+    on_medium = 'on.medium';
+    on_bright = 'on.bright';
+
+    # Transitions
+    initial -> off 'PLUGIN';
+    off -> on_dim 'PRESS';
+    on_dim -> on_medium 'PRESS';
+    on_medium -> on_bright 'PRESS';
+    on_bright -> off 'PRESS';
+
+    # Define the initial state
+    start: initial;
+}%%
+```
+
+* I didn't test this code, it is what Claude 3.7 thinks it would look. But for our purposes gives an idea of the Ragel representation
+
+### Pros
+
+  + The state machine is very few lines of code
+
+### Cons
+
+  - Ragel doesn't support hierarchical state machines by default, so we need to flatten it like with  on.dim, on.medium, etc.
   - After compilation, the state machine essentially becomes documentation within another language.
   - It can suffer from the state explosion problem.
 
 ## Plaid
-Plaid introduces object-state programming, integrating state machines into object-oriented design.
+
+Plaid introduces type state oriented programming, integrating state machines into object-oriented design.
+
+Typestate-Oriented Programming, a paradigm that extends object-oriented programming with type-states. A type-state is like a class, in that it has its own interface (a set of method signatures), representation (fields), and behavior (method implementations). However, the type-state of an object can change over time, and Plaid's type system helps track these changes.
+
+for example our current lamp state machine, would look like this in plaid:
+
+```JavaScript
+state Lamp {
+    // State hierarchy
+    state Initial {
+        method plugIn() [ Initial >> Off ] { /* transition logic */ }
+    }
+
+    state Off {
+        method press() [ Off >> On.Dim ] { /* transition logic */ }
+    }
+
+    state On {
+        // Nested states
+        state Dim {
+            method press() [ On.Dim >> On.Medium ] { /* transition logic */ }
+        }
+
+        state Medium {
+            method press() [ On.Medium >> On.Bright ] { /* transition logic */ }
+        }
+
+        state Bright {
+            method press() [ On.Bright >> Off ] { /* transition logic */ }
+        }
+    }
+
+    // Constructor starts in Initial state
+    Lamp() [ => Initial ] { /* initialization */ }
+}
+```
+[Implementation of the Lamp State Machine in Plaid, (according to Claude 3.7) ]
+
+Observe that if we are in the state `Off` then the `method press()` transitions the state from: `Off` to `On.Dim`
+
 
 - Pros:
   - The state machine is part of the object-oriented structure.
-  - It represents Harel state charts as objects.
+  - It represents nested state charts as objects.
 - Cons:
   - The state machine can become diluted because the logic is mixed with state transition code.
+
 
 ## Eiffel
 Eiffel implements state machines in two distinct ways:
@@ -9436,30 +9931,142 @@ Eiffel implements state machines in two distinct ways:
 ### 1. State Machine Pattern / Component
 As proposed by Karine Arnout in her thesis, this approach treats the state machine as a separate component.
 
-- **Pros:**
+#### Pros
   - It is the most documented method for implementing state machines in objects.
-- **Cons:**
-  - It creates new objects at runtime.
+
+#### Cons
+  - It creates new objects at run time.
   - The state machine logic is spread across multiple regions of the code.
 
 ### 2. As Part of the Features of a Class
 This method integrates the state machine within the class itself.
 
-- **Method:**
-  - Uses boolean flags to indicate the current state.
+#### Method
+
+  - Uses Boolean flags to indicate the current state.
   - Employs preconditions to ensure that transitions between states are valid.
+
+For example look at this Eiffel code:
+
+```Eiffel
+class
+    LAMP
+
+feature -- Status
+    is_initial: BOOLEAN
+    is_off: BOOLEAN
+    is_on: BOOLEAN
+    is_dim: BOOLEAN
+    is_medium: BOOLEAN
+    is_bright: BOOLEAN
+
+feature -- Initialization
+    make
+            -- Create lamp in initial state.
+        do
+            is_initial := True
+            is_off := False
+            is_on := False
+            is_dim := False
+            is_medium := False
+            is_bright := False
+        ensure
+            in_initial_state: is_initial
+        end
+
+feature -- Transitions
+    plug_to_wall
+            -- Plug the lamp to the wall.
+        require
+            is_in_initial_state: is_initial
+        do
+            is_initial := False
+            is_off := True
+        ensure
+            is_off_now: is_off
+        end
+
+    press_button
+            -- Press the lamp button.
+        require
+            not_in_initial_state: not is_initial
+        do
+            if is_off then
+                is_off := False
+                is_on := True
+                is_dim := True
+            elseif is_on and is_dim then
+                is_dim := False
+                is_medium := True
+            elseif is_on and is_medium then
+                is_medium := False
+                is_bright := True
+            elseif is_on and is_bright then
+                is_on := False
+                is_bright := False
+                is_off := True
+            end
+        ensure
+            state_changed: old is_off /= is_off or
+                           old is_dim /= is_dim or
+                           old is_medium /= is_medium or
+                           old is_bright /= is_bright
+        end
+
+feature -- Status report
+    state: STRING
+            -- Current state of the lamp as a string.
+        do
+            if is_initial then
+                Result := "initial"
+            elseif is_off then
+                Result := "off"
+            elseif is_on then
+                if is_dim then
+                    Result := "on.dim"
+                elseif is_medium then
+                    Result := "on.medium"
+                elseif is_bright then
+                    Result := "on.bright"
+                end
+            end
+        end
+
+invariant
+    valid_state_combination: is_initial implies (not is_off and not is_on and not is_dim and not is_medium and not is_bright)
+    off_state_valid: is_off implies (not is_initial and not is_on and not is_dim and not is_medium and not is_bright)
+    on_substates: is_on implies (is_dim or is_medium or is_bright)
+    dim_requires_on: is_dim implies is_on
+    medium_requires_on: is_medium implies is_on
+    bright_requires_on: is_bright implies is_on
+    one_on_substate: is_on implies (is_dim and not is_medium and not is_bright) or
+                              (not is_dim and is_medium and not is_bright) or
+                              (not is_dim and not is_medium and is_bright)
+end
+```
+
+For example in the Feature -- Transitions
+you see that in the method `plug_to_wall` the pre-condition `requires` that the current state of the state machine be `initial`
+Meaning you will get an error if you try to `plug to the wall` when the state machine is already connected.
+
+Or, in the `press_button` transition observe that it `requires` to not be in initial but any other state, you can press the button.
+But observe that in the post-condition `ensures` that if the state was `off` when we entered the method, then it should be `On` when we leave this function.
 
 # Desired Characteristics for State Machine Implementations
 
 What is the ideal approach?
-- **Centralized State Management:**
-  The entire state machine and its transitions should be defined in a single location (as seen in Ragel).
-- **Avoidance of State Explosion:**
-  The design should prevent the exponential growth of states, a common issue in hierarchical state machines (like Harel charts).
-- **Visibility:**
-  The state machine should be clearly visible and accessible, similar to the Elm architecture.
-- **Compilation Guarantees:**
-  It should provide the robust assurances of correctness offered by component-based approaches in Eiffel.
+
+Centralized State Management
+:  The entire state machine and its transitions should be defined in a single location (as seen in Ragel).
+
+Avoidance of State Explosion
+:  The design should prevent the exponential growth of states, a common issue in hierarchical state machines (like Harel charts).
+
+Visibility
+:  The state machine should be clearly visible and accessible, similar to the Elm architecture.
+
+Compilation Guarantees
+:  It should provide the robust assurances of correctness offered by component-based approaches in Eiffel.
 
 I'm writing this here so that I can come back and create my desired tool.
 
