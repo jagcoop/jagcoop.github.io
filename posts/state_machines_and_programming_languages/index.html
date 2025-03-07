@@ -370,48 +370,7 @@ export const lampMachine = createMachine({
 
 Perhaps it is also useful to see this Json document also as a graph:
 
-```plantuml
-@startjson
-{
-  "id": "'lamp',",
-  "initial": "'initial',",
-  "states": {
-    "initial": {
-      "on": {
-        "PLUGIN": "'off'"
-      }
-    },
-    "off": {
-      "on": {
-        "PRESS": "'on'"
-      }
-    },
-    "on": {
-      "initial": "'dim',",
-      "states": {
-        "dim": {
-          "on": {
-            "PRESS": "'medium'"
-          }
-        },
-        "medium": {
-          "on": {
-            "PRESS": "'bright'"
-          }
-        },
-        "bright": {
-          "on": {
-            "PRESS": {
-              "target": "'#lamp.off'"
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@endjson
-```
+[![](https://img.plantuml.biz/plantuml/svg/SoWkIImgoIhEp-Egvb9GKCfCKR9IK5BFISmjKDTHqW4BvMMMP2RcWCMXR9WKK7D9QZ5G1gGNHIb402YKduV40_83V4BTFVt0XkMdfQahGMLgmNIj3iGSe0nUCu9SWuCXHkJXCW5P2ueNKZ9peSu7Iw5v0Im6L88YWEa4D6VafgPabkR2dO9m3fAJm5eW2aapFAaeCpsZX0Z38Gf9CHnL62W1J0pfgILWQvL1QK0FEOxGxKPn1seiS85mBPT3QbuAA6q10000)](https://editor.plantuml.com/uml/SoWkIImgoIhEp-Egvb9GKCfCKR9IK5BFISmjKDTHqW4BvMMMP2RcWCMXR9WKK7D9QZ5G1gGNHIb402YKduV40_83V4BTFVt0XkMdfQahGMLgmNIj3iGSe0nUCu9SWuCXHkJXCW5P2ueNKZ9peSu7Iw5v0Im6L88YWEa4D6VafgPabkR2dO9m3fAJm5eW2aapFAaeCpsZX0Z38Gf9CHnL62W1J0pfgILWQvL1QK0FEOxGxKPn1seiS85mBPT3QbuAA6q10000)
 
 ### Pros
 
