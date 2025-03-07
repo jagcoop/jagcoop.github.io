@@ -2387,9 +2387,9 @@ mix phx.server
 ```
 
 Upload a PDF file
-![alt text](upload.png)
+![](upload.png)
 
-![alt text](result.png)
+![](result.png)
 
 And just like that, we've built a PDF parser in Rust ready to extract text with ease!
 
