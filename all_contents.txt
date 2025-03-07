@@ -489,6 +489,10 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./posts/Elixir-Rust_Integration](././posts/Elixir-Rust_Integration/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](././posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones/) 
   	  </li>
   	</ul>
@@ -2150,6 +2154,247 @@ Mental note: go directly with the interested ones in your initiative, avoid goin
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Elixir-Rust Integration
+By Miguel Iñiguez. March 6th, 2025
+
+Elixir is a powerful language, but it’s not always the best tool for every task. It is great in web services, background processing, and scalable applications, but for operations requiring low-level hardware access or extreme performance, we may need additional support. That’s where Rust comes in.
+
+Rust is a systems programming language designed for speed, safety, and reliability. Its emphasis on performance and memory safety makes it an excellent choice for computationally intensive tasks.
+
+In this project, we'll create a program to parse PDFs. To achieve this, we’ll use Native Implemented Functions (NIFs), which allow Elixir to directly call Rust code. NIFs enable high-performance native execution while maintaining the expressiveness of Elixir.
+
+Parsing PDFs is a complex challenge. They come in various formats, each with different structures, encodings, and embedded content. While extracting text is often our primary goal, even that can be tricky due to the diverse ways PDFs encode information.
+
+Rust’s zero-cost abstractions make it a great fit for this task. It allows us to write expressive, maintainable code that compiles to highly optimized machine instructions, offering C-like performance without sacrificing safety.
+
+For this project, we will use the pdf-extract library, which provides efficient unstructured data extraction in Rust.
+
+## The Setup
+
+Make sure you have installed Elixir and Rust.
+
+Let's start by creating a new LiveView Elixir application that lets users upload a PDF file and view a breakdown of its contents. We won’t need any database functionality, so we use the --no-ecto flag to skip the database setup.
+
+```
+$ mix phx.new elixir_pdf --no-ecto
+```
+
+add the rustler dependency to our mix.exs file
+
+
+```
+defp deps do
+  [
+    {:rustler, "~> 0.27.0"}
+  ]
+end
+
+```
+
+Next, run mix deps.get. Now, we can use mix rustler.new to generate a new Rust project in our code. We'll name the project Rustreader.
+
+```
+$ mix rustler.new
+This is the name of the Elixir module the NIF module will be registered to.
+Module name > Rustreader    
+This is the name used for the generated Rust crate. The default is most likely fine.
+Library name (rustreader) > rustreader
+* creating native/rustreader/.cargo/config.toml
+* creating native/rustreader/README.md
+* creating native/rustreader/Cargo.toml
+* creating native/rustreader/src/lib.rs
+* creating native/rustreader/.gitignore
+
+``` 
+
+Next, add extractous to native/rustreader/Cargo.toml file
+
+```
+[dependencies]
+rustler = "0.36.0"
+pdf-extract = "0.8.2"
+```
+
+Then we can run cargo build to build our Rust code
+
+```
+$ cd native/rustreader 
+$ cargo build
+	Updating crates.io index
+     Locking 253 packages to latest compatible versions
+     ....
+```
+## The Rust code
+Next, we'll create a function named extract_pdf in native/rustreader/src/lib.rs file
+
+```
+use rustler::{Encoder, Env, NifResult, Term};
+
+#[rustler::nif(schedule = "DirtyCpu")]
+fn extract_pdf(path: String) -> NifResult<String> {
+    let bytes = std::fs::read(path).unwrap();
+    let out = pdf_extract::extract_text_from_mem(&bytes).unwrap();
+
+
+    Ok(out)
+}
+
+rustler::init!("Elixir.RustReader", [extract_pdf]);
+```
+
+This code defines a new instance of the Extractor struct and uses it to extract the contents of the PDF file. We’ll then return both the contents and metadata as a tuple.
+
+The magic of the rustler::init! macro is that it automatically generates the necessary code to call the Rust function from Elixir.
+
+
+## The Elixir code
+
+We need to create the files lib/elixir_pdf_web/live/home_live.ex, lib/elixir_pdf_web/live/home_live.html.heex and lib/rust_reader.ex
+
+* home_live.ex allows users to upload a PDF file and then call our Rust function from the server.
+```
+defmodule ElixirPdfWeb.HomeLive do
+  use ElixirPdfWeb, :live_view
+
+  @impl true
+  def mount(_params, _session, socket) do
+    {:ok,
+     socket
+     |> assign(:uploaded_files, [])
+     |> allow_upload(:pdf,
+       accept: ~w(.pdf),
+       max_entries: 1,
+       # 10MB limit
+       max_file_size: 10_000_000,
+       chunk_size: 64_000
+     )}
+  end
+
+  @impl true
+  def handle_event("validate", _params, socket) do
+    {:noreply, socket}
+  end
+
+  @impl true
+  def handle_event("save", _params, socket) do
+    uploaded_files =
+      consume_uploaded_entries(socket, :pdf, fn %{path: path}, _entry ->
+        dest = Path.join(["priv", "static", "uploads", Path.basename(path)])
+        File.cp!(path, dest)
+        {:ok, dest}
+      end)
+
+    pdf_document =
+      uploaded_files
+      |> hd()
+      |> RustReader.extract_pdf()
+      |> IO.inspect()
+
+
+    {:noreply,
+     socket
+     |> assign(:pdf_document, pdf_document)
+     |> update(:uploaded_files, &(&1 ++ uploaded_files))}
+  end
+end
+
+```
+
+* home_live.html.heex is a simple LiveView template to allow users to upload a PDF file and see the results.
+```
+<div class="mx-auto max-w-2xl py-8">
+  <div class="flex flex-col items-center justify-center">
+    <h1 class="text-2xl font-bold mb-8">Upload PDF</h1>
+
+    <form phx-submit="save" phx-change="validate" class="w-full">
+      <div class="flex flex-col items-center space-y-4 w-full" phx-drop-target={@uploads.pdf.ref}>
+        <div class="w-full border-2 border-dashed border-gray-300 rounded-lg p-12 text-center hover:border-gray-400 transition-colors">
+          <div class="space-y-2">
+            <div class="text-gray-600">
+              Drag and drop your PDF here or
+              <label class="cursor-pointer text-blue-500 hover:text-blue-600">
+                browse <.live_file_input upload={@uploads.pdf} class="hidden" />
+              </label>
+            </div>
+            <p class="text-xs text-gray-500">PDF files only, up to 10MB</p>
+          </div>
+        </div>
+
+        <%= for entry <- @uploads.pdf.entries do %>
+          <div class="w-full">
+            <div class="flex items-center justify-between p-4 bg-gray-50 rounded">
+              <div class="flex items-center space-x-2">
+                <span class="font-medium">{entry.client_name}</span>
+                <span class="text-sm text-gray-500">
+                  ({entry.client_size}B)
+                </span>
+              </div>
+
+              <button
+                type="button"
+                class="text-red-500 hover:text-red-700"
+                phx-click="cancel-upload"
+                phx-value-ref={entry.ref}
+              >
+                &times;
+              </button>
+            </div>
+
+            <%= for err <- upload_errors(@uploads.pdf, entry) do %>
+            <% end %>
+          </div>
+        <% end %>
+
+        <%= if length(@uploads.pdf.entries) > 0 do %>
+          <button
+            type="submit"
+            class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+          >
+            Upload
+          </button>
+        <% end %>
+      </div>
+    </form>
+  </div>
+</div>
+```
+* rust_reader.ex defines the function that will be implemented in Rust
+```
+defmodule RustReader do
+  use Rustler, otp_app: :elixir_pdf, crate: :rustreader
+
+  def extract_pdf(_path), do: :erlang.nif_error(:nif_not_loaded)
+end
+
+```
+
+Alongside this we need to add code to our router.ex file.
+
+```
+scope "/", ElixirPdfWeb do
+  pipe_through :browser
+
+  live "/", HomeLive
+end
+```
+
+## Let's try it 
+
+Run the project 
+```
+mix phx.server
+```
+
+Upload a PDF file
+![alt text](upload.png)
+
+![alt text](result.png)
+
+And just like that, we've built a PDF parser in Rust ready to extract text with ease!
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><meta charset="utf-8" emacsmode="-*- markdown -*-">
 
 # Extending the Power of Your Personal Cloud with Development Tools
 
@@ -8479,331 +8724,335 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2025-03-06: posts/xilenial_discovers_perseverance](./posts/xilenial_discovers_perseverance).
+### [2025-03-07: posts/xilenial_discovers_perseverance](./posts/xilenial_discovers_perseverance).
 [lab notes ongaing](./posts/xilenial_discovers_perseverance)
 
 
-### [2025-03-06: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
+### [2025-03-07: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
 [lab notes ongaing](./posts/tdd_cloud_wilkinson_vs_meyer)
 
 
-### [2025-03-06: posts/state_machines_and_programming_languages](./posts/state_machines_and_programming_languages).
+### [2025-03-07: posts/state_machines_and_programming_languages](./posts/state_machines_and_programming_languages).
 [lab notes ongaing](./posts/state_machines_and_programming_languages)
 
 
-### [2025-03-06: posts/sonic_pi](./posts/sonic_pi).
+### [2025-03-07: posts/sonic_pi](./posts/sonic_pi).
 [lab notes ongaing](./posts/sonic_pi)
 
 
-### [2025-03-06: posts/observational_learning](./posts/observational_learning).
+### [2025-03-07: posts/observational_learning](./posts/observational_learning).
 [lab notes ongaing](./posts/observational_learning)
 
 
-### [2025-03-06: posts/music_and_technology](./posts/music_and_technology).
+### [2025-03-07: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2025-03-06: posts/ideas](./posts/ideas).
+### [2025-03-07: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2025-03-06: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2025-03-07: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2025-03-06: posts/haskell_musical_paradigm](./posts/haskell_musical_paradigm).
+### [2025-03-07: posts/haskell_musical_paradigm](./posts/haskell_musical_paradigm).
 [lab notes ongaing](./posts/haskell_musical_paradigm)
 
 
-### [2025-03-06: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2025-03-07: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2025-03-06: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
+### [2025-03-07: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
 [lab notes ongaing](./posts/executable_tutorials_literate_programming)
 
 
-### [2025-03-06: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2025-03-07: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2025-03-06: posts/argentina_coops](./posts/argentina_coops).
+### [2025-03-07: posts/argentina_coops](./posts/argentina_coops).
 [lab notes ongaing](./posts/argentina_coops)
 
 
-### [2025-03-06: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2025-03-07: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2025-03-06: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
+### [2025-03-07: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
 [lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
 
 
-### [2025-03-06: posts/What_a_mechanic_understans_about_free_software](./posts/What_a_mechanic_understans_about_free_software).
+### [2025-03-07: posts/What_a_mechanic_understans_about_free_software](./posts/What_a_mechanic_understans_about_free_software).
 [lab notes ongaing](./posts/What_a_mechanic_understans_about_free_software)
 
 
-### [2025-03-06: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
+### [2025-03-07: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
 
-### [2025-03-06: posts/Using_Elixir_Flow_To_Process_Data](./posts/Using_Elixir_Flow_To_Process_Data).
+### [2025-03-07: posts/Using_Elixir_Flow_To_Process_Data](./posts/Using_Elixir_Flow_To_Process_Data).
 [lab notes ongaing](./posts/Using_Elixir_Flow_To_Process_Data)
 
 
-### [2025-03-06: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2025-03-07: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2025-03-06: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2025-03-07: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2025-03-06: posts/Track_your_day](./posts/Track_your_day).
+### [2025-03-07: posts/Track_your_day](./posts/Track_your_day).
 [lab notes ongaing](./posts/Track_your_day)
 
 
-### [2025-03-06: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
+### [2025-03-07: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
 [lab notes ongaing](./posts/Top_10_Questions_for_a_Job_Interview)
 
 
-### [2025-03-06: posts/The_Zettelkasten_Note_Taking_Method](./posts/The_Zettelkasten_Note_Taking_Method).
+### [2025-03-07: posts/The_Zettelkasten_Note_Taking_Method](./posts/The_Zettelkasten_Note_Taking_Method).
 [lab notes ongaing](./posts/The_Zettelkasten_Note_Taking_Method)
 
 
-### [2025-03-06: posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD).
+### [2025-03-07: posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD).
 [lab notes ongaing](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD)
 
 
-### [2025-03-06: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
+### [2025-03-07: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
 [lab notes ongaing](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding)
 
 
-### [2025-03-06: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2025-03-07: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2025-03-06: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2025-03-07: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2025-03-06: posts/The_Illusion_of_Averages_Personalized_Diets_Brexit_Realities_and_Global_Political_Shifts](./posts/The_Illusion_of_Averages_Personalized_Diets_Brexit_Realities_and_Global_Political_Shifts).
+### [2025-03-07: posts/The_Illusion_of_Averages_Personalized_Diets_Brexit_Realities_and_Global_Political_Shifts](./posts/The_Illusion_of_Averages_Personalized_Diets_Brexit_Realities_and_Global_Political_Shifts).
 [lab notes ongaing](./posts/The_Illusion_of_Averages_Personalized_Diets_Brexit_Realities_and_Global_Political_Shifts)
 
 
-### [2025-03-06: posts/The_Future_of_Money](./posts/The_Future_of_Money).
+### [2025-03-07: posts/The_Future_of_Money](./posts/The_Future_of_Money).
 [lab notes ongaing](./posts/The_Future_of_Money)
 
 
-### [2025-03-06: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2025-03-07: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2025-03-06: posts/Teaching_Academic_Writing_with_the_Macro-Tulmin](./posts/Teaching_Academic_Writing_with_the_Macro-Tulmin).
+### [2025-03-07: posts/Teaching_Academic_Writing_with_the_Macro-Tulmin](./posts/Teaching_Academic_Writing_with_the_Macro-Tulmin).
 [lab notes ongaing](./posts/Teaching_Academic_Writing_with_the_Macro-Tulmin)
 
 
-### [2025-03-06: posts/TRIZ_applied_to_an_Acacemic_Problem](./posts/TRIZ_applied_to_an_Acacemic_Problem).
+### [2025-03-07: posts/TRIZ_applied_to_an_Acacemic_Problem](./posts/TRIZ_applied_to_an_Acacemic_Problem).
 [lab notes ongaing](./posts/TRIZ_applied_to_an_Acacemic_Problem)
 
 
-### [2025-03-06: posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw](./posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw).
+### [2025-03-07: posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw](./posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw).
 [lab notes ongaing](./posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw)
 
 
-### [2025-03-06: posts/Single_text_file](./posts/Single_text_file).
+### [2025-03-07: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2025-03-06: posts/Simple_example_of_liveview1_phx](./posts/Simple_example_of_liveview1_phx).
+### [2025-03-07: posts/Simple_example_of_liveview1_phx](./posts/Simple_example_of_liveview1_phx).
 [lab notes ongaing](./posts/Simple_example_of_liveview1_phx)
 
 
-### [2025-03-06: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2025-03-07: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2025-03-06: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
+### [2025-03-07: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
 [lab notes ongaing](./posts/Real_Life_Movies_as_a_Teaching_Method)
 
 
-### [2025-03-06: posts/Re-Discovering_My_PhD_Challenge_for_the_Semester](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester).
+### [2025-03-07: posts/Re-Discovering_My_PhD_Challenge_for_the_Semester](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester).
 [lab notes ongaing](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester)
 
 
-### [2025-03-06: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2025-03-07: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2025-03-06: posts/Prompt_Engineering_Basics](./posts/Prompt_Engineering_Basics).
+### [2025-03-07: posts/Prompt_Engineering_Basics](./posts/Prompt_Engineering_Basics).
 [lab notes ongaing](./posts/Prompt_Engineering_Basics)
 
 
-### [2025-03-06: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
+### [2025-03-07: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
 [lab notes ongaing](./posts/Product_Management_and_AI)
 
 
-### [2025-03-06: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
+### [2025-03-07: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
 [lab notes ongaing](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner)
 
 
-### [2025-03-06: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2025-03-07: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2025-03-06: posts/Our_New_Approach_for_Developing_Products](./posts/Our_New_Approach_for_Developing_Products).
+### [2025-03-07: posts/Our_New_Approach_for_Developing_Products](./posts/Our_New_Approach_for_Developing_Products).
 [lab notes ongaing](./posts/Our_New_Approach_for_Developing_Products)
 
 
-### [2025-03-06: posts/One_more_year](./posts/One_more_year).
+### [2025-03-07: posts/One_more_year](./posts/One_more_year).
 [lab notes ongaing](./posts/One_more_year)
 
 
-### [2025-03-06: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2025-03-07: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2025-03-06: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2025-03-07: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2025-03-06: posts/Moving_to_DeepSeek](./posts/Moving_to_DeepSeek).
+### [2025-03-07: posts/Moving_to_DeepSeek](./posts/Moving_to_DeepSeek).
 [lab notes ongaing](./posts/Moving_to_DeepSeek)
 
 
-### [2025-03-06: posts/More_About_Zettelkaster](./posts/More_About_Zettelkaster).
+### [2025-03-07: posts/More_About_Zettelkaster](./posts/More_About_Zettelkaster).
 [lab notes ongaing](./posts/More_About_Zettelkaster)
 
 
-### [2025-03-06: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2025-03-07: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2025-03-06: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2025-03-07: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2025-03-06: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2025-03-07: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2025-03-06: posts/Kanban_and_Scrum_Serious_Games_Effectiveness_for_Learning](./posts/Kanban_and_Scrum_Serious_Games_Effectiveness_for_Learning).
+### [2025-03-07: posts/Kanban_and_Scrum_Serious_Games_Effectiveness_for_Learning](./posts/Kanban_and_Scrum_Serious_Games_Effectiveness_for_Learning).
 [lab notes ongaing](./posts/Kanban_and_Scrum_Serious_Games_Effectiveness_for_Learning)
 
 
-### [2025-03-06: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2025-03-07: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2025-03-06: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2025-03-07: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2025-03-06: posts/Intellectual_Property_Analysis_The_Founder_Movie](./posts/Intellectual_Property_Analysis_The_Founder_Movie).
+### [2025-03-07: posts/Intellectual_Property_Analysis_The_Founder_Movie](./posts/Intellectual_Property_Analysis_The_Founder_Movie).
 [lab notes ongaing](./posts/Intellectual_Property_Analysis_The_Founder_Movie)
 
 
-### [2025-03-06: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
+### [2025-03-07: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
 [lab notes ongaing](./posts/Innovation_on_Water_Management_from_The)
 
 
-### [2025-03-06: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2025-03-07: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2025-03-06: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2025-03-07: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2025-03-06: posts/How_to_Learn_any_Topic](./posts/How_to_Learn_any_Topic).
+### [2025-03-07: posts/How_to_Learn_any_Topic](./posts/How_to_Learn_any_Topic).
 [lab notes ongaing](./posts/How_to_Learn_any_Topic)
 
 
-### [2025-03-06: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
+### [2025-03-07: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
 [lab notes ongaing](./posts/How_to_Do_a_Dirty_and_Quick_Review)
 
 
-### [2025-03-06: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2025-03-07: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2025-03-06: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2025-03-07: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2025-03-06: posts/Have_you_felt_exponential_era](./posts/Have_you_felt_exponential_era).
+### [2025-03-07: posts/Have_you_felt_exponential_era](./posts/Have_you_felt_exponential_era).
 [lab notes ongaing](./posts/Have_you_felt_exponential_era)
 
 
-### [2025-03-06: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
+### [2025-03-07: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
 [lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
 
 
-### [2025-03-06: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2025-03-07: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2025-03-06: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2025-03-07: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2025-03-06: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
+### [2025-03-07: posts/Elixir-Rust_Integration](./posts/Elixir-Rust_Integration).
+[lab notes ongaing](./posts/Elixir-Rust_Integration)
+
+
+### [2025-03-07: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
 [lab notes ongaing](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones)
 
 
-### [2025-03-06: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+### [2025-03-07: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
 [lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
 
 
-### [2025-03-06: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2025-03-07: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2025-03-06: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2025-03-07: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2025-03-06: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2025-03-07: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2025-03-06: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2025-03-07: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2025-03-06: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2025-03-07: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2025-03-06: posts/Continuous_Integration_CI_Garnix](./posts/Continuous_Integration_CI_Garnix).
+### [2025-03-07: posts/Continuous_Integration_CI_Garnix](./posts/Continuous_Integration_CI_Garnix).
 [lab notes ongaing](./posts/Continuous_Integration_CI_Garnix)
 
 
-### [2025-03-06: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2025-03-07: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2025-03-06: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
+### [2025-03-07: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
 [lab notes ongaing](./posts/Another_post_on_Crypto_Assets)
 
 
-### [2025-03-06: posts/A_premier_on_Prometheus_relabelling](./posts/A_premier_on_Prometheus_relabelling).
+### [2025-03-07: posts/A_premier_on_Prometheus_relabelling](./posts/A_premier_on_Prometheus_relabelling).
 [lab notes ongaing](./posts/A_premier_on_Prometheus_relabelling)
 
 
-### [2025-03-06: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2025-03-07: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2025-03-06: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2025-03-07: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
-### [2025-03-06: posts/A_Conference_With_Rami_Goldratt](./posts/A_Conference_With_Rami_Goldratt).
+### [2025-03-07: posts/A_Conference_With_Rami_Goldratt](./posts/A_Conference_With_Rami_Goldratt).
 [lab notes ongaing](./posts/A_Conference_With_Rami_Goldratt)
 
 
-### [2025-03-06: posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience).
+### [2025-03-07: posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience).
 [lab notes ongaing](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience)
 
 
@@ -8892,6 +9141,7 @@ Email
 		<li>[posts/Going_Agile_The_Agile_Way](/posts/Going_Agile_The_Agile_Way/index.html)</li>
 		<li>[posts/Frustration_in_the_face_of_improvement](/posts/Frustration_in_the_face_of_improvement/index.html)</li>
 		<li>[posts/Extending_the_Power_of_your_Personal_Cloud](/posts/Extending_the_Power_of_your_Personal_Cloud/index.html)</li>
+		<li>[posts/Elixir-Rust_Integration](/posts/Elixir-Rust_Integration/index.html)</li>
 		<li>[posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](/posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones/index.html)</li>
 		<li>[posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](/posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion/index.html)</li>
 		<li>[posts/Did_You_Read_This_Book](/posts/Did_You_Read_This_Book/index.html)</li>
@@ -9616,15 +9866,15 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2025-03-06: projects/yaml_resume_db](./projects/yaml_resume_db).
+### [2025-03-07: projects/yaml_resume_db](./projects/yaml_resume_db).
 [lab notes ongaing](./projects/yaml_resume_db)
 
 
-### [2025-03-06: projects/rewards.codes](./projects/rewards.codes).
+### [2025-03-07: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2025-03-06: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2025-03-07: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -10651,6 +10901,10 @@ I needed to compile the RegEx before doing the match.
 	  	</ul>
 	      <ul>
 	  	  <li>[./posts/Extending_the_Power_of_your_Personal_Cloud](././posts/Extending_the_Power_of_your_Personal_Cloud/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./posts/Elixir-Rust_Integration](././posts/Elixir-Rust_Integration/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
