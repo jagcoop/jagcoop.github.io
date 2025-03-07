@@ -57,6 +57,23 @@ off => on : press button;
 on => off: press button;
 </script>
 
+The code that generates that diagram for that state machine (using a tool called smcat) is:
+
+```
+initial,
+off,
+on {
+    Dim => Medium : press button;
+    Medium => Bright: press button;
+};
+initial => off : plug it to wall;
+off => on : press button;
+on => off: press button;
+```
+
+Observe how brief it is.
+The text represents the elements of the diagram and almost nothing more.
+
 # Advantages of Making State Machines Visible
 
 Making state machines explicit has several benefits:
