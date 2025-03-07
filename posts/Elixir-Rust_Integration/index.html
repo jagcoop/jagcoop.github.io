@@ -1,0 +1,242 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Elixir-Rust Integration
+By Miguel Iñiguez. March 6th, 2025
+
+Elixir is a powerful language, but it’s not always the best tool for every task. It is great in web services, background processing, and scalable applications, but for operations requiring low-level hardware access or extreme performance, we may need additional support. That’s where Rust comes in.
+
+Rust is a systems programming language designed for speed, safety, and reliability. Its emphasis on performance and memory safety makes it an excellent choice for computationally intensive tasks.
+
+In this project, we'll create a program to parse PDFs. To achieve this, we’ll use Native Implemented Functions (NIFs), which allow Elixir to directly call Rust code. NIFs enable high-performance native execution while maintaining the expressiveness of Elixir.
+
+Parsing PDFs is a complex challenge. They come in various formats, each with different structures, encodings, and embedded content. While extracting text is often our primary goal, even that can be tricky due to the diverse ways PDFs encode information.
+
+Rust’s zero-cost abstractions make it a great fit for this task. It allows us to write expressive, maintainable code that compiles to highly optimized machine instructions, offering C-like performance without sacrificing safety.
+
+For this project, we will use the pdf-extract library, which provides efficient unstructured data extraction in Rust.
+
+## The Setup
+
+Make sure you have installed Elixir and Rust.
+
+Let's start by creating a new LiveView Elixir application that lets users upload a PDF file and view a breakdown of its contents. We won’t need any database functionality, so we use the --no-ecto flag to skip the database setup.
+
+```
+$ mix phx.new elixir_pdf --no-ecto
+```
+
+add the rustler dependency to our mix.exs file
+
+
+```
+defp deps do
+  [
+    {:rustler, "~> 0.27.0"}
+  ]
+end
+
+```
+
+Next, run mix deps.get. Now, we can use mix rustler.new to generate a new Rust project in our code. We'll name the project Rustreader.
+
+```
+$ mix rustler.new
+This is the name of the Elixir module the NIF module will be registered to.
+Module name > Rustreader    
+This is the name used for the generated Rust crate. The default is most likely fine.
+Library name (rustreader) > rustreader
+* creating native/rustreader/.cargo/config.toml
+* creating native/rustreader/README.md
+* creating native/rustreader/Cargo.toml
+* creating native/rustreader/src/lib.rs
+* creating native/rustreader/.gitignore
+
+``` 
+
+Next, add extractous to native/rustreader/Cargo.toml file
+
+```
+[dependencies]
+rustler = "0.36.0"
+pdf-extract = "0.8.2"
+```
+
+Then we can run cargo build to build our Rust code
+
+```
+$ cd native/rustreader 
+$ cargo build
+	Updating crates.io index
+     Locking 253 packages to latest compatible versions
+     ....
+```
+## The Rust code
+Next, we'll create a function named extract_pdf in native/rustreader/src/lib.rs file
+
+```
+use rustler::{Encoder, Env, NifResult, Term};
+
+#[rustler::nif(schedule = "DirtyCpu")]
+fn extract_pdf(path: String) -> NifResult<String> {
+    let bytes = std::fs::read(path).unwrap();
+    let out = pdf_extract::extract_text_from_mem(&bytes).unwrap();
+
+
+    Ok(out)
+}
+
+rustler::init!("Elixir.RustReader", [extract_pdf]);
+```
+
+This code defines a new instance of the Extractor struct and uses it to extract the contents of the PDF file. We’ll then return both the contents and metadata as a tuple.
+
+The magic of the rustler::init! macro is that it automatically generates the necessary code to call the Rust function from Elixir.
+
+
+## The Elixir code
+
+We need to create the files lib/elixir_pdf_web/live/home_live.ex, lib/elixir_pdf_web/live/home_live.html.heex and lib/rust_reader.ex
+
+* home_live.ex allows users to upload a PDF file and then call our Rust function from the server.
+```
+defmodule ElixirPdfWeb.HomeLive do
+  use ElixirPdfWeb, :live_view
+
+  @impl true
+  def mount(_params, _session, socket) do
+    {:ok,
+     socket
+     |> assign(:uploaded_files, [])
+     |> allow_upload(:pdf,
+       accept: ~w(.pdf),
+       max_entries: 1,
+       # 10MB limit
+       max_file_size: 10_000_000,
+       chunk_size: 64_000
+     )}
+  end
+
+  @impl true
+  def handle_event("validate", _params, socket) do
+    {:noreply, socket}
+  end
+
+  @impl true
+  def handle_event("save", _params, socket) do
+    uploaded_files =
+      consume_uploaded_entries(socket, :pdf, fn %{path: path}, _entry ->
+        dest = Path.join(["priv", "static", "uploads", Path.basename(path)])
+        File.cp!(path, dest)
+        {:ok, dest}
+      end)
+
+    pdf_document =
+      uploaded_files
+      |> hd()
+      |> RustReader.extract_pdf()
+      |> IO.inspect()
+
+
+    {:noreply,
+     socket
+     |> assign(:pdf_document, pdf_document)
+     |> update(:uploaded_files, &(&1 ++ uploaded_files))}
+  end
+end
+
+```
+
+* home_live.html.heex is a simple LiveView template to allow users to upload a PDF file and see the results.
+```
+<div class="mx-auto max-w-2xl py-8">
+  <div class="flex flex-col items-center justify-center">
+    <h1 class="text-2xl font-bold mb-8">Upload PDF</h1>
+
+    <form phx-submit="save" phx-change="validate" class="w-full">
+      <div class="flex flex-col items-center space-y-4 w-full" phx-drop-target={@uploads.pdf.ref}>
+        <div class="w-full border-2 border-dashed border-gray-300 rounded-lg p-12 text-center hover:border-gray-400 transition-colors">
+          <div class="space-y-2">
+            <div class="text-gray-600">
+              Drag and drop your PDF here or
+              <label class="cursor-pointer text-blue-500 hover:text-blue-600">
+                browse <.live_file_input upload={@uploads.pdf} class="hidden" />
+              </label>
+            </div>
+            <p class="text-xs text-gray-500">PDF files only, up to 10MB</p>
+          </div>
+        </div>
+
+        <%= for entry <- @uploads.pdf.entries do %>
+          <div class="w-full">
+            <div class="flex items-center justify-between p-4 bg-gray-50 rounded">
+              <div class="flex items-center space-x-2">
+                <span class="font-medium">{entry.client_name}</span>
+                <span class="text-sm text-gray-500">
+                  ({entry.client_size}B)
+                </span>
+              </div>
+
+              <button
+                type="button"
+                class="text-red-500 hover:text-red-700"
+                phx-click="cancel-upload"
+                phx-value-ref={entry.ref}
+              >
+                &times;
+              </button>
+            </div>
+
+            <%= for err <- upload_errors(@uploads.pdf, entry) do %>
+            <% end %>
+          </div>
+        <% end %>
+
+        <%= if length(@uploads.pdf.entries) > 0 do %>
+          <button
+            type="submit"
+            class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+          >
+            Upload
+          </button>
+        <% end %>
+      </div>
+    </form>
+  </div>
+</div>
+```
+* rust_reader.ex defines the function that will be implemented in Rust
+```
+defmodule RustReader do
+  use Rustler, otp_app: :elixir_pdf, crate: :rustreader
+
+  def extract_pdf(_path), do: :erlang.nif_error(:nif_not_loaded)
+end
+
+```
+
+Alongside this we need to add code to our router.ex file.
+
+```
+scope "/", ElixirPdfWeb do
+  pipe_through :browser
+
+  live "/", HomeLive
+end
+```
+
+## Let's try it 
+
+Run the project 
+```
+mix phx.server
+```
+
+Upload a PDF file
+![](upload.png)
+
+![](result.png)
+
+And just like that, we've built a PDF parser in Rust ready to extract text with ease!
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
