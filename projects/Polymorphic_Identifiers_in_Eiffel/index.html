@@ -1,0 +1,843 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+<meta name="author" content="Alejandro Garcia Fernandez">
+<meta name="description" content="Implementing the Architecture Oriented Programming of Objective.st in Eiffel">
+<meta name="keywords" content="Eiffel, Objective Smalltalk, Design Patterns">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+
+
+                  **In-program RESOURCES implementation in Eiffel **
+
+What would happen, if we took the Universal Access Principle (UAP) and the RESTful architecture seriously?
+If every piece of data in our program had a URL and every collection responded to a REST verbs.
+
+Introduction
+===========================================================================
+
+UAP coined by Bertrand Meyer, means that there should be no difference between the way we invoke a computation (in java call a 'method')
+And the way we address value. (in java read a 'field').
+Polymorphic Identifiers is the name given by Marcel P. Weiher, to the idea of applying the UAP to every piece of data a program can need.
+Inspired by the fact that in the internet, everything has an address (URL: Uniform Resource Locator) or a name (URI: Uniform Resource Identifier).
+Weiher concluded that the exact same mechanism could be use to address any piece of data used by a single program.
+He implemented PI's first as a library and then as foundational concept of his programming language Objective-Smalltalk.
+
+In this paper we explain the implementation of RESTFUL an Eiffel package that implements the ideas of PI's
+Taking advantage of Eiffel's unique capabilities, such as Design-by-Contract, Multiple Inheritance and Once Classes.
+
+Motivating Example
+==============================================================================
+
+Let's start with a simple challenge:
+We want to read the code Repositories an Organization has on GitHub.
+So we must get the json in the URL https://api.github.com/orgs/dotnet/repos
+Uppercase the name of the project
+And save them, Pretty Printed in a local file.
+
+The NuShell Implementation
+-------------------------------------------------------------------------------
+NuShell is a Unix shell like Bash or Fish with a heavy focus on data processing.
+
+``` NuShell
+HTTP get https://api.github.com/orgs/dotnet/repos
+    | from json
+    | each { |repo| $repo | set name ($repo.name | str to-upper) }
+    | to json --pretty > dotnet_repos_uppercase.json
+
+```
+
+As you can see the code is very expressive
+it practically reads like the problem statement.
+
+Eiffel Implementation
+-------------------------------------------------------------------------------
+Inspired by this example code by [JLVilla](https://github.com/EiffelNETCore/examples/blob/main/sdk/console/api_client_newtonsoft/application.e)
+Our code will look like this:
+
+```Eiffel
+note
+    description: "Project root class"
+    EIS: "name=HTTP Request", "src=https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient", "protocol=uri"
+
+class
+    APPLICATION
+
+create
+    make
+
+feature {NONE} -- Initialization
+
+    make
+            -- Run application.
+        local
+            client: HTTP_CLIENT
+            l_request: HTTP_REQUEST_MESSAGE
+            l_response: HTTP_RESPONSE_MESSAGE
+            l_serializer: JSON_SERIALIZER
+            l_repo: REPOSITORY
+            l_arr: ARRAY_LIST
+            l_json_writer: JSON_TEXT_WRITER
+            l_file: SYSTEM_FILE
+            i: INTEGER
+        do
+            create client.make
+
+            -- Send request and get response
+            create l_request.make_from_method_and_request_uri ({HTTP_METHOD}.get, "")
+            client.set_base_address ("https://api.github.com/orgs/dotnet/repos")
+            l_response := client.send_http_request_message (l_request)
+
+            -- Deserialize the response
+            create l_serializer.make
+            create l_arr.make
+            l_serializer.deserialize_json (l_response.content.read_as_stream, l_arr)
+
+            -- Uppercase repo names and collect them in a list
+            across l_arr as repo_item loop
+                l_repo := {REPOSITORY}.from_json (repo_item.item.to_string)
+                l_repo.set_name (l_repo.name.upper)
+                l_arr.force (l_repo)
+            end
+
+            -- Write JSON to file
+            create l_file.make ("dotnet_repos_uppercase.json")
+            create l_json_writer.make
+            l_file.append_text (l_arr.to_json)
+        end
+end
+```
+
+Observe how many instructions are spent setting up the configuration to load the data, transform it and the store it again.
+
+And also observe that the line count, is a lot more than the "ideal" version set by NuShell.
+
+Now this problems are not specific to Eiffel.
+Any program with Static typing would have a high Line Count.
+This is due to the static nature of typing and the fact that json was born to be `evaluate` by a JavaScript interpreter.
+In this code listing we don't even, show the `{REPOSITORY}` class with the `from_json` converting feature.
+
+But even dynamically typed languages have the similar problems
+
+
+JavaScript Implementation
+-------------------------------------------------------------------------------
+
+```node
+#!/usr/bin/env node
+
+// uppercase_dotnet_repos.js
+
+import { writeFile } from 'node:fs/promises';
+
+async function main() {
+  const token = process.env.GITHUB_TOKEN;          // optional GitHub token for higher rate limits
+  const headers = {
+    'Accept': 'application/vnd.github+json',
+    ...(token && { 'Authorization': `Bearer ${token}` })
+  };
+
+  // 1. Fetch repos
+  const res = await fetch('https://api.github.com/orgs/dotnet/repos', { headers });
+  if (!res.ok) {
+    console.error(`GitHub API error: ${res.status} ${res.statusText}`);
+    process.exit(1);
+  }
+  const repos = await res.json();
+
+  // 2. Upper-case the `name` field
+  const updated = repos.map(repo => ({
+    ...repo,
+    name: repo.name.toUpperCase()
+  }));
+
+  // 3. Write out pretty-printed JSON
+  const outPath = 'dotnet_repos_uppercase.json';
+  await writeFile(outPath, JSON.stringify(updated, null, 2), 'utf8');
+  console.log(`✅ Wrote ${updated.length} repos to ${outPath}`);
+}
+
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
+});
+```
+
+Summary of Implementations
+--------------------------------------------------------------------------------
+
+In the table 1 we can see how all implementations are a lot more verbose than
+the one in NuShell and only the Eiffel Implementation, provides the safety warranties
+of a Statically typed language.
+
+| **Metric**                        | **NuShell**                             | **Eiffel**                          | **JavaScript**                          |
+|-----------------------------------|-----------------------------------------|-------------------------------------|-----------------------------------------|
+| **Line Count**                    | 8                                       | 41                                  | 26                                      |
+| **Static vs Dynamic Types**       | Dynamic (No explicit type declarations) | Static (Explicit type declarations) | Dynamic (No explicit type declarations) |
+| **Concurrent vs Single-Threaded** | Single-threaded                         | Single-threaded                     | Single-threaded (async functions)       |
+| **McCabe's Complexity**           | 4                                       | 14                                  | 8                                       |
+|                                   |                                         |                                     |                                         |
+
+
+In this paper we will develop RESTFUL Eiffel
+a cluster of Eiffel classes that will help us get closer to the "ideal"
+
+
+Background
+===============================================================================
+
+RESTful Architecture
+-------------------------------------------------------------------------------
+
+Intuitively a every-time you open a web-browser like Chrome or Firefox,
+and you read a web page like Wikipedia you are using a RESTful architecture.
+
+The browser is a user-agent.
+connecting to Server (Wikipedia.com).
+Through a resource identification (URI): https://en.wikipedia.org/wiki/Eiffel_(programming_language)
+Using the GET (HTTP verb).
+And your content is delivered to you in a Representation (i.e. XHTML).
+But you could also get other representations. like a json formatted text of the same information.
+
+
+
+The REST architecture was defined by Roy Fielding in his PhD Thesis.
+And later formalized with TLA+ by (name of the paper).
+In particular Fielding has said that many APIs that claim to be RESTful aren't.
+
+So what is a RESTFUL API? A RESTful system is one that satisfy the following constraints.
+
+
+### REST Constraints
+
+ RESTful systems are defined by six constraints that, distinguish them from other architectural styles:
+
+Client–Server
+:   Separates user interface (clients) from data storage (servers), allowing each to evolve independently.
+    Clients interact with origin servers (or their caches) via a uniform interface.
+
+Stateless
+:  Every request carries all the information needed for processing; servers do not retain client session state.
+   All application state is kept on the client side (including caches).
+
+Cacheable
+:  Responses are explicitly marked as cacheable or non-cacheable.
+   Caching by clients and intermediaries reduces load and improves performance by reusing prior responses.
+
+Layered System
+:  Clients don’t know (and needn’t know) whether they’re talking directly to the origin server or to an intermediary (proxy, gateway, etc.).
+   Intermediaries can provide shared caches, load balancing, and security enforcement without altering client–server interactions.
+
+Uniform Interface (the central REST principle)
+:  Enforced via four sub-constraints:
+   * **Resource Identification:** Each resource is uniquely identified (e.g., by a URI).
+   * **Manipulation via Representations:** Clients change resource state by exchanging representations.
+   * **Self-Descriptive Messages:** Every message carries enough metadata (resource IDs, representation format, hypermedia links) to be understood in isolation.
+   * **HATEOAS:** Clients discover available actions dynamically through hypermedia controls provided in responses.
+
+Code-On-Demand (optional)
+:  Servers can extend client functionality by sending executable code (applets, scripts), which clients download and run.
+
+Systems that satisfy all mandatory constraints (1–5) — and optionally 6 — are deemed RESTful.
+
+
+### REST Actors
+
+Based on the previous Constraints we Can identify the following actors:
+
+Here’s the expanded set of REST actors, now including Proxies, Gateways, and Caches as distinct elements:
+
+:   Resources
+    Named abstractions of information (identified by URIs) on which operations are performed.
+    According to Roy Fielding in his dissertation "Architectural Styles and the Design of Network-based Software Architectures" (2000), a resource in REST (Representational State Transfer) is defined as:
+    > “Any information that can be named.”
+
+    He elaborates that:
+        A resource is an abstraction of some piece of information or service.
+        It is identified by a URI (Uniform Resource Identifier).
+        The actual content or representation of the resource (like HTML, JSON, XML, etc.) is separate from the resource itself.
+        A resource may have multiple representations, and those are transferred to clients through the REST interface (usually over HTTP).
+
+User Agents
+:   Client-side processes (plus their client connectors) that initiate resource requests and receive responses.
+
+Origin Servers
+:   Server-side processes (plus their server connectors) responsible for hosting and managing resource representations and handling modification requests.
+
+Proxies
+:   Client-selected intermediaries that forward requests to origin servers (or other intermediaries), optionally transforming or filtering messages for purposes like security, protocol translation, or request aggregation.
+
+Gateways
+:   Network- or server-selected intermediaries that bridge between different systems or protocols—e.g., translating between REST and legacy APIs—without the client needing to know about the back-end topology.
+
+Caches
+:   Storage actors that hold previously retrieved, cacheable responses; they can reside within User Agents, Proxies, Gateways, or Origin Servers to answer identical future requests without recontacting the origin server.
+
+
+* **Connectors**
+  The uniform-interface links—clients, servers, caches, resolvers, tunnels—through which all components communicate, hiding implementation details and ensuring consistent, stateless interactions.
+
+Together, User Agents use client connectors to request or manipulate Resources managed by Origin Servers, optionally via Proxies or Gateways, with Caches improving efficiency—all over the same Uniform Interface.
+
+
+### REST Verbs
+
+
+| Method  | Definition                                                       | Safe | Idempotent | Cacheable                  |
+|---------|------------------------------------------------------------------|:----:|:----------:|:---------------------------|
+| GET     | Requests a resource representation; retrieves data only.         | Yes  | Yes        | Yes                        |
+| HEAD    | Same as GET but without a response body.                         | Yes  | Yes        | Yes                        |
+| POST    | Submits data; may change state or cause side effects.            | No   | No         | Conditional [^conditional] |
+| PUT     | Replaces the resource’s representation with the request content. | No   | Yes        | No                         |
+| DELETE  | Removes the specified resource.                                  | No   | Yes        | No                         |
+| CONNECT | Opens a tunnel to the target resource.                           | No   | No         | No                         |
+| OPTIONS | Lists available communication options for the resource.          | Yes  | Yes        | No                         |
+| TRACE   | Performs a loop-back diagnostic test.                            | Yes  | Yes        | No                         |
+| PATCH   | Applies partial modifications to a resource.                     | No   | No         | Conditional [^conditional] |
+[Table [RestVerbs]: REST protocol verbs]
+
+Made with info from: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods
+
+
+
+Eiffel's Features that match RESTful interface
+===============================================
+
+Design by Contract
+------------------------------------------------
+a pre-condition violation is equivalent to an Error 404 Not found
+a post-condition violation is equivalent to an Error 500 Internal Server Error
+
+Once classes
+------------------------------------------------
+Are equivalent to a resource,
+since a resource is uniquely know by an identifier
+it means resources behave like Singleton pattern
+and once classes are perfect to represent resources.
+
+Multiple Inheritance
+-------------------------------------------------
+A server component is-a Resource that also responds to the REST Verbs.
+
+deferred classes (in java abstract classes)
+-------------------------------------------------
+A deferred class help us define clearly what are the pre-condition and post-conditions.
+in Eiffel they can also include an implementation. as opposed to instances in Java.
+that don't have enough information for reuse.
+
+
+Alias
+-------------------------------------------------
+We want to provide a common interface for different kinds of resources.
+And the ability to alias operators will help us to make different things.
+to look like if they were all collections (tables or dictionaries).
+
+Weiher's Polymorphic Identifiers
+================================================
+
+Weiher's paper on Polymorphic identifiers and Storage combinators was the inspiration for all of this paper.
+On the polymorphic identfiers paper Weiher show that we need an Uniform Access Principle applied to every kind of data,
+the same way it is used in Eiffel for computation.
+
+In order to achive that Uniformity for in-program, localhost and remote storage.
+Weiher shows we need 3 core concepts.
+
+* Polymorphic Identfiers (URIs in RESTful Architecture)
+* Scheme Handlers (Clients in RESTful Architecture)
+* References (Computational Resources in RESTful Architecture)
+
+
+Polymorphic Identifiers (PIs)
+---------------------------------------------------------
+These are URIs that serve as polymorphic names for storage locations.
+PIs are implemented as actual URIs, with the scheme part designating the handler.
+This allows them to seamlessly integrate both internal and external resources using a common syntax.
+They're not just similar to URIs - they literally are URIs with added compiler and runtime support.
+
+For example:
+
+```
+person                         // Plain identifier (uses default scheme)
+var:person/name                // Access 'name' property of 'person' object
+file://tmp/button.png          // Access a file
+http://www.example.com/button.png  // Access a web resource
+file:{env:HOME}/rfcs/{rfcName}     // Dynamic URI with template variables
+```
+
+References
+------------------------------------------------------------
+Mediate access to specific storage locations.
+References hide variations in access mechanics from clients.
+indexed references (offsets to context),
+messaging references (L-Value-specific messages),
+and keyed references (generic access messages with a key).
+
+When you use a PI,
+the system creates a Reference object behind the scenes.
+This Reference knows how to:
+
+### Read/write the storage location
+You use the same syntax to access any resource regardless of type:
+
+```
+name := var:person/name         // Reading a property
+var:person/name := newName      // Writing a property
+```
+
+#### Perform optimized access
+The Reference implementation in the paper can access data in three ways:
+```
+// From the Reference implementation:
+if (offset >= 0) {
+  return ((id*)target)[offset];    // Direct memory access (fastest)
+} else if (getSelector) {
+  return [target perform:getSelector];  // Message sending
+} else {
+  return [target objectForKey:attributeName];  // Dictionary access
+}
+```
+
+
+Scheme-handlers
+-------------------------------------------------------------
+Each scheme-handler manages a specific store.
+They translate from identifiers to references and define the operations for interacting with specific types of storage.
+They work like protocol clients, responsible for the abstraction over storage types.
+
+Scheme-handlers map the scheme part of the URI to actual implementation code:
+```
+// Define a scheme handler for 'rfc:' URIs
+base := ref:http://datatracker.ietf.org/doc
+scheme:rfc := RelativeScheme schemeWithBase: base
+```
+
+Then you can use it:
+
+```
+// Download an RFC to a local file
+file:rfc1738 := http://datatracker.ietf.org/doc/rfc1738
+// With the scheme defined above, this is equivalent to:
+file:rfc1738 := rfc:rfc1738
+```
+
+Real-World Benefits
+-----------------------------------------------------
+Concretely, this system solves problems like:
+
+Switching Storage Backends: You can change an object to use dictionary storage instead of instance variables without changing any client code.
+Parametrized Access: You can access properties dynamically:
+
+name := valueAccessor value
+
+External Resource Integration: You can work with files/web in the same way as objects:
+```
+// Set up a custom resource scheme
+scheme:image := RelativeScheme schemeWithBase: http://www.example.com
+
+// Now use it with simple names
+button := image:button.png
+```
+
+In summary
+---------------------------------------------------------------
+The whole system essentially lets you work with any kind of storage - memory, files, web, custom stores - using a consistent syntax.
+
+
+Designing a solution
+=================================================
+So we want a RESTful API the Design space has the following level.
+
+In-program
+: Resources that live in the same program. Like variables, objects, tables, dictionaries.
+  Examples:
+
+  -- Read a single person out of a list of contacts.
+  `conan := contacts["O'Brien"]`
+
+Localhost
+: Resources (files, images) that live in the some computer as the program.
+  Examples
+
+  -- Read a text file out of a directory:
+  `my_file := home["my_file.txt"]`
+
+
+Remote Resources
+: Are resources that live in the internet and can be accessed by a protocol such as HTTP, ftp, etc.
+  Example
+  `repos := github["/orgs/dotnet/repos"]`
+
+In summary we want to access a an In-program Dictionary or Table,
+with the same interface we use to access a remote application.
+
+Implementation
+=================================================
+
+In order to create our solution we need to define:
+
+* REST Verbs
+* RESOURCE and a
+* REST_RESOURCE
+
+And do three implementations:
+
+1. In-program: a HASH_TABLE as a REST_RESOURCE
+2. Localhost: a DIRECTORY as a REST_RESOURCE.
+3. Remote: for example GITHUB_API as REST_RESOURCE
+
+REST Verbs
+-------------------------------------------------
+We will look, at how to implement REST Verbs as an interface.
+
+In table [RestVerbs] we have defined the elements of the protocol.
+We can code said protocol as a `deferred class REST`
+
+```Eiffel
+note
+	description: "[
+		{REST_W_STORAGE}.
+		A contract representation of the http verbs.
+		to be used to define {REST_RESOURCES}
+	]"
+	author: "Alejandro Garcia"
+	date: "$Date$"
+	revision: "$Revision$"
+
+deferred class interface
+	REST_W_STORAGE [R -> , S -> ]
+
+feature -- http verbs
+
+	extend (data: R; key: detachable URL_PATH)
+			-- equivalent to http POST
+			-- Submits data; may change state or cause side effects
+		ensure
+			data_must_be_stored: attached item (last_inserted_key)
+
+	force (data: R; key: URL_PATH)
+			-- equivalent to http PUT
+			-- Replaces the resource's representation with the request content.
+		require
+			requested_a_known_key: has_key (key)
+		ensure then
+			item_must_be_stored: attached item (key)
+
+	has_key (key: URL_PATH): BOOLEAN
+			-- equivalent to http HEAD
+			-- Same as GET but without a response body
+
+	item alias "[]" (key: URL_PATH): R assign force
+			-- equivalent to http GET
+			-- Requests a resource representation; retrieves data only.
+		require else
+			key_must_exist: has_key (key)
+		ensure then
+			error_500: Result /= Void
+
+	last_inserted_key: URL_PATH
+			-- there is NO equivalent for this in http protocol.
+			-- but is necessary to keep the Command / Query Separation principle in Eiffel
+
+	remove (key: URL_PATH)
+			-- equivalent to http DELETE
+			-- Removes the specified resource.
+		ensure then
+			item_was_truly_eliminated: not has_key (key)
+
+	trace (key: URL_PATH): detachable S
+			-- equivalent to http TRACE
+			-- Performs a loop-back diagnostic test. In our interpretation since this is debugging operation.
+			-- It would return the actual [S]tored data.
+		require
+			must_be_stored: has_key (key)
+		ensure
+			error_500_internal_server_error: Result /= Void
+
+end -- class REST_W_STORAGE
+
+```
+
+a RESOURCE
+-----------------------------------------------------------------------
+
+Fielding emphasizes that:
+
+    > "The key abstraction of information in REST is a resource.
+    > Any information that can be named can be a resource."
+
+```Eiffel
+@include('./resource.e')
+```
+
+a REST_RESOURCE
+---------------------------------------------------------------------
+
+And finally a REST_RESOURCE is a RESOURCE that can answer to REST Requests.
+
+
+It is important to note that a RESOURCE is uniquely identified by their name.
+so two resources with the same name, MUST be the same.
+And we can express that relation ship in code by redefining the `is_equal` feature.
+
+```
+include code of the REST RESOURCE
+```
+
+and we must test it.
+
+```
+include code of the test
+```
+
+RESOURCE_NAME Server
+-----------------------------------------------------------------------
+Since RESOURCEs are unique by their name.
+We need a register of all the resources and make sure that for each name,
+only one resource exists.
+
+This class has the same behavior as the Domain Name Server (DNS).
+Has in the internet, is a table of URLs and the appropriate REST_RESOURCE
+to answer to them.
+
+In Eiffel this could potentially be done using once classes.
+BUT they don't work properly for ONCE objects.
+
+NOTE :: Check this implementation
+
+
+Implementing an In-program REST_RESOURCE
+-----------------------------------------------------------------------
+
+Now that we have a REST_RESOURCE and the RESOURCE_NAME_SERVER
+
+We will start by creating a HASH_TABLE that behaves like a REST_RESOURCE
+
+```
+include the code for the TABLE_RESOURCE.e
+```
+
+
+Implementing an Localhost RESOURCE
+-----------------------------------------------------------------------
+
+Now we will cross the barrier of the program and now use a RESOURCE in our system like
+if it was inside our program.
+
+
+```
+Include the code listing of the DIRECTORY_RESOURCE
+```
+
+HERE is the test.
+
+
+### Another Localhost Resource.
+
+As we have stablishide in the Background a resource not only can be static,
+like an image. It can also be dynamic like a PHP script or a database.
+to prove this point we are going to code another resource.
+this one for a SQLite database.
+Observe how configure and accessing it till uses a the UAP
+with a URL.
+but now we are communicating with a database.
+
+Implementing a REMOTE_RESOURCE
+------------------------------------------------------------------------------
+
+A remote resource brings us the the biggest challenge.
+
+It forces us to consider a CLIENT_PROXY that will expose,
+all the functionality we want a remote resource to have.
+
+Weiher calls this SCHEMA_HANDLERS since they know how to use the communication protocol
+HTTP, ftp, file, etc. that the resource needs.
+
+I Prefer the term CLIENT_PROXY since it is already defined in the REST literature.
+
+```
+Refactor the coder in API_RESOURCE.e to create a generic
+CLIENT_PROXY over strings.
+and then a JSON_API_RESOURCE that is an REST[JSON,STRING]
+and the a GITHUB_API_RESOURCES that is REST[OBJECT, JSON] or something like that
+```
+
+Experiment Results
+============================================================================
+Back to our our motivating example.
+Now let's build the challenge with our RESTful library.
+
+
+so going to back to the [Challenge]
+
+We can express our solution with in-program RESOURCES as:
+
+```
+Include link to the test that surprised me that it works
+```
+
+And this table compares the results
+to the "ideal" the NuShell solution , the Original Eiffel Solution and Finally the RESTful solution.
+
+Notice how close the Restful solution is to the ideal.
+
+
+Lessons Learned
+==============================
+
+After all that work what did we gain?
+-------------------------------------------
+The capability to mix and match local and remote resources.
+  as if they were part of the current system.
+
+Why didn't you use the same terms as Weiher did?
+-------------------------------------------------------
+While making this library I discovered that many of the concepts,
+  discussed by Weiher already had analogs in the RESTful Architecture.
+  And made the conscious decisions to remain within that domain.
+  As much as possible.
+  To take advantage of vast literature in RESTful Architecture.
+
+
+Weiher uses terms like:
+schema handlers to mean the PROXY and protocols
+
+Polymorphic identifiers to mean URI and URLs
+
+Stores to mean Resources.
+
+and ______ to refer to HTTP verbs.
+
+In the Eiffel implementation I tried to maintain as much as possible relation with the RESTful API domain and analogies.
+
+Because I didn't see the need to invent new words for the concepts we were dealing with.
+And it made the access to a vast library of knowledge of the REST architecture that needed very little in terms of comprehension.
+
+
+The impedance mist-mach between REST and Object Oriented is not as wide as expected
+---------------------------------------------------------------------------------
+Many concepts in REST don't map perfectly to OOP.
+But OOP being a general programming language can handle the ambiguity.
+
+Here is a list of mismatches found:
+
+| in the REST Architect                                                                            | Eiffel's Object Oriented Programming                                               | Solution                                                                                                                                                                |
+| Resource are uniquely identified by a name                                                         | Each object is unique, even if they point to the same data                         | The RESOURCE_NAME_SERVER that follows the registry design pattern [^KarineArnoutThesis]. Makes sure that on creation first we check if the resource didn't exist before |
+| HTTP Verbs define a protocol                                                                      | the TABLE deferred class defines other features                                    | the REST class help define the HTTP verbs in terms of the TABLE features                                                                                                |
+| No separation between Command and Queries, and POST and PUT operations will still return content   | In Eiffel the Command / Query Separation Principle is *fundamental*               | the `deferred class REST` there is the last_inserted_key to handle the operation result like POST that create a new data in the entity                                  |
+| Is weakly typed and the Request Headings give 'hints' of the data types but they are not mandatory | Statically typed, forces us to know before hand what  kind we will be working with | Constraint Generosity `REST[R,S]` allows us to separate the types of the Representation and the Storage itself                                                          |
+
+Other Eiffel such as: Void-safety and SCOOP (Simple Concurrent Object Oriented Programming).
+Will be useful in a future work, implementing Weiher Storage Combinators [link_to_papers].
+
+Other concepts map easily between RESTful Architecture and Eiffel's OOP.
+
+| in RESTful Architecture                                                                                                           | In Eiffel                                                                                  | Why it works |
+| HTTP status 400 Client Error                                                                                                      | Are pare-condition violations and are responsibility of the client                          |              |
+| HTTP status 500 Internal Server Error                                                                                             | Are post-condition violation, meaning the server / supplier couldn't satisfy               |              |
+| Every piece of data is a RESOURCE, there are value resources like an image or a file, and computational resources like PHP script | Everything is an object, and objects can be only value objects or have complete behaviors |              |
+
+Design by contract is complicated
+------------------------------------
+
+Since a Pre-condition can only be weakened,
+that means that we must put the most stringent pre-conditions on the top of our hierarchy.
+
+but since a post-condition can only be strengthened
+then we can put the most lenient post-condition at the top of the inheritance hierarchy.
+and strength it below in the hierarchy.
+
+now the problem is with the feature signature.
+the input arguments can be considered a pre-condition.
+they must be almost exactly the same as the signature of the ancestor.
+so if an argument is marked as detachable (i.e. void then the argument must remain detachable)
+but the output of a feature is like a post-condition which can be strengthened,
+so a detachable result can be made attached???
+
+Future Work
+=============================================
+
+This article will continue in two directions:
+
+* Create more BASIC_RESOURCES
+* Implement Storage Combinators
+
+Continue Exploring the Design Space
+------------------------------------------------------------------------------
+This article only covers one branch,
+of the possible combinations
+for BASIC_RESOURCES.
+
+Since our goal was to show that "Unified Access" was possible
+for different locations of the problem.
+Now that we have shown that it is possible,
+we can increase the practicality by creating more classes.
+
+```plantuml
+@startmindmap
+* Design decisions
+** Concurrent
+*** Full load
+**** in-program
+**** localhost
+**** remote
+*** Streaming
+**** in-program
+**** localhost
+**** remote
+**[#lightgreen] Synchronous
+*** Streaming
+**** remote
+**** localhost
+**** in-program
+***[#lightgreen] Full load
+****[#lightgreen] remote
+*****[#lightgreen] GITHUB_API
+****[#lightgreen] localhost
+*****[#lightgreen] DIRECTORY_RESOURCE
+****[#lightgreen] in-program
+*****[#lightgreen] TABLE_RESOURCE
+@endmindmap
+```
+
+Implement Weiher's Storage Combinators
+----------------------------------------------------------
+
+One of Weiher's powerful insights is that once we have all the components
+implementing the `REST` interface then creating combinations like pipelines,
+becames easy.
+
+In future work we will implement the Storage Combinators mechanism.
+To create new pipelines.
+
+Conclusions
+==========================================================
+
+Warhorse insight that we can use the mechanisms in large systems to organize the code of our own program.
+is very powerful and can provide guidance to develop more usable experiences for developers.
+
+the Restful Eiffel cluster has the potential to became a very useful library for Eiffel developers
+And Eiffel advanced programming features made an ideal programming language to specify the components of restful application.
+
+
+Footnotes
+===============================================================================
+[^conditional]: POST and PATCH are cacheable when responses explicitly include freshness information and a matching Content-Location header.
+
+References
+================================================================================
+
+- Weiher, M., & Hirschfeld, R. (2013). Polymorphic identifiers: uniform resource access in objective-smalltalk. Dynamic Languages Symposium.
+- Weiher, M., & Hirschfeld, R. (2016). Constraints as polymorphic connectors. Proceedings of the 15th International Conference on Modularity.
+- Weiher, M., & Hirschfeld, R. (2019). Standard object out: streaming objects with polymorphic write streams. Proceedings of the 15th ACM SIGPLAN International Symposium on Dynamic Languages.
+- Weiher, M., & Hirschfeld, R. (2019). Storage combinators. Proceedings of the 2019 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software.
+- Weiher, M. (2020 a). Can programmers escape the gentle tyranny of call/return? Companion Proceedings of the 4th International Conference on Art, Science, and Engineering of Programming.
+- Weiher, M. (2020 b). Can programmers escape the gentle tyranny of call/return? https://www.youtube.com/watch?v=Gel8ffr4pqw
+
+
+<link rel="stylesheet" href="https://unpkg.com/latex.css/style.min.css" />
+<style>
+body.md{
+	max-width:90ch; !important
+}
+</style>
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden}</style>
+<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>

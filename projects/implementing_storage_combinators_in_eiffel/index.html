@@ -1,0 +1,645 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+<meta name="author" content="Alejandro Garcia Fernandez">
+<meta name="description" content="Implementing the Architecture Oriented Programming of Objective.st in Eiffel">
+<meta name="keywords" content="Eiffel, Objective Smalltalk, Design Patterns">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+
+
+                  **In-program REST for Eiffel**
+Applyng the UAP (Universal Access Principle) to local and remote resources.
+
+	By asking: What would happen if every collection in a program had a URL as identifier and a Resful API as interface?,
+Weiher's Resources[^1] unlock a new familiar way of software composition.
+WHere the now familiar ways of composing cloud API's can be applied to the level of single programs.
+Whit components that by implementing a REST API can compose into new servers.
+
+Introduction
+===============================================================================
+
+We could argue that the most successful software composition example are Unix pipes.
+Where independent programs, by limiting them selves to a very simple API can be chained togetther in compositions.
+That where inamigable to the authors of each each individual program.
+
+Another successful example of software composition, are the orchestration of services through RestAPI's.
+Services like "If This Then That" (iftt.com)
+Have connected programs livinig in different servers, develop in different languages.
+
+Learning from those successes Marcel P. Weiher proposes to organize our single program the same way.
+Using this techniques Weiher has manage to compose complex functionality with
+Caching, local and remote resources, and synchonous resources.
+
+In this paper, I present the Iterative process that leadme to implement Weihers Ideas in Eiffel.
+
+Motivating Example
+================================================================================
+
+Suppose inside a program we read a Bitmap image.
+We wanto to store it in a variable,
+flip one of the bits.
+And then save the varible, as a text file again.
+
+This is seems like a simple image and yet, let's look at the implementation.
+
+Reading o local file
+----------------------------------------------------------------
+```Eiffel
+class
+    APPLICATION
+
+create
+    make
+
+feature {NONE} -- Initialization
+
+    make
+            -- Run application.
+        do
+            create input_file.make_open_read ("input.txt")
+            create output_file.make_open_write ("output.txt")
+
+            from
+                input_file.read_character
+            until
+                input_file.exhausted
+            loop
+                output_file.put (input_file.last_character)
+                input_file.read_character
+            end
+
+            input_file.close
+            output_file.close
+        end
+
+feature -- Access
+
+    input_file: PLAIN_TEXT_FILE
+    output_file: PLAIN_TEXT_FILE
+
+end
+```
+[File Copier from RosettaCode.org https://rosettacode.org/wiki/File_input/output#Eiffel]
+
+
+Reading a remote file using ftp
+---------------------------------------------------------
+
+```Eiffel
+class
+    APPLICATION
+
+create
+    make
+
+feature {NONE} -- Initialization
+
+    make
+            -- Run application.
+        local
+            curl: CURL_EASY_EXTERNALS
+            curl_handle: POINTER
+            result_code: INTEGER
+            temp_file_path: STRING
+            file_content: STRING
+        do
+            -- Initialize curl
+            create curl
+            curl_handle := curl.init
+
+            if curl_handle /= default_pointer then
+                -- Set up for downloading the file
+                temp_file_path := "downloaded_file.txt"
+
+                -- Configure curl for FTP download
+                result_code := set_curl_options_for_download (curl, curl_handle,
+                               "ftp://ftp.example.com/remote_file.txt",
+                               "username", "password", temp_file_path)
+
+                if result_code = {CURL_CODES}.ok then
+                    -- Perform the download
+                    result_code := curl.perform (curl_handle)
+
+                    if result_code = {CURL_CODES}.ok then
+                        io.put_string ("File downloaded successfully.%N")
+
+                        -- Read the downloaded file content
+                        file_content := read_file_content (temp_file_path)
+
+                        -- Configure curl for FTP upload
+                        result_code := set_curl_options_for_upload (curl, curl_handle,
+                                       "ftp://ftp.example.com/remote_file_modified.txt",
+                                       "username", "password", file_content)
+
+                        if result_code = {CURL_CODES}.ok then
+                            -- Perform the upload
+                            result_code := curl.perform (curl_handle)
+
+                            if result_code = {CURL_CODES}.ok then
+                                io.put_string ("File uploaded successfully.%N")
+                            else
+                                io.put_string ("Failed to upload file. Error: " + curl.error_message (result_code) + "%N")
+                            end
+                        else
+                            io.put_string ("Failed to set curl options for upload. Error: " + curl.error_message (result_code) + "%N")
+                        end
+                    else
+                        io.put_string ("Failed to download file. Error: " + curl.error_message (result_code) + "%N")
+                    end
+                else
+                    io.put_string ("Failed to set curl options for download. Error: " + curl.error_message (result_code) + "%N")
+                end
+
+                -- Clean up
+                curl.cleanup (curl_handle)
+            else
+                io.put_string ("Failed to initialize curl.%N")
+            end
+        end
+
+feature {NONE} -- Implementation
+
+    set_curl_options_for_download (a_curl: CURL_EASY_EXTERNALS; a_curl_handle: POINTER;
+                                  a_url: STRING; a_username: STRING; a_password: STRING;
+                                  a_output_file: STRING): INTEGER
+            -- Set curl options for FTP download
+        local
+            file: PLAIN_TEXT_FILE
+            credentials: STRING
+        do
+            -- Create output file
+            create file.make_create_read_write (a_output_file)
+            file.close
+
+            -- Set URL
+            Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_url, a_url)
+
+            -- Set credentials
+            if Result = {CURL_CODES}.ok then
+                credentials := a_username + ":" + a_password
+                Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_userpwd, credentials)
+            end
+
+            -- Set FTP options
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_integer (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_ftp_use_epsv, 1)
+            end
+
+            -- Set file writing options
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_writedata, a_output_file)
+            end
+
+            -- Verbose output for debugging (optional)
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_integer (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_verbose, 1)
+            end
+        end
+
+    set_curl_options_for_upload (a_curl: CURL_EASY_EXTERNALS; a_curl_handle: POINTER;
+                                a_url: STRING; a_username: STRING; a_password: STRING;
+                                a_file_content: STRING): INTEGER
+            -- Set curl options for FTP upload
+        local
+            credentials: STRING
+            temp_file_path: STRING
+        do
+            -- Reset curl handle
+            a_curl.reset (a_curl_handle)
+
+            -- Create temporary file with content to upload
+            temp_file_path := "temp_upload.txt"
+            write_file_content (temp_file_path, a_file_content)
+
+            -- Set URL
+            Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_url, a_url)
+
+            -- Set credentials
+            if Result = {CURL_CODES}.ok then
+                credentials := a_username + ":" + a_password
+                Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_userpwd, credentials)
+            end
+
+            -- Set FTP options
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_integer (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_ftp_use_epsv, 1)
+            end
+
+            -- Set upload options
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_integer (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_upload, 1)
+            end
+
+            -- Set file reading options
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_readdata, temp_file_path)
+            end
+
+            -- Verbose output for debugging (optional)
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_integer (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_verbose, 1)
+            end
+        end
+
+    read_file_content (a_file_path: STRING): STRING
+            -- Read content from a file
+        local
+            file: PLAIN_TEXT_FILE
+        do
+            create Result.make_empty
+            create file.make_open_read (a_file_path)
+
+            from
+                file.read_character
+            until
+                file.exhausted
+            loop
+                Result.append_character (file.last_character)
+                file.read_character
+            end
+
+            file.close
+        end
+
+    write_file_content (a_file_path: STRING; a_content: STRING)
+            -- Write content to a file
+        local
+            file: PLAIN_TEXT_FILE
+        do
+            create file.make_create_read_write (a_file_path)
+
+            file.put_string (a_content)
+            file.close
+        end
+
+end
+```
+
+Finally uploading a file through http
+-------------------------------------------
+
+Finally let's set it through an API.
+
+```chatgpt
+Can you create the code here for an  Eiffel API that connects and posts an image to the flickr API
+```
+
+Let's create a composition
+----------------------------------------------
+To finalize the example le's think
+How could we develop a Cache,
+That gets remote files,
+and stores them locally for the next calling.
+
+
+```chatgpt
+Can you create the code, that reads an image from a remote server?
+and then stores it locally.
+```
+
+Now let's compare the alternative with software made for composition.
+
+```chatgpt
+
+Can you create a Bash script that search or a file locally,
+if it doesn't find it, downloads the file from an image server.
+Stores it locally,
+and the next time, we ask for the same image it reads the one on the local file.
+
+```
+
+Let's observe the same script in NuShell a new generation shell that is also
+a replacement for bash, that is extremely productive.
+
+```chatgpt
+Can you create an NuSHell script that searches for an image, in a local directory.
+If it doesn't find it then downoald it from a remote server.
+store it locally, so that the next time,
+we ask for it it reads the one locally?
+```
+
+As you can see the NuShell script is very expressive,
+it represents that we want to do and nothing else.
+Whereas the algorithmic version in both Eiffel and Python
+Is riddle with accidental complexity, and minutia that hides what we really want to achieve.
+
+On this paper we will see how Weiher's Storage Combinators can be implemented to make the version in Eiffel almost as expressive as the one in Nushell.
+
+Composition in the real world.
+======================================================================
+
+In the era of WebServices and API's we have seen the delopment of Systems composed of several different API's
+from different vendors and independent developers.
+This composiitions have been called Mashups
+
+```chatpt
+Insert citation for the book on mashups
+and our previous thesis on the subject.
+```
+
+
+What made Mashups possible is that every API has a comamn interface in the form of a REST API.
+
+A REST Api was formalized in Fiedings thesis in the following 6 principles.
+
+````chatgpt
+What are the 6 principles formalized by fielding in his thesis about Rest.
+````
+
+Those principles we can see them expressed as the "Verbs" in the HTTP protocol definition.
+
+```chatgpt
+Insert a table of the 7 http verbs what do they mean, if they are Safe, Idem-pontent and cachable.
+```
+
+Now locally a Storage can be thought as a String_Table (a Dictionary in Python).
+Indexed by the "path" of the resource.
+
+So we can create a relationship between,
+http Verbs.
+On this paper I intend to follow, the HTTP analogy
+as far as we can take it.
+
+To keep thinking about the fact that we are composing http resources.
+
+
+
+
+
+Development
+======================================================================
+
+1st Iteration a Restful API
+----------------------------------------------------------------------
+
+The first characteristic of an `Storage Combinator` is that it respects a Rest API
+given a "route" or PATH.
+
+so the precise definition of a REST_STORE is an instance ("effective class")
+that implements the REST_STORE abstract_class ("deferred class")
+
+```note_to_self
+insert the contract view, at a certain commit
+using bash code that emacs can interpret.
+```
+
+Notice that we have the Pre-condition (require)
+that the user  of the class is asking for data that we have (has)
+if we don't have it then it returns and error_404 to the user
+this is applying Design-By-Contract to the webserver.
+Also observe that if it is our method the one that doesn´t fullfill a request would be the equivalent of 500 error.
+
+Also notice that PUT requires the path to exists.
+Whereas POST doesn't have the precondition, it doesn't even require the path to be given so it is detachable.
+
+### Applying the RESTy API to a STRING_TABLE
+
+Now the implementation of the REST API is very succint.
+Thanks to the fact that Eiffel Library Collection has since the Beginning
+
+```note_to_self
+insert citation to the communications of the ACM article on the design of the libraries
+And citation to the book.. where BM talks about the design of the eiffel libraries.
+```
+
+This care to the conformance of the librires will be very useful for us since it willl save a lot of work on the implementation.
+
+### The implementation
+
+Now that we know the specificiation (eiffel: Contract) then we can proceed with the implementation
+That in this case is as as simple as:
+
+```note_to_self
+Insert the code view at a certain point in time.
+and write notes in it's
+
+### Examples
+
+Given this implementation a dictionary (eif STRING_TABLE) can be used like in thi examples (tests)
+
+```chatgpt
+Crete Eiffel test examples of storing long paths,
+and also examples where asking or a non stored path
+returns an error 404
+and see how could I trigger a 500 error.
+```
+
+2nd Iteration a RESTy API's for an 'unreliable store'
+================================================================================
+
+Our first example a Dictionary was the platonic ideal of stores.
+It is single threaded and as long as our program is running we can assume,
+that what ever we put in the dictionary, we can get back.
+
+But the real world is more messy. Things go missing, [^j1]
+They reappear (like socks in the fridge)
+
+So for this we will create a RESTLY_DIRECTORY
+I.e. a filesystem directory that implements REST-like api for the retrival and writing of text_files.
+
+The important characteristic is that a File can be removed by another operating system process.
+While no one is looking at the washer  cycle.
+
+### The new contract
+
+```note_to_self
+in jj checkout the version of the contract that can handle detachable return values.
+and show that the more strict contract can inherit from the detachable type
+but not the other way around.
+```
+
+Also show the current class diagram.
+Where the REST_TABLE inherits from the more strict store, and the
+file store inherits from the detachable one.
+
+### The implementation?
+    propbably I shouldn't put the implementation here, just a link (including revision) with the correct version of the implentation
+
+### Example tests
+    THis is the important part.
+    Show that assigining something new to the REST_API will create a new text file with that name and contents.
+    then show that we can trigger a post conditin in  Eiffel
+
+[j1]: I think all of humany has had this problem.
+[j2]: This has happened to me... I cannot be the only one :-)
+
+3rd Iteration Mapper RESTapi for object transformers
+====================================================================================
+A REST_MAPPER
+is-a REST_STORE with the property that the path and value.
+can be modified before being stored.
+
+Which now give us the problem, that now what we storet is not what we get.
+So that requires creating a new Contract.
+
+```note_to_self
+insert the code for the new REST_DETABLE_TWO_TYPES class.
+and show line by line the changes that were necessary
+SHOW THAT We can redfine the simple clothing store.
+
+Insert the diagram of inheritance,
+between abstract classes.
+```
+
+### Show the implementation
+
+### Show the tests, and delete a file before calling get , bit i
+
+Show that eventhough we stored a name with lowar_case, we can have a class.
+That by the item you do a get, that has passed the precondition
+We can trigger the post-condition.
+
+4th Iteration a REST_RESOURCE
+==================================================================
+What distinguis a REST_RESOURCE from just a REST_STORE
+is that a resourc *has* an identifier.
+That is a URL that uniquely identifies the resource.
+It is so uninque in fact that changing the resource is not allowed,
+and trying to do so would create a new REST_RESOURCE with the new ID
+rather than modify the current one.
+
+This is the definition of an IDENTIFIER
+-------------------------------------------------
+
+```note_to_self
+Insert the code of the IDENTIFIER
+```
+
+(1) Notice that it is-a 'URI'
+(2) And that is an immutable value class (eif. 'expanded class')
+Which means that we cannot change the values of any of the values once it is created.
+(3) we are redefining the value setters to create new versions of the current resource, with the ne we value.
+(4) Observe that we use the word ONCE which is a singleton, once this resource is created, it won't create a new object. But will be an insntance of the current one.
+
+Now that we know what an IDENTIFIER *is*
+
+We can define a REST_RESORCE asking
+
+> REST_RESOURCE is-a REST_STORE that is uniquely identified by a UNIQUE_URI
+> and where all it's content has a 'subdirectory' where we will look for the entities.
+
+```note_to_self
+instert the REST_RESOURCE class with it's make_from_url method
+```
+
+(1) observe that we the prefix part is the subdiriectory, befare the entry.
+
+Now let's create a RESOURCE_TABLE and  RESOURCE_DIRECtORY
+they both inherit from UNIQUE_URI and from REST_STORE
+
+Observe that now we have redefine the stores,
+to consider the prefix that comes from the subdomain.
+this only redirects the path.
+
+### Examples
+Show that creating two resources with the same url
+is actually the same RESOURCE.
+
+modifiying one of the urls creates a new RESOURCE
+
+now show how creating a new directory, you don't need to specify the whole path anymore,
+Since it is using the prefix.
+
+### Exercises
+create the Current_resource which is the resource that represents the direcotry where the current app is running.
+create the env resource that represents environment variables currently defined in the operating system.
+
+5th Iteration a REMOTE_RESOURCE
+======================================================================
+
+A REMOTE_RESOURCE is-a resource that knows how to connect, store and retrieve resources,
+living outside the current program.
+has-a inmutable unique identifier
+has-a protocol proxy that knows how to connect and retrive resources.
+is-a RESTFUL_STORE, where the values are actually stored in a remote server.
+
+For example
+------------------------------------
+Let's look at some implementations in particular the HTPP ones
+
+
+Tests
+----------------------------------------------------
+How well does this work in practice?
+
+
+6th Iteration RESOURCE_COMBINATOR
+============================================================================
+
+A RESOURCE_COMBINATOR is a function that takes two REST_RESOURCeS and combines their operations,
+to compose a new one. That is used independently of the original ones.
+
+For example, the cache combinator.
+-------------------------------------
+So we want to cache the expensive http requests that we make to an external server.
+
+Has as local_store the file writing one.
+and as remote_store the one that is an http client.
+
+7th Iteration RESOURCE_SERVER
+===========================================================================
+
+Up to this point, we have consumed resources.
+But how can we "expose" our local resources.
+To the exterior?
+
+This communication must happen according to a protocol.
+So that means we need now PROTOCOL Server,
+that can publish our RESOURCES according to the rules of the protocol.
+
+Going back to our motivating example
+============================================================================
+
+After all that work defining, and implementing REST_RESOURCES in Eiffel.
+How does our original problem look like?
+
+
+
+Conclussions
+============================================================================
+
+* Eiffels mature library, and advanced features made it an ideal candidate to write this specification.
+
+* REST RESOURCES works because RESOURCES are a "deep class"
+  Osternout, claims that in order for a class to be useful, it must be deep.
+  Meaning it must have a small public interface, that hides a complex internal structure.
+  In our case using the well defined and small RESTFUL constratints has afforded us the freedom,
+  to  create complex compositions of small parts.
+
+** The fact that http is a stateless protocol, gives the benefits of Functional Programming
+
+
+Lessons Learned
+===================================================
+
+There is no Specification without prototype.
+
+This work started as an attempt to specify Weiher's work on Architecture Oriented Programming.
+Mostly, because I was confused by some of the terms used, in his paper
+For example the word "reference" is used diferently in the 2016 paper,
+than in the the 2019 paper of Storage Combinators.
+
+Also I didn't like the name "Polymorphic Identifiers", to me it sounded like a contradiciton
+an Identifier shouldn't change shape so no polymorphic.
+But by formalizing it turns out that the Identifier or the name URI uniform resource *identfier*.
+and the Resource is what the "polymorphic identifier meant.
+
+I think that Storage Combinators are a "rediscovery" of the RESTful architectural style with two key innovations.
+
+1. It applies the RESOURCE concept to level of the program. So basically. What if every variale, dictionary, etc. in our
+   program was addresable by a URI ?
+
+2. It makes standard combinators allowing us to create new Resources, as the combination of others in Dynamic.
+   i.e. not compiled way.
+
+3. What the CSP specification brings to the table is a formally verified specification of REST.
+  That helped up uncover blind spots in the Storage Combinators work.
+
+<link rel="stylesheet" href="https://unpkg.com/latex.css/style.min.css" />
+<style>
+body.md{
+	max-width:90ch; !important
+}
+</style>
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden}</style>
+<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
