@@ -211,6 +211,14 @@ This are the innovations that have been ocupaying our minds lately
   	  </li>
   	</ul>
       <ul>
+  	  <li>[./projects/implementing_storage_combinators_in_eiffel](././projects/implementing_storage_combinators_in_eiffel/) 
+  	  </li>
+  	</ul>
+      <ul>
+  	  <li>[./projects/Polymorphic_Identifiers_in_Eiffel](././projects/Polymorphic_Identifiers_in_Eiffel/) 
+  	  </li>
+  	</ul>
+      <ul>
   	  <li>[./projects/AOP_in_Eiffel](././projects/AOP_in_Eiffel/) 
   	  </li>
   	</ul>
@@ -8734,339 +8742,339 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2025-05-17: posts/xilenial_discovers_perseverance](./posts/xilenial_discovers_perseverance).
+### [2025-05-21: posts/xilenial_discovers_perseverance](./posts/xilenial_discovers_perseverance).
 [lab notes ongaing](./posts/xilenial_discovers_perseverance)
 
 
-### [2025-05-17: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
+### [2025-05-21: posts/tdd_cloud_wilkinson_vs_meyer](./posts/tdd_cloud_wilkinson_vs_meyer).
 [lab notes ongaing](./posts/tdd_cloud_wilkinson_vs_meyer)
 
 
-### [2025-05-17: posts/state_machines_and_programming_languages](./posts/state_machines_and_programming_languages).
+### [2025-05-21: posts/state_machines_and_programming_languages](./posts/state_machines_and_programming_languages).
 [lab notes ongaing](./posts/state_machines_and_programming_languages)
 
 
-### [2025-05-17: posts/sonic_pi](./posts/sonic_pi).
+### [2025-05-21: posts/sonic_pi](./posts/sonic_pi).
 [lab notes ongaing](./posts/sonic_pi)
 
 
-### [2025-05-17: posts/observational_learning](./posts/observational_learning).
+### [2025-05-21: posts/observational_learning](./posts/observational_learning).
 [lab notes ongaing](./posts/observational_learning)
 
 
-### [2025-05-17: posts/musical](./posts/musical).
+### [2025-05-21: posts/musical](./posts/musical).
 [lab notes ongaing](./posts/musical)
 
 
-### [2025-05-17: posts/music_and_technology](./posts/music_and_technology).
+### [2025-05-21: posts/music_and_technology](./posts/music_and_technology).
 [lab notes ongaing](./posts/music_and_technology)
 
 
-### [2025-05-17: posts/ideas](./posts/ideas).
+### [2025-05-21: posts/ideas](./posts/ideas).
 [lab notes ongaing](./posts/ideas)
 
 
-### [2025-05-17: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
+### [2025-05-21: posts/how_to_define_a_problem](./posts/how_to_define_a_problem).
 [lab notes ongaing](./posts/how_to_define_a_problem)
 
 
-### [2025-05-17: posts/haskell_musical_paradigm](./posts/haskell_musical_paradigm).
+### [2025-05-21: posts/haskell_musical_paradigm](./posts/haskell_musical_paradigm).
 [lab notes ongaing](./posts/haskell_musical_paradigm)
 
 
-### [2025-05-17: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
+### [2025-05-21: posts/faust_a_musical_dsl](./posts/faust_a_musical_dsl).
 [lab notes ongaing](./posts/faust_a_musical_dsl)
 
 
-### [2025-05-17: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
+### [2025-05-21: posts/executable_tutorials_literate_programming](./posts/executable_tutorials_literate_programming).
 [lab notes ongaing](./posts/executable_tutorials_literate_programming)
 
 
-### [2025-05-17: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
+### [2025-05-21: posts/different_perspectives_for_the_same_information](./posts/different_perspectives_for_the_same_information).
 [lab notes ongaing](./posts/different_perspectives_for_the_same_information)
 
 
-### [2025-05-17: posts/argentina_coops](./posts/argentina_coops).
+### [2025-05-21: posts/argentina_coops](./posts/argentina_coops).
 [lab notes ongaing](./posts/argentina_coops)
 
 
-### [2025-05-17: posts/a_dozen_problems](./posts/a_dozen_problems).
+### [2025-05-21: posts/a_dozen_problems](./posts/a_dozen_problems).
 [lab notes ongaing](./posts/a_dozen_problems)
 
 
-### [2025-05-17: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
+### [2025-05-21: posts/You_Need_To_Write_Here_is_Why](./posts/You_Need_To_Write_Here_is_Why).
 [lab notes ongaing](./posts/You_Need_To_Write_Here_is_Why)
 
 
-### [2025-05-17: posts/What_a_mechanic_understans_about_free_software](./posts/What_a_mechanic_understans_about_free_software).
+### [2025-05-21: posts/What_a_mechanic_understans_about_free_software](./posts/What_a_mechanic_understans_about_free_software).
 [lab notes ongaing](./posts/What_a_mechanic_understans_about_free_software)
 
 
-### [2025-05-17: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
+### [2025-05-21: posts/Videogames_The_new_frontier_in_English_learning](./posts/Videogames_The_new_frontier_in_English_learning).
 [lab notes ongaing](./posts/Videogames_The_new_frontier_in_English_learning)
 
 
-### [2025-05-17: posts/Using_Elixir_Flow_To_Process_Data](./posts/Using_Elixir_Flow_To_Process_Data).
+### [2025-05-21: posts/Using_Elixir_Flow_To_Process_Data](./posts/Using_Elixir_Flow_To_Process_Data).
 [lab notes ongaing](./posts/Using_Elixir_Flow_To_Process_Data)
 
 
-### [2025-05-17: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
+### [2025-05-21: posts/Unlocking_the_Power_of_Personal_Cloud](./posts/Unlocking_the_Power_of_Personal_Cloud).
 [lab notes ongaing](./posts/Unlocking_the_Power_of_Personal_Cloud)
 
 
-### [2025-05-17: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
+### [2025-05-21: posts/Understanding_complexity_in_software_systems](./posts/Understanding_complexity_in_software_systems).
 [lab notes ongaing](./posts/Understanding_complexity_in_software_systems)
 
 
-### [2025-05-17: posts/Track_your_day](./posts/Track_your_day).
+### [2025-05-21: posts/Track_your_day](./posts/Track_your_day).
 [lab notes ongaing](./posts/Track_your_day)
 
 
-### [2025-05-17: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
+### [2025-05-21: posts/Top_10_Questions_for_a_Job_Interview](./posts/Top_10_Questions_for_a_Job_Interview).
 [lab notes ongaing](./posts/Top_10_Questions_for_a_Job_Interview)
 
 
-### [2025-05-17: posts/The_Zettelkasten_Note_Taking_Method](./posts/The_Zettelkasten_Note_Taking_Method).
+### [2025-05-21: posts/The_Zettelkasten_Note_Taking_Method](./posts/The_Zettelkasten_Note_Taking_Method).
 [lab notes ongaing](./posts/The_Zettelkasten_Note_Taking_Method)
 
 
-### [2025-05-17: posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD).
+### [2025-05-21: posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD).
 [lab notes ongaing](./posts/The_Sunk_Cost_Fallacy_Another_Obstacle_in_my_PhD)
 
 
-### [2025-05-17: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
+### [2025-05-21: posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding).
 [lab notes ongaing](./posts/The_Story_of_How_Bitcoin_Became_an_Unexpected_Best_Man_at_My_Wedding)
 
 
-### [2025-05-17: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
+### [2025-05-21: posts/The_Rise_and_Fall_of_Abacus_Rationale](./posts/The_Rise_and_Fall_of_Abacus_Rationale).
 [lab notes ongaing](./posts/The_Rise_and_Fall_of_Abacus_Rationale)
 
 
-### [2025-05-17: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
+### [2025-05-21: posts/The_Photovoltaics_Dilemma](./posts/The_Photovoltaics_Dilemma).
 [lab notes ongaing](./posts/The_Photovoltaics_Dilemma)
 
 
-### [2025-05-17: posts/The_Illusion_of_Averages_Personalized_Diets_Brexit_Realities_and_Global_Political_Shifts](./posts/The_Illusion_of_Averages_Personalized_Diets_Brexit_Realities_and_Global_Political_Shifts).
+### [2025-05-21: posts/The_Illusion_of_Averages_Personalized_Diets_Brexit_Realities_and_Global_Political_Shifts](./posts/The_Illusion_of_Averages_Personalized_Diets_Brexit_Realities_and_Global_Political_Shifts).
 [lab notes ongaing](./posts/The_Illusion_of_Averages_Personalized_Diets_Brexit_Realities_and_Global_Political_Shifts)
 
 
-### [2025-05-17: posts/The_Future_of_Money](./posts/The_Future_of_Money).
+### [2025-05-21: posts/The_Future_of_Money](./posts/The_Future_of_Money).
 [lab notes ongaing](./posts/The_Future_of_Money)
 
 
-### [2025-05-17: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
+### [2025-05-21: posts/Terravision_vs_Google_Earth](./posts/Terravision_vs_Google_Earth).
 [lab notes ongaing](./posts/Terravision_vs_Google_Earth)
 
 
-### [2025-05-17: posts/Teaching_Academic_Writing_with_the_Macro-Tulmin](./posts/Teaching_Academic_Writing_with_the_Macro-Tulmin).
+### [2025-05-21: posts/Teaching_Academic_Writing_with_the_Macro-Tulmin](./posts/Teaching_Academic_Writing_with_the_Macro-Tulmin).
 [lab notes ongaing](./posts/Teaching_Academic_Writing_with_the_Macro-Tulmin)
 
 
-### [2025-05-17: posts/TRIZ_applied_to_an_Acacemic_Problem](./posts/TRIZ_applied_to_an_Acacemic_Problem).
+### [2025-05-21: posts/TRIZ_applied_to_an_Acacemic_Problem](./posts/TRIZ_applied_to_an_Acacemic_Problem).
 [lab notes ongaing](./posts/TRIZ_applied_to_an_Acacemic_Problem)
 
 
-### [2025-05-17: posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw](./posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw).
+### [2025-05-21: posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw](./posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw).
 [lab notes ongaing](./posts/Softwre_is_Eating_The_World_and_AI_is_Eating_the_Sw)
 
 
-### [2025-05-17: posts/Single_text_file](./posts/Single_text_file).
+### [2025-05-21: posts/Single_text_file](./posts/Single_text_file).
 [lab notes ongaing](./posts/Single_text_file)
 
 
-### [2025-05-17: posts/Simple_example_of_liveview1_phx](./posts/Simple_example_of_liveview1_phx).
+### [2025-05-21: posts/Simple_example_of_liveview1_phx](./posts/Simple_example_of_liveview1_phx).
 [lab notes ongaing](./posts/Simple_example_of_liveview1_phx)
 
 
-### [2025-05-17: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
+### [2025-05-21: posts/Requirements_in_the_Age_of_AI](./posts/Requirements_in_the_Age_of_AI).
 [lab notes ongaing](./posts/Requirements_in_the_Age_of_AI)
 
 
-### [2025-05-17: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
+### [2025-05-21: posts/Real_Life_Movies_as_a_Teaching_Method](./posts/Real_Life_Movies_as_a_Teaching_Method).
 [lab notes ongaing](./posts/Real_Life_Movies_as_a_Teaching_Method)
 
 
-### [2025-05-17: posts/Re-Discovering_My_PhD_Challenge_for_the_Semester](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester).
+### [2025-05-21: posts/Re-Discovering_My_PhD_Challenge_for_the_Semester](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester).
 [lab notes ongaing](./posts/Re-Discovering_My_PhD_Challenge_for_the_Semester)
 
 
-### [2025-05-17: posts/Psychological_Safety](./posts/Psychological_Safety).
+### [2025-05-21: posts/Psychological_Safety](./posts/Psychological_Safety).
 [lab notes ongaing](./posts/Psychological_Safety)
 
 
-### [2025-05-17: posts/Prompt_Engineering_Basics](./posts/Prompt_Engineering_Basics).
+### [2025-05-21: posts/Prompt_Engineering_Basics](./posts/Prompt_Engineering_Basics).
 [lab notes ongaing](./posts/Prompt_Engineering_Basics)
 
 
-### [2025-05-17: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
+### [2025-05-21: posts/Product_Management_and_AI](./posts/Product_Management_and_AI).
 [lab notes ongaing](./posts/Product_Management_and_AI)
 
 
-### [2025-05-17: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
+### [2025-05-21: posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner).
 [lab notes ongaing](./posts/Pay_Your_Dues_BPM_Diagraming_SketchMiner)
 
 
-### [2025-05-17: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
+### [2025-05-21: posts/PMI_vs_Flight_Levels_Less_is_More](./posts/PMI_vs_Flight_Levels_Less_is_More).
 [lab notes ongaing](./posts/PMI_vs_Flight_Levels_Less_is_More)
 
 
-### [2025-05-17: posts/Our_New_Approach_for_Developing_Products](./posts/Our_New_Approach_for_Developing_Products).
+### [2025-05-21: posts/Our_New_Approach_for_Developing_Products](./posts/Our_New_Approach_for_Developing_Products).
 [lab notes ongaing](./posts/Our_New_Approach_for_Developing_Products)
 
 
-### [2025-05-17: posts/One_more_year](./posts/One_more_year).
+### [2025-05-21: posts/One_more_year](./posts/One_more_year).
 [lab notes ongaing](./posts/One_more_year)
 
 
-### [2025-05-17: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
+### [2025-05-21: posts/Navigating_GHC_compilation_errors_in_Emacs](./posts/Navigating_GHC_compilation_errors_in_Emacs).
 [lab notes ongaing](./posts/Navigating_GHC_compilation_errors_in_Emacs)
 
 
-### [2025-05-17: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
+### [2025-05-21: posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud).
 [lab notes ongaing](./posts/Multi-layered_Proxy_Architecture_for_my_Personal_Cloud)
 
 
-### [2025-05-17: posts/Moving_to_DeepSeek](./posts/Moving_to_DeepSeek).
+### [2025-05-21: posts/Moving_to_DeepSeek](./posts/Moving_to_DeepSeek).
 [lab notes ongaing](./posts/Moving_to_DeepSeek)
 
 
-### [2025-05-17: posts/More_About_Zettelkaster](./posts/More_About_Zettelkaster).
+### [2025-05-21: posts/More_About_Zettelkaster](./posts/More_About_Zettelkaster).
 [lab notes ongaing](./posts/More_About_Zettelkaster)
 
 
-### [2025-05-17: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
+### [2025-05-21: posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development).
 [lab notes ongaing](./posts/Micro_Schools_as_an_alternative_for_Sw_Dev_Engineers_Talent_Development)
 
 
-### [2025-05-17: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
+### [2025-05-21: posts/Manage_complexity_behind_simple_interfaces](./posts/Manage_complexity_behind_simple_interfaces).
 [lab notes ongaing](./posts/Manage_complexity_behind_simple_interfaces)
 
 
-### [2025-05-17: posts/Karina_La_Humana](./posts/Karina_La_Humana).
+### [2025-05-21: posts/Karina_La_Humana](./posts/Karina_La_Humana).
 [lab notes ongaing](./posts/Karina_La_Humana)
 
 
-### [2025-05-17: posts/Kanban_and_Scrum_Serious_Games_Effectiveness_for_Learning](./posts/Kanban_and_Scrum_Serious_Games_Effectiveness_for_Learning).
+### [2025-05-21: posts/Kanban_and_Scrum_Serious_Games_Effectiveness_for_Learning](./posts/Kanban_and_Scrum_Serious_Games_Effectiveness_for_Learning).
 [lab notes ongaing](./posts/Kanban_and_Scrum_Serious_Games_Effectiveness_for_Learning)
 
 
-### [2025-05-17: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
+### [2025-05-21: posts/Kanban_Serious_Games_Intro](./posts/Kanban_Serious_Games_Intro).
 [lab notes ongaing](./posts/Kanban_Serious_Games_Intro)
 
 
-### [2025-05-17: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
+### [2025-05-21: posts/Kanban_Case_Study_in_Public_Sector_Part_I](./posts/Kanban_Case_Study_in_Public_Sector_Part_I).
 [lab notes ongaing](./posts/Kanban_Case_Study_in_Public_Sector_Part_I)
 
 
-### [2025-05-17: posts/Intellectual_Property_Analysis_The_Founder_Movie](./posts/Intellectual_Property_Analysis_The_Founder_Movie).
+### [2025-05-21: posts/Intellectual_Property_Analysis_The_Founder_Movie](./posts/Intellectual_Property_Analysis_The_Founder_Movie).
 [lab notes ongaing](./posts/Intellectual_Property_Analysis_The_Founder_Movie)
 
 
-### [2025-05-17: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
+### [2025-05-21: posts/Innovation_on_Water_Management_from_The](./posts/Innovation_on_Water_Management_from_The).
 [lab notes ongaing](./posts/Innovation_on_Water_Management_from_The)
 
 
-### [2025-05-17: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
+### [2025-05-21: posts/Innovation_Methods_Comparison](./posts/Innovation_Methods_Comparison).
 [lab notes ongaing](./posts/Innovation_Methods_Comparison)
 
 
-### [2025-05-17: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
+### [2025-05-21: posts/Ikigai_to_Evaluate_Education_Ideas](./posts/Ikigai_to_Evaluate_Education_Ideas).
 [lab notes ongaing](./posts/Ikigai_to_Evaluate_Education_Ideas)
 
 
-### [2025-05-17: posts/How_to_Learn_any_Topic](./posts/How_to_Learn_any_Topic).
+### [2025-05-21: posts/How_to_Learn_any_Topic](./posts/How_to_Learn_any_Topic).
 [lab notes ongaing](./posts/How_to_Learn_any_Topic)
 
 
-### [2025-05-17: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
+### [2025-05-21: posts/How_to_Do_a_Dirty_and_Quick_Review](./posts/How_to_Do_a_Dirty_and_Quick_Review).
 [lab notes ongaing](./posts/How_to_Do_a_Dirty_and_Quick_Review)
 
 
-### [2025-05-17: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
+### [2025-05-21: posts/How_To_Choose_a_Book](./posts/How_To_Choose_a_Book).
 [lab notes ongaing](./posts/How_To_Choose_a_Book)
 
 
-### [2025-05-17: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
+### [2025-05-21: posts/Home_Manager_strategies_for_symlink_management](./posts/Home_Manager_strategies_for_symlink_management).
 [lab notes ongaing](./posts/Home_Manager_strategies_for_symlink_management)
 
 
-### [2025-05-17: posts/Have_you_felt_exponential_era](./posts/Have_you_felt_exponential_era).
+### [2025-05-21: posts/Have_you_felt_exponential_era](./posts/Have_you_felt_exponential_era).
 [lab notes ongaing](./posts/Have_you_felt_exponential_era)
 
 
-### [2025-05-17: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
+### [2025-05-21: posts/Going_Agile_The_Agile_Way](./posts/Going_Agile_The_Agile_Way).
 [lab notes ongaing](./posts/Going_Agile_The_Agile_Way)
 
 
-### [2025-05-17: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
+### [2025-05-21: posts/Frustration_in_the_face_of_improvement](./posts/Frustration_in_the_face_of_improvement).
 [lab notes ongaing](./posts/Frustration_in_the_face_of_improvement)
 
 
-### [2025-05-17: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
+### [2025-05-21: posts/Extending_the_Power_of_your_Personal_Cloud](./posts/Extending_the_Power_of_your_Personal_Cloud).
 [lab notes ongaing](./posts/Extending_the_Power_of_your_Personal_Cloud)
 
 
-### [2025-05-17: posts/Elixir-Rust_Integration](./posts/Elixir-Rust_Integration).
+### [2025-05-21: posts/Elixir-Rust_Integration](./posts/Elixir-Rust_Integration).
 [lab notes ongaing](./posts/Elixir-Rust_Integration)
 
 
-### [2025-05-17: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
+### [2025-05-21: posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones).
 [lab notes ongaing](./posts/Dont_Waste_Your_Time_with_Skeptics_Work_with_Interested_Ones)
 
 
-### [2025-05-17: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
+### [2025-05-21: posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion).
 [lab notes ongaing](./posts/Disrupting_Innovation_for_Educational_Challenges_From_Atlantic_To_Pacific_Dominion)
 
 
-### [2025-05-17: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
+### [2025-05-21: posts/Did_You_Read_This_Book](./posts/Did_You_Read_This_Book).
 [lab notes ongaing](./posts/Did_You_Read_This_Book)
 
 
-### [2025-05-17: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
+### [2025-05-21: posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines).
 [lab notes ongaing](./posts/Devtron_Enhancing_Kubernetes_Management_and_DevOps_Pipelines)
 
 
-### [2025-05-17: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
+### [2025-05-21: posts/Declarative_dotfiles_with_Home_Manager](./posts/Declarative_dotfiles_with_Home_Manager).
 [lab notes ongaing](./posts/Declarative_dotfiles_with_Home_Manager)
 
 
-### [2025-05-17: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
+### [2025-05-21: posts/Creating_a_QR_for_Google_review_URL](./posts/Creating_a_QR_for_Google_review_URL).
 [lab notes ongaing](./posts/Creating_a_QR_for_Google_review_URL)
 
 
-### [2025-05-17: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
+### [2025-05-21: posts/Create_Abundance_With_Software](./posts/Create_Abundance_With_Software).
 [lab notes ongaing](./posts/Create_Abundance_With_Software)
 
 
-### [2025-05-17: posts/Continuous_Integration_CI_Garnix](./posts/Continuous_Integration_CI_Garnix).
+### [2025-05-21: posts/Continuous_Integration_CI_Garnix](./posts/Continuous_Integration_CI_Garnix).
 [lab notes ongaing](./posts/Continuous_Integration_CI_Garnix)
 
 
-### [2025-05-17: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
+### [2025-05-21: posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise).
 [lab notes ongaing](./posts/Bloom_Taxonomy_Shu_Ha_Ri_Expertise)
 
 
-### [2025-05-17: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
+### [2025-05-21: posts/Another_post_on_Crypto_Assets](./posts/Another_post_on_Crypto_Assets).
 [lab notes ongaing](./posts/Another_post_on_Crypto_Assets)
 
 
-### [2025-05-17: posts/A_premier_on_Prometheus_relabelling](./posts/A_premier_on_Prometheus_relabelling).
+### [2025-05-21: posts/A_premier_on_Prometheus_relabelling](./posts/A_premier_on_Prometheus_relabelling).
 [lab notes ongaing](./posts/A_premier_on_Prometheus_relabelling)
 
 
-### [2025-05-17: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
+### [2025-05-21: posts/A_Tool_in_a_World_Full_of_Distractions](./posts/A_Tool_in_a_World_Full_of_Distractions).
 [lab notes ongaing](./posts/A_Tool_in_a_World_Full_of_Distractions)
 
 
-### [2025-05-17: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
+### [2025-05-21: posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions).
 [lab notes ongaing](./posts/A_Real_Challenge_as_DevOps_Navigating_Key_Hurdles_and_Solutions)
 
 
-### [2025-05-17: posts/A_Conference_With_Rami_Goldratt](./posts/A_Conference_With_Rami_Goldratt).
+### [2025-05-21: posts/A_Conference_With_Rami_Goldratt](./posts/A_Conference_With_Rami_Goldratt).
 [lab notes ongaing](./posts/A_Conference_With_Rami_Goldratt)
 
 
-### [2025-05-17: posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience).
+### [2025-05-21: posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience).
 [lab notes ongaing](./posts/A_Better_Approach_To_Finding_a_Resarch_Problem_for_Proffesionals_with_Experience)
 
 
@@ -10516,6 +10524,1494 @@ body.md{
 </style>
 <!-- Markdeep: --><style class="fallback">body{visibility:hidden}</style>
 <script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+<meta name="author" content="Alejandro Garcia Fernandez">
+<meta name="description" content="Implementing the Architecture Oriented Programming of Objective.st in Eiffel">
+<meta name="keywords" content="Eiffel, Objective Smalltalk, Design Patterns">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+
+
+                  **In-program RESOURCES implementation in Eiffel **
+
+What would happen, if we took the Universal Access Principle (UAP) and the RESTful architecture seriously?
+If every piece of data in our program had a URL and every collection responded to a REST verbs.
+
+Introduction
+===========================================================================
+
+UAP coined by Bertrand Meyer, means that there should be no difference between the way we invoke a computation (in java call a 'method')
+And the way we address value. (in java read a 'field').
+Polymorphic Identifiers is the name given by Marcel P. Weiher, to the idea of applying the UAP to every piece of data a program can need.
+Inspired by the fact that in the internet, everything has an address (URL: Uniform Resource Locator) or a name (URI: Uniform Resource Identifier).
+Weiher concluded that the exact same mechanism could be use to address any piece of data used by a single program.
+He implemented PI's first as a library and then as foundational concept of his programming language Objective-Smalltalk.
+
+In this paper we explain the implementation of RESTFUL an Eiffel package that implements the ideas of PI's
+Taking advantage of Eiffel's unique capabilities, such as Design-by-Contract, Multiple Inheritance and Once Classes.
+
+Motivating Example
+==============================================================================
+
+Let's start with a simple challenge:
+We want to read the code Repositories an Organization has on GitHub.
+So we must get the json in the URL https://api.github.com/orgs/dotnet/repos
+Uppercase the name of the project
+And save them, Pretty Printed in a local file.
+
+The NuShell Implementation
+-------------------------------------------------------------------------------
+NuShell is a Unix shell like Bash or Fish with a heavy focus on data processing.
+
+``` NuShell
+HTTP get https://api.github.com/orgs/dotnet/repos
+    | from json
+    | each { |repo| $repo | set name ($repo.name | str to-upper) }
+    | to json --pretty > dotnet_repos_uppercase.json
+
+```
+
+As you can see the code is very expressive
+it practically reads like the problem statement.
+
+Eiffel Implementation
+-------------------------------------------------------------------------------
+Inspired by this example code by [JLVilla](https://github.com/EiffelNETCore/examples/blob/main/sdk/console/api_client_newtonsoft/application.e)
+Our code will look like this:
+
+```Eiffel
+note
+    description: "Project root class"
+    EIS: "name=HTTP Request", "src=https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient", "protocol=uri"
+
+class
+    APPLICATION
+
+create
+    make
+
+feature {NONE} -- Initialization
+
+    make
+            -- Run application.
+        local
+            client: HTTP_CLIENT
+            l_request: HTTP_REQUEST_MESSAGE
+            l_response: HTTP_RESPONSE_MESSAGE
+            l_serializer: JSON_SERIALIZER
+            l_repo: REPOSITORY
+            l_arr: ARRAY_LIST
+            l_json_writer: JSON_TEXT_WRITER
+            l_file: SYSTEM_FILE
+            i: INTEGER
+        do
+            create client.make
+
+            -- Send request and get response
+            create l_request.make_from_method_and_request_uri ({HTTP_METHOD}.get, "")
+            client.set_base_address ("https://api.github.com/orgs/dotnet/repos")
+            l_response := client.send_http_request_message (l_request)
+
+            -- Deserialize the response
+            create l_serializer.make
+            create l_arr.make
+            l_serializer.deserialize_json (l_response.content.read_as_stream, l_arr)
+
+            -- Uppercase repo names and collect them in a list
+            across l_arr as repo_item loop
+                l_repo := {REPOSITORY}.from_json (repo_item.item.to_string)
+                l_repo.set_name (l_repo.name.upper)
+                l_arr.force (l_repo)
+            end
+
+            -- Write JSON to file
+            create l_file.make ("dotnet_repos_uppercase.json")
+            create l_json_writer.make
+            l_file.append_text (l_arr.to_json)
+        end
+end
+```
+
+Observe how many instructions are spent setting up the configuration to load the data, transform it and the store it again.
+
+And also observe that the line count, is a lot more than the "ideal" version set by NuShell.
+
+Now this problems are not specific to Eiffel.
+Any program with Static typing would have a high Line Count.
+This is due to the static nature of typing and the fact that json was born to be `evaluate` by a JavaScript interpreter.
+In this code listing we don't even, show the `{REPOSITORY}` class with the `from_json` converting feature.
+
+But even dynamically typed languages have the similar problems
+
+
+JavaScript Implementation
+-------------------------------------------------------------------------------
+
+```node
+#!/usr/bin/env node
+
+// uppercase_dotnet_repos.js
+
+import { writeFile } from 'node:fs/promises';
+
+async function main() {
+  const token = process.env.GITHUB_TOKEN;          // optional GitHub token for higher rate limits
+  const headers = {
+    'Accept': 'application/vnd.github+json',
+    ...(token && { 'Authorization': `Bearer ${token}` })
+  };
+
+  // 1. Fetch repos
+  const res = await fetch('https://api.github.com/orgs/dotnet/repos', { headers });
+  if (!res.ok) {
+    console.error(`GitHub API error: ${res.status} ${res.statusText}`);
+    process.exit(1);
+  }
+  const repos = await res.json();
+
+  // 2. Upper-case the `name` field
+  const updated = repos.map(repo => ({
+    ...repo,
+    name: repo.name.toUpperCase()
+  }));
+
+  // 3. Write out pretty-printed JSON
+  const outPath = 'dotnet_repos_uppercase.json';
+  await writeFile(outPath, JSON.stringify(updated, null, 2), 'utf8');
+  console.log(`✅ Wrote ${updated.length} repos to ${outPath}`);
+}
+
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
+});
+```
+
+Summary of Implementations
+--------------------------------------------------------------------------------
+
+In the table 1 we can see how all implementations are a lot more verbose than
+the one in NuShell and only the Eiffel Implementation, provides the safety warranties
+of a Statically typed language.
+
+| **Metric**                        | **NuShell**                             | **Eiffel**                          | **JavaScript**                          |
+|-----------------------------------|-----------------------------------------|-------------------------------------|-----------------------------------------|
+| **Line Count**                    | 8                                       | 41                                  | 26                                      |
+| **Static vs Dynamic Types**       | Dynamic (No explicit type declarations) | Static (Explicit type declarations) | Dynamic (No explicit type declarations) |
+| **Concurrent vs Single-Threaded** | Single-threaded                         | Single-threaded                     | Single-threaded (async functions)       |
+| **McCabe's Complexity**           | 4                                       | 14                                  | 8                                       |
+|                                   |                                         |                                     |                                         |
+
+
+In this paper we will develop RESTFUL Eiffel
+a cluster of Eiffel classes that will help us get closer to the "ideal"
+
+
+Background
+===============================================================================
+
+RESTful Architecture
+-------------------------------------------------------------------------------
+
+Intuitively a every-time you open a web-browser like Chrome or Firefox,
+and you read a web page like Wikipedia you are using a RESTful architecture.
+
+The browser is a user-agent.
+connecting to Server (Wikipedia.com).
+Through a resource identification (URI): https://en.wikipedia.org/wiki/Eiffel_(programming_language)
+Using the GET (HTTP verb).
+And your content is delivered to you in a Representation (i.e. XHTML).
+But you could also get other representations. like a json formatted text of the same information.
+
+
+
+The REST architecture was defined by Roy Fielding in his PhD Thesis.
+And later formalized with TLA+ by (name of the paper).
+In particular Fielding has said that many APIs that claim to be RESTful aren't.
+
+So what is a RESTFUL API? A RESTful system is one that satisfy the following constraints.
+
+
+### REST Constraints
+
+ RESTful systems are defined by six constraints that, distinguish them from other architectural styles:
+
+Client–Server
+:   Separates user interface (clients) from data storage (servers), allowing each to evolve independently.
+    Clients interact with origin servers (or their caches) via a uniform interface.
+
+Stateless
+:  Every request carries all the information needed for processing; servers do not retain client session state.
+   All application state is kept on the client side (including caches).
+
+Cacheable
+:  Responses are explicitly marked as cacheable or non-cacheable.
+   Caching by clients and intermediaries reduces load and improves performance by reusing prior responses.
+
+Layered System
+:  Clients don’t know (and needn’t know) whether they’re talking directly to the origin server or to an intermediary (proxy, gateway, etc.).
+   Intermediaries can provide shared caches, load balancing, and security enforcement without altering client–server interactions.
+
+Uniform Interface (the central REST principle)
+:  Enforced via four sub-constraints:
+   * **Resource Identification:** Each resource is uniquely identified (e.g., by a URI).
+   * **Manipulation via Representations:** Clients change resource state by exchanging representations.
+   * **Self-Descriptive Messages:** Every message carries enough metadata (resource IDs, representation format, hypermedia links) to be understood in isolation.
+   * **HATEOAS:** Clients discover available actions dynamically through hypermedia controls provided in responses.
+
+Code-On-Demand (optional)
+:  Servers can extend client functionality by sending executable code (applets, scripts), which clients download and run.
+
+Systems that satisfy all mandatory constraints (1–5) — and optionally 6 — are deemed RESTful.
+
+
+### REST Actors
+
+Based on the previous Constraints we Can identify the following actors:
+
+Here’s the expanded set of REST actors, now including Proxies, Gateways, and Caches as distinct elements:
+
+:   Resources
+    Named abstractions of information (identified by URIs) on which operations are performed.
+    According to Roy Fielding in his dissertation "Architectural Styles and the Design of Network-based Software Architectures" (2000), a resource in REST (Representational State Transfer) is defined as:
+    > “Any information that can be named.”
+
+    He elaborates that:
+        A resource is an abstraction of some piece of information or service.
+        It is identified by a URI (Uniform Resource Identifier).
+        The actual content or representation of the resource (like HTML, JSON, XML, etc.) is separate from the resource itself.
+        A resource may have multiple representations, and those are transferred to clients through the REST interface (usually over HTTP).
+
+User Agents
+:   Client-side processes (plus their client connectors) that initiate resource requests and receive responses.
+
+Origin Servers
+:   Server-side processes (plus their server connectors) responsible for hosting and managing resource representations and handling modification requests.
+
+Proxies
+:   Client-selected intermediaries that forward requests to origin servers (or other intermediaries), optionally transforming or filtering messages for purposes like security, protocol translation, or request aggregation.
+
+Gateways
+:   Network- or server-selected intermediaries that bridge between different systems or protocols—e.g., translating between REST and legacy APIs—without the client needing to know about the back-end topology.
+
+Caches
+:   Storage actors that hold previously retrieved, cacheable responses; they can reside within User Agents, Proxies, Gateways, or Origin Servers to answer identical future requests without recontacting the origin server.
+
+
+* **Connectors**
+  The uniform-interface links—clients, servers, caches, resolvers, tunnels—through which all components communicate, hiding implementation details and ensuring consistent, stateless interactions.
+
+Together, User Agents use client connectors to request or manipulate Resources managed by Origin Servers, optionally via Proxies or Gateways, with Caches improving efficiency—all over the same Uniform Interface.
+
+
+### REST Verbs
+
+
+| Method  | Definition                                                       | Safe | Idempotent | Cacheable                  |
+|---------|------------------------------------------------------------------|:----:|:----------:|:---------------------------|
+| GET     | Requests a resource representation; retrieves data only.         | Yes  | Yes        | Yes                        |
+| HEAD    | Same as GET but without a response body.                         | Yes  | Yes        | Yes                        |
+| POST    | Submits data; may change state or cause side effects.            | No   | No         | Conditional [^conditional] |
+| PUT     | Replaces the resource’s representation with the request content. | No   | Yes        | No                         |
+| DELETE  | Removes the specified resource.                                  | No   | Yes        | No                         |
+| CONNECT | Opens a tunnel to the target resource.                           | No   | No         | No                         |
+| OPTIONS | Lists available communication options for the resource.          | Yes  | Yes        | No                         |
+| TRACE   | Performs a loop-back diagnostic test.                            | Yes  | Yes        | No                         |
+| PATCH   | Applies partial modifications to a resource.                     | No   | No         | Conditional [^conditional] |
+[Table [RestVerbs]: REST protocol verbs]
+
+Made with info from: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods
+
+
+
+Eiffel's Features that match RESTful interface
+===============================================
+
+Design by Contract
+------------------------------------------------
+a pre-condition violation is equivalent to an Error 404 Not found
+a post-condition violation is equivalent to an Error 500 Internal Server Error
+
+Once classes
+------------------------------------------------
+Are equivalent to a resource,
+since a resource is uniquely know by an identifier
+it means resources behave like Singleton pattern
+and once classes are perfect to represent resources.
+
+Multiple Inheritance
+-------------------------------------------------
+A server component is-a Resource that also responds to the REST Verbs.
+
+deferred classes (in java abstract classes)
+-------------------------------------------------
+A deferred class help us define clearly what are the pre-condition and post-conditions.
+in Eiffel they can also include an implementation. as opposed to instances in Java.
+that don't have enough information for reuse.
+
+
+Alias
+-------------------------------------------------
+We want to provide a common interface for different kinds of resources.
+And the ability to alias operators will help us to make different things.
+to look like if they were all collections (tables or dictionaries).
+
+Weiher's Polymorphic Identifiers
+================================================
+
+Weiher's paper on Polymorphic identifiers and Storage combinators was the inspiration for all of this paper.
+On the polymorphic identfiers paper Weiher show that we need an Uniform Access Principle applied to every kind of data,
+the same way it is used in Eiffel for computation.
+
+In order to achive that Uniformity for in-program, localhost and remote storage.
+Weiher shows we need 3 core concepts.
+
+* Polymorphic Identfiers (URIs in RESTful Architecture)
+* Scheme Handlers (Clients in RESTful Architecture)
+* References (Computational Resources in RESTful Architecture)
+
+
+Polymorphic Identifiers (PIs)
+---------------------------------------------------------
+These are URIs that serve as polymorphic names for storage locations.
+PIs are implemented as actual URIs, with the scheme part designating the handler.
+This allows them to seamlessly integrate both internal and external resources using a common syntax.
+They're not just similar to URIs - they literally are URIs with added compiler and runtime support.
+
+For example:
+
+```
+person                         // Plain identifier (uses default scheme)
+var:person/name                // Access 'name' property of 'person' object
+file://tmp/button.png          // Access a file
+http://www.example.com/button.png  // Access a web resource
+file:{env:HOME}/rfcs/{rfcName}     // Dynamic URI with template variables
+```
+
+References
+------------------------------------------------------------
+Mediate access to specific storage locations.
+References hide variations in access mechanics from clients.
+indexed references (offsets to context),
+messaging references (L-Value-specific messages),
+and keyed references (generic access messages with a key).
+
+When you use a PI,
+the system creates a Reference object behind the scenes.
+This Reference knows how to:
+
+### Read/write the storage location
+You use the same syntax to access any resource regardless of type:
+
+```
+name := var:person/name         // Reading a property
+var:person/name := newName      // Writing a property
+```
+
+#### Perform optimized access
+The Reference implementation in the paper can access data in three ways:
+```
+// From the Reference implementation:
+if (offset >= 0) {
+  return ((id*)target)[offset];    // Direct memory access (fastest)
+} else if (getSelector) {
+  return [target perform:getSelector];  // Message sending
+} else {
+  return [target objectForKey:attributeName];  // Dictionary access
+}
+```
+
+
+Scheme-handlers
+-------------------------------------------------------------
+Each scheme-handler manages a specific store.
+They translate from identifiers to references and define the operations for interacting with specific types of storage.
+They work like protocol clients, responsible for the abstraction over storage types.
+
+Scheme-handlers map the scheme part of the URI to actual implementation code:
+```
+// Define a scheme handler for 'rfc:' URIs
+base := ref:http://datatracker.ietf.org/doc
+scheme:rfc := RelativeScheme schemeWithBase: base
+```
+
+Then you can use it:
+
+```
+// Download an RFC to a local file
+file:rfc1738 := http://datatracker.ietf.org/doc/rfc1738
+// With the scheme defined above, this is equivalent to:
+file:rfc1738 := rfc:rfc1738
+```
+
+Real-World Benefits
+-----------------------------------------------------
+Concretely, this system solves problems like:
+
+Switching Storage Backends: You can change an object to use dictionary storage instead of instance variables without changing any client code.
+Parametrized Access: You can access properties dynamically:
+
+name := valueAccessor value
+
+External Resource Integration: You can work with files/web in the same way as objects:
+```
+// Set up a custom resource scheme
+scheme:image := RelativeScheme schemeWithBase: http://www.example.com
+
+// Now use it with simple names
+button := image:button.png
+```
+
+In summary
+---------------------------------------------------------------
+The whole system essentially lets you work with any kind of storage - memory, files, web, custom stores - using a consistent syntax.
+
+
+Designing a solution
+=================================================
+So we want a RESTful API the Design space has the following level.
+
+In-program
+: Resources that live in the same program. Like variables, objects, tables, dictionaries.
+  Examples:
+
+  -- Read a single person out of a list of contacts.
+  `conan := contacts["O'Brien"]`
+
+Localhost
+: Resources (files, images) that live in the some computer as the program.
+  Examples
+
+  -- Read a text file out of a directory:
+  `my_file := home["my_file.txt"]`
+
+
+Remote Resources
+: Are resources that live in the internet and can be accessed by a protocol such as HTTP, ftp, etc.
+  Example
+  `repos := github["/orgs/dotnet/repos"]`
+
+In summary we want to access a an In-program Dictionary or Table,
+with the same interface we use to access a remote application.
+
+Implementation
+=================================================
+
+In order to create our solution we need to define:
+
+* REST Verbs
+* RESOURCE and a
+* REST_RESOURCE
+
+And do three implementations:
+
+1. In-program: a HASH_TABLE as a REST_RESOURCE
+2. Localhost: a DIRECTORY as a REST_RESOURCE.
+3. Remote: for example GITHUB_API as REST_RESOURCE
+
+REST Verbs
+-------------------------------------------------
+We will look, at how to implement REST Verbs as an interface.
+
+In table [RestVerbs] we have defined the elements of the protocol.
+We can code said protocol as a `deferred class REST`
+
+```Eiffel
+note
+	description: "[
+		{REST_W_STORAGE}.
+		A contract representation of the http verbs.
+		to be used to define {REST_RESOURCES}
+	]"
+	author: "Alejandro Garcia"
+	date: "$Date$"
+	revision: "$Revision$"
+
+deferred class interface
+	REST_W_STORAGE [R -> , S -> ]
+
+feature -- http verbs
+
+	extend (data: R; key: detachable URL_PATH)
+			-- equivalent to http POST
+			-- Submits data; may change state or cause side effects
+		ensure
+			data_must_be_stored: attached item (last_inserted_key)
+
+	force (data: R; key: URL_PATH)
+			-- equivalent to http PUT
+			-- Replaces the resource's representation with the request content.
+		require
+			requested_a_known_key: has_key (key)
+		ensure then
+			item_must_be_stored: attached item (key)
+
+	has_key (key: URL_PATH): BOOLEAN
+			-- equivalent to http HEAD
+			-- Same as GET but without a response body
+
+	item alias "[]" (key: URL_PATH): R assign force
+			-- equivalent to http GET
+			-- Requests a resource representation; retrieves data only.
+		require else
+			key_must_exist: has_key (key)
+		ensure then
+			error_500: Result /= Void
+
+	last_inserted_key: URL_PATH
+			-- there is NO equivalent for this in http protocol.
+			-- but is necessary to keep the Command / Query Separation principle in Eiffel
+
+	remove (key: URL_PATH)
+			-- equivalent to http DELETE
+			-- Removes the specified resource.
+		ensure then
+			item_was_truly_eliminated: not has_key (key)
+
+	trace (key: URL_PATH): detachable S
+			-- equivalent to http TRACE
+			-- Performs a loop-back diagnostic test. In our interpretation since this is debugging operation.
+			-- It would return the actual [S]tored data.
+		require
+			must_be_stored: has_key (key)
+		ensure
+			error_500_internal_server_error: Result /= Void
+
+end -- class REST_W_STORAGE
+
+```
+
+a RESOURCE
+-----------------------------------------------------------------------
+
+Fielding emphasizes that:
+
+    > "The key abstraction of information in REST is a resource.
+    > Any information that can be named can be a resource."
+
+```Eiffel
+@include('./resource.e')
+```
+
+a REST_RESOURCE
+---------------------------------------------------------------------
+
+And finally a REST_RESOURCE is a RESOURCE that can answer to REST Requests.
+
+
+It is important to note that a RESOURCE is uniquely identified by their name.
+so two resources with the same name, MUST be the same.
+And we can express that relation ship in code by redefining the `is_equal` feature.
+
+```
+include code of the REST RESOURCE
+```
+
+and we must test it.
+
+```
+include code of the test
+```
+
+RESOURCE_NAME Server
+-----------------------------------------------------------------------
+Since RESOURCEs are unique by their name.
+We need a register of all the resources and make sure that for each name,
+only one resource exists.
+
+This class has the same behavior as the Domain Name Server (DNS).
+Has in the internet, is a table of URLs and the appropriate REST_RESOURCE
+to answer to them.
+
+In Eiffel this could potentially be done using once classes.
+BUT they don't work properly for ONCE objects.
+
+NOTE :: Check this implementation
+
+
+Implementing an In-program REST_RESOURCE
+-----------------------------------------------------------------------
+
+Now that we have a REST_RESOURCE and the RESOURCE_NAME_SERVER
+
+We will start by creating a HASH_TABLE that behaves like a REST_RESOURCE
+
+```
+include the code for the TABLE_RESOURCE.e
+```
+
+
+Implementing an Localhost RESOURCE
+-----------------------------------------------------------------------
+
+Now we will cross the barrier of the program and now use a RESOURCE in our system like
+if it was inside our program.
+
+
+```
+Include the code listing of the DIRECTORY_RESOURCE
+```
+
+HERE is the test.
+
+
+### Another Localhost Resource.
+
+As we have stablishide in the Background a resource not only can be static,
+like an image. It can also be dynamic like a PHP script or a database.
+to prove this point we are going to code another resource.
+this one for a SQLite database.
+Observe how configure and accessing it till uses a the UAP
+with a URL.
+but now we are communicating with a database.
+
+Implementing a REMOTE_RESOURCE
+------------------------------------------------------------------------------
+
+A remote resource brings us the the biggest challenge.
+
+It forces us to consider a CLIENT_PROXY that will expose,
+all the functionality we want a remote resource to have.
+
+Weiher calls this SCHEMA_HANDLERS since they know how to use the communication protocol
+HTTP, ftp, file, etc. that the resource needs.
+
+I Prefer the term CLIENT_PROXY since it is already defined in the REST literature.
+
+```
+Refactor the coder in API_RESOURCE.e to create a generic
+CLIENT_PROXY over strings.
+and then a JSON_API_RESOURCE that is an REST[JSON,STRING]
+and the a GITHUB_API_RESOURCES that is REST[OBJECT, JSON] or something like that
+```
+
+Experiment Results
+============================================================================
+Back to our our motivating example.
+Now let's build the challenge with our RESTful library.
+
+
+so going to back to the [Challenge]
+
+We can express our solution with in-program RESOURCES as:
+
+```
+Include link to the test that surprised me that it works
+```
+
+And this table compares the results
+to the "ideal" the NuShell solution , the Original Eiffel Solution and Finally the RESTful solution.
+
+Notice how close the Restful solution is to the ideal.
+
+
+Lessons Learned
+==============================
+
+After all that work what did we gain?
+-------------------------------------------
+The capability to mix and match local and remote resources.
+  as if they were part of the current system.
+
+Why didn't you use the same terms as Weiher did?
+-------------------------------------------------------
+While making this library I discovered that many of the concepts,
+  discussed by Weiher already had analogs in the RESTful Architecture.
+  And made the conscious decisions to remain within that domain.
+  As much as possible.
+  To take advantage of vast literature in RESTful Architecture.
+
+
+Weiher uses terms like:
+schema handlers to mean the PROXY and protocols
+
+Polymorphic identifiers to mean URI and URLs
+
+Stores to mean Resources.
+
+and ______ to refer to HTTP verbs.
+
+In the Eiffel implementation I tried to maintain as much as possible relation with the RESTful API domain and analogies.
+
+Because I didn't see the need to invent new words for the concepts we were dealing with.
+And it made the access to a vast library of knowledge of the REST architecture that needed very little in terms of comprehension.
+
+
+The impedance mist-mach between REST and Object Oriented is not as wide as expected
+---------------------------------------------------------------------------------
+Many concepts in REST don't map perfectly to OOP.
+But OOP being a general programming language can handle the ambiguity.
+
+Here is a list of mismatches found:
+
+| in the REST Architect                                                                            | Eiffel's Object Oriented Programming                                               | Solution                                                                                                                                                                |
+| Resource are uniquely identified by a name                                                         | Each object is unique, even if they point to the same data                         | The RESOURCE_NAME_SERVER that follows the registry design pattern [^KarineArnoutThesis]. Makes sure that on creation first we check if the resource didn't exist before |
+| HTTP Verbs define a protocol                                                                      | the TABLE deferred class defines other features                                    | the REST class help define the HTTP verbs in terms of the TABLE features                                                                                                |
+| No separation between Command and Queries, and POST and PUT operations will still return content   | In Eiffel the Command / Query Separation Principle is *fundamental*               | the `deferred class REST` there is the last_inserted_key to handle the operation result like POST that create a new data in the entity                                  |
+| Is weakly typed and the Request Headings give 'hints' of the data types but they are not mandatory | Statically typed, forces us to know before hand what  kind we will be working with | Constraint Generosity `REST[R,S]` allows us to separate the types of the Representation and the Storage itself                                                          |
+
+Other Eiffel such as: Void-safety and SCOOP (Simple Concurrent Object Oriented Programming).
+Will be useful in a future work, implementing Weiher Storage Combinators [link_to_papers].
+
+Other concepts map easily between RESTful Architecture and Eiffel's OOP.
+
+| in RESTful Architecture                                                                                                           | In Eiffel                                                                                  | Why it works |
+| HTTP status 400 Client Error                                                                                                      | Are pare-condition violations and are responsibility of the client                          |              |
+| HTTP status 500 Internal Server Error                                                                                             | Are post-condition violation, meaning the server / supplier couldn't satisfy               |              |
+| Every piece of data is a RESOURCE, there are value resources like an image or a file, and computational resources like PHP script | Everything is an object, and objects can be only value objects or have complete behaviors |              |
+
+Design by contract is complicated
+------------------------------------
+
+Since a Pre-condition can only be weakened,
+that means that we must put the most stringent pre-conditions on the top of our hierarchy.
+
+but since a post-condition can only be strengthened
+then we can put the most lenient post-condition at the top of the inheritance hierarchy.
+and strength it below in the hierarchy.
+
+now the problem is with the feature signature.
+the input arguments can be considered a pre-condition.
+they must be almost exactly the same as the signature of the ancestor.
+so if an argument is marked as detachable (i.e. void then the argument must remain detachable)
+but the output of a feature is like a post-condition which can be strengthened,
+so a detachable result can be made attached???
+
+Future Work
+=============================================
+
+This article will continue in two directions:
+
+* Create more BASIC_RESOURCES
+* Implement Storage Combinators
+
+Continue Exploring the Design Space
+------------------------------------------------------------------------------
+This article only covers one branch,
+of the possible combinations
+for BASIC_RESOURCES.
+
+Since our goal was to show that "Unified Access" was possible
+for different locations of the problem.
+Now that we have shown that it is possible,
+we can increase the practicality by creating more classes.
+
+```plantuml
+@startmindmap
+* Design decisions
+** Concurrent
+*** Full load
+**** in-program
+**** localhost
+**** remote
+*** Streaming
+**** in-program
+**** localhost
+**** remote
+**[#lightgreen] Synchronous
+*** Streaming
+**** remote
+**** localhost
+**** in-program
+***[#lightgreen] Full load
+****[#lightgreen] remote
+*****[#lightgreen] GITHUB_API
+****[#lightgreen] localhost
+*****[#lightgreen] DIRECTORY_RESOURCE
+****[#lightgreen] in-program
+*****[#lightgreen] TABLE_RESOURCE
+@endmindmap
+```
+
+Implement Weiher's Storage Combinators
+----------------------------------------------------------
+
+One of Weiher's powerful insights is that once we have all the components
+implementing the `REST` interface then creating combinations like pipelines,
+becames easy.
+
+In future work we will implement the Storage Combinators mechanism.
+To create new pipelines.
+
+Conclusions
+==========================================================
+
+Warhorse insight that we can use the mechanisms in large systems to organize the code of our own program.
+is very powerful and can provide guidance to develop more usable experiences for developers.
+
+the Restful Eiffel cluster has the potential to became a very useful library for Eiffel developers
+And Eiffel advanced programming features made an ideal programming language to specify the components of restful application.
+
+
+Footnotes
+===============================================================================
+[^conditional]: POST and PATCH are cacheable when responses explicitly include freshness information and a matching Content-Location header.
+
+References
+================================================================================
+
+- Weiher, M., & Hirschfeld, R. (2013). Polymorphic identifiers: uniform resource access in objective-smalltalk. Dynamic Languages Symposium.
+- Weiher, M., & Hirschfeld, R. (2016). Constraints as polymorphic connectors. Proceedings of the 15th International Conference on Modularity.
+- Weiher, M., & Hirschfeld, R. (2019). Standard object out: streaming objects with polymorphic write streams. Proceedings of the 15th ACM SIGPLAN International Symposium on Dynamic Languages.
+- Weiher, M., & Hirschfeld, R. (2019). Storage combinators. Proceedings of the 2019 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software.
+- Weiher, M. (2020 a). Can programmers escape the gentle tyranny of call/return? Companion Proceedings of the 4th International Conference on Art, Science, and Engineering of Programming.
+- Weiher, M. (2020 b). Can programmers escape the gentle tyranny of call/return? https://www.youtube.com/watch?v=Gel8ffr4pqw
+
+
+<link rel="stylesheet" href="https://unpkg.com/latex.css/style.min.css" />
+<style>
+body.md{
+	max-width:90ch; !important
+}
+</style>
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden}</style>
+<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+<meta name="author" content="Alejandro Garcia Fernandez">
+<meta name="description" content="Implementing the Architecture Oriented Programming of Objective.st in Eiffel">
+<meta name="keywords" content="Eiffel, Objective Smalltalk, Design Patterns">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+
+
+                  **In-program REST for Eiffel**
+Applyng the UAP (Universal Access Principle) to local and remote resources.
+
+	By asking: What would happen if every collection in a program had a URL as identifier and a Resful API as interface?,
+Weiher's Resources[^1] unlock a new familiar way of software composition.
+WHere the now familiar ways of composing cloud API's can be applied to the level of single programs.
+Whit components that by implementing a REST API can compose into new servers.
+
+Introduction
+===============================================================================
+
+We could argue that the most successful software composition example are Unix pipes.
+Where independent programs, by limiting them selves to a very simple API can be chained togetther in compositions.
+That where inamigable to the authors of each each individual program.
+
+Another successful example of software composition, are the orchestration of services through RestAPI's.
+Services like "If This Then That" (iftt.com)
+Have connected programs livinig in different servers, develop in different languages.
+
+Learning from those successes Marcel P. Weiher proposes to organize our single program the same way.
+Using this techniques Weiher has manage to compose complex functionality with
+Caching, local and remote resources, and synchonous resources.
+
+In this paper, I present the Iterative process that leadme to implement Weihers Ideas in Eiffel.
+
+Motivating Example
+================================================================================
+
+Suppose inside a program we read a Bitmap image.
+We wanto to store it in a variable,
+flip one of the bits.
+And then save the varible, as a text file again.
+
+This is seems like a simple image and yet, let's look at the implementation.
+
+Reading o local file
+----------------------------------------------------------------
+```Eiffel
+class
+    APPLICATION
+
+create
+    make
+
+feature {NONE} -- Initialization
+
+    make
+            -- Run application.
+        do
+            create input_file.make_open_read ("input.txt")
+            create output_file.make_open_write ("output.txt")
+
+            from
+                input_file.read_character
+            until
+                input_file.exhausted
+            loop
+                output_file.put (input_file.last_character)
+                input_file.read_character
+            end
+
+            input_file.close
+            output_file.close
+        end
+
+feature -- Access
+
+    input_file: PLAIN_TEXT_FILE
+    output_file: PLAIN_TEXT_FILE
+
+end
+```
+[File Copier from RosettaCode.org https://rosettacode.org/wiki/File_input/output#Eiffel]
+
+
+Reading a remote file using ftp
+---------------------------------------------------------
+
+```Eiffel
+class
+    APPLICATION
+
+create
+    make
+
+feature {NONE} -- Initialization
+
+    make
+            -- Run application.
+        local
+            curl: CURL_EASY_EXTERNALS
+            curl_handle: POINTER
+            result_code: INTEGER
+            temp_file_path: STRING
+            file_content: STRING
+        do
+            -- Initialize curl
+            create curl
+            curl_handle := curl.init
+
+            if curl_handle /= default_pointer then
+                -- Set up for downloading the file
+                temp_file_path := "downloaded_file.txt"
+
+                -- Configure curl for FTP download
+                result_code := set_curl_options_for_download (curl, curl_handle,
+                               "ftp://ftp.example.com/remote_file.txt",
+                               "username", "password", temp_file_path)
+
+                if result_code = {CURL_CODES}.ok then
+                    -- Perform the download
+                    result_code := curl.perform (curl_handle)
+
+                    if result_code = {CURL_CODES}.ok then
+                        io.put_string ("File downloaded successfully.%N")
+
+                        -- Read the downloaded file content
+                        file_content := read_file_content (temp_file_path)
+
+                        -- Configure curl for FTP upload
+                        result_code := set_curl_options_for_upload (curl, curl_handle,
+                                       "ftp://ftp.example.com/remote_file_modified.txt",
+                                       "username", "password", file_content)
+
+                        if result_code = {CURL_CODES}.ok then
+                            -- Perform the upload
+                            result_code := curl.perform (curl_handle)
+
+                            if result_code = {CURL_CODES}.ok then
+                                io.put_string ("File uploaded successfully.%N")
+                            else
+                                io.put_string ("Failed to upload file. Error: " + curl.error_message (result_code) + "%N")
+                            end
+                        else
+                            io.put_string ("Failed to set curl options for upload. Error: " + curl.error_message (result_code) + "%N")
+                        end
+                    else
+                        io.put_string ("Failed to download file. Error: " + curl.error_message (result_code) + "%N")
+                    end
+                else
+                    io.put_string ("Failed to set curl options for download. Error: " + curl.error_message (result_code) + "%N")
+                end
+
+                -- Clean up
+                curl.cleanup (curl_handle)
+            else
+                io.put_string ("Failed to initialize curl.%N")
+            end
+        end
+
+feature {NONE} -- Implementation
+
+    set_curl_options_for_download (a_curl: CURL_EASY_EXTERNALS; a_curl_handle: POINTER;
+                                  a_url: STRING; a_username: STRING; a_password: STRING;
+                                  a_output_file: STRING): INTEGER
+            -- Set curl options for FTP download
+        local
+            file: PLAIN_TEXT_FILE
+            credentials: STRING
+        do
+            -- Create output file
+            create file.make_create_read_write (a_output_file)
+            file.close
+
+            -- Set URL
+            Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_url, a_url)
+
+            -- Set credentials
+            if Result = {CURL_CODES}.ok then
+                credentials := a_username + ":" + a_password
+                Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_userpwd, credentials)
+            end
+
+            -- Set FTP options
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_integer (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_ftp_use_epsv, 1)
+            end
+
+            -- Set file writing options
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_writedata, a_output_file)
+            end
+
+            -- Verbose output for debugging (optional)
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_integer (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_verbose, 1)
+            end
+        end
+
+    set_curl_options_for_upload (a_curl: CURL_EASY_EXTERNALS; a_curl_handle: POINTER;
+                                a_url: STRING; a_username: STRING; a_password: STRING;
+                                a_file_content: STRING): INTEGER
+            -- Set curl options for FTP upload
+        local
+            credentials: STRING
+            temp_file_path: STRING
+        do
+            -- Reset curl handle
+            a_curl.reset (a_curl_handle)
+
+            -- Create temporary file with content to upload
+            temp_file_path := "temp_upload.txt"
+            write_file_content (temp_file_path, a_file_content)
+
+            -- Set URL
+            Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_url, a_url)
+
+            -- Set credentials
+            if Result = {CURL_CODES}.ok then
+                credentials := a_username + ":" + a_password
+                Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_userpwd, credentials)
+            end
+
+            -- Set FTP options
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_integer (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_ftp_use_epsv, 1)
+            end
+
+            -- Set upload options
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_integer (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_upload, 1)
+            end
+
+            -- Set file reading options
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_string (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_readdata, temp_file_path)
+            end
+
+            -- Verbose output for debugging (optional)
+            if Result = {CURL_CODES}.ok then
+                Result := a_curl.setopt_integer (a_curl_handle, {CURL_OPT_CONSTANTS}.curlopt_verbose, 1)
+            end
+        end
+
+    read_file_content (a_file_path: STRING): STRING
+            -- Read content from a file
+        local
+            file: PLAIN_TEXT_FILE
+        do
+            create Result.make_empty
+            create file.make_open_read (a_file_path)
+
+            from
+                file.read_character
+            until
+                file.exhausted
+            loop
+                Result.append_character (file.last_character)
+                file.read_character
+            end
+
+            file.close
+        end
+
+    write_file_content (a_file_path: STRING; a_content: STRING)
+            -- Write content to a file
+        local
+            file: PLAIN_TEXT_FILE
+        do
+            create file.make_create_read_write (a_file_path)
+
+            file.put_string (a_content)
+            file.close
+        end
+
+end
+```
+
+Finally uploading a file through http
+-------------------------------------------
+
+Finally let's set it through an API.
+
+```chatgpt
+Can you create the code here for an  Eiffel API that connects and posts an image to the flickr API
+```
+
+Let's create a composition
+----------------------------------------------
+To finalize the example le's think
+How could we develop a Cache,
+That gets remote files,
+and stores them locally for the next calling.
+
+
+```chatgpt
+Can you create the code, that reads an image from a remote server?
+and then stores it locally.
+```
+
+Now let's compare the alternative with software made for composition.
+
+```chatgpt
+
+Can you create a Bash script that search or a file locally,
+if it doesn't find it, downloads the file from an image server.
+Stores it locally,
+and the next time, we ask for the same image it reads the one on the local file.
+
+```
+
+Let's observe the same script in NuShell a new generation shell that is also
+a replacement for bash, that is extremely productive.
+
+```chatgpt
+Can you create an NuSHell script that searches for an image, in a local directory.
+If it doesn't find it then downoald it from a remote server.
+store it locally, so that the next time,
+we ask for it it reads the one locally?
+```
+
+As you can see the NuShell script is very expressive,
+it represents that we want to do and nothing else.
+Whereas the algorithmic version in both Eiffel and Python
+Is riddle with accidental complexity, and minutia that hides what we really want to achieve.
+
+On this paper we will see how Weiher's Storage Combinators can be implemented to make the version in Eiffel almost as expressive as the one in Nushell.
+
+Composition in the real world.
+======================================================================
+
+In the era of WebServices and API's we have seen the delopment of Systems composed of several different API's
+from different vendors and independent developers.
+This composiitions have been called Mashups
+
+```chatpt
+Insert citation for the book on mashups
+and our previous thesis on the subject.
+```
+
+
+What made Mashups possible is that every API has a comamn interface in the form of a REST API.
+
+A REST Api was formalized in Fiedings thesis in the following 6 principles.
+
+````chatgpt
+What are the 6 principles formalized by fielding in his thesis about Rest.
+````
+
+Those principles we can see them expressed as the "Verbs" in the HTTP protocol definition.
+
+```chatgpt
+Insert a table of the 7 http verbs what do they mean, if they are Safe, Idem-pontent and cachable.
+```
+
+Now locally a Storage can be thought as a String_Table (a Dictionary in Python).
+Indexed by the "path" of the resource.
+
+So we can create a relationship between,
+http Verbs.
+On this paper I intend to follow, the HTTP analogy
+as far as we can take it.
+
+To keep thinking about the fact that we are composing http resources.
+
+
+
+
+
+Development
+======================================================================
+
+1st Iteration a Restful API
+----------------------------------------------------------------------
+
+The first characteristic of an `Storage Combinator` is that it respects a Rest API
+given a "route" or PATH.
+
+so the precise definition of a REST_STORE is an instance ("effective class")
+that implements the REST_STORE abstract_class ("deferred class")
+
+```note_to_self
+insert the contract view, at a certain commit
+using bash code that emacs can interpret.
+```
+
+Notice that we have the Pre-condition (require)
+that the user  of the class is asking for data that we have (has)
+if we don't have it then it returns and error_404 to the user
+this is applying Design-By-Contract to the webserver.
+Also observe that if it is our method the one that doesn´t fullfill a request would be the equivalent of 500 error.
+
+Also notice that PUT requires the path to exists.
+Whereas POST doesn't have the precondition, it doesn't even require the path to be given so it is detachable.
+
+### Applying the RESTy API to a STRING_TABLE
+
+Now the implementation of the REST API is very succint.
+Thanks to the fact that Eiffel Library Collection has since the Beginning
+
+```note_to_self
+insert citation to the communications of the ACM article on the design of the libraries
+And citation to the book.. where BM talks about the design of the eiffel libraries.
+```
+
+This care to the conformance of the librires will be very useful for us since it willl save a lot of work on the implementation.
+
+### The implementation
+
+Now that we know the specificiation (eiffel: Contract) then we can proceed with the implementation
+That in this case is as as simple as:
+
+```note_to_self
+Insert the code view at a certain point in time.
+and write notes in it's
+
+### Examples
+
+Given this implementation a dictionary (eif STRING_TABLE) can be used like in thi examples (tests)
+
+```chatgpt
+Crete Eiffel test examples of storing long paths,
+and also examples where asking or a non stored path
+returns an error 404
+and see how could I trigger a 500 error.
+```
+
+2nd Iteration a RESTy API's for an 'unreliable store'
+================================================================================
+
+Our first example a Dictionary was the platonic ideal of stores.
+It is single threaded and as long as our program is running we can assume,
+that what ever we put in the dictionary, we can get back.
+
+But the real world is more messy. Things go missing, [^j1]
+They reappear (like socks in the fridge)
+
+So for this we will create a RESTLY_DIRECTORY
+I.e. a filesystem directory that implements REST-like api for the retrival and writing of text_files.
+
+The important characteristic is that a File can be removed by another operating system process.
+While no one is looking at the washer  cycle.
+
+### The new contract
+
+```note_to_self
+in jj checkout the version of the contract that can handle detachable return values.
+and show that the more strict contract can inherit from the detachable type
+but not the other way around.
+```
+
+Also show the current class diagram.
+Where the REST_TABLE inherits from the more strict store, and the
+file store inherits from the detachable one.
+
+### The implementation?
+    propbably I shouldn't put the implementation here, just a link (including revision) with the correct version of the implentation
+
+### Example tests
+    THis is the important part.
+    Show that assigining something new to the REST_API will create a new text file with that name and contents.
+    then show that we can trigger a post conditin in  Eiffel
+
+[j1]: I think all of humany has had this problem.
+[j2]: This has happened to me... I cannot be the only one :-)
+
+3rd Iteration Mapper RESTapi for object transformers
+====================================================================================
+A REST_MAPPER
+is-a REST_STORE with the property that the path and value.
+can be modified before being stored.
+
+Which now give us the problem, that now what we storet is not what we get.
+So that requires creating a new Contract.
+
+```note_to_self
+insert the code for the new REST_DETABLE_TWO_TYPES class.
+and show line by line the changes that were necessary
+SHOW THAT We can redfine the simple clothing store.
+
+Insert the diagram of inheritance,
+between abstract classes.
+```
+
+### Show the implementation
+
+### Show the tests, and delete a file before calling get , bit i
+
+Show that eventhough we stored a name with lowar_case, we can have a class.
+That by the item you do a get, that has passed the precondition
+We can trigger the post-condition.
+
+4th Iteration a REST_RESOURCE
+==================================================================
+What distinguis a REST_RESOURCE from just a REST_STORE
+is that a resourc *has* an identifier.
+That is a URL that uniquely identifies the resource.
+It is so uninque in fact that changing the resource is not allowed,
+and trying to do so would create a new REST_RESOURCE with the new ID
+rather than modify the current one.
+
+This is the definition of an IDENTIFIER
+-------------------------------------------------
+
+```note_to_self
+Insert the code of the IDENTIFIER
+```
+
+(1) Notice that it is-a 'URI'
+(2) And that is an immutable value class (eif. 'expanded class')
+Which means that we cannot change the values of any of the values once it is created.
+(3) we are redefining the value setters to create new versions of the current resource, with the ne we value.
+(4) Observe that we use the word ONCE which is a singleton, once this resource is created, it won't create a new object. But will be an insntance of the current one.
+
+Now that we know what an IDENTIFIER *is*
+
+We can define a REST_RESORCE asking
+
+> REST_RESOURCE is-a REST_STORE that is uniquely identified by a UNIQUE_URI
+> and where all it's content has a 'subdirectory' where we will look for the entities.
+
+```note_to_self
+instert the REST_RESOURCE class with it's make_from_url method
+```
+
+(1) observe that we the prefix part is the subdiriectory, befare the entry.
+
+Now let's create a RESOURCE_TABLE and  RESOURCE_DIRECtORY
+they both inherit from UNIQUE_URI and from REST_STORE
+
+Observe that now we have redefine the stores,
+to consider the prefix that comes from the subdomain.
+this only redirects the path.
+
+### Examples
+Show that creating two resources with the same url
+is actually the same RESOURCE.
+
+modifiying one of the urls creates a new RESOURCE
+
+now show how creating a new directory, you don't need to specify the whole path anymore,
+Since it is using the prefix.
+
+### Exercises
+create the Current_resource which is the resource that represents the direcotry where the current app is running.
+create the env resource that represents environment variables currently defined in the operating system.
+
+5th Iteration a REMOTE_RESOURCE
+======================================================================
+
+A REMOTE_RESOURCE is-a resource that knows how to connect, store and retrieve resources,
+living outside the current program.
+has-a inmutable unique identifier
+has-a protocol proxy that knows how to connect and retrive resources.
+is-a RESTFUL_STORE, where the values are actually stored in a remote server.
+
+For example
+------------------------------------
+Let's look at some implementations in particular the HTPP ones
+
+
+Tests
+----------------------------------------------------
+How well does this work in practice?
+
+
+6th Iteration RESOURCE_COMBINATOR
+============================================================================
+
+A RESOURCE_COMBINATOR is a function that takes two REST_RESOURCeS and combines their operations,
+to compose a new one. That is used independently of the original ones.
+
+For example, the cache combinator.
+-------------------------------------
+So we want to cache the expensive http requests that we make to an external server.
+
+Has as local_store the file writing one.
+and as remote_store the one that is an http client.
+
+7th Iteration RESOURCE_SERVER
+===========================================================================
+
+Up to this point, we have consumed resources.
+But how can we "expose" our local resources.
+To the exterior?
+
+This communication must happen according to a protocol.
+So that means we need now PROTOCOL Server,
+that can publish our RESOURCES according to the rules of the protocol.
+
+Going back to our motivating example
+============================================================================
+
+After all that work defining, and implementing REST_RESOURCES in Eiffel.
+How does our original problem look like?
+
+
+
+Conclussions
+============================================================================
+
+* Eiffels mature library, and advanced features made it an ideal candidate to write this specification.
+
+* REST RESOURCES works because RESOURCES are a "deep class"
+  Osternout, claims that in order for a class to be useful, it must be deep.
+  Meaning it must have a small public interface, that hides a complex internal structure.
+  In our case using the well defined and small RESTFUL constratints has afforded us the freedom,
+  to  create complex compositions of small parts.
+
+** The fact that http is a stateless protocol, gives the benefits of Functional Programming
+
+
+Lessons Learned
+===================================================
+
+There is no Specification without prototype.
+
+This work started as an attempt to specify Weiher's work on Architecture Oriented Programming.
+Mostly, because I was confused by some of the terms used, in his paper
+For example the word "reference" is used diferently in the 2016 paper,
+than in the the 2019 paper of Storage Combinators.
+
+Also I didn't like the name "Polymorphic Identifiers", to me it sounded like a contradiciton
+an Identifier shouldn't change shape so no polymorphic.
+But by formalizing it turns out that the Identifier or the name URI uniform resource *identfier*.
+and the Resource is what the "polymorphic identifier meant.
+
+I think that Storage Combinators are a "rediscovery" of the RESTful architectural style with two key innovations.
+
+1. It applies the RESOURCE concept to level of the program. So basically. What if every variale, dictionary, etc. in our
+   program was addresable by a URI ?
+
+2. It makes standard combinators allowing us to create new Resources, as the combination of others in Dynamic.
+   i.e. not compiled way.
+
+3. What the CSP specification brings to the table is a formally verified specification of REST.
+  That helped up uncover blind spots in the Storage Combinators work.
+
+<link rel="stylesheet" href="https://unpkg.com/latex.css/style.min.css" />
+<style>
+body.md{
+	max-width:90ch; !important
+}
+</style>
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden}</style>
+<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
 <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/newsmag.css?">
     <!-- Author meta tag -->
     <meta name="author" content="Your Name">
@@ -10586,15 +12082,23 @@ Our Writing
 This are the innovations that have been ocupaying our minds lately
 
 
-### [2025-05-17: projects/yaml_resume_db](./projects/yaml_resume_db).
+### [2025-05-21: projects/yaml_resume_db](./projects/yaml_resume_db).
 [lab notes ongaing](./projects/yaml_resume_db)
 
 
-### [2025-05-17: projects/rewards.codes](./projects/rewards.codes).
+### [2025-05-21: projects/rewards.codes](./projects/rewards.codes).
 [lab notes ongaing](./projects/rewards.codes)
 
 
-### [2025-05-17: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
+### [2025-05-21: projects/implementing_storage_combinators_in_eiffel](./projects/implementing_storage_combinators_in_eiffel).
+[lab notes ongaing](./projects/implementing_storage_combinators_in_eiffel)
+
+
+### [2025-05-21: projects/Polymorphic_Identifiers_in_Eiffel](./projects/Polymorphic_Identifiers_in_Eiffel).
+[lab notes ongaing](./projects/Polymorphic_Identifiers_in_Eiffel)
+
+
+### [2025-05-21: projects/AOP_in_Eiffel](./projects/AOP_in_Eiffel).
 [lab notes ongaing](./projects/AOP_in_Eiffel)
 
 
@@ -10618,6 +12122,8 @@ Email
     <li><a href="/">index</a></li>
 		<li>[projects/yaml_resume_db](/projects/yaml_resume_db/index.html)</li>
 		<li>[projects/rewards.codes](/projects/rewards.codes/index.html)</li>
+		<li>[projects/implementing_storage_combinators_in_eiffel](/projects/implementing_storage_combinators_in_eiffel/index.html)</li>
+		<li>[projects/Polymorphic_Identifiers_in_Eiffel](/projects/Polymorphic_Identifiers_in_Eiffel/index.html)</li>
 		<li>[projects/AOP_in_Eiffel](/projects/AOP_in_Eiffel/index.html)</li>
 </ul>
 
@@ -11341,6 +12847,14 @@ I needed to compile the RegEx before doing the match.
 	  	</ul>
 	      <ul>
 	  	  <li>[./projects/rewards.codes](././projects/rewards.codes/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./projects/implementing_storage_combinators_in_eiffel](././projects/implementing_storage_combinators_in_eiffel/) 
+	  	  </li>
+	  	</ul>
+	      <ul>
+	  	  <li>[./projects/Polymorphic_Identifiers_in_Eiffel](././projects/Polymorphic_Identifiers_in_Eiffel/) 
 	  	  </li>
 	  	</ul>
 	      <ul>
